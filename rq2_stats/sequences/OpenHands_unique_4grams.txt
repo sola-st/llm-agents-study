@@ -1,0 +1,284 @@
+Locate,Generate Fix,Run tests,Reproduce
+Explore,Generate Fix,Explore,Explore
+Explore,Generate Fix,Explore,Search
+Reproduce,Reproduce,Run tests,Reproduce
+Generate Fix,Generate Fix,Reproduce,Run tests
+Reproduce,Reproduce,Reproduce,Run tests
+Run tests,Generate Fix,Run tests,Refactor
+Reproduce,Run tests,Refactor,Run tests
+Explore,Reproduce,Run tests,Locate
+Generate Fix,Generate Fix,Generate Fix,Generate Fix
+Search,Locate,Reproduce,Run tests
+Refactor,Generate Fix,Generate Fix,Run tests
+Reproduce,Run tests,Run tests,Explore
+Locate,Generate Fix,Run tests,Generate Fix
+Generate Fix,Generate Fix,Run tests,Reproduce
+Explore,Locate,Explore,Reproduce
+Run tests,Generate Fix,Run tests,Explore
+Run tests,Explore,Run tests,Explore
+Reproduce,Run tests,Generate Fix,Reproduce
+Run tests,Refactor,Generate Fix,Run tests
+Search,Search,Search,Generate Fix
+Explore,Reproduce,Search,Explore
+Run tests,Run tests,Search,Explore
+Explore,Search,Search,Explore
+Explore,Search,Search,Search
+Generate Fix,Run tests,Search,Generate Fix
+Search,Explore,Search,Explore
+Search,Explore,Search,Search
+Search,Reproduce,Run tests,Generate Fix
+Run tests,Search,Generate Fix,Refactor
+Search,Search,Locate,Search
+Refactor,Run tests,Search,Generate Fix
+Run tests,Refactor,Run tests,Refactor
+Reproduce,Run tests,Generate Fix,Generate Fix
+Run tests,Run tests,Reproduce,Run tests
+Locate,Explore,Explore,Reproduce
+Search,Refactor,Run tests,Search
+Generate Fix,Run tests,Refactor,Generate Fix
+Locate,Reproduce,Run tests,Generate Fix
+Run tests,Explore,Generate Fix,Generate Fix
+Generate Fix,Run tests,Reproduce,Reproduce
+Generate Fix,Run tests,Locate,Search
+Explore,Reproduce,Run tests,Reproduce
+Explore,Explore,Explore,Reproduce
+Run tests,Explore,Explore,Generate Fix
+Explore,Explore,Run tests,Run tests
+Locate,Locate,Locate,Reproduce
+Run tests,Locate,Search,Search
+Search,Explore,Generate Fix,Generate Fix
+Search,Generate Fix,Refactor,Run tests
+Reproduce,Run tests,Locate,Search
+Generate Fix,Run tests,Generate Fix,Refactor
+Run tests,Generate Fix,Reproduce,Reproduce
+Explore,Search,Reproduce,Run tests
+Run tests,Search,Search,Search
+Explore,Explore,Run tests,Explore
+Search,Explore,Reproduce,Run tests
+Generate Fix,Run tests,Generate Fix,Run tests
+Search,Search,Explore,Explore
+Search,Search,Explore,Search
+Explore,Search,Reproduce,Explore
+Run tests,Generate Fix,Generate Fix,Refactor
+Generate Fix,Run tests,Reproduce,Generate Fix
+Reproduce,Reproduce,Explore,Reproduce
+Generate Fix,Run tests,Generate Fix,Explore
+Locate,Search,Search,Search
+Explore,Reproduce,Run tests,Generate Fix
+Explore,Explore,Explore,Generate Fix
+Explore,Explore,Search,Reproduce
+Generate Fix,Run tests,Explore,Explore
+Generate Fix,Run tests,Explore,Search
+Reproduce,Run tests,Explore,Run tests
+Reproduce,Explore,Explore,Explore
+Run tests,Generate Fix,Generate Fix,Run tests
+Generate Fix,Generate Fix,Run tests,Search
+Explore,Locate,Explore,Explore
+Generate Fix,Generate Fix,Generate Fix,Reproduce
+Reproduce,Run tests,Explore,Explore
+Search,Generate Fix,Run tests,Reproduce
+Reproduce,Run tests,Explore,Search
+Search,Generate Fix,Reproduce,Run tests
+Refactor,Run tests,Search,Search
+Explore,Run tests,Reproduce,Run tests
+Generate Fix,Generate Fix,Search,Explore
+Search,Reproduce,Explore,Search
+Explore,Explore,Generate Fix,Generate Fix
+Explore,Run tests,Reproduce,Explore
+Explore,Explore,Search,Generate Fix
+Explore,Generate Fix,Search,Explore
+Generate Fix,Reproduce,Run tests,Reproduce
+Generate Fix,Generate Fix,Reproduce,Explore
+Run tests,Reproduce,Reproduce,Reproduce
+Run tests,Reproduce,Run tests,Generate Fix
+Reproduce,Explore,Search,Search
+Run tests,Explore,Search,Locate
+Generate Fix,Explore,Generate Fix,Run tests
+Search,Generate Fix,Run tests,Generate Fix
+Generate Fix,Generate Fix,Explore,Generate Fix
+Run tests,Generate Fix,Search,Explore
+Refactor,Refactor,Generate Fix,Generate Fix
+Explore,Generate Fix,Generate Fix,Generate Fix
+Generate Fix,Reproduce,Run tests,Generate Fix
+Explore,Explore,Explore,Search
+Explore,Reproduce,Run tests,Search
+Explore,Generate Fix,Run tests,Reproduce
+Run tests,Reproduce,Explore,Explore
+Explore,Reproduce,Explore,Reproduce
+Explore,Search,Locate,Generate Fix
+Explore,Search,Generate Fix,Reproduce
+Search,Explore,Run tests,Search
+Reproduce,Run tests,Reproduce,Reproduce
+Explore,Search,Explore,Reproduce
+Generate Fix,Explore,Run tests,Explore
+Explore,Reproduce,Reproduce,Explore
+Explore,Explore,Generate Fix,Search
+Explore,Generate Fix,Run tests,Generate Fix
+Generate Fix,Generate Fix,Generate Fix,Run tests
+Run tests,Search,Search,Refactor
+Locate,Explore,Search,Reproduce
+Explore,Run tests,Run tests,Explore
+Generate Fix,Generate Fix,Generate Fix,Explore
+Explore,Locate,Locate,Explore
+Locate,Locate,Explore,Search
+Explore,Search,Generate Fix,Generate Fix
+Search,Locate,Generate Fix,Run tests
+Locate,Generate Fix,Run tests,Search
+Explore,Search,Explore,Generate Fix
+Run tests,Generate Fix,Refactor,Generate Fix
+Run tests,Search,Search,Explore
+Search,Explore,Explore,Generate Fix
+Run tests,Reproduce,Reproduce,Run tests
+Generate Fix,Generate Fix,Refactor,Refactor
+Reproduce,Search,Explore,Search
+Refactor,Run tests,Refactor,Run tests
+Run tests,Reproduce,Reproduce,Explore
+Run tests,Generate Fix,Run tests,Locate
+Locate,Search,Locate,Generate Fix
+Refactor,Refactor,Run tests,Refactor
+Generate Fix,Run tests,Run tests,Search
+Search,Search,Search,Search
+Refactor,Generate Fix,Run tests,Generate Fix
+Run tests,Explore,Search,Generate Fix
+Search,Search,Search,Explore
+Generate Fix,Search,Search,Explore
+Generate Fix,Generate Fix,Run tests,Explore
+Search,Generate Fix,Generate Fix,Generate Fix
+Run tests,Reproduce,Run tests,Reproduce
+Reproduce,Run tests,Generate Fix,Run tests
+Generate Fix,Run tests,Search,Explore
+Generate Fix,Reproduce,Reproduce,Run tests
+Locate,Explore,Locate,Explore
+Generate Fix,Run tests,Refactor,Run tests
+Generate Fix,Run tests,Search,Search
+Explore,Generate Fix,Run tests,Run tests
+Run tests,Refactor,Run tests,Generate Fix
+Refactor,Refactor,Run tests,Search
+Run tests,Explore,Generate Fix,Run tests
+Explore,Run tests,Explore,Generate Fix
+Reproduce,Run tests,Search,Explore
+Explore,Explore,Reproduce,Reproduce
+Run tests,Explore,Explore,Run tests
+Explore,Search,Search,Locate
+Explore,Reproduce,Generate Fix,Search
+Explore,Generate Fix,Generate Fix,Reproduce
+Search,Explore,Generate Fix,Run tests
+Refactor,Refactor,Refactor,Run tests
+Run tests,Run tests,Explore,Run tests
+Run tests,Explore,Explore,Explore
+Run tests,Explore,Explore,Search
+Refactor,Run tests,Reproduce,Run tests
+Generate Fix,Search,Explore,Generate Fix
+Search,Explore,Generate Fix,Search
+Run tests,Run tests,Explore,Explore
+Explore,Reproduce,Run tests,Refactor
+Run tests,Run tests,Explore,Search
+Generate Fix,Refactor,Run tests,Search
+Search,Explore,Explore,Search
+Generate Fix,Run tests,Reproduce,Run tests
+Generate Fix,Explore,Generate Fix,Explore
+Reproduce,Explore,Reproduce,Run tests
+Explore,Explore,Reproduce,Generate Fix
+Explore,Explore,Explore,Run tests
+Explore,Reproduce,Run tests,Run tests
+Generate Fix,Generate Fix,Search,Generate Fix
+Generate Fix,Run tests,Reproduce,Explore
+Generate Fix,Explore,Explore,Explore
+Reproduce,Run tests,Run tests,Reproduce
+Reproduce,Explore,Reproduce,Explore
+Explore,Reproduce,Run tests,Explore
+Explore,Explore,Explore,Explore
+Run tests,Generate Fix,Run tests,Reproduce
+Run tests,Explore,Search,Search
+Run tests,Explore,Run tests,Reproduce
+Run tests,Generate Fix,Reproduce,Run tests
+Search,Search,Explore,Locate
+Run tests,Refactor,Refactor,Refactor
+Explore,Explore,Generate Fix,Run tests
+Run tests,Refactor,Refactor,Run tests
+Reproduce,Reproduce,Explore,Explore
+Generate Fix,Explore,Search,Explore
+Explore,Explore,Generate Fix,Explore
+Run tests,Generate Fix,Run tests,Generate Fix
+Run tests,Reproduce,Run tests,Run tests
+Explore,Explore,Search,Explore
+Locate,Explore,Reproduce,Run tests
+Explore,Explore,Search,Search
+Search,Explore,Search,Reproduce
+Generate Fix,Refactor,Refactor,Generate Fix
+Run tests,Reproduce,Run tests,Explore
+Run tests,Reproduce,Run tests,Search
+Locate,Search,Locate,Reproduce
+Search,Search,Refactor,Run tests
+Search,Generate Fix,Run tests,Search
+Search,Search,Search,Refactor
+Explore,Generate Fix,Generate Fix,Run tests
+Refactor,Run tests,Refactor,Refactor
+Run tests,Search,Locate,Generate Fix
+Explore,Search,Search,Generate Fix
+Generate Fix,Reproduce,Run tests,Explore
+Explore,Generate Fix,Generate Fix,Search
+Run tests,Refactor,Run tests,Reproduce
+Search,Explore,Search,Generate Fix
+Search,Reproduce,Run tests,Refactor
+Explore,Explore,Run tests,Reproduce
+Generate Fix,Refactor,Generate Fix,Run tests
+Search,Locate,Locate,Locate
+Generate Fix,Reproduce,Explore,Reproduce
+Explore,Generate Fix,Run tests,Refactor
+Reproduce,Explore,Run tests,Explore
+Generate Fix,Run tests,Generate Fix,Reproduce
+Search,Explore,Locate,Explore
+Locate,Locate,Reproduce,Run tests
+Run tests,Search,Explore,Generate Fix
+Search,Search,Generate Fix,Generate Fix
+Explore,Generate Fix,Run tests,Explore
+Explore,Reproduce,Explore,Run tests
+Explore,Search,Generate Fix,Run tests
+Reproduce,Run tests,Explore,Reproduce
+Search,Search,Explore,Generate Fix
+Search,Search,Locate,Locate
+Reproduce,Run tests,Reproduce,Run tests
+Explore,Search,Explore,Run tests
+Explore,Search,Generate Fix,Explore
+Generate Fix,Run tests,Generate Fix,Generate Fix
+Refactor,Generate Fix,Run tests,Refactor
+Explore,Search,Explore,Explore
+Explore,Search,Explore,Search
+Reproduce,Run tests,Reproduce,Explore
+Search,Explore,Explore,Explore
+Generate Fix,Run tests,Explore,Generate Fix
+Locate,Locate,Explore,Locate
+Generate Fix,Generate Fix,Run tests,Generate Fix
+Run tests,Locate,Search,Locate
+Run tests,Generate Fix,Generate Fix,Generate Fix
+Run tests,Reproduce,Generate Fix,Run tests
+Reproduce,Run tests,Explore,Generate Fix
+Locate,Search,Locate,Search
+Run tests,Generate Fix,Explore,Generate Fix
+Run tests,Explore,Search,Explore
+Run tests,Search,Generate Fix,Run tests
+Search,Locate,Search,Locate
+Search,Generate Fix,Explore,Run tests
+Search,Generate Fix,Generate Fix,Search
+Explore,Run tests,Explore,Run tests
+Search,Search,Search,Locate
+Explore,Run tests,Search,Explore
+Run tests,Explore,Reproduce,Run tests
+Reproduce,Generate Fix,Search,Explore
+Run tests,Refactor,Run tests,Search
+Run tests,Search,Explore,Search
+Explore,Run tests,Explore,Search
+Generate Fix,Search,Generate Fix,Run tests
+Run tests,Reproduce,Explore,Reproduce
+Generate Fix,Run tests,Search,Locate
+Generate Fix,Explore,Generate Fix,Generate Fix
+Refactor,Run tests,Generate Fix,Run tests
+Generate Fix,Search,Explore,Explore
+Generate Fix,Run tests,Generate Fix,Search
+Explore,Explore,Reproduce,Run tests
+Explore,Run tests,Run tests,Reproduce
+Explore,Explore,Reproduce,Explore
+Locate,Locate,Explore,Reproduce
+Generate Fix,Generate Fix,Search,Search
+Run tests,Generate Fix,Generate Fix,Search

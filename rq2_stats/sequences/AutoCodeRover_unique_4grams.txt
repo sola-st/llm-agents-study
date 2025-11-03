@@ -1,0 +1,36 @@
+Search,Search,Explain,Locate
+Search,Locate,Locate,Locate
+Locate,Explain,Locate,Explore
+Locate,Locate,Explain,Explain
+Locate,Locate,Locate,Locate
+Search,Explain,Locate,Locate
+Locate,Search,Locate,Locate
+Locate,Locate,Explore,Generate Fix
+Locate,Locate,Locate,Explain
+Locate,Explore,Explain,Generate Fix
+Explain,Locate,Locate,Explore
+Search,Explain,Locate,Explain
+Explain,Explain,Locate,Locate
+Explain,Explain,Locate,Explain
+Explain,Locate,Explore,Explain
+Explain,Locate,Search,Locate
+Explain,Locate,Search,Explain
+Explore,Explain,Locate,Explore
+Locate,Explain,Explain,Locate
+Locate,Locate,Locate,Explore
+Search,Explain,Locate,Explore
+Explain,Locate,Explain,Locate
+Search,Explain,Locate,Search
+Locate,Locate,Explore,Explain
+Explain,Explain,Locate,Explore
+Locate,Explore,Explain,Explain
+Explore,Explain,Explain,Generate Fix
+Explain,Locate,Explain,Explain
+Explore,Generate Fix,Generate Fix,Explain
+Locate,Explore,Generate Fix,Generate Fix
+Search,Search,Search,Explain
+Search,Explain,Search,Explain
+Explain,Search,Explain,Locate
+Explain,Locate,Locate,Locate
+Locate,Search,Explain,Locate
+Explain,Locate,Explore,Generate Fix

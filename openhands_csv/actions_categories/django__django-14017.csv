@@ -1,0 +1,13 @@
+iteration,category
+1,Locate
+2,Locate
+3,Explore
+4,Reproduce
+5,Run tests
+6,Generate Fix
+7,Run tests
+8,Generate Fix
+9,Run tests
+10,Reproduce
+11,Reproduce
+12,Run tests

@@ -1,0 +1,24 @@
+iteration,category
+0,Explore
+1,Explore
+2,Search
+3,Search
+4,Explore
+5,Search
+6,Reproduce
+7,Run tests
+8,Generate Fix
+9,Run tests
+10,Generate Fix
+11,Run tests
+12,Explore
+13,Generate Fix
+14,Run tests
+15,Explore
+16,Generate Fix
+17,Run tests
+18,Explore
+19,Generate Fix
+20,Run tests
+21,Refactor
+22,Run tests
