@@ -1,0 +1,53 @@
+Result at Iteration 0: Result of search_class("AutocompleteJsonView"):
+Found 1 classes with name AutocompleteJsonView in the codebase.
+Search result 1: <file>django/contrib/admin/views/autocomplete.py</file> <class>AutocompleteJsonView</class> <code>class AutocompleteJsonView(BaseListView):
+    paginate_by = 20
+    admin_site = None
+    def get(self, request, *args, **kwargs):
+    def get_paginator(self, *args, **kwargs):
+    def get_queryset(self):
+    def process_request(self, request):
+    def has_perm(self, request, obj=None):
+</code>
+
+
+
+Result of search_method_in_class("get", "AutocompleteJsonView"):
+Found 1 methods with name get in class AutocompleteJsonView.
+Search result 1: <file>django/contrib/admin/views/autocomplete.py</file> <class>AutocompleteJsonView</class> <func>get</func> <code>    def get(self, request, *args, **kwargs):
+        """
+        Return a JsonResponse with search results of the form:
+        {
+            results: [{id: "123" text: "foo"}],
+            pagination: {more: true}
+        }
+        """
+        self.term, self.model_admin, self.source_field, to_field_name = self.process_request(request)
+
+        if not self.has_perm(request):
+            raise PermissionDenied
+
+        self.object_list = self.get_queryset()
+        context = self.get_context_data()
+        return JsonResponse({
+            'results': [
+                {'id': str(getattr(obj, to_field_name)), 'text': str(obj)}
+                for obj in context['object_list']
+            ],
+            'pagination': {'more': context['page_obj'].has_next()},
+        })
+</code>
+
+Other results are in these files:
+
+
+Result of search_method_in_class("serialize_result", "AutocompleteJsonView"):
+Could not find method serialize_result in class AutocompleteJsonView`.
+Action at Iteration 1: Analyze
+
+Result at Iteration 1: The result is contained in the reasoning
+Action at Iteration 2: Locate
+
+Result at Iteration 2: The result is contained in the reasoning
+Action at Iteration 3: write_patch
+

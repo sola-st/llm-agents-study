@@ -1,0 +1,16 @@
+Action at Iteration 0: search_method("makemigrations"), search_class("MigrationWriter"), search_code("migrations.CreateModel"), search_code("bases=")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: search_method_in_class("as_string", "MigrationWriter");search_method_in_class("serialize", "MigrationWriter")
+
+Action at Iteration 3: Analyze
+
+Action at Iteration 4: Locate
+
+Action at Iteration 5: write_patch
+
+Action at Iteration 6: write_patch
+
+Action at Iteration 7: ErrorResponse
+

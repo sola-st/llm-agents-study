@@ -1,0 +1,8 @@
+Action at Iteration 0: search_method("setup_databases"), search_method("create_test_db"), search_method("serialize_db_to_string"), search_method("execute_sql")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: Locate
+
+Action at Iteration 3: write_patch
+

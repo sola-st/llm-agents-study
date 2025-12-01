@@ -1,0 +1,36 @@
+Thought at iteration 0: I'll help you implement the necessary changes to fix the issue described in the PR. Let's follow the steps:
+
+1. First, let's explore the repository structure to locate the relevant files:
+Thought at iteration 1: Let me search through the repository to find the file containing the `_estimate_mi` function:
+Thought at iteration 2: Let me try a different search approach:
+Thought at iteration 3: Great! I found the file. Let's examine its content:
+Thought at iteration 4: Let me search for the specific line with the comparison:
+Thought at iteration 5: Now let me see the context around line 250:
+Thought at iteration 6: I see the issue. The PR description is correct - there's a direct comparison between `discrete_features` and the string `'auto'`, but `discrete_features` can be a boolean mask array or an array of indices.
+
+Let's create a script to reproduce the error:
+Thought at iteration 7: Let's run the script to see the warning:
+Thought at iteration 8: Great! We can see the FutureWarning about the elementwise comparison. Let's fix the code by modifying the comparison in `_estimate_mi` function:
+Thought at iteration 9: The changes look good. Let's run the reproduce script again to verify the fix:
+Thought at iteration 10: The FutureWarning is gone, but we have a different error now. Let's modify our test script to better handle the data:
+Thought at iteration 11: The test script looks good. Let's run it:
+Thought at iteration 12: Perfect! The code is now working correctly with all three types of input for `discrete_features`:
+1. String value 'auto'
+2. Boolean mask array
+3. Array of indices
+
+The fix we implemented:
+1. Changed the comparison `discrete_features == 'auto'` to first check if `discrete_features` is a string using `isinstance(discrete_features, str)` before comparing it to 'auto'
+2. This prevents the array comparison warning and handles all three input types correctly
+
+Let's verify that our changes handle edge cases properly:
+Thought at iteration 13: The edge case tests look good. Let's run them:
+Thought at iteration 14: The edge case tests reveal some issues that we should handle better in the code. Let's improve the error handling:
+Thought at iteration 15: The changes look good. We've improved the error handling by:
+
+1. Checking that when `discrete_features` is a string, it must be 'auto'
+2. Checking that when `discrete_features` is an array, it must contain either booleans or integers
+3. Checking that integer indices are within valid range [0, n_features)
+4. Checking that boolean mask has the correct shape (n_features,)
+
+Let's run our edge case tests again to verify the improved error messages:

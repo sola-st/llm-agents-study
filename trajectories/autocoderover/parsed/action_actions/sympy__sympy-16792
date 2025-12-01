@@ -1,0 +1,12 @@
+Action at Iteration 0: search_method("autowrap");search_code("codegen")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: search_class("CythonCodeWrapper");search_method_in_file("wrap_code", "sympy/utilities/autowrap.py");search_code_in_file("routine", "sympy/utilities/codegen.py")
+
+Action at Iteration 3: Analyze
+
+Action at Iteration 4: Locate
+
+Action at Iteration 5: write_patch
+

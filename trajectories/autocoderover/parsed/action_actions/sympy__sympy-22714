@@ -1,0 +1,34 @@
+Action at Iteration 0: 
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: Localize
+
+Action at Iteration 3: Analyze
+
+Action at Iteration 4: Analyze
+
+Action at Iteration 5: Localize
+
+Action at Iteration 6: Localize
+
+Action at Iteration 7: Localize
+
+Action at Iteration 8: Analyze
+
+Action at Iteration 9: Analyze
+
+Action at Iteration 10: Localize
+
+Action at Iteration 11: Analyze
+
+Action at Iteration 12: Analyze
+
+Action at Iteration 13: Localize
+
+Action at Iteration 14: ErrorResponse
+
+Action at Iteration 15: Analyze
+
+Action at Iteration 16: write_patch
+

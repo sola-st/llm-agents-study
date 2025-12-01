@@ -1,0 +1,12 @@
+Action at Iteration 0: search_class("Inline"), search_method("get_verbose_name"), search_method("get_verbose_name_plural"), search_code("verbose_name_plural")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: search_code_in_file("class Inline", "django/contrib/admin/options.py"), search_code_in_file("verbose_name_plural", "django/contrib/admin/options.py"), search_code_in_file("verbose_name_plural", "django/contrib/admin/utils.py"), search_code_in_file("InlineModelAdmin", "django/contrib/admin/options.py")
+
+Action at Iteration 3: Analyze
+
+Action at Iteration 4: Locate
+
+Action at Iteration 5: write_patch
+

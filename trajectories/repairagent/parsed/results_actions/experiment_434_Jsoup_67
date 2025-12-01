@@ -1,0 +1,945 @@
+Result at iteration 0: The result of executing that last command is:
+ Command extract_test_code returned: public void handlesDeepStack() {
+        // inspired by http://sv.stargate.wikia.com/wiki/M2J and https://github.com/jhy/jsoup/issues/955
+        // I didn't put it in the integration tests, because explorer and intellij kept dieing trying to preview/index it
+
+        // Arrange
+        StringBuilder longBody = new StringBuilder(500000);
+        for (int i = 0; i < 25000; i++) {
+            longBody.append(i).append("<dl><dd>");
+        }
+        for (int i = 0; i < 25000; i++) {
+            longBody.append(i).append("</dd></dl>");
+        }
+
+        // Act
+        long start = System.currentTimeMillis();
+        Document doc = Parser.parseBodyFragment(longBody.toString(), "");
+
+        // Assert
+        assertEquals(2, doc.body().childNodeSize());
+        assertEquals(25000, doc.select("dd").size());
+        assertTrue(System.currentTimeMillis() - start < 1000);
+    }
+
+    @Test
+    
+; Action at iteration1 : {'name': 'read_range', 'args': {'project_name': 'Jsoup', 'bug_index': '67', 'filepath': 'org.jsoup.parser.HtmlParserTest', 'startline': 1, 'endline': 30}}
+---
+Result at iteration 1: The result of executing that last command is:
+ Command read_range returned: Line 1:package org.jsoup.parser;
+Line 2:
+Line 3:import org.jsoup.Jsoup;
+Line 4:import org.jsoup.TextUtil;
+Line 5:import org.jsoup.helper.StringUtil;
+Line 6:import org.jsoup.integration.ParseTest;
+Line 7:import org.jsoup.nodes.Comment;
+Line 8:import org.jsoup.nodes.Document;
+Line 9:import org.jsoup.nodes.Element;
+Line 10:import org.jsoup.nodes.Entities;
+Line 11:import org.jsoup.nodes.FormElement;
+Line 12:import org.jsoup.nodes.Node;
+Line 13:import org.jsoup.nodes.TextNode;
+Line 14:import org.jsoup.safety.Whitelist;
+Line 15:import org.jsoup.select.Elements;
+Line 16:import org.junit.Ignore;
+Line 17:import org.junit.Test;
+Line 18:
+Line 19:import java.io.File;
+Line 20:import java.io.IOException;
+Line 21:import java.util.List;
+Line 22:
+Line 23:import static org.junit.Assert.assertEquals;
+Line 24:import static org.junit.Assert.assertFalse;
+Line 25:import static org.junit.Assert.assertTrue;
+Line 26:
+Line 27:/**
+Line 28: Tests for the Parser
+Line 29:
+Line 30: @author Jonathan Hedley, jonathan@hedley.net */
+
+; Action at iteration2 : {'name': 'read_range', 'args': {'project_name': 'Jsoup', 'bug_index': '67', 'filepath': 'org.jsoup.parser.HtmlParserTest', 'startline': 1, 'endline': 100}}
+---
+Result at iteration 2: The result of executing that last command is:
+ Command read_range returned a lengthy response, we truncated it to the first 4000 characters: Line 1:package org.jsoup.parser;
+Line 2:
+Line 3:import org.jsoup.Jsoup;
+Line 4:import org.jsoup.TextUtil;
+Line 5:import org.jsoup.helper.StringUtil;
+Line 6:import org.jsoup.integration.ParseTest;
+Line 7:import org.jsoup.nodes.Comment;
+Line 8:import org.jsoup.nodes.Document;
+Line 9:import org.jsoup.nodes.Element;
+Line 10:import org.jsoup.nodes.Entities;
+Line 11:import org.jsoup.nodes.FormElement;
+Line 12:import org.jsoup.nodes.Node;
+Line 13:import org.jsoup.nodes.TextNode;
+Line 14:import org.jsoup.safety.Whitelist;
+Line 15:import org.jsoup.select.Elements;
+Line 16:import org.junit.Ignore;
+Line 17:import org.junit.Test;
+Line 18:
+Line 19:import java.io.File;
+Line 20:import java.io.IOException;
+Line 21:import java.util.List;
+Line 22:
+Line 23:import static org.junit.Assert.assertEquals;
+Line 24:import static org.junit.Assert.assertFalse;
+Line 25:import static org.junit.Assert.assertTrue;
+Line 26:
+Line 27:/**
+Line 28: Tests for the Parser
+Line 29:
+Line 30: @author Jonathan Hedley, jonathan@hedley.net */
+Line 31:public class HtmlParserTest {
+Line 32:
+Line 33:    @Test public void parsesSimpleDocument() {
+Line 34:        String html = "<html><head><title>First!</title></head><body><p>First post! <img src=\"foo.png\" /></p></body></html>";
+Line 35:        Document doc = Jsoup.parse(html);
+Line 36:        // need a better way to verify these:
+Line 37:        Element p = doc.body().child(0);
+Line 38:        assertEquals("p", p.tagName());
+Line 39:        Element img = p.child(0);
+Line 40:        assertEquals("foo.png", img.attr("src"));
+Line 41:        assertEquals("img", img.tagName());
+Line 42:    }
+Line 43:
+Line 44:    @Test public void parsesRoughAttributes() {
+Line 45:        String html = "<html><head><title>First!</title></head><body><p class=\"foo > bar\">First post! <img src=\"foo.png\" /></p></body></html>";
+Line 46:        Document doc = Jsoup.parse(html);
+Line 47:
+Line 48:        // need a better way to verify these:
+Line 49:        Element p = doc.body().child(0);
+Line 50:        assertEquals("p", p.tagName());
+Line 51:        assertEquals("foo > bar", p.attr("class"));
+Line 52:    }
+Line 53:
+Line 54:    @Test public void parsesQuiteRoughAttributes() {
+Line 55:        String html = "<p =a>One<a <p>Something</p>Else";
+Line 56:        // this gets a <p> with attr '=a' and an <a tag with an attribue named '<p'; and then auto-recreated
+Line 57:        Document doc = Jsoup.parse(html);
+Line 58:        assertEquals("<p =a>One<a <p>Something</a></p>\n" +
+Line 59:                "<a <p>Else</a>", doc.body().html());
+Line 60:
+Line 61:        doc = Jsoup.parse("<p .....>");
+Line 62:        assertEquals("<p .....></p>", doc.body().html());
+Line 63:    }
+Line 64:
+Line 65:    @Test public void parsesComments() {
+Line 66:        String html = "<html><head></head><body><img src=foo><!-- <table><tr><td></table> --><p>Hello</p></body></html>";
+Line 67:        Document doc = Jsoup.parse(html);
+Line 68:
+Line 69:        Element body = doc.body();
+Line 70:        Comment comment = (Comment) body.childNode(1); // comment should not be sub of img, as it's an empty tag
+Line 71:        assertEquals(" <table><tr><td></table> ", comment.getData());
+Line 72:        Element p = body.child(1);
+Line 73:        TextNode text = (TextNode) p.childNode(0);
+Line 74:        assertEquals("Hello", text.getWholeText());
+Line 75:    }
+Line 76:
+Line 77:    @Test public void parsesUnterminatedComments() {
+Line 78:        String html = "<p>Hello<!-- <tr><td>";
+Line 79:        Document doc = Jsoup.parse(html);
+Line 80:        Element p = doc.getElementsByTag("p").get(0);
+Line 81:        assertEquals("Hello", p.text());
+Line 82:        TextNode text = (TextNode) p.childNode(0);
+Line 83:        assertEquals("Hello", text.getWholeText());
+Line 84:        Comment comment = (Comment) p.childNode(1);
+Line 85:        assertEquals(" <tr><td>", comment.getData());
+Line 86:    }
+Line 87:
+Line 88:    @Test public void dropsUnterminatedTag() {
+Line 89:        // jsoup used to pars
+; Action at iteration3 : {'name': 'read_range', 'args': {'project_name': 'Jsoup', 'bug_index': '67', 'filepath': 'org.jsoup.parser.HtmlParserTest', 'startline': 33, 'endline': 89}}
+---
+Result at iteration 3: The result of executing that last command is:
+ Command read_range returned: Line 33:    @Test public void parsesSimpleDocument() {
+Line 34:        String html = "<html><head><title>First!</title></head><body><p>First post! <img src=\"foo.png\" /></p></body></html>";
+Line 35:        Document doc = Jsoup.parse(html);
+Line 36:        // need a better way to verify these:
+Line 37:        Element p = doc.body().child(0);
+Line 38:        assertEquals("p", p.tagName());
+Line 39:        Element img = p.child(0);
+Line 40:        assertEquals("foo.png", img.attr("src"));
+Line 41:        assertEquals("img", img.tagName());
+Line 42:    }
+Line 43:
+Line 44:    @Test public void parsesRoughAttributes() {
+Line 45:        String html = "<html><head><title>First!</title></head><body><p class=\"foo > bar\">First post! <img src=\"foo.png\" /></p></body></html>";
+Line 46:        Document doc = Jsoup.parse(html);
+Line 47:
+Line 48:        // need a better way to verify these:
+Line 49:        Element p = doc.body().child(0);
+Line 50:        assertEquals("p", p.tagName());
+Line 51:        assertEquals("foo > bar", p.attr("class"));
+Line 52:    }
+Line 53:
+Line 54:    @Test public void parsesQuiteRoughAttributes() {
+Line 55:        String html = "<p =a>One<a <p>Something</p>Else";
+Line 56:        // this gets a <p> with attr '=a' and an <a tag with an attribue named '<p'; and then auto-recreated
+Line 57:        Document doc = Jsoup.parse(html);
+Line 58:        assertEquals("<p =a>One<a <p>Something</a></p>\n" +
+Line 59:                "<a <p>Else</a>", doc.body().html());
+Line 60:
+Line 61:        doc = Jsoup.parse("<p .....>");
+Line 62:        assertEquals("<p .....></p>", doc.body().html());
+Line 63:    }
+Line 64:
+Line 65:    @Test public void parsesComments() {
+Line 66:        String html = "<html><head></head><body><img src=foo><!-- <table><tr><td></table> --><p>Hello</p></body></html>";
+Line 67:        Document doc = Jsoup.parse(html);
+Line 68:
+Line 69:        Element body = doc.body();
+Line 70:        Comment comment = (Comment) body.childNode(1); // comment should not be sub of img, as it's an empty tag
+Line 71:        assertEquals(" <table><tr><td></table> ", comment.getData());
+Line 72:        Element p = body.child(1);
+Line 73:        TextNode text = (TextNode) p.childNode(0);
+Line 74:        assertEquals("Hello", text.getWholeText());
+Line 75:    }
+Line 76:
+Line 77:    @Test public void parsesUnterminatedComments() {
+Line 78:        String html = "<p>Hello<!-- <tr><td>";
+Line 79:        Document doc = Jsoup.parse(html);
+Line 80:        Element p = doc.getElementsByTag("p").get(0);
+Line 81:        assertEquals("Hello", p.text());
+Line 82:        TextNode text = (TextNode) p.childNode(0);
+Line 83:        assertEquals("Hello", text.getWholeText());
+Line 84:        Comment comment = (Comment) p.childNode(1);
+Line 85:        assertEquals(" <tr><td>", comment.getData());
+Line 86:    }
+Line 87:
+Line 88:    @Test public void dropsUnterminatedTag() {
+Line 89:        // jsoup used to parse this to <p>, but whatwg, webkit will drop.
+
+; Action at iteration4 : {'name': 'extract_test_code', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'test_file_path': 'org.jsoup.parser.HtmlParserTest'}}
+---
+Result at iteration 4: The result of executing that last command is:
+ Command extract_test_code returned: public void handlesDeepStack() {
+        // inspired by http://sv.stargate.wikia.com/wiki/M2J and https://github.com/jhy/jsoup/issues/955
+        // I didn't put it in the integration tests, because explorer and intellij kept dieing trying to preview/index it
+
+        // Arrange
+        StringBuilder longBody = new StringBuilder(500000);
+        for (int i = 0; i < 25000; i++) {
+            longBody.append(i).append("<dl><dd>");
+        }
+        for (int i = 0; i < 25000; i++) {
+            longBody.append(i).append("</dd></dl>");
+        }
+
+        // Act
+        long start = System.currentTimeMillis();
+        Document doc = Parser.parseBodyFragment(longBody.toString(), "");
+
+        // Assert
+        assertEquals(2, doc.body().childNodeSize());
+        assertEquals(25000, doc.select("dd").size());
+        assertTrue(System.currentTimeMillis() - start < 1000);
+    }
+
+    @Test
+    
+; Action at iteration5 : {'name': 'read_range', 'args': {'project_name': 'Jsoup', 'bug_index': '67', 'filepath': 'org.jsoup.parser.HtmlTreeBuilder.java', 'startline': 42, 'endline': 468}}
+---
+Result at iteration 5: The result of executing that last command is:
+ Command read_range returned a lengthy response, we truncated it to the first 4000 characters: Line 42:
+Line 43:    private HtmlTreeBuilderState state; // the current state
+Line 44:    private HtmlTreeBuilderState originalState; // original / marked state
+Line 45:
+Line 46:    private boolean baseUriSetFromDoc;
+Line 47:    private Element headElement; // the current head element
+Line 48:    private FormElement formElement; // the current form element
+Line 49:    private Element contextElement; // fragment parse context -- could be null even if fragment parsing
+Line 50:    private ArrayList<Element> formattingElements; // active (open) formatting elements
+Line 51:    private List<String> pendingTableCharacters; // chars in table to be shifted out
+Line 52:    private Token.EndTag emptyEnd; // reused empty end tag
+Line 53:
+Line 54:    private boolean framesetOk; // if ok to go into frameset
+Line 55:    private boolean fosterInserts; // if next inserts should be fostered
+Line 56:    private boolean fragmentParsing; // if parsing a fragment of html
+Line 57:
+Line 58:    HtmlTreeBuilder() {}
+Line 59:
+Line 60:    ParseSettings defaultSettings() {
+Line 61:        return ParseSettings.htmlDefault;
+Line 62:    }
+Line 63:
+Line 64:    @Override
+Line 65:    protected void initialiseParse(Reader input, String baseUri, ParseErrorList errors, ParseSettings settings) {
+Line 66:        super.initialiseParse(input, baseUri, errors, settings);
+Line 67:
+Line 68:        // this is a bit mucky. todo - probably just create new parser objects to ensure all reset.
+Line 69:        state = HtmlTreeBuilderState.Initial;
+Line 70:        originalState = null;
+Line 71:        baseUriSetFromDoc = false;
+Line 72:        headElement = null;
+Line 73:        formElement = null;
+Line 74:        contextElement = null;
+Line 75:        formattingElements = new ArrayList<>();
+Line 76:        pendingTableCharacters = new ArrayList<>();
+Line 77:        emptyEnd = new Token.EndTag();
+Line 78:        framesetOk = true;
+Line 79:        fosterInserts = false;
+Line 80:        fragmentParsing = false;
+Line 81:    }
+Line 82:
+Line 83:    List<Node> parseFragment(String inputFragment, Element context, String baseUri, ParseErrorList errors, ParseSettings settings) {
+Line 84:        // context may be null
+Line 85:        state = HtmlTreeBuilderState.Initial;
+Line 86:        initialiseParse(new StringReader(inputFragment), baseUri, errors, settings);
+Line 87:        contextElement = context;
+Line 88:        fragmentParsing = true;
+Line 89:        Element root = null;
+Line 90:
+Line 91:        if (context != null) {
+Line 92:            if (context.ownerDocument() != null) // quirks setup:
+Line 93:                doc.quirksMode(context.ownerDocument().quirksMode());
+Line 94:
+Line 95:            // initialise the tokeniser state:
+Line 96:            String contextTag = context.tagName();
+Line 97:            if (StringUtil.in(contextTag, "title", "textarea"))
+Line 98:                tokeniser.transition(TokeniserState.Rcdata);
+Line 99:            else if (StringUtil.in(contextTag, "iframe", "noembed", "noframes", "style", "xmp"))
+Line 100:                tokeniser.transition(TokeniserState.Rawtext);
+Line 101:            else if (contextTag.equals("script"))
+Line 102:                tokeniser.transition(TokeniserState.ScriptData);
+Line 103:            else if (contextTag.equals(("noscript")))
+Line 104:                tokeniser.transition(TokeniserState.Data); // if scripting enabled, rawtext
+Line 105:            else if (contextTag.equals("plaintext"))
+Line 106:                tokeniser.transition(TokeniserState.Data);
+Line 107:            else
+Line 108:                tokeniser.transition(TokeniserState.Data); // default
+Line 109:
+Line 110:            root = new Element(Tag.valueOf("html", settings), baseUri);
+Line 111:            doc.appendChild(root);
+Line 112:            stack.add(root);
+Line 113:            resetInsertionMode();
+Line 114:
+Line 115:            // setup form element to nearest form on context (up ancestor chain). ensures form controls are associated
+Line 116:    
+; Action at iteration6 : {'name': 'read_range', 'args': {'project_name': 'Jsoup', 'bug_index': '67', 'filepath': 'org.jsoup.parser.HtmlTreeBuilder.java', 'startline': 83, 'endline': 116}}
+---
+Result at iteration 6: The result of executing that last command is:
+ Command read_range returned: Line 83:    List<Node> parseFragment(String inputFragment, Element context, String baseUri, ParseErrorList errors, ParseSettings settings) {
+Line 84:        // context may be null
+Line 85:        state = HtmlTreeBuilderState.Initial;
+Line 86:        initialiseParse(new StringReader(inputFragment), baseUri, errors, settings);
+Line 87:        contextElement = context;
+Line 88:        fragmentParsing = true;
+Line 89:        Element root = null;
+Line 90:
+Line 91:        if (context != null) {
+Line 92:            if (context.ownerDocument() != null) // quirks setup:
+Line 93:                doc.quirksMode(context.ownerDocument().quirksMode());
+Line 94:
+Line 95:            // initialise the tokeniser state:
+Line 96:            String contextTag = context.tagName();
+Line 97:            if (StringUtil.in(contextTag, "title", "textarea"))
+Line 98:                tokeniser.transition(TokeniserState.Rcdata);
+Line 99:            else if (StringUtil.in(contextTag, "iframe", "noembed", "noframes", "style", "xmp"))
+Line 100:                tokeniser.transition(TokeniserState.Rawtext);
+Line 101:            else if (contextTag.equals("script"))
+Line 102:                tokeniser.transition(TokeniserState.ScriptData);
+Line 103:            else if (contextTag.equals(("noscript")))
+Line 104:                tokeniser.transition(TokeniserState.Data); // if scripting enabled, rawtext
+Line 105:            else if (contextTag.equals("plaintext"))
+Line 106:                tokeniser.transition(TokeniserState.Data);
+Line 107:            else
+Line 108:                tokeniser.transition(TokeniserState.Data); // default
+Line 109:
+Line 110:            root = new Element(Tag.valueOf("html", settings), baseUri);
+Line 111:            doc.appendChild(root);
+Line 112:            stack.add(root);
+Line 113:            resetInsertionMode();
+Line 114:
+Line 115:            // setup form element to nearest form on context (up ancestor chain). ensures form controls are associated
+Line 116:            // with form correctly
+
+; Action at iteration7 : {'name': 'extract_test_code', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'test_file_path': 'org.jsoup.parser.HtmlParserTest'}}
+---
+Result at iteration 7: The result of executing that last command is:
+ Command extract_test_code returned: public void handlesDeepStack() {
+        // inspired by http://sv.stargate.wikia.com/wiki/M2J and https://github.com/jhy/jsoup/issues/955
+        // I didn't put it in the integration tests, because explorer and intellij kept dieing trying to preview/index it
+
+        // Arrange
+        StringBuilder longBody = new StringBuilder(500000);
+        for (int i = 0; i < 25000; i++) {
+            longBody.append(i).append("<dl><dd>");
+        }
+        for (int i = 0; i < 25000; i++) {
+            longBody.append(i).append("</dd></dl>");
+        }
+
+        // Act
+        long start = System.currentTimeMillis();
+        Document doc = Parser.parseBodyFragment(longBody.toString(), "");
+
+        // Assert
+        assertEquals(2, doc.body().childNodeSize());
+        assertEquals(25000, doc.select("dd").size());
+        assertTrue(System.currentTimeMillis() - start < 1000);
+    }
+
+    @Test
+    
+; Action at iteration8 : {'name': 'express_hypothesis', 'args': {'hypothesis': "The bug may be related to the parsing of a large HTML body in the 'parseFragment' method, potentially causing an issue with the HtmlTreeBuilderState transitions or element creation."}}
+---
+Result at iteration 8: The result of executing that last command is:
+ Command express_hypothesis returned: Since you have a hypothesis about the bug, the current state have been changed from 'collect information to understand the bug' to 'collect information to fix the bug'
+; Action at iteration9 : {'name': 'search_code_base', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'key_words': ['HtmlTreeBuilder', 'parseFragment', 'HtmlTreeBuilderState']}}
+---
+Result at iteration 9: The result of executing that last command is:
+ Failure: command search_code_base returned too much output.                     Do not execute this command again with the same arguments.
+; Action at iteration10 : {'name': 'extract_method_code', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'filepath': 'org.jsoup.parser.HtmlTreeBuilder.java', 'method_name': 'parseFragment'}}
+---
+Result at iteration 10: The result of executing that last command is:
+ Command extract_method_code returned: We found the following implementations for the method name parseFragment (we give the body of the method):
+### Implementation candidate 0:
+    List<Node> parseFragment(String inputFragment, Element context, String baseUri, ParseErrorList errors, ParseSettings settings) {
+        // context may be null
+        state = HtmlTreeBuilderState.Initial;
+        initialiseParse(new StringReader(inputFragment), baseUri, errors, settings);
+        contextElement = context;
+        fragmentParsing = true;
+        Element root = null;
+
+        if (context != null) {
+            if (context.ownerDocument() != null) // quirks setup:
+                doc.quirksMode(context.ownerDocument().quirksMode());
+
+            // initialise the tokeniser state:
+            String contextTag = context.tagName();
+            if (StringUtil.in(contextTag, "title", "textarea"))
+                tokeniser.transition(TokeniserState.Rcdata);
+            else if (StringUtil.in(contextTag, "iframe", "noembed", "noframes", "style", "xmp"))
+                tokeniser.transition(TokeniserState.Rawtext);
+            else if (contextTag.equals("script"))
+                tokeniser.transition(TokeniserState.ScriptData);
+            else if (contextTag.equals(("noscript")))
+                tokeniser.transition(TokeniserState.Data); // if scripting enabled, rawtext
+            else if (contextTag.equals("plaintext"))
+                tokeniser.transition(TokeniserState.Data);
+            else
+                tokeniser.transition(TokeniserState.Data); // default
+
+            root = new Element(Tag.valueOf("html", settings), baseUri);
+            doc.appendChild(root);
+            stack.add(root);
+            resetInsertionMode();
+
+            // setup form element to nearest form on context (up ancestor chain). ensures form controls are associated
+            // with form correctly
+            Elements contextChain = context.parents();
+            contextChain.add(0, context);
+            for (Element parent: contextChain) {
+                if (parent instanceof FormElement) {
+                    formElement = (FormElement) parent;
+                    break;
+                }
+            }
+        }
+
+        runParser();
+        if (context != null)
+            return root.childNodes();
+        else
+            return doc.childNodes();
+    }
+
+; Action at iteration11 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]}}
+---
+Result at iteration 11: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration12 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 86, 'new_lines': ['if (context != null) {', '    if (context.parents().size() > MAX_DEPTH) {', '        throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '    }', '}']}]}]}}
+---
+Result at iteration 12: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration13 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]}}
+---
+Result at iteration 13: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration14 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 86, 'new_lines': ['if (context != null) {', '    if (context.parents() != null && context.parents().size() > MAX_DEPTH) {', '        throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '    }', '}']}]}]}}
+---
+Result at iteration 14: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration15 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 86, 'new_lines': ['if (context != null) {', '    if (context.parents() != null && context.parents().size() > MAX_DEPTH) {', '        throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '    }', '}']}]}]}}
+---
+Result at iteration 15: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration16 : {'name': 'extract_method_code', 'args': {'project_name': 'Jsoup', 'bug_index': '67', 'filepath': 'org.jsoup.parser.HtmlParserTest', 'method_name': 'handlesDeepStack'}}
+---
+Result at iteration 16: The result of executing that last command is:
+ Command extract_method_code returned: Error: 'ascii' codec can't decode byte 0xe2 in position 41327: ordinal not in range(128)
+; Action at iteration17 : {'name': 'read_range', 'args': {'project_name': 'Jsoup', 'bug_index': '67', 'filepath': 'org.jsoup.parser.HtmlTreeBuilder.java', 'startline': 42, 'endline': 468}}
+---
+Result at iteration 17: The result of executing that last command is:
+ Command read_range returned a lengthy response, we truncated it to the first 4000 characters: Line 42:
+Line 43:    private HtmlTreeBuilderState state; // the current state
+Line 44:    private HtmlTreeBuilderState originalState; // original / marked state
+Line 45:
+Line 46:    private boolean baseUriSetFromDoc;
+Line 47:    private Element headElement; // the current head element
+Line 48:    private FormElement formElement; // the current form element
+Line 49:    private Element contextElement; // fragment parse context -- could be null even if fragment parsing
+Line 50:    private ArrayList<Element> formattingElements; // active (open) formatting elements
+Line 51:    private List<String> pendingTableCharacters; // chars in table to be shifted out
+Line 52:    private Token.EndTag emptyEnd; // reused empty end tag
+Line 53:
+Line 54:    private boolean framesetOk; // if ok to go into frameset
+Line 55:    private boolean fosterInserts; // if next inserts should be fostered
+Line 56:    private boolean fragmentParsing; // if parsing a fragment of html
+Line 57:
+Line 58:    HtmlTreeBuilder() {}
+Line 59:
+Line 60:    ParseSettings defaultSettings() {
+Line 61:        return ParseSettings.htmlDefault;
+Line 62:    }
+Line 63:
+Line 64:    @Override
+Line 65:    protected void initialiseParse(Reader input, String baseUri, ParseErrorList errors, ParseSettings settings) {
+Line 66:        super.initialiseParse(input, baseUri, errors, settings);
+Line 67:
+Line 68:        // this is a bit mucky. todo - probably just create new parser objects to ensure all reset.
+Line 69:        state = HtmlTreeBuilderState.Initial;
+Line 70:        originalState = null;
+Line 71:        baseUriSetFromDoc = false;
+Line 72:        headElement = null;
+Line 73:        formElement = null;
+Line 74:        contextElement = null;
+Line 75:        formattingElements = new ArrayList<>();
+Line 76:        pendingTableCharacters = new ArrayList<>();
+Line 77:        emptyEnd = new Token.EndTag();
+Line 78:        framesetOk = true;
+Line 79:        fosterInserts = false;
+Line 80:        fragmentParsing = false;
+Line 81:    }
+Line 82:
+Line 83:    List<Node> parseFragment(String inputFragment, Element context, String baseUri, ParseErrorList errors, ParseSettings settings) {
+Line 84:        // context may be null
+Line 85:        state = HtmlTreeBuilderState.Initial;
+Line 86:        initialiseParse(new StringReader(inputFragment), baseUri, errors, settings);
+Line 87:        contextElement = context;
+Line 88:        fragmentParsing = true;
+Line 89:        Element root = null;
+Line 90:
+Line 91:        if (context != null) {
+Line 92:            if (context.ownerDocument() != null) // quirks setup:
+Line 93:                doc.quirksMode(context.ownerDocument().quirksMode());
+Line 94:
+Line 95:            // initialise the tokeniser state:
+Line 96:            String contextTag = context.tagName();
+Line 97:            if (StringUtil.in(contextTag, "title", "textarea"))
+Line 98:                tokeniser.transition(TokeniserState.Rcdata);
+Line 99:            else if (StringUtil.in(contextTag, "iframe", "noembed", "noframes", "style", "xmp"))
+Line 100:                tokeniser.transition(TokeniserState.Rawtext);
+Line 101:            else if (contextTag.equals("script"))
+Line 102:                tokeniser.transition(TokeniserState.ScriptData);
+Line 103:            else if (contextTag.equals(("noscript")))
+Line 104:                tokeniser.transition(TokeniserState.Data); // if scripting enabled, rawtext
+Line 105:            else if (contextTag.equals("plaintext"))
+Line 106:                tokeniser.transition(TokeniserState.Data);
+Line 107:            else
+Line 108:                tokeniser.transition(TokeniserState.Data); // default
+Line 109:
+Line 110:            root = new Element(Tag.valueOf("html", settings), baseUri);
+Line 111:            doc.appendChild(root);
+Line 112:            stack.add(root);
+Line 113:            resetInsertionMode();
+Line 114:
+Line 115:            // setup form element to nearest form on context (up ancestor chain). ensures form controls are associated
+Line 116:    
+; Action at iteration18 : {'name': 'extract_test_code', 'args': {'project_name': 'Jsoup', 'bug_index': '67', 'test_name': 'handlesDeepStack'}}
+---
+Result at iteration 18: The result of executing that last command is:
+ Command extract_test_code returned: Error: extract_test_code() missing 1 required positional argument: 'test_file_path'
+; Action at iteration19 : {'name': 'search_code_base', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'key_words': ['handlesDeepStack']}}
+---
+Result at iteration 19: The result of executing that last command is:
+ Failure: command search_code_base returned too much output.                     Do not execute this command again with the same arguments.
+; Action at iteration20 : {'name': 'extract_similar_functions_calls', 'args': {'project_name': 'Jsoup', 'bug_index': '67', 'file_path': 'org.jsoup.parser.HtmlParserTest', 'code_snippet': 'public void handlesDeepStack() {'}}
+---
+Result at iteration 20: The result of executing that last command is:
+ Command extract_similar_functions_calls returned: No similar functions calls were found. There is no need to use this command again.
+; Action at iteration21 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', 'throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]}}
+---
+Result at iteration 21: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration22 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 86, 'new_lines': ['if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', 'throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]}}
+---
+Result at iteration 22: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration23 : {'name': 'search_code_base', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'key_words': ['HtmlTreeBuilder', 'parseFragment', 'HtmlTreeBuilderState']}}
+---
+Result at iteration 23: The result of executing that last command is:
+ Failure: command search_code_base returned too much output.                     Do not execute this command again with the same arguments.
+; Action at iteration24 : {'name': 'extract_method_code', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'filepath': 'org.jsoup.parser.HtmlTreeBuilder.java', 'method_name': 'parseFragment'}}
+---
+Result at iteration 24: The result of executing that last command is:
+ Command extract_method_code returned: We found the following implementations for the method name parseFragment (we give the body of the method):
+### Implementation candidate 0:
+    List<Node> parseFragment(String inputFragment, Element context, String baseUri, ParseErrorList errors, ParseSettings settings) {
+        // context may be null
+        state = HtmlTreeBuilderState.Initial;
+        initialiseParse(new StringReader(inputFragment), baseUri, errors, settings);
+        contextElement = context;
+        fragmentParsing = true;
+        Element root = null;
+
+        if (context != null) {
+            if (context.ownerDocument() != null) // quirks setup:
+                doc.quirksMode(context.ownerDocument().quirksMode());
+
+            // initialise the tokeniser state:
+            String contextTag = context.tagName();
+            if (StringUtil.in(contextTag, "title", "textarea"))
+                tokeniser.transition(TokeniserState.Rcdata);
+            else if (StringUtil.in(contextTag, "iframe", "noembed", "noframes", "style", "xmp"))
+                tokeniser.transition(TokeniserState.Rawtext);
+            else if (contextTag.equals("script"))
+                tokeniser.transition(TokeniserState.ScriptData);
+            else if (contextTag.equals(("noscript")))
+                tokeniser.transition(TokeniserState.Data); // if scripting enabled, rawtext
+            else if (contextTag.equals("plaintext"))
+                tokeniser.transition(TokeniserState.Data);
+            else
+                tokeniser.transition(TokeniserState.Data); // default
+
+            root = new Element(Tag.valueOf("html", settings), baseUri);
+            doc.appendChild(root);
+            stack.add(root);
+            resetInsertionMode();
+
+            // setup form element to nearest form on context (up ancestor chain). ensures form controls are associated
+            // with form correctly
+            Elements contextChain = context.parents();
+            contextChain.add(0, context);
+            for (Element parent: contextChain) {
+                if (parent instanceof FormElement) {
+                    formElement = (FormElement) parent;
+                    break;
+                }
+            }
+        }
+
+        runParser();
+        if (context != null)
+            return root.childNodes();
+        else
+            return doc.childNodes();
+    }
+
+; Action at iteration25 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents().size() > MAX_DEPTH) {', 'throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]}}
+---
+Result at iteration 25: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration26 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', 'throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]}}
+---
+Result at iteration 26: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration27 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]}}
+---
+Result at iteration 27: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration28 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 86, 'new_lines': ['if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]}}
+---
+Result at iteration 28: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration29 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]}}
+---
+Result at iteration 29: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration30 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]}}
+---
+Result at iteration 30: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration31 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]}}
+---
+Result at iteration 31: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration32 : {'name': 'extract_method_code', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'filepath': 'org.jsoup.parser.HtmlTreeBuilder.java', 'method_name': 'parseFragment'}}
+---
+Result at iteration 32: The result of executing that last command is:
+ Command extract_method_code returned: We found the following implementations for the method name parseFragment (we give the body of the method):
+### Implementation candidate 0:
+    List<Node> parseFragment(String inputFragment, Element context, String baseUri, ParseErrorList errors, ParseSettings settings) {
+        // context may be null
+        state = HtmlTreeBuilderState.Initial;
+        initialiseParse(new StringReader(inputFragment), baseUri, errors, settings);
+        contextElement = context;
+        fragmentParsing = true;
+        Element root = null;
+
+        if (context != null) {
+            if (context.ownerDocument() != null) // quirks setup:
+                doc.quirksMode(context.ownerDocument().quirksMode());
+
+            // initialise the tokeniser state:
+            String contextTag = context.tagName();
+            if (StringUtil.in(contextTag, "title", "textarea"))
+                tokeniser.transition(TokeniserState.Rcdata);
+            else if (StringUtil.in(contextTag, "iframe", "noembed", "noframes", "style", "xmp"))
+                tokeniser.transition(TokeniserState.Rawtext);
+            else if (contextTag.equals("script"))
+                tokeniser.transition(TokeniserState.ScriptData);
+            else if (contextTag.equals(("noscript")))
+                tokeniser.transition(TokeniserState.Data); // if scripting enabled, rawtext
+            else if (contextTag.equals("plaintext"))
+                tokeniser.transition(TokeniserState.Data);
+            else
+                tokeniser.transition(TokeniserState.Data); // default
+
+            root = new Element(Tag.valueOf("html", settings), baseUri);
+            doc.appendChild(root);
+            stack.add(root);
+            resetInsertionMode();
+
+            // setup form element to nearest form on context (up ancestor chain). ensures form controls are associated
+            // with form correctly
+            Elements contextChain = context.parents();
+            contextChain.add(0, context);
+            for (Element parent: contextChain) {
+                if (parent instanceof FormElement) {
+                    formElement = (FormElement) parent;
+                    break;
+                }
+            }
+        }
+
+        runParser();
+        if (context != null)
+            return root.childNodes();
+        else
+            return doc.childNodes();
+    }
+
+; Action at iteration33 : {'name': 'search_code_base', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'key_words': ['parseFragment', 'context', 'tokeniser']}}
+---
+Result at iteration 33: The result of executing that last command is:
+ Failure: command search_code_base returned too much output.                     Do not execute this command again with the same arguments.
+; Action at iteration34 : {'name': 'AI_generates_method_code', 'args': {'project_name': 'Jsoup', 'bug_index': '67', 'filepath': 'org.jsoup.parser.HtmlTreeBuilder.java', 'method_name': 'parseFragment'}}
+---
+Result at iteration 34: The result of executing that last command is:
+ Command AI_generates_method_code returned: ```java
+    private void closeTo(String... elNames) {
+        for (int pos = stack.size() - 1; pos >= 0; pos--) {
+            Element next = stack.get(pos);
+            if (inSorted(next.nodeName(), elNames)) {
+                for (int i = stack.size() - 1; i >= pos; i--) {
+                    Element element = stack.get(i);
+                    stack.remove(i);
+                    if (element == next) {
+                        break;
+                    }
+                }
+                break;
+            }
+        }
+    }
+
+    private void generateImpliedEndTags(String excludeTag) {
+        while (StringUtil.in(stack.get(stack.size() - 1).nodeName(), TagSearchEndTags) && !stack.get(stack.size() - 1).nodeName().equals(excludeTag)) {
+            stack.remove(stack.size() - 1);
+        }
+    }
+
+    private void clearFormattingElementsToLastMarker() {
+        if (formattingElements.isEmpty()) {
+            return;
+        }
+        int size = formattingElements.size();
+        Element last = formattingElements.get(size - 1);
+        if (last == null || stack.contains(last)) {
+            return;
+        }
+        for (int i = size - 1; i >= 0; i--) {
+            Element element = formattingElements.get(i);
+            if (element == null) {
+                break;
+            } else {
+                formattingElements.remove(i);
+            }
+        }
+    }
+
+    private void reconstructFormattingElements() {
+        int size = formattingElements.size();
+        if (size == 0 || formattingElements.get(size - 1) == null) {
+            return;
+        }
+        Element entry = formattingElements.get(size - 1);
+        int pos = size - 1;
+        if (pos > 0 && formattingElements.get(pos - 1) != null) {
+            for (; pos > 0; pos--) {
+                Element element = formattingElements.get(pos - 1);
+                if (element == null) {
+                    break;
+                }
+                Element clone = element.clone();
+                entry.insertChildren(0, clone);
+                entry = clone;
+            }
+        }
+        Element clone = entry.clone();
+        formattingElements.set(pos, clone);
+        entry.replaceWith(clone);
+    }
+
+    private void insertMarkerToFormattingElements() {
+        formattingElements.add(null);
+    }
+
+    private void removeFromActiveFormattingElements(Element element) {
+        for (int i = formattingElements.size() - 1; i >= 0; i--) {
+            Element active = formattingElements.get(i);
+            if (active == null) {
+                break;
+            }
+            if (active == element) {
+                formattingElements.remove(i);
+                break;
+            }
+        }
+    }
+
+    private void removeDescendantsFromFormattingElements(Element element) {
+        for (int i = formattingElements.size() - 1; i >= 0; i--) {
+            Element active = formattingElements.get(i);
+            if (active == null || active == element) {
+                break;
+            }
+            formattingElements.remove(i);
+        }
+    }
+
+    private Element getActiveFormattingElement(String tagName) {
+        for (int i = formattingElements.size() - 1; i >= 0; i--) {
+            Element element = formattingElements.get(i);
+            if (element == null) {
+                break;
+            }
+            if (element.nodeName().equals(tagName)) {
+                return element;
+            }
+        }
+        return null;
+    }
+}
+```
+; Action at iteration35 : {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'changes_dicts': [{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 86, 'new_lines': ['// Alternative implementation for deep stack handling', 'closeTo("html");', 'generateImpliedEndTags(null);', 'clearFormattingElementsToLastMarker();', 'reconstructFormattingElements();', 'insertMarkerToFormattingElements();', 'removeFromActiveFormattingElements(context);', 'removeDescendantsFromFormattingElements(context);', 'getActiveFormattingElement("html");']}]}]}}
+---
+Result at iteration 35: The result of executing that last command is:
+ Command write_fix returned: Error: 'NoneType' object is not iterable
+; Action at iteration36 : {'name': 'extract_method_code', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'filepath': 'org.jsoup.parser.HtmlTreeBuilder.java', 'method_name': 'parseFragment'}}
+---
+Result at iteration 36: The result of executing that last command is:
+ Command extract_method_code returned: We found the following implementations for the method name parseFragment (we give the body of the method):
+### Implementation candidate 0:
+    List<Node> parseFragment(String inputFragment, Element context, String baseUri, ParseErrorList errors, ParseSettings settings) {
+        // context may be null
+        state = HtmlTreeBuilderState.Initial;
+        initialiseParse(new StringReader(inputFragment), baseUri, errors, settings);
+        contextElement = context;
+        fragmentParsing = true;
+        Element root = null;
+
+        if (context != null) {
+            if (context.ownerDocument() != null) // quirks setup:
+                doc.quirksMode(context.ownerDocument().quirksMode());
+
+            // initialise the tokeniser state:
+            String contextTag = context.tagName();
+            if (StringUtil.in(contextTag, "title", "textarea"))
+                tokeniser.transition(TokeniserState.Rcdata);
+            else if (StringUtil.in(contextTag, "iframe", "noembed", "noframes", "style", "xmp"))
+                tokeniser.transition(TokeniserState.Rawtext);
+            else if (contextTag.equals("script"))
+                tokeniser.transition(TokeniserState.ScriptData);
+            else if (contextTag.equals(("noscript")))
+                tokeniser.transition(TokeniserState.Data); // if scripting enabled, rawtext
+            else if (contextTag.equals("plaintext"))
+                tokeniser.transition(TokeniserState.Data);
+            else
+                tokeniser.transition(TokeniserState.Data); // default
+
+            root = new Element(Tag.valueOf("html", settings), baseUri);
+            doc.appendChild(root);
+            stack.add(root);
+            resetInsertionMode();
+
+            // setup form element to nearest form on context (up ancestor chain). ensures form controls are associated
+            // with form correctly
+            Elements contextChain = context.parents();
+            contextChain.add(0, context);
+            for (Element parent: contextChain) {
+                if (parent instanceof FormElement) {
+                    formElement = (FormElement) parent;
+                    break;
+                }
+            }
+        }
+
+        runParser();
+        if (context != null)
+            return root.childNodes();
+        else
+            return doc.childNodes();
+    }
+
+; Action at iteration37 : {'name': 'AI_generates_method_code', 'args': {'project_name': 'Jsoup', 'bug_index': '67', 'filepath': 'org.jsoup.parser.HtmlTreeBuilder.java', 'method_name': 'parseFragment'}}
+---
+Result at iteration 37: The result of executing that last command is:
+ Command AI_generates_method_code returned: ```java
+    private void parseFragment(String inputFragment, Element context, String baseUri, ParseErrorList errors, ParseSettings settings) {
+        state = HtmlTreeBuilderState.Initial;
+        initialiseParse(new StringReader(inputFragment), baseUri, errors, settings);
+        contextElement = context;
+        fragmentParsing = true;
+        Element root = null;
+
+        if (context != null) {
+            if (context.ownerDocument() != null)
+                doc.quirksMode(context.ownerDocument().quirksMode());
+
+            String contextTag = context.tagName();
+            if (StringUtil.in(contextTag, "title", "textarea"))
+                tokeniser.transition(TokeniserState.Rcdata);
+            else if (StringUtil.in(contextTag, "iframe", "noembed", "noframes", "style", "xmp"))
+                tokeniser.transition(TokeniserState.Rawtext);
+            else if (contextTag.equals("script"))
+                tokeniser.transition(TokeniserState.ScriptData);
+            else if (contextTag.equals(("noscript")))
+                tokeniser.transition(TokeniserState.Data);
+            else if (contextTag.equals("plaintext"))
+                tokeniser.transition(TokeniserState.Data);
+            else
+                tokeniser.transition(TokeniserState.Data);
+
+            root = new Element(Tag.valueOf("html", settings), baseUri);
+            doc.appendChild(root);
+            stack.add(root);
+            resetInsertionMode();
+
+            Elements contextChain = context.parents();
+            contextChain.add(0, context);
+            for (Element parent: contextChain) {
+                if (parent instanceof FormElement) {
+                    formElement = (FormElement) parent;
+                    break;
+                }
+            }
+        }
+
+        runParser();
+        if (context != null)
+            return root.childNodes();
+        else
+            return doc.childNodes();
+    }
+```
+; Action at iteration38 : {'name': 'search_code_base', 'args': {'project_name': 'Jsoup', 'bug_index': 67, 'key_words': ['parseFragment', 'context', 'tokeniser']}}
+---
+Result at iteration 38: The result of executing that last command is:
+ Failure: command search_code_base returned too much output.                     Do not execute this command again with the same arguments.
+; Action at iteration39 : END OF TRAJECTORY
+---

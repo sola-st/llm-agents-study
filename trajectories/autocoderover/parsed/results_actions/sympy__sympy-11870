@@ -1,0 +1,122 @@
+Result at Iteration 0: Result of search_method("trigsimp"):
+Found 3 methods with name trigsimp in the codebase.
+Search result 1: <file>sympy/simplify/trigsimp.py</file> <func>trigsimp</func> <code>def trigsimp(expr, **opts):
+    """
+    reduces expression by using known trig identities
+
+    Notes
+    =====
+
+    method:
+    - Determine the method to use. Valid choices are 'matching' (default),
+    'groebner', 'combined', and 'fu'. If 'matching', simplify the
+    expression recursively by targeting common patterns. If 'groebner', apply
+    an experimental groebner basis algorithm. In this case further options
+    are forwarded to ``trigsimp_groebner``, please refer to its docstring.
+    If 'combined', first run the groebner basis algorithm with small
+    default parameters, then run the 'matching' algorithm. 'fu' runs the
+    collection of trigonometric transformations described by Fu, et al.
+    (see the `fu` docstring).
+
+
+    Examples
+    ========
+
+    >>> from sympy import trigsimp, sin, cos, log
+    >>> from sympy.abc import x, y
+    >>> e = 2*sin(x)**2 + 2*cos(x)**2
+    >>> trigsimp(e)
+    2
+
+    Simplification occurs wherever trigonometric functions are located.
+
+    >>> trigsimp(log(e))
+    log(2)
+
+    Using `method="groebner"` (or `"combined"`) might lead to greater
+    simplification.
+
+    The old trigsimp routine can be accessed as with method 'old'.
+
+    >>> from sympy import coth, tanh
+    >>> t = 3*tanh(x)**7 - 2/coth(x)**7
+    >>> trigsimp(t, method='old') == t
+    True
+    >>> trigsimp(t)
+    tanh(x)**7
+
+    """
+    from sympy.simplify.fu import fu
+
+    expr = sympify(expr)
+
+    try:
+        return expr._eval_trigsimp(**opts)
+    except AttributeError:
+        pass
+
+    old = opts.pop('old', False)
+    if not old:
+        opts.pop('deep', None)
+        recursive = opts.pop('recursive', None)
+        method = opts.pop('method', 'matching')
+    else:
+        method = 'old'
+
+    def groebnersimp(ex, **opts):
+        def traverse(e):
+            if e.is_Atom:
+                return e
+            args = [traverse(x) for x in e.args]
+            if e.is_Function or e.is_Pow:
+                args = [trigsimp_groebner(x, **opts) for x in args]
+            return e.func(*args)
+        new = traverse(ex)
+        if not isinstance(new, Expr):
+            return new
+        return trigsimp_groebner(new, **opts)
+
+    trigsimpfunc = {
+        'fu': (lambda x: fu(x, **opts)),
+        'matching': (lambda x: futrig(x)),
+        'groebner': (lambda x: groebnersimp(x, **opts)),
+        'combined': (lambda x: futrig(groebnersimp(x,
+                               polynomial=True, hints=[2, tan]))),
+        'old': lambda x: trigsimp_old(x, **opts),
+                   }[method]
+
+    return trigsimpfunc(expr)
+</code>
+
+Search result 2: <file>sympy/vector/basisdependent.py</file> <class>BasisDependent</class> <func>trigsimp</func> <code>    def trigsimp(self, **opts):
+        """
+        Implements the SymPy trigsimp routine, for this quantity.
+
+        trigsimp's documentation
+        ========================
+
+        """
+        trig_components = [tsimp(v, **opts) * k for
+                           k, v in self.components.items()]
+        return self._add_func(*trig_components)
+</code>
+
+Search result 3: <file>sympy/core/expr.py</file> <class>Expr</class> <func>trigsimp</func> <code>    def trigsimp(self, **args):
+        """See the trigsimp function in sympy.simplify"""
+        from sympy.simplify import trigsimp
+        return trigsimp(self, **args)
+</code>
+Action at Iteration 1: Analyze
+
+Result at Iteration 1: The result is contained in the reasoning
+Action at Iteration 2: Locate
+
+Result at Iteration 2: The result is contained in the reasoning
+Action at Iteration 3: write_patch
+
+Result at Iteration 3: The result is contained in the reasoning
+Action at Iteration 4: write_patch
+
+Result at Iteration 4: The result is contained in the reasoning
+Action at Iteration 5: ErrorResponse
+

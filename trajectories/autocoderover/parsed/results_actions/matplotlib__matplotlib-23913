@@ -1,0 +1,150 @@
+Result at Iteration 0: Result of search_class("Legend"):
+Found 1 classes with name Legend in the codebase.
+Search result 1: <file>lib/matplotlib/legend.py</file> <class>Legend</class> <code>class Legend(Artist):
+    codes = {'best': 0, **AnchoredOffsetbox.codes}
+    zorder = 5
+    def __str__(self):
+    @_api.make_keyword_only("3.6", "loc")
+    @_docstring.dedent_interpd
+    def __init__(
+        self, parent, handles, labels,
+        loc=None,
+        numpoints=None,      # number of points in the legend line
+        markerscale=None,    # relative size of legend markers vs. original
+        markerfirst=True,    # left/right ordering of legend marker and label
+        scatterpoints=None,  # number of scatter points
+        scatteryoffsets=None,
+        prop=None,           # properties for the legend texts
+        fontsize=None,       # keyword to set font size directly
+        labelcolor=None,     # keyword to set the text color
+
+        borderpad=None,      # whitespace inside the legend border
+        labelspacing=None,   # vertical space between the legend entries
+        handlelength=None,   # length of the legend handles
+        handleheight=None,   # height of the legend handles
+        handletextpad=None,  # pad between the legend handle and text
+        borderaxespad=None,  # pad between the axes and legend border
+        columnspacing=None,  # spacing between columns
+
+        ncols=1,     # number of columns
+        mode=None,  # horizontal distribution of columns: None or "expand"
+
+        fancybox=None,  # True: fancy box, False: rounded box, None: rcParam
+        shadow=None,
+        title=None,           # legend title
+        title_fontsize=None,  # legend title font size
+        framealpha=None,      # set frame alpha
+        edgecolor=None,       # frame patch edgecolor
+        facecolor=None,       # frame patch facecolor
+
+        bbox_to_anchor=None,  # bbox to which the legend will be anchored
+        bbox_transform=None,  # transform for the bbox
+        frameon=None,         # draw frame
+        handler_map=None,
+        title_fontproperties=None,  # properties for the legend title
+        alignment="center",       # control the alignment within the legend box
+        *,
+        ncol=1  # synonym for ncols (backward compatibility)
+    ):
+    def _set_artist_props(self, a):
+    def _set_loc(self, loc):
+    def set_ncols(self, ncols):
+    def _get_loc(self):
+    _loc = property(_get_loc, _set_loc)
+    def _findoffset(self, width, height, xdescent, ydescent, renderer):
+    @allow_rasterization
+    def draw(self, renderer):
+    _default_handler_map = {
+        StemContainer: legend_handler.HandlerStem(),
+        ErrorbarContainer: legend_handler.HandlerErrorbar(),
+        Line2D: legend_handler.HandlerLine2D(),
+        Patch: legend_handler.HandlerPatch(),
+        StepPatch: legend_handler.HandlerStepPatch(),
+        LineCollection: legend_handler.HandlerLineCollection(),
+        RegularPolyCollection: legend_handler.HandlerRegularPolyCollection(),
+        CircleCollection: legend_handler.HandlerCircleCollection(),
+        BarContainer: legend_handler.HandlerPatch(
+            update_func=legend_handler.update_from_first_child),
+        tuple: legend_handler.HandlerTuple(),
+        PathCollection: legend_handler.HandlerPathCollection(),
+        PolyCollection: legend_handler.HandlerPolyCollection()
+        }
+    @classmethod
+    def get_default_handler_map(cls):
+    @classmethod
+    def set_default_handler_map(cls, handler_map):
+    @classmethod
+    def update_default_handler_map(cls, handler_map):
+    def get_legend_handler_map(self):
+    @staticmethod
+    def get_legend_handler(legend_handler_map, orig_handle):
+    def _init_legend_box(self, handles, labels, markerfirst=True):
+    def _auto_legend_data(self):
+    def get_children(self):
+    def get_frame(self):
+    def get_lines(self):
+    def get_patches(self):
+    def get_texts(self):
+    def set_alignment(self, alignment):
+    def get_alignment(self):
+    def set_title(self, title, prop=None):
+    def get_title(self):
+    def get_window_extent(self, renderer=None):
+    def get_tightbbox(self, renderer=None):
+    def get_frame_on(self):
+    def set_frame_on(self, b):
+    draw_frame = set_frame_on  # Backcompat alias.
+    def get_bbox_to_anchor(self):
+    def set_bbox_to_anchor(self, bbox, transform=None):
+    def _get_anchored_bbox(self, loc, bbox, parentbbox, renderer):
+    def _find_best_position(self, width, height, renderer, consider=None):
+    def contains(self, event):
+    def set_draggable(self, state, use_blit=False, update='loc'):
+    def get_draggable(self):
+</code>
+
+
+
+Result of search_method("draggable"):
+Found 1 methods with name draggable in the codebase.
+Search result 1: <file>lib/matplotlib/text.py</file> <class>_AnnotationBase</class> <func>draggable</func> <code>    def draggable(self, state=None, use_blit=False):
+        """
+        Set whether the annotation is draggable with the mouse.
+
+        Parameters
+        ----------
+        state : bool or None
+            - True or False: set the draggability.
+            - None: toggle the draggability.
+
+        Returns
+        -------
+        DraggableAnnotation or None
+            If the annotation is draggable, the corresponding
+            `.DraggableAnnotation` helper is returned.
+        """
+        from matplotlib.offsetbox import DraggableAnnotation
+        is_draggable = self._draggable is not None
+
+        # if state is None we'll toggle
+        if state is None:
+            state = not is_draggable
+
+        if state:
+            if self._draggable is None:
+                self._draggable = DraggableAnnotation(self, use_blit)
+        else:
+            if self._draggable is not None:
+                self._draggable.disconnect()
+            self._draggable = None
+
+        return self._draggable
+</code>
+Action at Iteration 1: Analyze
+
+Result at Iteration 1: The result is contained in the reasoning
+Action at Iteration 2: Locate
+
+Result at Iteration 2: The result is contained in the reasoning
+Action at Iteration 3: write_patch
+

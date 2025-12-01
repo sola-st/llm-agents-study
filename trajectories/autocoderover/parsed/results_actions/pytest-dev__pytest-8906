@@ -1,0 +1,79 @@
+Result at Iteration 0: Result of search_method("skip"):
+Found 1 methods with name skip in the codebase.
+Search result 1: <file>src/_pytest/outcomes.py</file> <func>skip</func> <code>def skip(msg: str = "", *, allow_module_level: bool = False) -> "NoReturn":
+    """Skip an executing test with the given message.
+
+    This function should be called only during testing (setup, call or teardown) or
+    during collection by using the ``allow_module_level`` flag.  This function can
+    be called in doctests as well.
+
+    :param bool allow_module_level:
+        Allows this function to be called at module level, skipping the rest
+        of the module. Defaults to False.
+
+    .. note::
+        It is better to use the :ref:`pytest.mark.skipif ref` marker when
+        possible to declare a test to be skipped under certain conditions
+        like mismatching platforms or dependencies.
+        Similarly, use the ``# doctest: +SKIP`` directive (see `doctest.SKIP
+        <https://docs.python.org/3/library/how-to/doctest.html#doctest.SKIP>`_)
+        to skip a doctest statically.
+    """
+    __tracebackhide__ = True
+    raise Skipped(msg=msg, allow_module_level=allow_module_level)
+</code>
+
+
+
+Result of search_code("allow_module_level=True"):
+Found 9 snippets containing `allow_module_level=True` in the codebase.
+They appeared in the following files:
+<file>testing/test_pluginmanager.py</file> (1 matches)
+<file>testing/test_runner.py</file> (1 matches)
+<file>testing/test_warnings.py</file> (1 matches)
+<file>testing/test_unraisableexception.py</file> (1 matches)
+<file>testing/test_threadexception.py</file> (1 matches)
+<file>testing/test_skipping.py</file> (2 matches)
+<file>src/_pytest/outcomes.py</file> (2 matches)
+
+
+Result of search_method("skip_module"):
+Could not find method skip_module in the codebase.
+
+Result of search_code("pytestmark = pytest.mark.skip"):
+Found 4 snippets containing `pytestmark = pytest.mark.skip` in the codebase.
+They appeared in the following files:
+<file>testing/test_mark.py</file> (1 matches)
+<file>testing/test_skipping.py</file> (3 matches)
+
+
+Result of search_code("pytestmark = pytest.mark.skipif"):
+Found 3 snippets containing `pytestmark = pytest.mark.skipif` in the codebase.
+Search result 1: <file>testing/test_mark.py</file> <class>TestFunctional</class> <func>test_mark_from_parameters</func> <code>
+            import pytest
+
+            pytestmark = pytest.mark.skipif(True, reason='skip all')
+
+            # skipifs inside fixture params</code>
+
+Search result 2: <file>testing/test_skipping.py</file> <class>TestEvaluation</class> <func>test_skipif_class</func> <code>
+            import pytest
+            class TestClass(object):
+                pytestmark = pytest.mark.skipif("config._hackxyz")
+                def test_func(self):
+                    pass</code>
+
+Search result 3: <file>testing/test_skipping.py</file> <func>test_skipif_class</func> <code>
+
+        class TestClass(object):
+            pytestmark = pytest.mark.skipif("True")
+            def test_that(self):
+                assert 0</code>
+Action at Iteration 1: Analyze
+
+Result at Iteration 1: The result is contained in the reasoning
+Action at Iteration 2: Locate
+
+Result at Iteration 2: The result is contained in the reasoning
+Action at Iteration 3: write_patch
+

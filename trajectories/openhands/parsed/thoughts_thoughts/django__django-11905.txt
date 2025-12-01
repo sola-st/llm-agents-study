@@ -1,0 +1,29 @@
+Thought at iteration 0: I'll help you implement the necessary changes to prevent using __isnull lookup with non-boolean values in Django. Let's follow the steps:
+
+1. First, let's explore the repository structure to understand where the relevant code might be:
+Thought at iteration 1: Based on the repository structure, we can see this is a Django repository. The issue is related to the `__isnull` lookup, which is a database query feature. This lookup is likely handled in the database query handling code, which should be in the `django/db` directory.
+
+Let's first create a script to reproduce the issue:
+Thought at iteration 2: Now let's look for the code that handles the `__isnull` lookup in the Django codebase:
+Thought at iteration 3: Let's check the content of `django/db/models/lookups.py` since that's likely where the lookup is defined:
+Thought at iteration 4: Let's search for the `isnull` lookup in this file:
+Thought at iteration 5: Let's view the specific section around line 462:
+Thought at iteration 6: Perfect! I found the `IsNull` lookup class. The issue is that it doesn't validate that the `rhs` (right-hand side) value is a boolean. Let's modify the class to add this validation:
+Thought at iteration 7: The changes look good. I've added a `get_prep_lookup()` method that validates the `rhs` value is a boolean before proceeding. If it's not a boolean, it raises a ValueError with a descriptive message.
+
+Now let's try to run our reproduction script to confirm the error is caught:
+Thought at iteration 8: Ah, we need to configure Django settings first. Let's modify our reproduction script:
+Thought at iteration 9: The changes look good. Now let's run the script again:
+Thought at iteration 10: We need to call django.setup() before defining the model. Let's fix that:
+Thought at iteration 11: The changes look good. Now let's run the script again:
+Thought at iteration 12: We need to add our test app to INSTALLED_APPS. Let's fix that:
+Thought at iteration 13: The changes look good. Now let's run the script again:
+Thought at iteration 14: We need to create a test_app module. Let's do that:
+Thought at iteration 15: None
+Thought at iteration 16: None
+Thought at iteration 17: Now let's run the script again:
+Thought at iteration 18: None
+Thought at iteration 19: Perfect! Our changes are working as expected. The script raises a ValueError when trying to use a non-boolean value (integer 1) with the __isnull lookup.
+
+Let's test a few edge cases to make sure our implementation is robust:
+Thought at iteration 20: The changes look good. Now let's run the script again to test all edge cases:

@@ -1,0 +1,20 @@
+Action at Iteration 0: search_class("PolyFit");search_method("polyfit");search_method("lstsq")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: Localize
+
+Action at Iteration 3: search_method_in_class("_fit_predict", "PolyFit")
+
+Action at Iteration 4: Locate
+
+Action at Iteration 5: Localize
+
+Action at Iteration 6: Localize
+
+Action at Iteration 7: Localize
+
+Action at Iteration 8: ErrorResponse
+
+Action at Iteration 9: write_patch
+

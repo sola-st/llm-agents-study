@@ -1,0 +1,10 @@
+Action at Iteration 0: search_method_in_file("draw_text", "backend_ps.py"), search_code_in_file("for ps_name, xs_names in stream:", "backend_ps.py"), search_code("TypeError: cannot unpack non-iterable NoneType object")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: Localize
+
+Action at Iteration 3: Locate
+
+Action at Iteration 4: write_patch
+

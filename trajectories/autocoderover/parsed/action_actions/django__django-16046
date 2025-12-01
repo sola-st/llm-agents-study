@@ -1,0 +1,8 @@
+Action at Iteration 0: search_code_in_file("if str_number[0] == \"-\"", "numberformat.py")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: Locate
+
+Action at Iteration 3: write_patch
+

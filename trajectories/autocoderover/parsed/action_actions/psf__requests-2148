@@ -1,0 +1,12 @@
+Action at Iteration 0: search_class("ConnectionError");search_method_in_class("iter_content", "Response");search_method_in_class("stream", "HTTPResponse");search_code("socket.error")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: search_code_in_file("socket.error", "requests/adapters.py");search_code_in_file("socket.error", "requests/utils.py")
+
+Action at Iteration 3: Analyze
+
+Action at Iteration 4: Locate
+
+Action at Iteration 5: write_patch
+

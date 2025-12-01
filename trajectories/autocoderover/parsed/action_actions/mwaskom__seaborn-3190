@@ -1,0 +1,12 @@
+Action at Iteration 0: search_method_in_class("Plot._plot", "Plot"), search_method_in_class("_setup_scales", "Plotter"), search_method_in_class("_setup", "ContinuousBase")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: Localize
+
+Action at Iteration 3: Localize
+
+Action at Iteration 4: ErrorResponse
+
+Action at Iteration 5: write_patch
+

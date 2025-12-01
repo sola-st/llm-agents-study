@@ -1,0 +1,12 @@
+Action at Iteration 0: search_method("subs");search_method("limit")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: search_method_in_file("subs", "sympy/core/basic.py");search_method_in_file("limit", "sympy/series/limits.py")
+
+Action at Iteration 3: Analyze
+
+Action at Iteration 4: Locate
+
+Action at Iteration 5: write_patch
+

@@ -1,0 +1,12 @@
+Action at Iteration 0: search_method("--fixtures");search_method("register_fixture");search_method("display_fixtures")
+
+Action at Iteration 1: search_class("FixtureDef");search_method("parse_args");search_code("fixture scope")
+
+Action at Iteration 2: search_class("FixtureDef");search_method("parse_args");search_code("fixture scope")
+
+Action at Iteration 3: Analyze
+
+Action at Iteration 4: Locate
+
+Action at Iteration 5: write_patch
+

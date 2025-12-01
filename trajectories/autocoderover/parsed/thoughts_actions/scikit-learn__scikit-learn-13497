@@ -1,0 +1,63 @@
+Thought at Iteration 0: search_method("_estimate_mi")
+Action at Iteration 0: search_method("_estimate_mi")
+
+Thought at Iteration 1: Based on the information gathered from the `_estimate_mi` method in the `sklearn/feature_selection/mutual_info_.py` file, we can identify a few key points relevant to the issue:
+
+1. **Issue Description**: The issue points out that there is a comparison in the `_estimate_mi` function where `discrete_features` is checked against the string `'auto'`. However, `discrete_features` can also be an array of indices or a boolean mask, which could lead to errors in future versions of numpy. Additionally, it suggests that the function might not have been tested with `discrete_features` not equal to `'auto'`.
+
+2. **Current Implementation**:
+    - The `discrete_features` parameter can take the values `'auto'`, a boolean, or an array-like object. If `'auto'`, it is determined based on whether `X` is sparse or dense.
+    - If `discrete_features` is a boolean, a mask is created for all features as either discrete or continuous.
+    - If `discrete_features` is array-like, it is converted to a numpy array. If the dtype of this array is not boolean, a new boolean mask is created where indices in `discrete_features` are marked as True (discrete).
+    - Continuous features in a sparse matrix `X` are not allowed, raising a ValueError if found.
+
+3. **Potential Solutions**:
+    - The comparison `if discrete_features == 'auto':` is valid but needs additional handling or checks to ensure compatibility with future numpy versions and to handle cases where `discrete_features` is not `'auto'` but an array or boolean.
+    - Enhance testing to cover scenarios where `discrete_features` is an array of indices or a boolean mask, ensuring that the function behaves as expected in these cases.
+
+4. **Next Steps**:
+    - Review and possibly refactor the handling of `discrete_features` to ensure it's robust and future-proof.
+    - Implement additional unit tests to cover the scenarios mentioned in the issue.
+
+Given this analysis, the next step would be to draft a patch that addresses these concerns, ensuring that the comparison and handling of `discrete_features` are both correct and efficient, and that adequate tests are in place.
+Action at Iteration 1: Analyze
+
+Thought at Iteration 2: - do we need more context:
+
+- where are bug locations: 
+  - **Buggy File**: `sklearn/feature_selection/mutual_info_.py`
+  - **Buggy Method**: `_estimate_mi`
+Action at Iteration 2: Locate
+
+Thought at Iteration 3: # modification 1
+```python
+<file>sklearn/feature_selection/mutual_info_.py</file>
+<original>if discrete_features == 'auto':
+    discrete_features = issparse(X)</original>
+<patched>if isinstance(discrete_features, str) and discrete_features == 'auto':
+    discrete_features = issparse(X)
+elif not isinstance(discrete_features, (np.ndarray, list, bool)):
+    raise ValueError("discrete_features must be 'auto', a boolean, an array-like object with indices of discrete features, or a boolean mask.")</patched>
+```
+
+# modification 2
+```python
+<file>sklearn/feature_selection/mutual_info_.py</file>
+<original>if discrete_features.dtype != 'bool':
+    discrete_mask = np.zeros(n_features, dtype=bool)
+    discrete_mask[discrete_features] = True
+else:
+    discrete_mask = discrete_features</original>
+<patched>try:
+    if discrete_features.dtype != 'bool':
+        discrete_mask = np.zeros(n_features, dtype=bool)
+        discrete_mask[discrete_features] = True
+    else:
+        discrete_mask = discrete_features
+except TypeError:
+    raise ValueError("discrete_features array should be of type bool or contain indices of discrete features.")</patched>
+```
+
+These modifications address the issue by ensuring that the `discrete_features` parameter is correctly handled when it is not 'auto'. The first modification adds a check to ensure that `discrete_features` is either 'auto', a boolean, an array-like object, or a boolean mask, and raises a ValueError if not. The second modification wraps the array handling in a try-except block to catch TypeErrors that may arise from incorrect usage of the `discrete_features` parameter, providing a clearer error message to the user.
+Action at Iteration 3: write_patch
+

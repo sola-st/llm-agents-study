@@ -1,0 +1,43 @@
+Result at Iteration 0: Result of search_method("json_script"):
+Found 2 methods with name json_script in the codebase.
+Search result 1: <file>django/template/defaultfilters.py</file> <func>json_script</func> <code>def json_script(value, element_id=None):
+    """
+    Output value JSON-encoded, wrapped in a <script type="application/json">
+    tag (with an optional id).
+    """
+    return _json_script(value, element_id)
+</code>
+
+Search result 2: <file>django/utils/html.py</file> <func>json_script</func> <code>def json_script(value, element_id=None):
+    """
+    Escape all the HTML/XML special characters with their unicode escapes, so
+    value is safe to be output anywhere except for inside a tag attribute. Wrap
+    the escaped JSON in a script tag.
+    """
+    from django.core.serializers.json import DjangoJSONEncoder
+
+    json_str = json.dumps(value, cls=DjangoJSONEncoder).translate(_json_script_escapes)
+    if element_id:
+        template = '<script id="{}" type="application/json">{}</script>'
+        args = (element_id, mark_safe(json_str))
+    else:
+        template = '<script type="application/json">{}</script>'
+        args = (mark_safe(json_str),)
+    return format_html(template, *args)
+</code>
+
+
+
+Result of search_class("DjangoJSONEncoder"):
+Found 1 classes with name DjangoJSONEncoder in the codebase.
+Search result 1: <file>django/core/serializers/json.py</file> <class>DjangoJSONEncoder</class> <code>class DjangoJSONEncoder(json.JSONEncoder):
+    def default(self, o):
+</code>
+Action at Iteration 1: Analyze
+
+Result at Iteration 1: The result is contained in the reasoning
+Action at Iteration 2: Locate
+
+Result at Iteration 2: The result is contained in the reasoning
+Action at Iteration 3: write_patch
+

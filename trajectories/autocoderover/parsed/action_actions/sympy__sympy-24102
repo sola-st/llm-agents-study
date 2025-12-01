@@ -1,0 +1,12 @@
+Action at Iteration 0: search_class("mathematica");search_method("parse_mathematica")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: search_class("MathematicaParser")
+
+Action at Iteration 3: Analyze
+
+Action at Iteration 4: Locate
+
+Action at Iteration 5: write_patch
+

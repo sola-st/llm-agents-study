@@ -1,0 +1,57 @@
+Result at Iteration 0: Result of search_method("mathematica_code"):
+Found 1 methods with name mathematica_code in the codebase.
+Search result 1: <file>sympy/printing/mathematica.py</file> <func>mathematica_code</func> <code>def mathematica_code(expr, **settings):
+    r"""Converts an expr to a string of the Wolfram Mathematica code
+
+    Examples
+    ========
+
+    >>> from sympy import mathematica_code as mcode, symbols, sin
+    >>> x = symbols('x')
+    >>> mcode(sin(x).series(x).removeO())
+    '(1/120)*x^5 - 1/6*x^3 + x'
+    """
+    return MCodePrinter(settings).doprint(expr)
+</code>
+Action at Iteration 1: Analyze
+
+Result at Iteration 1: The result is contained in the reasoning
+Action at Iteration 2: search_class("MCodePrinter")
+
+Result at Iteration 2: Result of search_class("MCodePrinter"):
+Found 1 classes with name MCodePrinter in the codebase.
+Search result 1: <file>sympy/printing/mathematica.py</file> <class>MCodePrinter</class> <code>class MCodePrinter(CodePrinter):
+    printmethod = "_mcode"
+    _default_settings = {
+        'order': None,
+        'full_prec': 'auto',
+        'precision': 15,
+        'user_functions': {},
+        'human': True,
+        'allow_unknown_functions': False,
+    }
+    _number_symbols = set()
+    _not_supported = set()
+    def __init__(self, settings={}):
+    doprint = StrPrinter.doprint
+    def _print_Pow(self, expr):
+    def _print_Mul(self, expr):
+    def _print_Pi(self, expr):
+    def _print_Infinity(self, expr):
+    def _print_NegativeInfinity(self, expr):
+    def _print_list(self, expr):
+    _print_tuple = _print_list
+    _print_Tuple = _print_list
+    def _print_Function(self, expr):
+    def _print_Integral(self, expr):
+    def _print_Sum(self, expr):
+    def _print_Derivative(self, expr):
+</code>
+Action at Iteration 3: Analyze
+
+Result at Iteration 3: The result is contained in the reasoning
+Action at Iteration 4: Locate
+
+Result at Iteration 4: The result is contained in the reasoning
+Action at Iteration 5: write_patch
+

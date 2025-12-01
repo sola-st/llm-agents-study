@@ -1,0 +1,44 @@
+Thought at iteration 0: I'll help you implement the necessary changes to make UniqueConstraint check for field existence, similar to how unique_together does. Let's follow the steps:
+
+1. First, let's explore the repository structure:
+Thought at iteration 1: Based on the repository structure and the PR description, we need to focus on the UniqueConstraint validation in Django's model system. The issue is that when using UniqueConstraint, Django doesn't validate that the fields specified in the constraint actually exist in the model, unlike the older unique_together syntax which raises models.E012.
+
+Let's first create a script to reproduce the issue:
+Thought at iteration 2: Let's run this script to confirm the issue:
+Thought at iteration 3: We need to modify our script to properly initialize Django:
+Thought at iteration 4: Now let's run the script again:
+Thought at iteration 5: We need to add an app_label to our models:
+Thought at iteration 6: None
+Thought at iteration 7: Now let's run the script again:
+Thought at iteration 8: Perfect! We've confirmed the issue. The script shows that:
+1. When using UniqueConstraint with a non-existent field, no error is raised
+2. When using unique_together with a non-existent field, models.E012 is raised
+
+Now let's look at the relevant code in Django to add this validation:
+Thought at iteration 9: Let's try a different search:
+Thought at iteration 10: Let's examine the constraints.py file first:
+Thought at iteration 11: Looking at the code, we can see that the UniqueConstraint class doesn't have any validation for field existence. The validation happens when trying to use the fields in constraint_sql() and create_sql() methods, but that's too late - we want to catch this during model validation like unique_together does.
+
+Let's look at how unique_together validation is implemented:
+Thought at iteration 12: None
+Thought at iteration 13: Let's search for E012 in this file:
+Thought at iteration 14: Let's look at the context around line 1662:
+Thought at iteration 15: Great! We found the validation code. Now let's look at how this validation is called. Let's search for the method that contains this code:
+Thought at iteration 16: Perfect! We found the validation method _check_local_fields that's used for validating fields in unique_together and other options. We need to add similar validation for UniqueConstraint.
+
+Let's look at where model checks are defined:
+Thought at iteration 17: Let's look at the constraints.py file again to add our validation:
+Thought at iteration 18: None
+Thought at iteration 19: Now we need to make sure the check method is called. Let's look at how model checks are performed:
+Thought at iteration 20: Let's look at models/base.py:
+Thought at iteration 21: Let's look at the _check_constraints method:
+Thought at iteration 22: Let's look at the full method:
+Thought at iteration 23: Let's look at where constraints are checked:
+Thought at iteration 24: Let's look at the model checks module:
+Thought at iteration 25: Looking at the code, we can see that model checks are performed in check_all_models() and it calls model.check() for each model. We need to add our constraint validation to the model's check() method.
+
+Let's look at how model.check() is implemented:
+Thought at iteration 26: Great! We can see that model.check() already calls _check_constraints(). We need to modify _check_constraints() to also call check() on each constraint:
+Thought at iteration 27: Now let's run our test script again to verify the fix:
+Thought at iteration 28: Oops, we need to import checks in constraints.py:
+Thought at iteration 29: Now let's run our test script again:

@@ -1,0 +1,2244 @@
+Result at iteration 0: ls -R /workspace/mwaskom__seaborn__0.13
+/workspace/mwaskom__seaborn__0.13:
+CITATION.cff  README.md    doc	     pyproject.toml  tests
+LICENSE.md    SECURITY.md  examples  seaborn
+Makefile      ci	   licences  setup.cfg
+
+/workspace/mwaskom__seaborn__0.13/ci:
+cache_datasets.py  check_gallery.py  deps_pinned.txt  getmsfonts.sh
+
+/workspace/mwaskom__seaborn__0.13/doc:
+Makefile     _templates  conf.py	 installing.rst  tools
+README.md    _tutorial	 example_thumbs  make.bat	 tutorial.yaml
+_docstrings  api.rst	 faq.rst	 matplotlibrc	 whatsnew
+_static      citing.rst  index.rst	 sphinxext
+
+/workspace/mwaskom__seaborn__0.13/doc/_docstrings:
+FacetGrid.ipynb		 lmplot.ipynb		    objects.Plot.label.ipynb
+JointGrid.ipynb		 move_legend.ipynb	    objects.Plot.layout.ipynb
+Makefile		 mpl_palette.ipynb	    objects.Plot.limit.ipynb
+PairGrid.ipynb		 objects.Agg.ipynb	    objects.Plot.on.ipynb
+axes_style.ipynb	 objects.Area.ipynb	    objects.Plot.pair.ipynb
+barplot.ipynb		 objects.Band.ipynb	    objects.Plot.scale.ipynb
+blend_palette.ipynb	 objects.Bar.ipynb	    objects.Plot.share.ipynb
+boxenplot.ipynb		 objects.Bars.ipynb	    objects.Plot.theme.ipynb
+boxplot.ipynb		 objects.Count.ipynb	    objects.Range.ipynb
+catplot.ipynb		 objects.Dash.ipynb	    objects.Shift.ipynb
+clustermap.ipynb	 objects.Dodge.ipynb	    objects.Stack.ipynb
+color_palette.ipynb	 objects.Dot.ipynb	    objects.Text.ipynb
+countplot.ipynb		 objects.Dots.ipynb	    pairplot.ipynb
+cubehelix_palette.ipynb  objects.Est.ipynb	    plotting_context.ipynb
+dark_palette.ipynb	 objects.Hist.ipynb	    pointplot.ipynb
+displot.ipynb		 objects.Jitter.ipynb	    regplot.ipynb
+diverging_palette.ipynb  objects.KDE.ipynb	    relplot.ipynb
+ecdfplot.ipynb		 objects.Line.ipynb	    residplot.ipynb
+heatmap.ipynb		 objects.Lines.ipynb	    rugplot.ipynb
+histplot.ipynb		 objects.Norm.ipynb	    scatterplot.ipynb
+hls_palette.ipynb	 objects.Path.ipynb	    set_context.ipynb
+husl_palette.ipynb	 objects.Paths.ipynb	    set_style.ipynb
+jointplot.ipynb		 objects.Perc.ipynb	    set_theme.ipynb
+kdeplot.ipynb		 objects.Plot.add.ipynb     stripplot.ipynb
+light_palette.ipynb	 objects.Plot.config.ipynb  swarmplot.ipynb
+lineplot.ipynb		 objects.Plot.facet.ipynb   violinplot.ipynb
+
+/workspace/mwaskom__seaborn__0.13/doc/_static:
+copybutton.js	       logo-mark-lightbg.svg  logo-wide-darkbg.png
+css		       logo-mark-whitebg.png  logo-wide-darkbg.svg
+favicon.ico	       logo-tall-darkbg.png   logo-wide-lightbg.png
+favicon_old.ico        logo-tall-darkbg.svg   logo-wide-lightbg.svg
+logo-mark-darkbg.png   logo-tall-lightbg.png  logo-wide-whitebg.png
+logo-mark-darkbg.svg   logo-tall-lightbg.svg
+logo-mark-lightbg.png  logo-tall-whitebg.png
+
+/workspace/mwaskom__seaborn__0.13/doc/_static/css:
+custom.css
+
+/workspace/mwaskom__seaborn__0.13/doc/_templates:
+autosummary  layout.html  version.html
+
+/workspace/mwaskom__seaborn__0.13/doc/_templates/autosummary:
+base.rst  class.rst  object.rst  plot.rst  scale.rst
+
+/workspace/mwaskom__seaborn__0.13/doc/_tutorial:
+Makefile	      data_structure.ipynb     objects_interface.ipynb
+aesthetics.ipynb      distributions.ipynb      properties.ipynb
+axis_grids.ipynb      error_bars.ipynb	       regression.ipynb
+categorical.ipynb     function_overview.ipynb  relational.ipynb
+color_palettes.ipynb  introduction.ipynb
+
+/workspace/mwaskom__seaborn__0.13/doc/example_thumbs:
+
+/workspace/mwaskom__seaborn__0.13/doc/sphinxext:
+gallery_generator.py  tutorial_builder.py
+
+/workspace/mwaskom__seaborn__0.13/doc/tools:
+extract_examples.py  generate_logos.py	nb_to_doc.py  set_nb_kernels.py
+
+/workspace/mwaskom__seaborn__0.13/doc/whatsnew:
+index.rst    v0.11.1.rst  v0.12.2.rst  v0.3.0.rst  v0.5.1.rst  v0.8.0.rst
+v0.10.0.rst  v0.11.2.rst  v0.13.0.rst  v0.3.1.rst  v0.6.0.rst  v0.8.1.rst
+v0.10.1.rst  v0.12.0.rst  v0.2.0.rst   v0.4.0.rst  v0.7.0.rst  v0.9.0.rst
+v0.11.0.rst  v0.12.1.rst  v0.2.1.rst   v0.5.0.rst  v0.7.1.rst  v0.9.1.rst
+
+/workspace/mwaskom__seaborn__0.13/examples:
+anscombes_quartet.py		multiple_regression.py
+different_scatter_variables.py	pair_grid_with_kde.py
+errorband_lineplots.py		paired_pointplots.py
+faceted_histogram.py		pairgrid_dotplot.py
+faceted_lineplot.py		palette_choices.py
+grouped_barplot.py		palette_generation.py
+grouped_boxplot.py		part_whole_bars.py
+grouped_violinplots.py		pointplot_anova.py
+heat_scatter.py			radial_facets.py
+hexbin_marginals.py		regression_marginals.py
+histogram_stacked.py		residplot.py
+horizontal_boxplot.py		scatter_bubbles.py
+jitter_stripplot.py		scatterplot_categorical.py
+joint_histogram.py		scatterplot_matrix.py
+joint_kde.py			scatterplot_sizes.py
+kde_ridgeplot.py		simple_violinplots.py
+large_distributions.py		smooth_bivariate_kde.py
+layered_bivariate_plot.py	spreadsheet_heatmap.py
+logistic_regression.py		strip_regplot.py
+many_facets.py			structured_heatmap.py
+many_pairwise_correlations.py	three_variable_histogram.py
+marginal_ticks.py		timeseries_facets.py
+multiple_bivariate_kde.py	wide_data_lineplot.py
+multiple_conditional_kde.py	wide_form_violinplot.py
+multiple_ecdf.py
+
+/workspace/mwaskom__seaborn__0.13/licences:
+APPDIRS_LICENSE  NUMPYDOC_LICENSE   SCIPY_LICENSE
+HUSL_LICENSE	 PACKAGING_LICENSE
+
+/workspace/mwaskom__seaborn__0.13/seaborn:
+__init__.py	_oldcore.py	categorical.py	  miscplot.py	 utils.py
+_compat.py	_statistics.py	cm.py		  objects.py	 widgets.py
+_core		_stats		colors		  palettes.py
+_decorators.py	_testing.py	distributions.py  rcmod.py
+_docstrings.py	algorithms.py	external	  regression.py
+_marks		axisgrid.py	matrix.py	  relational.py
+
+/workspace/mwaskom__seaborn__0.13/seaborn/_core:
+__init__.py  exceptions.py  moves.py  properties.py  scales.py	  typing.py
+data.py      groupby.py     plot.py   rules.py	     subplots.py
+
+/workspace/mwaskom__seaborn__0.13/seaborn/_marks:
+__init__.py  area.py  bar.py  base.py  dot.py  line.py	text.py
+
+/workspace/mwaskom__seaborn__0.13/seaborn/_stats:
+__init__.py	base.py      density.py  regression.py
+aggregation.py	counting.py  order.py
+
+/workspace/mwaskom__seaborn__0.13/seaborn/colors:
+__init__.py  crayons.py  xkcd_rgb.py
+
+/workspace/mwaskom__seaborn__0.13/seaborn/external:
+__init__.py  appdirs.py  docscrape.py  husl.py	kde.py	version.py
+
+/workspace/mwaskom__seaborn__0.13/tests:
+__init__.py	    test_categorical.py    test_objects.py
+_core		    test_core.py	   test_palettes.py
+_marks		    test_decorators.py	   test_rcmod.py
+_stats		    test_distributions.py  test_regression.py
+conftest.py	    test_docstrings.py	   test_relational.py
+test_algorithms.py  test_matrix.py	   test_statistics.py
+test_axisgrid.py    test_miscplot.py	   test_utils.py
+
+/workspace/mwaskom__seaborn__0.13/tests/_core:
+__init__.py	 test_moves.py	     test_rules.py
+test_data.py	 test_plot.py	     test_scales.py
+test_groupby.py  test_properties.py  test_subplots.py
+
+/workspace/mwaskom__seaborn__0.13/tests/_marks:
+__init__.py   test_bar.py   test_dot.py   test_text.py
+test_area.py  test_base.py  test_line.py
+
+/workspace/mwaskom__seaborn__0.13/tests/_stats:
+__init__.py	     test_counting.py  test_order.py
+test_aggregation.py  test_density.py   test_regression.py; Next thought: Based on the repository structure, we can see that the main seaborn code is in the `/workspace/mwaskom__seaborn__0.13/seaborn` directory. The error occurs in the `pairplot` function which is likely in the `axisgrid.py` file since that's where the error traceback points to.
+
+2. Let's first create a script to reproduce the error:
+---
+Result at iteration 1: File created successfully at: /workspace/mwaskom__seaborn__0.13/reproduce_error.py; Next thought: Let's run the script to confirm the error:
+---
+Result at iteration 2: cd /workspace/mwaskom__seaborn__0.13 && python reproduce_error.py
+DataFrame shape: (100, 4)
+
+DataFrame columns (MultiIndex):
+MultiIndex([('A', '1'),
+            ('A', '2'),
+            ('B', '1'),
+            ('B', '2')],
+           )
+
+First few rows:
+          A                   B          
+          1         2         1         2
+0  0.374540  0.031429  0.642032  0.051682
+1  0.950714  0.636410  0.084140  0.531355
+2  0.731994  0.314356  0.161629  0.540635
+3  0.598658  0.508571  0.898554  0.637430
+4  0.156019  0.907566  0.606429  0.726091
+Traceback (most recent call last):
+  File "/testbed/reproduce_error.py", line 23, in <module>
+    sns.pairplot(df)
+  File "/testbed/seaborn/axisgrid.py", line 2144, in pairplot
+    grid.map_diag(histplot, **diag_kws)
+  File "/testbed/seaborn/axisgrid.py", line 1490, in map_diag
+    vector = self.data[var]
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/frame.py", line 3766, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/indexes/multi.py", line 2535, in _get_indexer_strict
+    self._raise_if_missing(key, indexer, axis_name)
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/indexes/multi.py", line 2553, in _raise_if_missing
+    raise KeyError(f"{keyarr[cmask]} not in index")
+KeyError: "['1'] not in index"; Next thought: Great, we've reproduced the error. The issue occurs because `pairplot` is trying to access individual columns by their names, but with a MultiIndex DataFrame, the column names are tuples like `('A', '1')` rather than single strings.
+
+Let's look at the relevant code in axisgrid.py:
+---
+Result at iteration 3: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+     1	from __future__ import annotations
+     2	from itertools import product
+     3	from inspect import signature
+     4	import warnings
+     5	from textwrap import dedent
+     6	
+     7	import numpy as np
+     8	import pandas as pd
+     9	import matplotlib as mpl
+    10	import matplotlib.pyplot as plt
+    11	
+    12	from ._oldcore import VectorPlotter, variable_type, categorical_order
+    13	from ._compat import share_axis, get_legend_handles
+    14	from . import utils
+    15	from .utils import (
+    16	    adjust_legend_subtitles, _check_argument, _draw_figure, _disable_autolayout
+    17	)
+    18	from .palettes import color_palette, blend_palette
+    19	from ._docstrings import (
+    20	    DocstringComponents,
+    21	    _core_docs,
+    22	)
+    23	
+    24	__all__ = ["FacetGrid", "PairGrid", "JointGrid", "pairplot", "jointplot"]
+    25	
+    26	
+    27	_param_docs = DocstringComponents.from_nested_components(
+    28	    core=_core_docs["params"],
+    29	)
+    30	
+    31	
+    32	class _BaseGrid:
+    33	    """Base class for grids of subplots."""
+    34	
+    35	    def set(self, **kwargs):
+    36	        """Set attributes on each subplot Axes."""
+    37	        for ax in self.axes.flat:
+    38	            if ax is not None:  # Handle removed axes
+    39	                ax.set(**kwargs)
+    40	        return self
+    41	
+    42	    @property
+    43	    def fig(self):
+    44	        """DEPRECATED: prefer the `figure` property."""
+    45	        # Grid.figure is preferred because it matches the Axes attribute name.
+    46	        # But as the maintanace burden on having this property is minimal,
+    47	        # let's be slow about formally deprecating it. For now just note its deprecation
+    48	        # in the docstring; add a warning in version 0.13, and eventually remove it.
+    49	        return self._figure
+    50	
+    51	    @property
+    52	    def figure(self):
+    53	        """Access the :class:`matplotlib.figure.Figure` object underlying the grid."""
+    54	        return self._figure
+    55	
+    56	    def apply(self, func, *args, **kwargs):
+    57	        """
+    58	        Pass the grid to a user-supplied function and return self.
+    59	
+    60	        The `func` must accept an object of this type for its first
+    61	        positional argument. Additional arguments are passed through.
+    62	        The return value of `func` is ignored; this method returns self.
+    63	        See the `pipe` method if you want the return value.
+    64	
+    65	        Added in v0.12.0.
+    66	
+    67	        """
+    68	        func(self, *args, **kwargs)
+    69	        return self
+    70	
+    71	    def pipe(self, func, *args, **kwargs):
+    72	        """
+    73	        Pass the grid to a user-supplied function and return its value.
+    74	
+    75	        The `func` must accept an object of this type for its first
+    76	        positional argument. Additional arguments are passed through.
+    77	        The return value of `func` becomes the return value of this method.
+    78	        See the `apply` method if you want to return self instead.
+    79	
+    80	        Added in v0.12.0.
+    81	
+    82	        """
+    83	        return func(self, *args, **kwargs)
+    84	
+    85	    def savefig(self, *args, **kwargs):
+    86	        """
+    87	        Save an image of the plot.
+    88	
+    89	        This wraps :meth:`matplotlib.figure.Figure.savefig`, using bbox_inches="tight"
+    90	        by default. Parameters are passed through to the matplotlib function.
+    91	
+    92	        """
+    93	        kwargs = kwargs.copy()
+    94	        kwargs.setdefault("bbox_inches", "tight")
+    95	        self.figure.savefig(*args, **kwargs)
+    96	
+    97	
+    98	class Grid(_BaseGrid):
+    99	    """A grid that can have multiple subplots and an external legend."""
+   100	    _margin_titles = False
+   101	    _legend_out = True
+   102	
+   103	    def __init__(self):
+   104	
+   105	        self._tight_layout_rect = [0, 0, 1, 1]
+   106	        self._tight_layout_pad = None
+   107	
+   108	        # This attribute is set externally and is a hack to handle newer functions that
+   109	        # don't add proxy artists onto the Axes. We need an overall cleaner approach.
+   110	        self._extract_legend_handles = False
+   111	
+   112	    def tight_layout(self, *args, **kwargs):
+   113	        """Call fig.tight_layout within rect that exclude the legend."""
+   114	        kwargs = kwargs.copy()
+   115	        kwargs.setdefault("rect", self._tight_layout_rect)
+   116	        if self._tight_layout_pad is not None:
+   117	            kwargs.setdefault("pad", self._tight_layout_pad)
+   118	        self._figure.tight_layout(*args, **kwargs)
+   119	        return self
+   120	
+   121	    def add_legend(self, legend_data=None, title=None, label_order=None,
+   122	                   adjust_subtitles=False, **kwargs):
+   123	        """Draw a legend, maybe placing it outside axes and resizing the figure.
+   124	
+   125	        Parameters
+   126	        ----------
+   127	        legend_data : dict
+   128	            Dictionary mapping label names (or two-element tuples where the
+   129	            second element is a label name) to matplotlib artist handles. The
+   130	            default reads from ``self._legend_data``.
+   131	        title : string
+   132	            Title for the legend. The default reads from ``self._hue_var``.
+   133	        label_order : list of labels
+   134	            The order that the legend entries should appear in. The default
+   135	            reads from ``self.hue_names``.
+   136	        adjust_subtitles : bool
+   137	            If True, modify entries with invisible artists to left-align
+   138	            the labels and set the font size to that of a title.
+   139	        kwargs : key, value pairings
+   140	            Other keyword arguments are passed to the underlying legend methods
+   141	            on the Figure or Axes object.
+   142	
+   143	        Returns
+   144	        -------
+   145	        self : Grid instance
+   146	            Returns self for easy chaining.
+   147	
+   148	        """
+   149	        # Find the data for the legend
+   150	        if legend_data is None:
+   151	            legend_data = self._legend_data
+   152	        if label_order is None:
+   153	            if self.hue_names is None:
+   154	                label_order = list(legend_data.keys())
+   155	            else:
+   156	                label_order = list(map(utils.to_utf8, self.hue_names))
+   157	
+   158	        blank_handle = mpl.patches.Patch(alpha=0, linewidth=0)
+   159	        handles = [legend_data.get(l, blank_handle) for l in label_order]
+   160	        title = self._hue_var if title is None else title
+   161	        title_size = mpl.rcParams["legend.title_fontsize"]
+   162	
+   163	        # Unpack nested labels from a hierarchical legend
+   164	        labels = []
+   165	        for entry in label_order:
+   166	            if isinstance(entry, tuple):
+   167	                _, label = entry
+   168	            else:
+   169	                label = entry
+   170	            labels.append(label)
+   171	
+   172	        # Set default legend kwargs
+   173	        kwargs.setdefault("scatterpoints", 1)
+   174	
+   175	        if self._legend_out:
+   176	
+   177	            kwargs.setdefault("frameon", False)
+   178	            kwargs.setdefault("loc", "center right")
+   179	
+   180	            # Draw a full-figure legend outside the grid
+   181	            figlegend = self._figure.legend(handles, labels, **kwargs)
+   182	
+   183	            self._legend = figlegend
+   184	            figlegend.set_title(title, prop={"size": title_size})
+   185	
+   186	            if adjust_subtitles:
+   187	                adjust_legend_subtitles(figlegend)
+   188	
+   189	            # Draw the plot to set the bounding boxes correctly
+   190	            _draw_figure(self._figure)
+   191	
+   192	            # Calculate and set the new width of the figure so the legend fits
+   193	            legend_width = figlegend.get_window_extent().width / self._figure.dpi
+   194	            fig_width, fig_height = self._figure.get_size_inches()
+   195	            self._figure.set_size_inches(fig_width + legend_width, fig_height)
+   196	
+   197	            # Draw the plot again to get the new transformations
+   198	            _draw_figure(self._figure)
+   199	
+   200	            # Now calculate how much space we need on the right side
+   201	            legend_width = figlegend.get_window_extent().width / self._figure.dpi
+   202	            space_needed = legend_width / (fig_width + legend_width)
+   203	            margin = .04 if self._margin_titles else .01
+   204	            self._space_needed = margin + space_needed
+   205	            right = 1 - self._space_needed
+   206	
+   207	            # Place the subplot axes to give space for the legend
+   208	            self._figure.subplots_adjust(right=right)
+   209	            self._tight_layout_rect[2] = right
+   210	
+   211	        else:
+   212	            # Draw a legend in the first axis
+   213	            ax = self.axes.flat[0]
+   214	            kwargs.setdefault("loc", "best")
+   215	
+   216	            leg = ax.legend(handles, labels, **kwargs)
+   217	            leg.set_title(title, prop={"size": title_size})
+   218	            self._legend = leg
+   219	
+   220	            if adjust_subtitles:
+   221	                adjust_legend_subtitles(leg)
+   222	
+   223	        return self
+   224	
+   225	    def _update_legend_data(self, ax):
+   226	        """Extract the legend data from an axes object and save it."""
+   227	        data = {}
+   228	
+   229	        # Get data directly from the legend, which is necessary
+   230	        # for newer functions that don't add labeled proxy artists
+   231	        if ax.legend_ is not None and self._extract_legend_handles:
+   232	            handles = get_legend_handles(ax.legend_)
+   233	            labels = [t.get_text() for t in ax.legend_.texts]
+   234	            data.update({l: h for h, l in zip(handles, labels)})
+   235	
+   236	        handles, labels = ax.get_legend_handles_labels()
+   237	        data.update({l: h for h, l in zip(handles, labels)})
+   238	
+   239	        self._legend_data.update(data)
+   240	
+   241	        # Now clear the legend
+   242	        ax.legend_ = None
+   243	
+   244	    def _get_palette(self, data, hue, hue_order, palette):
+   245	        """Get a list of colors for the hue variable."""
+   246	        if hue is None:
+   247	            palette = color_palette(n_colors=1)
+   248	
+   249	        else:
+   250	            hue_names = categorical_order(data[hue], hue_order)
+   251	            n_colors = len(hue_names)
+   252	
+   253	            # By default use either the current color palette or HUSL
+   254	            if palette is None:
+   255	                current_palette = utils.get_color_cycle()
+   256	                if n_colors > len(current_palette):
+   257	                    colors = color_palette("husl", n_colors)
+   258	                else:
+   259	                    colors = color_palette(n_colors=n_colors)
+   260	
+   261	            # Allow for palette to map from hue variable names
+   262	            elif isinstance(palette, dict):
+   263	                color_names = [palette[h] for h in hue_names]
+   264	                colors = color_palette(color_names, n_colors)
+   265	
+   266	            # Otherwise act as if we just got a list of colors
+   267	            else:
+   268	                colors = color_palette(palette, n_colors)
+   269	
+   270	            palette = color_palette(colors, n_colors)
+   271	
+   272	        return palette
+   273	
+   274	    @property
+   275	    def legend(self):
+   276	        """The :class:`matplotlib.legend.Legend` object, if present."""
+   277	        try:
+   278	            return self._legend
+   279	        except AttributeError:
+   280	            return None
+   281	
+   282	    def tick_params(self, axis='both', **kwargs):
+   283	        """Modify the ticks, tick labels, and gridlines.
+   284	
+   285	        Parameters
+   286	        ----------
+   287	        axis : {'x', 'y', 'both'}
+   288	            The axis on which to apply the formatting.
+   289	        kwargs : keyword arguments
+   290	            Additional keyword arguments to pass to
+   291	            :meth:`matplotlib.axes.Axes.tick_params`.
+   292	
+   293	        Returns
+   294	        -------
+   295	        self : Grid instance
+   296	            Returns self for easy chaining.
+   297	
+   298	        """
+   299	        for ax in self.figure.axes:
+   300	            ax.tick_params(axis=axis, **kwargs)
+   301	        return self
+   302	
+   303	
+   304	_facet_docs = dict(
+   305	
+   306	    data=dedent("""\
+   307	    data : DataFrame
+   308	        Tidy ("long-form") dataframe where each column is a variable and each
+   309	        row is an observation.\
+   310	    """),
+   311	    rowcol=dedent("""\
+   312	    row, col : vectors or keys in ``data``
+   313	        Variables that define subsets to plot on different facets.\
+   314	    """),
+   315	    rowcol_order=dedent("""\
+   316	    {row,col}_order : vector of strings
+   317	        Specify the order in which levels of the ``row`` and/or ``col`` variables
+   318	        appear in the grid of subplots.\
+   319	    """),
+   320	    col_wrap=dedent("""\
+   321	    col_wrap : int
+   322	        "Wrap" the column variable at this width, so that the column facets
+   323	        span multiple rows. Incompatible with a ``row`` facet.\
+   324	    """),
+   325	    share_xy=dedent("""\
+   326	    share{x,y} : bool, 'col', or 'row' optional
+   327	        If true, the facets will share y axes across columns and/or x axes
+   328	        across rows.\
+   329	    """),
+   330	    height=dedent("""\
+   331	    height : scalar
+   332	        Height (in inches) of each facet. See also: ``aspect``.\
+   333	    """),
+   334	    aspect=dedent("""\
+   335	    aspect : scalar
+   336	        Aspect ratio of each facet, so that ``aspect * height`` gives the width
+   337	        of each facet in inches.\
+   338	    """),
+   339	    palette=dedent("""\
+   340	    palette : palette name, list, or dict
+   341	        Colors to use for the different levels of the ``hue`` variable. Should
+   342	        be something that can be interpreted by :func:`color_palette`, or a
+   343	        dictionary mapping hue levels to matplotlib colors.\
+   344	    """),
+   345	    legend_out=dedent("""\
+   346	    legend_out : bool
+   347	        If ``True``, the figure size will be extended, and the legend will be
+   348	        drawn outside the plot on the center right.\
+   349	    """),
+   350	    margin_titles=dedent("""\
+   351	    margin_titles : bool
+   352	        If ``True``, the titles for the row variable are drawn to the right of
+   353	        the last column. This option is experimental and may not work in all
+   354	        cases.\
+   355	    """),
+   356	    facet_kws=dedent("""\
+   357	    facet_kws : dict
+   358	        Additional parameters passed to :class:`FacetGrid`.
+   359	    """),
+   360	)
+   361	
+   362	
+   363	class FacetGrid(Grid):
+   364	    """Multi-plot grid for plotting conditional relationships."""
+   365	
+   366	    def __init__(
+   367	        self, data, *,
+   368	        row=None, col=None, hue=None, col_wrap=None,
+   369	        sharex=True, sharey=True, height=3, aspect=1, palette=None,
+   370	        row_order=None, col_order=None, hue_order=None, hue_kws=None,
+   371	        dropna=False, legend_out=True, despine=True,
+   372	        margin_titles=False, xlim=None, ylim=None, subplot_kws=None,
+   373	        gridspec_kws=None,
+   374	    ):
+   375	
+   376	        super().__init__()
+   377	
+   378	        # Determine the hue facet layer information
+   379	        hue_var = hue
+   380	        if hue is None:
+   381	            hue_names = None
+   382	        else:
+   383	            hue_names = categorical_order(data[hue], hue_order)
+   384	
+   385	        colors = self._get_palette(data, hue, hue_order, palette)
+   386	
+   387	        # Set up the lists of names for the row and column facet variables
+   388	        if row is None:
+   389	            row_names = []
+   390	        else:
+   391	            row_names = categorical_order(data[row], row_order)
+   392	
+   393	        if col is None:
+   394	            col_names = []
+   395	        else:
+   396	            col_names = categorical_order(data[col], col_order)
+   397	
+   398	        # Additional dict of kwarg -> list of values for mapping the hue var
+   399	        hue_kws = hue_kws if hue_kws is not None else {}
+   400	
+   401	        # Make a boolean mask that is True anywhere there is an NA
+   402	        # value in one of the faceting variables, but only if dropna is True
+   403	        none_na = np.zeros(len(data), bool)
+   404	        if dropna:
+   405	            row_na = none_na if row is None else data[row].isnull()
+   406	            col_na = none_na if col is None else data[col].isnull()
+   407	            hue_na = none_na if hue is None else data[hue].isnull()
+   408	            not_na = ~(row_na | col_na | hue_na)
+   409	        else:
+   410	            not_na = ~none_na
+   411	
+   412	        # Compute the grid shape
+   413	        ncol = 1 if col is None else len(col_names)
+   414	        nrow = 1 if row is None else len(row_names)
+   415	        self._n_facets = ncol * nrow
+   416	
+   417	        self._col_wrap = col_wrap
+   418	        if col_wrap is not None:
+   419	            if row is not None:
+   420	                err = "Cannot use `row` and `col_wrap` together."
+   421	                raise ValueError(err)
+   422	            ncol = col_wrap
+   423	            nrow = int(np.ceil(len(col_names) / col_wrap))
+   424	        self._ncol = ncol
+   425	        self._nrow = nrow
+   426	
+   427	        # Calculate the base figure size
+   428	        # This can get stretched later by a legend
+   429	        # TODO this doesn't account for axis labels
+   430	        figsize = (ncol * height * aspect, nrow * height)
+   431	
+   432	        # Validate some inputs
+   433	        if col_wrap is not None:
+   434	            margin_titles = False
+   435	
+   436	        # Build the subplot keyword dictionary
+   437	        subplot_kws = {} if subplot_kws is None else subplot_kws.copy()
+   438	        gridspec_kws = {} if gridspec_kws is None else gridspec_kws.copy()
+   439	        if xlim is not None:
+   440	            subplot_kws["xlim"] = xlim
+   441	        if ylim is not None:
+   442	            subplot_kws["ylim"] = ylim
+   443	
+   444	        # --- Initialize the subplot grid
+   445	
+   446	        with _disable_autolayout():
+   447	            fig = plt.figure(figsize=figsize)
+   448	
+   449	        if col_wrap is None:
+   450	
+   451	            kwargs = dict(squeeze=False,
+   452	                          sharex=sharex, sharey=sharey,
+   453	                          subplot_kw=subplot_kws,
+   454	                          gridspec_kw=gridspec_kws)
+   455	
+   456	            axes = fig.subplots(nrow, ncol, **kwargs)
+   457	
+   458	            if col is None and row is None:
+   459	                axes_dict = {}
+   460	        <response clipped><NOTE>To save on context only part of this file has been shown to you. You should retry this tool after you have searched inside the file with `grep -n` in order to find the line numbers of what you are looking for.</NOTE>; Next thought: Let's search for the relevant code sections:
+---
+Result at iteration 4: cd /workspace/mwaskom__seaborn__0.13 && grep -n "def pairplot" seaborn/axisgrid.py
+2005:def pairplot(; Next thought: Let's look at the pairplot function:
+---
+Result at iteration 5: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  2005	def pairplot(
+  2006	    data, *,
+  2007	    hue=None, hue_order=None, palette=None,
+  2008	    vars=None, x_vars=None, y_vars=None,
+  2009	    kind="scatter", diag_kind="auto", markers=None,
+  2010	    height=2.5, aspect=1, corner=False, dropna=False,
+  2011	    plot_kws=None, diag_kws=None, grid_kws=None, size=None,
+  2012	):
+  2013	    """Plot pairwise relationships in a dataset.
+  2014	
+  2015	    By default, this function will create a grid of Axes such that each numeric
+  2016	    variable in ``data`` will by shared across the y-axes across a single row and
+  2017	    the x-axes across a single column. The diagonal plots are treated
+  2018	    differently: a univariate distribution plot is drawn to show the marginal
+  2019	    distribution of the data in each column.
+  2020	
+  2021	    It is also possible to show a subset of variables or plot different
+  2022	    variables on the rows and columns.
+  2023	
+  2024	    This is a high-level interface for :class:`PairGrid` that is intended to
+  2025	    make it easy to draw a few common styles. You should use :class:`PairGrid`
+  2026	    directly if you need more flexibility.
+  2027	
+  2028	    Parameters
+  2029	    ----------
+  2030	    data : `pandas.DataFrame`
+  2031	        Tidy (long-form) dataframe where each column is a variable and
+  2032	        each row is an observation.
+  2033	    hue : name of variable in ``data``
+  2034	        Variable in ``data`` to map plot aspects to different colors.
+  2035	    hue_order : list of strings
+  2036	        Order for the levels of the hue variable in the palette
+  2037	    palette : dict or seaborn color palette
+  2038	        Set of colors for mapping the ``hue`` variable. If a dict, keys
+  2039	        should be values  in the ``hue`` variable.
+  2040	    vars : list of variable names
+  2041	        Variables within ``data`` to use, otherwise use every column with
+  2042	        a numeric datatype.
+  2043	    {x, y}_vars : lists of variable names
+  2044	        Variables within ``data`` to use separately for the rows and
+  2045	        columns of the figure; i.e. to make a non-square plot.
+  2046	    kind : {'scatter', 'kde', 'hist', 'reg'}
+  2047	        Kind of plot to make.
+  2048	    diag_kind : {'auto', 'hist', 'kde', None}
+  2049	        Kind of plot for the diagonal subplots. If 'auto', choose based on
+  2050	        whether or not ``hue`` is used.
+  2051	    markers : single matplotlib marker code or list
+  2052	        Either the marker to use for all scatterplot points or a list of markers
+  2053	        with a length the same as the number of levels in the hue variable so that
+  2054	        differently colored points will also have different scatterplot
+  2055	        markers.
+  2056	    height : scalar
+  2057	        Height (in inches) of each facet.
+  2058	    aspect : scalar
+  2059	        Aspect * height gives the width (in inches) of each facet.
+  2060	    corner : bool
+  2061	        If True, don't add axes to the upper (off-diagonal) triangle of the
+  2062	        grid, making this a "corner" plot.
+  2063	    dropna : boolean
+  2064	        Drop missing values from the data before plotting.
+  2065	    {plot, diag, grid}_kws : dicts
+  2066	        Dictionaries of keyword arguments. ``plot_kws`` are passed to the
+  2067	        bivariate plotting function, ``diag_kws`` are passed to the univariate
+  2068	        plotting function, and ``grid_kws`` are passed to the :class:`PairGrid`
+  2069	        constructor.
+  2070	
+  2071	    Returns
+  2072	    -------
+  2073	    grid : :class:`PairGrid`
+  2074	        Returns the underlying :class:`PairGrid` instance for further tweaking.
+  2075	
+  2076	    See Also
+  2077	    --------
+  2078	    PairGrid : Subplot grid for more flexible plotting of pairwise relationships.
+  2079	    JointGrid : Grid for plotting joint and marginal distributions of two variables.
+  2080	
+  2081	    Examples
+  2082	    --------
+  2083	
+  2084	    .. include:: ../docstrings/pairplot.rst
+  2085	
+  2086	    """
+  2087	    # Avoid circular import
+  2088	    from .distributions import histplot, kdeplot
+  2089	
+  2090	    # Handle deprecations
+  2091	    if size is not None:
+  2092	        height = size
+  2093	        msg = ("The `size` parameter has been renamed to `height`; "
+  2094	               "please update your code.")
+  2095	        warnings.warn(msg, UserWarning)
+  2096	
+  2097	    if not isinstance(data, pd.DataFrame):
+  2098	        raise TypeError(
+  2099	            f"'data' must be pandas DataFrame object, not: {type(data)}")
+  2100	
+  2101	    plot_kws = {} if plot_kws is None else plot_kws.copy()
+  2102	    diag_kws = {} if diag_kws is None else diag_kws.copy()
+  2103	    grid_kws = {} if grid_kws is None else grid_kws.copy()
+  2104	
+  2105	    # Resolve "auto" diag kind
+  2106	    if diag_kind == "auto":
+  2107	        if hue is None:
+  2108	            diag_kind = "kde" if kind == "kde" else "hist"
+  2109	        else:
+  2110	            diag_kind = "hist" if kind == "hist" else "kde"
+  2111	
+  2112	    # Set up the PairGrid
+  2113	    grid_kws.setdefault("diag_sharey", diag_kind == "hist")
+  2114	    grid = PairGrid(data, vars=vars, x_vars=x_vars, y_vars=y_vars, hue=hue,
+  2115	                    hue_order=hue_order, palette=palette, corner=corner,
+  2116	                    height=height, aspect=aspect, dropna=dropna, **grid_kws)
+  2117	
+  2118	    # Add the markers here as PairGrid has figured out how many levels of the
+  2119	    # hue variable are needed and we don't want to duplicate that process
+  2120	    if markers is not None:
+  2121	        if kind == "reg":
+  2122	            # Needed until regplot supports style
+  2123	            if grid.hue_names is None:
+  2124	                n_markers = 1
+  2125	            else:
+  2126	                n_markers = len(grid.hue_names)
+  2127	            if not isinstance(markers, list):
+  2128	                markers = [markers] * n_markers
+  2129	            if len(markers) != n_markers:
+  2130	                raise ValueError("markers must be a singleton or a list of "
+  2131	                                 "markers for each level of the hue variable")
+  2132	            grid.hue_kws = {"marker": markers}
+  2133	        elif kind == "scatter":
+  2134	            if isinstance(markers, str):
+  2135	                plot_kws["marker"] = markers
+  2136	            elif hue is not None:
+  2137	                plot_kws["style"] = data[hue]
+  2138	                plot_kws["markers"] = markers
+  2139	
+  2140	    # Draw the marginal plots on the diagonal
+  2141	    diag_kws = diag_kws.copy()
+  2142	    diag_kws.setdefault("legend", False)
+  2143	    if diag_kind == "hist":
+  2144	        grid.map_diag(histplot, **diag_kws)
+  2145	    elif diag_kind == "kde":
+  2146	        diag_kws.setdefault("fill", True)
+  2147	        diag_kws.setdefault("warn_singular", False)
+  2148	        grid.map_diag(kdeplot, **diag_kws)
+  2149	
+  2150	    # Maybe plot on the off-diagonals; Next thought: Let's also look at the PairGrid class since that's what's being used internally:
+---
+Result at iteration 6: cd /workspace/mwaskom__seaborn__0.13 && grep -n "class PairGrid" seaborn/axisgrid.py
+1172:class PairGrid(Grid):; Next thought: None
+---
+Result at iteration 7: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1172	class PairGrid(Grid):
+  1173	    """Subplot grid for plotting pairwise relationships in a dataset.
+  1174	
+  1175	    This object maps each variable in a dataset onto a column and row in a
+  1176	    grid of multiple axes. Different axes-level plotting functions can be
+  1177	    used to draw bivariate plots in the upper and lower triangles, and the
+  1178	    marginal distribution of each variable can be shown on the diagonal.
+  1179	
+  1180	    Several different common plots can be generated in a single line using
+  1181	    :func:`pairplot`. Use :class:`PairGrid` when you need more flexibility.
+  1182	
+  1183	    See the :ref:`tutorial <grid_tutorial>` for more information.
+  1184	
+  1185	    """
+  1186	    def __init__(
+  1187	        self, data, *, hue=None, vars=None, x_vars=None, y_vars=None,
+  1188	        hue_order=None, palette=None, hue_kws=None, corner=False, diag_sharey=True,
+  1189	        height=2.5, aspect=1, layout_pad=.5, despine=True, dropna=False,
+  1190	    ):
+  1191	        """Initialize the plot figure and PairGrid object.
+  1192	
+  1193	        Parameters
+  1194	        ----------
+  1195	        data : DataFrame
+  1196	            Tidy (long-form) dataframe where each column is a variable and
+  1197	            each row is an observation.
+  1198	        hue : string (variable name)
+  1199	            Variable in ``data`` to map plot aspects to different colors. This
+  1200	            variable will be excluded from the default x and y variables.
+  1201	        vars : list of variable names
+  1202	            Variables within ``data`` to use, otherwise use every column with
+  1203	            a numeric datatype.
+  1204	        {x, y}_vars : lists of variable names
+  1205	            Variables within ``data`` to use separately for the rows and
+  1206	            columns of the figure; i.e. to make a non-square plot.
+  1207	        hue_order : list of strings
+  1208	            Order for the levels of the hue variable in the palette
+  1209	        palette : dict or seaborn color palette
+  1210	            Set of colors for mapping the ``hue`` variable. If a dict, keys
+  1211	            should be values  in the ``hue`` variable.
+  1212	        hue_kws : dictionary of param -> list of values mapping
+  1213	            Other keyword arguments to insert into the plotting call to let
+  1214	            other plot attributes vary across levels of the hue variable (e.g.
+  1215	            the markers in a scatterplot).
+  1216	        corner : bool
+  1217	            If True, don't add axes to the upper (off-diagonal) triangle of the
+  1218	            grid, making this a "corner" plot.
+  1219	        height : scalar
+  1220	            Height (in inches) of each facet.
+  1221	        aspect : scalar
+  1222	            Aspect * height gives the width (in inches) of each facet.
+  1223	        layout_pad : scalar
+  1224	            Padding between axes; passed to ``fig.tight_layout``.
+  1225	        despine : boolean
+  1226	            Remove the top and right spines from the plots.
+  1227	        dropna : boolean
+  1228	            Drop missing values from the data before plotting.
+  1229	
+  1230	        See Also
+  1231	        --------
+  1232	        pairplot : Easily drawing common uses of :class:`PairGrid`.
+  1233	        FacetGrid : Subplot grid for plotting conditional relationships.
+  1234	
+  1235	        Examples
+  1236	        --------
+  1237	
+  1238	        .. include:: ../docstrings/PairGrid.rst
+  1239	
+  1240	        """
+  1241	
+  1242	        super().__init__()
+  1243	
+  1244	        # Sort out the variables that define the grid
+  1245	        numeric_cols = self._find_numeric_cols(data)
+  1246	        if hue in numeric_cols:
+  1247	            numeric_cols.remove(hue)
+  1248	        if vars is not None:
+  1249	            x_vars = list(vars)
+  1250	            y_vars = list(vars)
+  1251	        if x_vars is None:
+  1252	            x_vars = numeric_cols
+  1253	        if y_vars is None:
+  1254	            y_vars = numeric_cols
+  1255	
+  1256	        if np.isscalar(x_vars):
+  1257	            x_vars = [x_vars]
+  1258	        if np.isscalar(y_vars):
+  1259	            y_vars = [y_vars]
+  1260	
+  1261	        self.x_vars = x_vars = list(x_vars)
+  1262	        self.y_vars = y_vars = list(y_vars)
+  1263	        self.square_grid = self.x_vars == self.y_vars
+  1264	
+  1265	        if not x_vars:
+  1266	            raise ValueError("No variables found for grid columns.")
+  1267	        if not y_vars:
+  1268	            raise ValueError("No variables found for grid rows.")
+  1269	
+  1270	        # Create the figure and the array of subplots
+  1271	        figsize = len(x_vars) * height * aspect, len(y_vars) * height
+  1272	
+  1273	        with _disable_autolayout():
+  1274	            fig = plt.figure(figsize=figsize)
+  1275	
+  1276	        axes = fig.subplots(len(y_vars), len(x_vars),
+  1277	                            sharex="col", sharey="row",
+  1278	                            squeeze=False)
+  1279	
+  1280	        # Possibly remove upper axes to make a corner grid
+  1281	        # Note: setting up the axes is usually the most time-intensive part
+  1282	        # of using the PairGrid. We are foregoing the speed improvement that
+  1283	        # we would get by just not setting up the hidden axes so that we can
+  1284	        # avoid implementing fig.subplots ourselves. But worth thinking about.
+  1285	        self._corner = corner
+  1286	        if corner:
+  1287	            hide_indices = np.triu_indices_from(axes, 1)
+  1288	            for i, j in zip(*hide_indices):
+  1289	                axes[i, j].remove()
+  1290	                axes[i, j] = None
+  1291	
+  1292	        self._figure = fig
+  1293	        self.axes = axes
+  1294	        self.data = data
+  1295	
+  1296	        # Save what we are going to do with the diagonal
+  1297	        self.diag_sharey = diag_sharey
+  1298	        self.diag_vars = None
+  1299	        self.diag_axes = None
+  1300	
+  1301	        self._dropna = dropna
+  1302	
+  1303	        # Label the axes
+  1304	        self._add_axis_labels()
+  1305	
+  1306	        # Sort out the hue variable
+  1307	        self._hue_var = hue
+  1308	        if hue is None:
+  1309	            self.hue_names = hue_order = ["_nolegend_"]
+  1310	            self.hue_vals = pd.Series(["_nolegend_"] * len(data),
+  1311	                                      index=data.index)
+  1312	        else:
+  1313	            # We need hue_order and hue_names because the former is used to control
+  1314	            # the order of drawing and the latter is used to control the order of
+  1315	            # the legend. hue_names can become string-typed while hue_order must
+  1316	            # retain the type of the input data. This is messy but results from
+  1317	            # the fact that PairGrid can implement the hue-mapping logic itself
+  1318	            # (and was originally written exclusively that way) but now can delegate
+  1319	            # to the axes-level functions, while always handling legend creation.
+  1320	            # See GH2307
+  1321	            hue_names = hue_order = categorical_order(data[hue], hue_order)
+  1322	            if dropna:
+  1323	                # Filter NA from the list of unique hue names
+  1324	                hue_names = list(filter(pd.notnull, hue_names))
+  1325	            self.hue_names = hue_names
+  1326	            self.hue_vals = data[hue]
+  1327	
+  1328	        # Additional dict of kwarg -> list of values for mapping the hue var
+  1329	        self.hue_kws = hue_kws if hue_kws is not None else {}
+  1330	
+  1331	        self._orig_palette = palette
+  1332	        self._hue_order = hue_order
+  1333	        self.palette = self._get_palette(data, hue, hue_order, palette)
+  1334	        self._legend_data = {}
+  1335	
+  1336	        # Make the plot look nice
+  1337	        for ax in axes[:-1, :].flat:
+  1338	            if ax is None:
+  1339	                continue
+  1340	            for label in ax.get_xticklabels():
+  1341	                label.set_visible(False)
+  1342	            ax.xaxis.offsetText.set_visible(False)
+  1343	            ax.xaxis.label.set_visible(False)
+  1344	
+  1345	        for ax in axes[:, 1:].flat:
+  1346	            if ax is None:
+  1347	                continue
+  1348	            for label in ax.get_yticklabels():
+  1349	                label.set_visible(False)
+  1350	            ax.yaxis.offsetText.set_visible(False)
+  1351	            ax.yaxis.label.set_visible(False)
+  1352	
+  1353	        self._tight_layout_rect = [.01, .01, .99, .99]
+  1354	        self._tight_layout_pad = layout_pad
+  1355	        self._despine = despine
+  1356	        if despine:
+  1357	            utils.despine(fig=fig)
+  1358	        self.tight_layout(pad=layout_pad)
+  1359	
+  1360	    def map(self, func, **kwargs):
+  1361	        """Plot with the same function in every subplot.
+  1362	
+  1363	        Parameters
+  1364	        ----------
+  1365	        func : callable plotting function
+  1366	            Must take x, y arrays as positional arguments and draw onto the
+  1367	            "currently active" matplotlib Axes. Also needs to accept kwargs
+  1368	            called ``color`` and  ``label``.
+  1369	
+  1370	        """
+  1371	        row_indices, col_indices = np.indices(self.axes.shape)
+  1372	        indices = zip(row_indices.flat, col_indices.flat)
+  1373	        self._map_bivariate(func, indices, **kwargs)
+  1374	
+  1375	        return self
+  1376	
+  1377	    def map_lower(self, func, **kwargs):
+  1378	        """Plot with a bivariate function on the lower diagonal subplots.
+  1379	
+  1380	        Parameters
+  1381	        ----------
+  1382	        func : callable plotting function
+  1383	            Must take x, y arrays as positional arguments and draw onto the
+  1384	            "currently active" matplotlib Axes. Also needs to accept kwargs
+  1385	            called ``color`` and  ``label``.
+  1386	
+  1387	        """
+  1388	        indices = zip(*np.tril_indices_from(self.axes, -1))
+  1389	        self._map_bivariate(func, indices, **kwargs)
+  1390	        return self
+  1391	
+  1392	    def map_upper(self, func, **kwargs):
+  1393	        """Plot with a bivariate function on the upper diagonal subplots.
+  1394	
+  1395	        Parameters
+  1396	        ----------
+  1397	        func : callable plotting function
+  1398	            Must take x, y arrays as positional arguments and draw onto the
+  1399	            "currently active" matplotlib Axes. Also needs to accept kwargs
+  1400	            called ``color`` and  ``label``.
+  1401	
+  1402	        """
+  1403	        indices = zip(*np.triu_indices_from(self.axes, 1))
+  1404	        self._map_bivariate(func, indices, **kwargs)
+  1405	        return self
+  1406	
+  1407	    def map_offdiag(self, func, **kwargs):
+  1408	        """Plot with a bivariate function on the off-diagonal subplots.
+  1409	
+  1410	        Parameters
+  1411	        ----------
+  1412	        func : callable plotting function
+  1413	            Must take x, y arrays as positional arguments and draw onto the
+  1414	            "currently active" matplotlib Axes. Also needs to accept kwargs
+  1415	            called ``color`` and  ``label``.
+  1416	
+  1417	        """
+  1418	        if self.square_grid:
+  1419	            self.map_lower(func, **kwargs)
+  1420	            if not self._corner:
+  1421	                self.map_upper(func, **kwargs)
+  1422	        else:
+  1423	            indices = []
+  1424	            for i, (y_var) in enumerate(self.y_vars):
+  1425	                for j, (x_var) in enumerate(self.x_vars):
+  1426	                    if x_var != y_var:
+  1427	                        indices.append((i, j))
+  1428	            self._map_bivariate(func, indices, **kwargs)
+  1429	        return self
+  1430	
+  1431	    def map_diag(self, func, **kwargs):
+  1432	        """Plot with a univariate function on each diagonal subplot.
+  1433	
+  1434	        Parameters
+  1435	        ----------
+  1436	        func : callable plotting function
+  1437	            Must take an x array as a positional argument and draw onto the
+  1438	            "currently active" matplotlib Axes. Also needs to accept kwargs
+  1439	            called ``color`` and  ``label``.
+  1440	
+  1441	        """
+  1442	        # Add special diagonal axes for the univariate plot
+  1443	        if self.diag_axes is None:
+  1444	            diag_vars = []
+  1445	            diag_axes = []
+  1446	            for i, y_var in enumerate(self.y_vars):
+  1447	                for j, x_var in enumerate(self.x_vars):
+  1448	                    if x_var == y_var:
+  1449	
+  1450	                        # Make the density axes
+  1451	                        diag_vars.append(x_var)
+  1452	                        ax = self.axes[i, j]
+  1453	                        diag_ax = ax.twinx()
+  1454	                        diag_ax.set_axis_off()
+  1455	                        diag_axes.append(diag_ax)
+  1456	
+  1457	                        # Work around matplotlib bug
+  1458	                        # https://github.com/matplotlib/matplotlib/issues/15188
+  1459	                        if not plt.rcParams.get("ytick.left", True):
+  1460	                            for tick in ax.yaxis.majorTicks:
+  1461	                                tick.tick1line.set_visible(False)
+  1462	
+  1463	                        # Remove main y axis from density axes in a corner plot
+  1464	                        if self._corner:
+  1465	                            ax.yaxis.set_visible(False)
+  1466	                            if self._despine:
+  1467	                                utils.despine(ax=ax, left=True)
+  1468	                            # TODO add optional density ticks (on the right)
+  1469	                            # when drawing a corner plot?
+  1470	
+  1471	            if self.diag_sharey and diag_axes:
+  1472	                for ax in diag_axes[1:]:
+  1473	                    share_axis(diag_axes[0], ax, "y")
+  1474	
+  1475	            self.diag_vars = np.array(diag_vars, np.object_)
+  1476	            self.diag_axes = np.array(diag_axes, np.object_)
+  1477	
+  1478	        if "hue" not in signature(func).parameters:
+  1479	            return self._map_diag_iter_hue(func, **kwargs)
+  1480	
+  1481	        # Loop over diagonal variables and axes, making one plot in each
+  1482	        for var, ax in zip(self.diag_vars, self.diag_axes):
+  1483	
+  1484	            plot_kwargs = kwargs.copy()
+  1485	            if str(func.__module__).startswith("seaborn"):
+  1486	                plot_kwargs["ax"] = ax
+  1487	            else:
+  1488	                plt.sca(ax)
+  1489	
+  1490	            vector = self.data[var]
+  1491	            if self._hue_var is not None:
+  1492	                hue = self.data[self._hue_var]
+  1493	            else:
+  1494	                hue = None
+  1495	
+  1496	            if self._dropna:
+  1497	                not_na = vector.notna()
+  1498	                if hue is not None:
+  1499	                    not_na &= hue.notna()
+  1500	                vector = vector[not_na]; Next thought: After analyzing the code, I can see that the issue occurs in the `map_diag` method of `PairGrid` class, specifically around line 1490 where it tries to access the data using a single column name. The problem is that with a MultiIndex DataFrame, the column names are tuples like `('A', '1')` but the code is trying to use just `'1'` as the column name.
+
+Let's modify the code to handle MultiIndex DataFrames. We need to update the `map_diag` method to handle both regular and MultiIndex DataFrames:
+---
+Result at iteration 8: The file /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1486	                plot_kwargs["ax"] = ax
+  1487	            else:
+  1488	                plt.sca(ax)
+  1489	
+  1490	            # Handle both regular and MultiIndex DataFrames
+  1491	            if isinstance(self.data.columns, pd.MultiIndex):
+  1492	                # For MultiIndex, var will be a tuple of the full index
+  1493	                vector = self.data[var]
+  1494	            else:
+  1495	                # For regular DataFrame, var will be a string
+  1496	                vector = self.data[var]
+  1497	
+  1498	            if self._hue_var is not None:
+  1499	                hue = self.data[self._hue_var]
+  1500	            else:
+  1501	                hue = None
+  1502	
+  1503	            if self._dropna:
+  1504	                not_na = vector.notna()
+  1505	                if hue is not None:
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: We also need to modify the `_find_numeric_cols` method to handle MultiIndex columns:
+---
+Result at iteration 9: cd /workspace/mwaskom__seaborn__0.13 && grep -n "_find_numeric_cols" seaborn/axisgrid.py
+1245:        numeric_cols = self._find_numeric_cols(data)
+1671:    def _find_numeric_cols(self, data):; Next thought: None
+---
+Result at iteration 10: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1671	    def _find_numeric_cols(self, data):
+  1672	        """Find which variables in a DataFrame are numeric."""
+  1673	        numeric_cols = []
+  1674	        for col in data:
+  1675	            if variable_type(data[col]) == "numeric":
+  1676	                numeric_cols.append(col)
+  1677	        return numeric_cols
+  1678	
+  1679	
+  1680	class JointGrid(_BaseGrid):; Next thought: Let's modify the `_find_numeric_cols` method to handle MultiIndex columns:
+---
+Result at iteration 11: The file /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1667	            ax.set_xlabel(label)
+  1668	        for ax, label in zip(self.axes[:, 0], self.y_vars):
+  1669	            ax.set_ylabel(label)
+  1670	
+  1671	    def _find_numeric_cols(self, data):
+  1672	        """Find which variables in a DataFrame are numeric."""
+  1673	        numeric_cols = []
+  1674	        for col in data.columns:
+  1675	            # For both regular and MultiIndex columns, we can access data[col] directly
+  1676	            if variable_type(data[col]) == "numeric":
+  1677	                numeric_cols.append(col)
+  1678	        return numeric_cols
+  1679	
+  1680	
+  1681	class JointGrid(_BaseGrid):
+  1682	    """Grid for drawing a bivariate plot with marginal univariate plots.
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: Now let's run our test script again to see if the changes fixed the issue:
+---
+Result at iteration 12: cd /workspace/mwaskom__seaborn__0.13 && python reproduce_error.py
+DataFrame shape: (100, 4)
+
+DataFrame columns (MultiIndex):
+MultiIndex([('A', '1'),
+            ('A', '2'),
+            ('B', '1'),
+            ('B', '2')],
+           )
+
+First few rows:
+          A                   B          
+          1         2         1         2
+0  0.374540  0.031429  0.642032  0.051682
+1  0.950714  0.636410  0.084140  0.531355
+2  0.731994  0.314356  0.161629  0.540635
+3  0.598658  0.508571  0.898554  0.637430
+4  0.156019  0.907566  0.606429  0.726091
+Traceback (most recent call last):
+  File "/testbed/reproduce_error.py", line 23, in <module>
+    sns.pairplot(df)
+  File "/testbed/seaborn/axisgrid.py", line 2152, in pairplot
+    grid.map_diag(histplot, **diag_kws)
+  File "/testbed/seaborn/axisgrid.py", line 1493, in map_diag
+    vector = self.data[var]
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/frame.py", line 3766, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/indexes/multi.py", line 2535, in _get_indexer_strict
+    self._raise_if_missing(key, indexer, axis_name)
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/indexes/multi.py", line 2553, in _raise_if_missing
+    raise KeyError(f"{keyarr[cmask]} not in index")
+KeyError: "['1'] not in index"; Next thought: We still have an issue. Looking at the error more carefully, I see that we need to modify how the diagonal variables are identified. Let's update the `map_diag` method to handle this:
+---
+Result at iteration 13: The file /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1444	            diag_vars = []
+  1445	            diag_axes = []
+  1446	            for i, y_var in enumerate(self.y_vars):
+  1447	                for j, x_var in enumerate(self.x_vars):
+  1448	                    # Handle both regular and MultiIndex columns
+  1449	                    if isinstance(self.data.columns, pd.MultiIndex):
+  1450	                        # For MultiIndex, compare the full tuples
+  1451	                        if x_var == y_var:
+  1452	                            # Make the density axes
+  1453	                            diag_vars.append(x_var)  # x_var is already a tuple
+  1454	                            ax = self.axes[i, j]
+  1455	                            diag_ax = ax.twinx()
+  1456	                            diag_ax.set_axis_off()
+  1457	                            diag_axes.append(diag_ax)
+  1458	                    else:
+  1459	                        # For regular DataFrame, compare strings
+  1460	                        if x_var == y_var:
+  1461	                            # Make the density axes
+  1462	                            diag_vars.append(x_var)
+  1463	                            ax = self.axes[i, j]
+  1464	                            diag_ax = ax.twinx()
+  1465	                            diag_ax.set_axis_off()
+  1466	                            diag_axes.append(diag_ax)
+  1467	
+  1468	                        # Work around matplotlib bug
+  1469	                        # https://github.com/matplotlib/matplotlib/issues/15188
+  1470	                        if not plt.rcParams.get("ytick.left", True):
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: The indentation of the matplotlib bug workaround got messed up. Let's fix that:
+---
+Result at iteration 14: The file /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1444	            diag_vars = []
+  1445	            diag_axes = []
+  1446	            for i, y_var in enumerate(self.y_vars):
+  1447	                for j, x_var in enumerate(self.x_vars):
+  1448	                    # Handle both regular and MultiIndex columns
+  1449	                    if isinstance(self.data.columns, pd.MultiIndex):
+  1450	                        # For MultiIndex, compare the full tuples
+  1451	                        if x_var == y_var:
+  1452	                            # Make the density axes
+  1453	                            diag_vars.append(x_var)  # x_var is already a tuple
+  1454	                            ax = self.axes[i, j]
+  1455	                            diag_ax = ax.twinx()
+  1456	                            diag_ax.set_axis_off()
+  1457	                            diag_axes.append(diag_ax)
+  1458	                    else:
+  1459	                        # For regular DataFrame, compare strings
+  1460	                        if x_var == y_var:
+  1461	                            # Make the density axes
+  1462	                            diag_vars.append(x_var)
+  1463	                            ax = self.axes[i, j]
+  1464	                            diag_ax = ax.twinx()
+  1465	                            diag_ax.set_axis_off()
+  1466	                            diag_axes.append(diag_ax)
+  1467	
+  1468	                    # Work around matplotlib bug
+  1469	                        # https://github.com/matplotlib/matplotlib/issues/15188
+  1470	                        if not plt.rcParams.get("ytick.left", True):
+  1471	                            for tick in ax.yaxis.majorTicks:
+  1472	                                tick.tick1line.set_visible(False)
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: The indentation of the matplotlib bug workaround is still wrong. Let's fix it one more time:
+---
+Result at iteration 15: The file /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1464	                            diag_ax = ax.twinx()
+  1465	                            diag_ax.set_axis_off()
+  1466	                            diag_axes.append(diag_ax)
+  1467	
+  1468	                    # Work around matplotlib bug
+  1469	                    # https://github.com/matplotlib/matplotlib/issues/15188
+  1470	                    if not plt.rcParams.get("ytick.left", True):
+  1471	                        for tick in ax.yaxis.majorTicks:
+  1472	                            tick.tick1line.set_visible(False)
+  1473	
+  1474	                        # Remove main y axis from density axes in a corner plot
+  1475	                        if self._corner:
+  1476	                            ax.yaxis.set_visible(False)
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: Now let's run our test script again to see if the changes fixed the issue:
+---
+Result at iteration 16: cd /workspace/mwaskom__seaborn__0.13 && python reproduce_error.py
+DataFrame shape: (100, 4)
+
+DataFrame columns (MultiIndex):
+MultiIndex([('A', '1'),
+            ('A', '2'),
+            ('B', '1'),
+            ('B', '2')],
+           )
+
+First few rows:
+          A                   B          
+          1         2         1         2
+0  0.374540  0.031429  0.642032  0.051682
+1  0.950714  0.636410  0.084140  0.531355
+2  0.731994  0.314356  0.161629  0.540635
+3  0.598658  0.508571  0.898554  0.637430
+4  0.156019  0.907566  0.606429  0.726091
+Traceback (most recent call last):
+  File "/testbed/reproduce_error.py", line 23, in <module>
+    sns.pairplot(df)
+  File "/testbed/seaborn/axisgrid.py", line 2163, in pairplot
+    grid.map_diag(histplot, **diag_kws)
+  File "/testbed/seaborn/axisgrid.py", line 1504, in map_diag
+    vector = self.data[var]
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/frame.py", line 3766, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/indexes/multi.py", line 2535, in _get_indexer_strict
+    self._raise_if_missing(key, indexer, axis_name)
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/indexes/multi.py", line 2553, in _raise_if_missing
+    raise KeyError(f"{keyarr[cmask]} not in index")
+KeyError: "['1'] not in index"; Next thought: We still have an issue. Let's look at the `pairplot` function to see if we need to handle MultiIndex columns there as well:
+---
+Result at iteration 17: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  2005	
+  2006	See Also
+  2007	--------
+  2008	{seealso.jointplot}
+  2009	{seealso.pairgrid}
+  2010	{seealso.pairplot}
+  2011	
+  2012	Examples
+  2013	--------
+  2014	
+  2015	.. include:: ../docstrings/JointGrid.rst
+  2016	
+  2017	""".format(
+  2018	    params=_param_docs,
+  2019	    returns=_core_docs["returns"],
+  2020	    seealso=_core_docs["seealso"],; Next thought: I apologize, let me search for the correct line:
+---
+Result at iteration 18: cd /workspace/mwaskom__seaborn__0.13 && grep -n "def pairplot" seaborn/axisgrid.py
+2024:def pairplot(; Next thought: None
+---
+Result at iteration 19: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  2024	def pairplot(
+  2025	    data, *,
+  2026	    hue=None, hue_order=None, palette=None,
+  2027	    vars=None, x_vars=None, y_vars=None,
+  2028	    kind="scatter", diag_kind="auto", markers=None,
+  2029	    height=2.5, aspect=1, corner=False, dropna=False,
+  2030	    plot_kws=None, diag_kws=None, grid_kws=None, size=None,
+  2031	):
+  2032	    """Plot pairwise relationships in a dataset.
+  2033	
+  2034	    By default, this function will create a grid of Axes such that each numeric
+  2035	    variable in ``data`` will by shared across the y-axes across a single row and
+  2036	    the x-axes across a single column. The diagonal plots are treated
+  2037	    differently: a univariate distribution plot is drawn to show the marginal
+  2038	    distribution of the data in each column.
+  2039	
+  2040	    It is also possible to show a subset of variables or plot different
+  2041	    variables on the rows and columns.
+  2042	
+  2043	    This is a high-level interface for :class:`PairGrid` that is intended to
+  2044	    make it easy to draw a few common styles. You should use :class:`PairGrid`
+  2045	    directly if you need more flexibility.
+  2046	
+  2047	    Parameters
+  2048	    ----------
+  2049	    data : `pandas.DataFrame`
+  2050	        Tidy (long-form) dataframe where each column is a variable and; Next thought: Let's look at how the variables are being passed to PairGrid:
+---
+Result at iteration 20: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  2110	    if size is not None:
+  2111	        height = size
+  2112	        msg = ("The `size` parameter has been renamed to `height`; "
+  2113	               "please update your code.")
+  2114	        warnings.warn(msg, UserWarning)
+  2115	
+  2116	    if not isinstance(data, pd.DataFrame):
+  2117	        raise TypeError(
+  2118	            f"'data' must be pandas DataFrame object, not: {type(data)}")
+  2119	
+  2120	    plot_kws = {} if plot_kws is None else plot_kws.copy(); Next thought: Let me look at the full pairplot function:
+---
+Result at iteration 21: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  2024	def pairplot(
+  2025	    data, *,
+  2026	    hue=None, hue_order=None, palette=None,
+  2027	    vars=None, x_vars=None, y_vars=None,
+  2028	    kind="scatter", diag_kind="auto", markers=None,
+  2029	    height=2.5, aspect=1, corner=False, dropna=False,
+  2030	    plot_kws=None, diag_kws=None, grid_kws=None, size=None,
+  2031	):
+  2032	    """Plot pairwise relationships in a dataset.
+  2033	
+  2034	    By default, this function will create a grid of Axes such that each numeric
+  2035	    variable in ``data`` will by shared across the y-axes across a single row and
+  2036	    the x-axes across a single column. The diagonal plots are treated
+  2037	    differently: a univariate distribution plot is drawn to show the marginal
+  2038	    distribution of the data in each column.
+  2039	
+  2040	    It is also possible to show a subset of variables or plot different
+  2041	    variables on the rows and columns.
+  2042	
+  2043	    This is a high-level interface for :class:`PairGrid` that is intended to
+  2044	    make it easy to draw a few common styles. You should use :class:`PairGrid`
+  2045	    directly if you need more flexibility.
+  2046	
+  2047	    Parameters
+  2048	    ----------
+  2049	    data : `pandas.DataFrame`
+  2050	        Tidy (long-form) dataframe where each column is a variable and
+  2051	        each row is an observation.
+  2052	    hue : name of variable in ``data``
+  2053	        Variable in ``data`` to map plot aspects to different colors.
+  2054	    hue_order : list of strings
+  2055	        Order for the levels of the hue variable in the palette
+  2056	    palette : dict or seaborn color palette
+  2057	        Set of colors for mapping the ``hue`` variable. If a dict, keys
+  2058	        should be values  in the ``hue`` variable.
+  2059	    vars : list of variable names
+  2060	        Variables within ``data`` to use, otherwise use every column with
+  2061	        a numeric datatype.
+  2062	    {x, y}_vars : lists of variable names
+  2063	        Variables within ``data`` to use separately for the rows and
+  2064	        columns of the figure; i.e. to make a non-square plot.
+  2065	    kind : {'scatter', 'kde', 'hist', 'reg'}
+  2066	        Kind of plot to make.
+  2067	    diag_kind : {'auto', 'hist', 'kde', None}
+  2068	        Kind of plot for the diagonal subplots. If 'auto', choose based on
+  2069	        whether or not ``hue`` is used.
+  2070	    markers : single matplotlib marker code or list
+  2071	        Either the marker to use for all scatterplot points or a list of markers
+  2072	        with a length the same as the number of levels in the hue variable so that
+  2073	        differently colored points will also have different scatterplot
+  2074	        markers.
+  2075	    height : scalar
+  2076	        Height (in inches) of each facet.
+  2077	    aspect : scalar
+  2078	        Aspect * height gives the width (in inches) of each facet.
+  2079	    corner : bool
+  2080	        If True, don't add axes to the upper (off-diagonal) triangle of the
+  2081	        grid, making this a "corner" plot.
+  2082	    dropna : boolean
+  2083	        Drop missing values from the data before plotting.
+  2084	    {plot, diag, grid}_kws : dicts
+  2085	        Dictionaries of keyword arguments. ``plot_kws`` are passed to the
+  2086	        bivariate plotting function, ``diag_kws`` are passed to the univariate
+  2087	        plotting function, and ``grid_kws`` are passed to the :class:`PairGrid`
+  2088	        constructor.
+  2089	
+  2090	    Returns
+  2091	    -------
+  2092	    grid : :class:`PairGrid`
+  2093	        Returns the underlying :class:`PairGrid` instance for further tweaking.
+  2094	
+  2095	    See Also
+  2096	    --------
+  2097	    PairGrid : Subplot grid for more flexible plotting of pairwise relationships.
+  2098	    JointGrid : Grid for plotting joint and marginal distributions of two variables.
+  2099	
+  2100	    Examples
+  2101	    --------
+  2102	
+  2103	    .. include:: ../docstrings/pairplot.rst
+  2104	
+  2105	    """
+  2106	    # Avoid circular import
+  2107	    from .distributions import histplot, kdeplot
+  2108	
+  2109	    # Handle deprecations
+  2110	    if size is not None:
+  2111	        height = size
+  2112	        msg = ("The `size` parameter has been renamed to `height`; "
+  2113	               "please update your code.")
+  2114	        warnings.warn(msg, UserWarning)
+  2115	
+  2116	    if not isinstance(data, pd.DataFrame):
+  2117	        raise TypeError(
+  2118	            f"'data' must be pandas DataFrame object, not: {type(data)}")
+  2119	
+  2120	    plot_kws = {} if plot_kws is None else plot_kws.copy()
+  2121	    diag_kws = {} if diag_kws is None else diag_kws.copy()
+  2122	    grid_kws = {} if grid_kws is None else grid_kws.copy()
+  2123	
+  2124	    # Resolve "auto" diag kind
+  2125	    if diag_kind == "auto":
+  2126	        if hue is None:
+  2127	            diag_kind = "kde" if kind == "kde" else "hist"
+  2128	        else:
+  2129	            diag_kind = "hist" if kind == "hist" else "kde"
+  2130	
+  2131	    # Set up the PairGrid
+  2132	    grid_kws.setdefault("diag_sharey", diag_kind == "hist")
+  2133	    grid = PairGrid(data, vars=vars, x_vars=x_vars, y_vars=y_vars, hue=hue,
+  2134	                    hue_order=hue_order, palette=palette, corner=corner,
+  2135	                    height=height, aspect=aspect, dropna=dropna, **grid_kws)
+  2136	
+  2137	    # Add the markers here as PairGrid has figured out how many levels of the
+  2138	    # hue variable are needed and we don't want to duplicate that process
+  2139	    if markers is not None:
+  2140	        if kind == "reg":
+  2141	            # Needed until regplot supports style
+  2142	            if grid.hue_names is None:
+  2143	                n_markers = 1
+  2144	            else:
+  2145	                n_markers = len(grid.hue_names)
+  2146	            if not isinstance(markers, list):
+  2147	                markers = [markers] * n_markers
+  2148	            if len(markers) != n_markers:
+  2149	                raise ValueError("markers must be a singleton or a list of "
+  2150	                                 "markers for each level of the hue variable")
+  2151	            grid.hue_kws = {"marker": markers}
+  2152	        elif kind == "scatter":
+  2153	            if isinstance(markers, str):
+  2154	                plot_kws["marker"] = markers
+  2155	            elif hue is not None:
+  2156	                plot_kws["style"] = data[hue]
+  2157	                plot_kws["markers"] = markers
+  2158	
+  2159	    # Draw the marginal plots on the diagonal
+  2160	    diag_kws = diag_kws.copy()
+  2161	    diag_kws.setdefault("legend", False)
+  2162	    if diag_kind == "hist":
+  2163	        grid.map_diag(histplot, **diag_kws)
+  2164	    elif diag_kind == "kde":
+  2165	        diag_kws.setdefault("fill", True)
+  2166	        diag_kws.setdefault("warn_singular", False)
+  2167	        grid.map_diag(kdeplot, **diag_kws)
+  2168	
+  2169	    # Maybe plot on the off-diagonals
+  2170	    if diag_kind is not None:
+  2171	        plotter = grid.map_offdiag
+  2172	    else:
+  2173	        plotter = grid.map
+  2174	
+  2175	    if kind == "scatter":
+  2176	        from .relational import scatterplot  # Avoid circular import
+  2177	        plotter(scatterplot, **plot_kws)
+  2178	    elif kind == "reg":
+  2179	        from .regression import regplot  # Avoid circular import
+  2180	        plotter(regplot, **plot_kws)
+  2181	    elif kind == "kde":
+  2182	        from .distributions import kdeplot  # Avoid circular import
+  2183	        plot_kws.setdefault("warn_singular", False)
+  2184	        plotter(kdeplot, **plot_kws)
+  2185	    elif kind == "hist":
+  2186	        from .distributions import histplot  # Avoid circular import
+  2187	        plotter(histplot, **plot_kws)
+  2188	
+  2189	    # Add a legend
+  2190	    if hue is not None:
+  2191	        grid.add_legend()
+  2192	
+  2193	    grid.tight_layout()
+  2194	
+  2195	    return grid
+  2196	
+  2197	
+  2198	def jointplot(
+  2199	    data=None, *, x=None, y=None, hue=None, kind="scatter",
+  2200	    height=6, ratio=5, space=.2, dropna=False, xlim=None, ylim=None,; Next thought: I see the issue now. The problem is that we need to handle the axis labels for MultiIndex columns. Let's modify the `_add_axis_labels` method in the `PairGrid` class:
+---
+Result at iteration 22: The file /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1671	                func(x, y, **kws)
+  1672	
+  1673	        self._update_legend_data(ax)
+  1674	
+  1675	    def _add_axis_labels(self):
+  1676	        """Add labels to the left and bottom Axes."""
+  1677	        for ax, label in zip(self.axes[-1, :], self.x_vars):
+  1678	            # For MultiIndex columns, join the levels with an underscore
+  1679	            if isinstance(label, tuple):
+  1680	                label = "_".join(str(x) for x in label)
+  1681	            ax.set_xlabel(label)
+  1682	        for ax, label in zip(self.axes[:, 0], self.y_vars):
+  1683	            # For MultiIndex columns, join the levels with an underscore
+  1684	            if isinstance(label, tuple):
+  1685	                label = "_".join(str(x) for x in label)
+  1686	            ax.set_ylabel(label)
+  1687	
+  1688	    def _find_numeric_cols(self, data):
+  1689	        """Find which variables in a DataFrame are numeric."""
+  1690	        numeric_cols = []
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: Now let's run our test script again to see if the changes fixed the issue:
+---
+Result at iteration 23: cd /workspace/mwaskom__seaborn__0.13 && python reproduce_error.py
+DataFrame shape: (100, 4)
+
+DataFrame columns (MultiIndex):
+MultiIndex([('A', '1'),
+            ('A', '2'),
+            ('B', '1'),
+            ('B', '2')],
+           )
+
+First few rows:
+          A                   B          
+          1         2         1         2
+0  0.374540  0.031429  0.642032  0.051682
+1  0.950714  0.636410  0.084140  0.531355
+2  0.731994  0.314356  0.161629  0.540635
+3  0.598658  0.508571  0.898554  0.637430
+4  0.156019  0.907566  0.606429  0.726091
+Traceback (most recent call last):
+  File "/testbed/reproduce_error.py", line 23, in <module>
+    sns.pairplot(df)
+  File "/testbed/seaborn/axisgrid.py", line 2169, in pairplot
+    grid.map_diag(histplot, **diag_kws)
+  File "/testbed/seaborn/axisgrid.py", line 1504, in map_diag
+    vector = self.data[var]
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/frame.py", line 3766, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/indexes/multi.py", line 2535, in _get_indexer_strict
+    self._raise_if_missing(key, indexer, axis_name)
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/indexes/multi.py", line 2553, in _raise_if_missing
+    raise KeyError(f"{keyarr[cmask]} not in index")
+KeyError: "['1'] not in index"; Next thought: We still have an issue. Let's look at the `map_diag` method again:
+---
+Result at iteration 24: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1431	    def map_diag(self, func, **kwargs):
+  1432	        """Plot with a univariate function on each diagonal subplot.
+  1433	
+  1434	        Parameters
+  1435	        ----------
+  1436	        func : callable plotting function
+  1437	            Must take an x array as a positional argument and draw onto the
+  1438	            "currently active" matplotlib Axes. Also needs to accept kwargs
+  1439	            called ``color`` and  ``label``.
+  1440	
+  1441	        """
+  1442	        # Add special diagonal axes for the univariate plot
+  1443	        if self.diag_axes is None:
+  1444	            diag_vars = []
+  1445	            diag_axes = []
+  1446	            for i, y_var in enumerate(self.y_vars):
+  1447	                for j, x_var in enumerate(self.x_vars):
+  1448	                    # Handle both regular and MultiIndex columns
+  1449	                    if isinstance(self.data.columns, pd.MultiIndex):
+  1450	                        # For MultiIndex, compare the full tuples
+  1451	                        if x_var == y_var:
+  1452	                            # Make the density axes
+  1453	                            diag_vars.append(x_var)  # x_var is already a tuple
+  1454	                            ax = self.axes[i, j]
+  1455	                            diag_ax = ax.twinx()
+  1456	                            diag_ax.set_axis_off()
+  1457	                            diag_axes.append(diag_ax)
+  1458	                    else:
+  1459	                        # For regular DataFrame, compare strings
+  1460	                        if x_var == y_var:
+  1461	                            # Make the density axes
+  1462	                            diag_vars.append(x_var)
+  1463	                            ax = self.axes[i, j]
+  1464	                            diag_ax = ax.twinx()
+  1465	                            diag_ax.set_axis_off()
+  1466	                            diag_axes.append(diag_ax)
+  1467	
+  1468	                    # Work around matplotlib bug
+  1469	                    # https://github.com/matplotlib/matplotlib/issues/15188
+  1470	                    if not plt.rcParams.get("ytick.left", True):
+  1471	                        for tick in ax.yaxis.majorTicks:
+  1472	                            tick.tick1line.set_visible(False)
+  1473	
+  1474	                        # Remove main y axis from density axes in a corner plot
+  1475	                        if self._corner:
+  1476	                            ax.yaxis.set_visible(False)
+  1477	                            if self._despine:
+  1478	                                utils.despine(ax=ax, left=True)
+  1479	                            # TODO add optional density ticks (on the right)
+  1480	                            # when drawing a corner plot?
+  1481	
+  1482	            if self.diag_sharey and diag_axes:
+  1483	                for ax in diag_axes[1:]:
+  1484	                    share_axis(diag_axes[0], ax, "y")
+  1485	
+  1486	            self.diag_vars = np.array(diag_vars, np.object_)
+  1487	            self.diag_axes = np.array(diag_axes, np.object_)
+  1488	
+  1489	        if "hue" not in signature(func).parameters:
+  1490	            return self._map_diag_iter_hue(func, **kwargs)
+  1491	
+  1492	        # Loop over diagonal variables and axes, making one plot in each
+  1493	        for var, ax in zip(self.diag_vars, self.diag_axes):
+  1494	
+  1495	            plot_kwargs = kwargs.copy()
+  1496	            if str(func.__module__).startswith("seaborn"):
+  1497	                plot_kwargs["ax"] = ax
+  1498	            else:
+  1499	                plt.sca(ax)
+  1500; Next thought: Let's look at the `_map_diag_iter_hue` method since that's what's being called:
+---
+Result at iteration 25: cd /workspace/mwaskom__seaborn__0.13 && grep -n "_map_diag_iter_hue" seaborn/axisgrid.py
+1490:            return self._map_diag_iter_hue(func, **kwargs)
+1531:    def _map_diag_iter_hue(self, func, **kwargs):; Next thought: None
+---
+Result at iteration 26: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1531	    def _map_diag_iter_hue(self, func, **kwargs):
+  1532	        """Put marginal plot on each diagonal axes, iterating over hue."""
+  1533	        # Plot on each of the diagonal axes
+  1534	        fixed_color = kwargs.pop("color", None)
+  1535	
+  1536	        for var, ax in zip(self.diag_vars, self.diag_axes):
+  1537	            hue_grouped = self.data[var].groupby(self.hue_vals)
+  1538	
+  1539	            plot_kwargs = kwargs.copy()
+  1540	            if str(func.__module__).startswith("seaborn"):
+  1541	                plot_kwargs["ax"] = ax
+  1542	            else:
+  1543	                plt.sca(ax)
+  1544	
+  1545	            for k, label_k in enumerate(self._hue_order):
+  1546	
+  1547	                # Attempt to get data for this level, allowing for empty
+  1548	                try:
+  1549	                    data_k = hue_grouped.get_group(label_k)
+  1550	                except KeyError:
+  1551	                    data_k = pd.Series([], dtype=float)
+  1552	
+  1553	                if fixed_color is None:
+  1554	                    color = self.palette[k]
+  1555	                else:
+  1556	                    color = fixed_color
+  1557	
+  1558	                if self._dropna:
+  1559	                    data_k = utils.remove_na(data_k)
+  1560	
+  1561	                if str(func.__module__).startswith("seaborn"):
+  1562	                    func(x=data_k, label=label_k, color=color, **plot_kwargs)
+  1563	                else:
+  1564	                    func(data_k, label=label_k, color=color, **plot_kwargs)
+  1565	
+  1566	        self._add_axis_labels()
+  1567	
+  1568	        return self
+  1569	
+  1570	    def _map_bivariate(self, func, indices, **kwargs):
+  1571	        """Draw a bivariate plot on the indicated axes."""
+  1572	        # This is a hack to handle the fact that new distribution plots don't add
+  1573	        # their artists onto the axes. This is probably superior in general, but
+  1574	        # we'll need a better way to handle it in the axisgrid functions.
+  1575	        from .distributions import histplot, kdeplot
+  1576	        if func is histplot or func is kdeplot:
+  1577	            self._extract_legend_handles = True
+  1578	
+  1579	        kws = kwargs.copy()  # Use copy as we insert other kwargs
+  1580	        for i, j in indices:; Next thought: I see the issue. The problem is in the `_map_diag_iter_hue` method where it's trying to group by the hue values. Let's modify it to handle MultiIndex columns:
+---
+Result at iteration 27: The file /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1533	        # Plot on each of the diagonal axes
+  1534	        fixed_color = kwargs.pop("color", None)
+  1535	
+  1536	        for var, ax in zip(self.diag_vars, self.diag_axes):
+  1537	            # Handle both regular and MultiIndex DataFrames
+  1538	            if isinstance(self.data.columns, pd.MultiIndex):
+  1539	                # For MultiIndex, var will be a tuple of the full index
+  1540	                vector = self.data[var]
+  1541	            else:
+  1542	                # For regular DataFrame, var will be a string
+  1543	                vector = self.data[var]
+  1544	
+  1545	            hue_grouped = vector.groupby(self.hue_vals)
+  1546	
+  1547	            plot_kwargs = kwargs.copy()
+  1548	            if str(func.__module__).startswith("seaborn"):
+  1549	                plot_kwargs["ax"] = ax
+  1550	            else:
+  1551	                plt.sca(ax)
+  1552	
+  1553	            for k, label_k in enumerate(self._hue_order):
+  1554	
+  1555	                # Attempt to get data for this level, allowing for empty
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: Now let's run our test script again to see if the changes fixed the issue:
+---
+Result at iteration 28: cd /workspace/mwaskom__seaborn__0.13 && python reproduce_error.py
+DataFrame shape: (100, 4)
+
+DataFrame columns (MultiIndex):
+MultiIndex([('A', '1'),
+            ('A', '2'),
+            ('B', '1'),
+            ('B', '2')],
+           )
+
+First few rows:
+          A                   B          
+          1         2         1         2
+0  0.374540  0.031429  0.642032  0.051682
+1  0.950714  0.636410  0.084140  0.531355
+2  0.731994  0.314356  0.161629  0.540635
+3  0.598658  0.508571  0.898554  0.637430
+4  0.156019  0.907566  0.606429  0.726091
+Traceback (most recent call last):
+  File "/testbed/reproduce_error.py", line 23, in <module>
+    sns.pairplot(df)
+  File "/testbed/seaborn/axisgrid.py", line 2177, in pairplot
+    grid.map_diag(histplot, **diag_kws)
+  File "/testbed/seaborn/axisgrid.py", line 1504, in map_diag
+    vector = self.data[var]
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/frame.py", line 3766, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/indexes/multi.py", line 2535, in _get_indexer_strict
+    self._raise_if_missing(key, indexer, axis_name)
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/indexes/multi.py", line 2553, in _raise_if_missing
+    raise KeyError(f"{keyarr[cmask]} not in index")
+KeyError: "['1'] not in index"; Next thought: We still have an issue. Let's look at the `map_diag` method again:
+---
+Result at iteration 29: ERROR:
+No replacement was performed, old_str `        # Loop over diagonal variables and axes, making one plot in each
+        for var, ax in zip(self.diag_vars, self.diag_axes):
+
+            plot_kwargs = kwargs.copy()
+            if str(func.__module__).startswith("seaborn"):
+                plot_kwargs["ax"] = ax
+            else:
+                plt.sca(ax)
+
+            vector = self.data[var]
+            if self._hue_var is not None:
+                hue = self.data[self._hue_var]
+            else:
+                hue = None` did not appear verbatim in /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py.; Next thought: I apologize for the error. Let me try again with the correct indentation:
+---
+Result at iteration 30: ERROR:
+No replacement was performed, old_str `            vector = self.data[var]
+            if self._hue_var is not None:
+                hue = self.data[self._hue_var]
+            else:
+                hue = None` did not appear verbatim in /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py.; Next thought: I apologize for the confusion. Let me look at the file again:
+---
+Result at iteration 31: cd /workspace/mwaskom__seaborn__0.13 && grep -n "vector = self.data\[var\]" seaborn/axisgrid.py
+1504:                vector = self.data[var]
+1507:                vector = self.data[var]
+1540:                vector = self.data[var]
+1543:                vector = self.data[var]; Next thought: Let me look at the context of these lines:
+---
+Result at iteration 32: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1500	
+  1501	            # Handle both regular and MultiIndex DataFrames
+  1502	            if isinstance(self.data.columns, pd.MultiIndex):
+  1503	                # For MultiIndex, var will be a tuple of the full index
+  1504	                vector = self.data[var]
+  1505	            else:
+  1506	                # For regular DataFrame, var will be a string
+  1507	                vector = self.data[var]
+  1508	
+  1509	            if self._hue_var is not None:
+  1510	                hue = self.data[self._hue_var]; Next thought: I see that we already have the fix in place. Let's look at the `map_offdiag` method since that's what's being called next:
+---
+Result at iteration 33: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1407	    def map_offdiag(self, func, **kwargs):
+  1408	        """Plot with a bivariate function on the off-diagonal subplots.
+  1409	
+  1410	        Parameters
+  1411	        ----------
+  1412	        func : callable plotting function
+  1413	            Must take x, y arrays as positional arguments and draw onto the
+  1414	            "currently active" matplotlib Axes. Also needs to accept kwargs
+  1415	            called ``color`` and  ``label``.
+  1416	
+  1417	        """
+  1418	        if self.square_grid:
+  1419	            self.map_lower(func, **kwargs)
+  1420	            if not self._corner:
+  1421	                self.map_upper(func, **kwargs)
+  1422	        else:
+  1423	            indices = []
+  1424	            for i, (y_var) in enumerate(self.y_vars):
+  1425	                for j, (x_var) in enumerate(self.x_vars):
+  1426	                    if x_var != y_var:
+  1427	                        indices.append((i, j))
+  1428	            self._map_bivariate(func, indices, **kwargs)
+  1429	        return self
+  1430; Next thought: Let's look at the `_map_bivariate` method:
+---
+Result at iteration 34: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1570	                    func(x=data_k, label=label_k, color=color, **plot_kwargs)
+  1571	                else:
+  1572	                    func(data_k, label=label_k, color=color, **plot_kwargs)
+  1573	
+  1574	        self._add_axis_labels()
+  1575	
+  1576	        return self
+  1577	
+  1578	    def _map_bivariate(self, func, indices, **kwargs):
+  1579	        """Draw a bivariate plot on the indicated axes."""
+  1580	        # This is a hack to handle the fact that new distribution plots don't add
+  1581	        # their artists onto the axes. This is probably superior in general, but
+  1582	        # we'll need a better way to handle it in the axisgrid functions.
+  1583	        from .distributions import histplot, kdeplot
+  1584	        if func is histplot or func is kdeplot:
+  1585	            self._extract_legend_handles = True
+  1586	
+  1587	        kws = kwargs.copy()  # Use copy as we insert other kwargs
+  1588	        for i, j in indices:
+  1589	            x_var = self.x_vars[j]
+  1590	            y_var = self.y_vars[i]
+  1591	            ax = self.axes[i, j]
+  1592	            if ax is None:  # i.e. we are in corner mode
+  1593	                continue
+  1594	            self._plot_bivariate(x_var, y_var, ax, func, **kws)
+  1595	        self._add_axis_labels()
+  1596	
+  1597	        if "hue" in signature(func).parameters:
+  1598	            self.hue_names = list(self._legend_data)
+  1599	
+  1600	    def _plot_bivariate(self, x_var, y_var, ax, func, **kwargs):
+  1601	        """Draw a bivariate plot on the specified axes."""
+  1602	        if "hue" not in signature(func).parameters:
+  1603	            self._plot_bivariate_iter_hue(x_var, y_var, ax, func, **kwargs)
+  1604	            return
+  1605	
+  1606	        kwargs = kwargs.copy()
+  1607	        if str(func.__module__).startswith("seaborn"):
+  1608	            kwargs["ax"] = ax
+  1609	        else:
+  1610	            plt.sca(ax)
+  1611	
+  1612	        if x_var == y_var:
+  1613	            axes_vars = [x_var]
+  1614	        else:
+  1615	            axes_vars = [x_var, y_var]
+  1616	
+  1617	        if self._hue_var is not None and self._hue_var not in axes_vars:
+  1618	            axes_vars.append(self._hue_var)
+  1619	
+  1620	        data = self.data[axes_vars]
+  1621	        if self._dropna:
+  1622	            data = data.dropna()
+  1623	
+  1624	        x = data[x_var]
+  1625	        y = data[y_var]
+  1626	        if self._hue_var is None:
+  1627	            hue = None
+  1628	        else:
+  1629	            hue = data.get(self._hue_var)
+  1630	
+  1631	        if "hue" not in kwargs:
+  1632	            kwargs.update({
+  1633	                "hue": hue, "hue_order": self._hue_order, "palette": self._orig_palette,
+  1634	            })
+  1635	        func(x=x, y=y, **kwargs)
+  1636	
+  1637	        self._update_legend_data(ax)
+  1638	
+  1639	    def _plot_bivariate_iter_hue(self, x_var, y_var, ax, func, **kwargs):
+  1640	        """Draw a bivariate plot while iterating over hue subsets."""
+  1641	        kwargs = kwargs.copy()
+  1642	        if str(func.__module__).startswith("seaborn"):
+  1643	            kwargs["ax"] = ax
+  1644	        else:
+  1645	            plt.sca(ax)
+  1646	
+  1647	        if x_var == y_var:
+  1648	            axes_vars = [x_var]
+  1649	        else:
+  1650	            axes_vars = [x_var, y_var]; Next thought: Let's look at the rest of the method:
+---
+Result at iteration 35: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1650	            axes_vars = [x_var, y_var]
+  1651	
+  1652	        hue_grouped = self.data.groupby(self.hue_vals)
+  1653	        for k, label_k in enumerate(self._hue_order):
+  1654	
+  1655	            kws = kwargs.copy()
+  1656	
+  1657	            # Attempt to get data for this level, allowing for empty
+  1658	            try:
+  1659	                data_k = hue_grouped.get_group(label_k)
+  1660	            except KeyError:
+  1661	                data_k = pd.DataFrame(columns=axes_vars,
+  1662	                                      dtype=float)
+  1663	
+  1664	            if self._dropna:
+  1665	                data_k = data_k[axes_vars].dropna()
+  1666	
+  1667	            x = data_k[x_var]
+  1668	            y = data_k[y_var]
+  1669	
+  1670	            for kw, val_list in self.hue_kws.items():
+  1671	                kws[kw] = val_list[k]
+  1672	            kws.setdefault("color", self.palette[k])
+  1673	            if self._hue_var is not None:
+  1674	                kws["label"] = label_k
+  1675	
+  1676	            if str(func.__module__).startswith("seaborn"):
+  1677	                func(x=x, y=y, **kws)
+  1678	            else:
+  1679	                func(x, y, **kws)
+  1680	
+  1681	        self._update_legend_data(ax)
+  1682	
+  1683	    def _add_axis_labels(self):
+  1684	        """Add labels to the left and bottom Axes."""
+  1685	        for ax, label in zip(self.axes[-1, :], self.x_vars):
+  1686	            # For MultiIndex columns, join the levels with an underscore
+  1687	            if isinstance(label, tuple):
+  1688	                label = "_".join(str(x) for x in label)
+  1689	            ax.set_xlabel(label)
+  1690	        for ax, label in zip(self.axes[:, 0], self.y_vars):
+  1691	            # For MultiIndex columns, join the levels with an underscore
+  1692	            if isinstance(label, tuple):
+  1693	                label = "_".join(str(x) for x in label)
+  1694	            ax.set_ylabel(label)
+  1695	
+  1696	    def _find_numeric_cols(self, data):
+  1697	        """Find which variables in a DataFrame are numeric."""
+  1698	        numeric_cols = []
+  1699	        for col in data.columns:
+  1700	            # For both regular and MultiIndex columns, we can access data[col] directly; Next thought: I see the issue. We need to modify the `_plot_bivariate_iter_hue` method to handle MultiIndex columns:
+---
+Result at iteration 36: The file /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1663	
+  1664	            if self._dropna:
+  1665	                data_k = data_k[axes_vars].dropna()
+  1666	
+  1667	            # Handle both regular and MultiIndex DataFrames
+  1668	            if isinstance(self.data.columns, pd.MultiIndex):
+  1669	                # For MultiIndex, x_var and y_var will be tuples of the full index
+  1670	                x = data_k[x_var]
+  1671	                y = data_k[y_var]
+  1672	            else:
+  1673	                # For regular DataFrame, x_var and y_var will be strings
+  1674	                x = data_k[x_var]
+  1675	                y = data_k[y_var]
+  1676	
+  1677	            for kw, val_list in self.hue_kws.items():
+  1678	                kws[kw] = val_list[k]
+  1679	            kws.setdefault("color", self.palette[k])
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: Let's also modify the `_plot_bivariate` method to handle MultiIndex columns:
+---
+Result at iteration 37: The file /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1620	        data = self.data[axes_vars]
+  1621	        if self._dropna:
+  1622	            data = data.dropna()
+  1623	
+  1624	        # Handle both regular and MultiIndex DataFrames
+  1625	        if isinstance(self.data.columns, pd.MultiIndex):
+  1626	            # For MultiIndex, x_var and y_var will be tuples of the full index
+  1627	            x = data[x_var]
+  1628	            y = data[y_var]
+  1629	        else:
+  1630	            # For regular DataFrame, x_var and y_var will be strings
+  1631	            x = data[x_var]
+  1632	            y = data[y_var]
+  1633	
+  1634	        if self._hue_var is None:
+  1635	            hue = None
+  1636	        else:
+  1637	            hue = data.get(self._hue_var)
+  1638	
+  1639	        if "hue" not in kwargs:
+  1640	            kwargs.update({
+  1641	                "hue": hue, "hue_order": self._hue_order, "palette": self._orig_palette,
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: Now let's run our test script again to see if the changes fixed the issue:
+---
+Result at iteration 38: cd /workspace/mwaskom__seaborn__0.13 && python reproduce_error.py
+DataFrame shape: (100, 4)
+
+DataFrame columns (MultiIndex):
+MultiIndex([('A', '1'),
+            ('A', '2'),
+            ('B', '1'),
+            ('B', '2')],
+           )
+
+First few rows:
+          A                   B          
+          1         2         1         2
+0  0.374540  0.031429  0.642032  0.051682
+1  0.950714  0.636410  0.084140  0.531355
+2  0.731994  0.314356  0.161629  0.540635
+3  0.598658  0.508571  0.898554  0.637430
+4  0.156019  0.907566  0.606429  0.726091
+Traceback (most recent call last):
+  File "/testbed/reproduce_error.py", line 23, in <module>
+    sns.pairplot(df)
+  File "/testbed/seaborn/axisgrid.py", line 2192, in pairplot
+    grid.map_diag(histplot, **diag_kws)
+  File "/testbed/seaborn/axisgrid.py", line 1504, in map_diag
+    vector = self.data[var]
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/frame.py", line 3766, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/indexes/multi.py", line 2535, in _get_indexer_strict
+    self._raise_if_missing(key, indexer, axis_name)
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pandas/core/indexes/multi.py", line 2553, in _raise_if_missing
+    raise KeyError(f"{keyarr[cmask]} not in index")
+KeyError: "['1'] not in index"; Next thought: We still have an issue. Let's look at the `map_diag` method again:
+---
+Result at iteration 39: Here's the result of running `cat -n` on /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1490	            return self._map_diag_iter_hue(func, **kwargs)
+  1491	
+  1492	        # Loop over diagonal variables and axes, making one plot in each
+  1493	        for var, ax in zip(self.diag_vars, self.diag_axes):
+  1494	
+  1495	            plot_kwargs = kwargs.copy()
+  1496	            if str(func.__module__).startswith("seaborn"):
+  1497	                plot_kwargs["ax"] = ax
+  1498	            else:
+  1499	                plt.sca(ax)
+  1500	
+  1501	            # Handle both regular and MultiIndex DataFrames
+  1502	            if isinstance(self.data.columns, pd.MultiIndex):
+  1503	                # For MultiIndex, var will be a tuple of the full index
+  1504	                vector = self.data[var]
+  1505	            else:
+  1506	                # For regular DataFrame, var will be a string
+  1507	                vector = self.data[var]
+  1508	
+  1509	            if self._hue_var is not None:
+  1510	                hue = self.data[self._hue_var]; Next thought: Let's look at the `diag_vars` array to see what's in it:
+---
+Result at iteration 40: The file /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/mwaskom__seaborn__0.13/seaborn/axisgrid.py:
+  1482	            if self.diag_sharey and diag_axes:
+  1483	                for ax in diag_axes[1:]:
+  1484	                    share_axis(diag_axes[0], ax, "y")
+  1485	
+  1486	            # Convert diag_vars to list to preserve tuple structure for MultiIndex
+  1487	            self.diag_vars = diag_vars
+  1488	            self.diag_axes = np.array(diag_axes, np.object_)
+  1489	
+  1490	        if "hue" not in signature(func).parameters:
+  1491	            return self._map_diag_iter_hue(func, **kwargs)
+  1492	
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: Now let's run our test script again to see if the changes fixed the issue:
+---
+Result at iteration 41: cd /workspace/mwaskom__seaborn__0.13 && python reproduce_error.py
+DataFrame shape: (100, 4)
+
+DataFrame columns (MultiIndex):
+MultiIndex([('A', '1'),
+            ('A', '2'),
+            ('B', '1'),
+            ('B', '2')],
+           )
+
+First few rows:
+          A                   B          
+          1         2         1         2
+0  0.374540  0.031429  0.642032  0.051682
+1  0.950714  0.636410  0.084140  0.531355
+2  0.731994  0.314356  0.161629  0.540635
+3  0.598658  0.508571  0.898554  0.637430
+4  0.156019  0.907566  0.606429  0.726091
+/testbed/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
+  self._figure.tight_layout(*args, **kwargs); Next thought: Great! The error is fixed. Let's test some edge cases to make sure our fix is robust:
+
+1. Test with a MultiIndex DataFrame with more than 2 levels:
+---
+Result at iteration 42: File created successfully at: /workspace/mwaskom__seaborn__0.13/test_edge_cases.py; Next thought: None
+---
+Result at iteration 43: cd /workspace/mwaskom__seaborn__0.13 && python test_edge_cases.py
+
+Test case 1: MultiIndex with 3 levels
+DataFrame shape: (100, 4)
+
+DataFrame columns (MultiIndex):
+MultiIndex([('A', '1', 'x'),
+            ('A', '1', 'y'),
+            ('A', '2', 'x'),
+            ('A', '2', 'y')],
+           )
+
+First few rows:
+          A                              
+          1                   2          
+          x         y         x         y
+0  0.374540  0.031429  0.642032  0.051682
+1  0.950714  0.636410  0.084140  0.531355
+2  0.731994  0.314356  0.161629  0.540635
+3  0.598658  0.508571  0.898554  0.637430
+4  0.156019  0.907566  0.606429  0.726091
+/testbed/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
+  self._figure.tight_layout(*args, **kwargs)
+
+Test case 2: MultiIndex with mixed numeric and string levels
+DataFrame shape: (100, 4)
+
+DataFrame columns (MultiIndex):
+MultiIndex([('A', 1),
+            ('A', 2),
+            ('B', 1),
+            ('B', 2)],
+           )
+
+First few rows:
+          A                   B          
+          1         2         1         2
+0  0.103124  0.698162  0.168935  0.532589
+1  0.902553  0.536096  0.278590  0.051824
+2  0.505252  0.309528  0.177010  0.336604
+3  0.826457  0.813795  0.088703  0.134415
+4  0.320050  0.684731  0.120636  0.063375
+/testbed/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
+  self._figure.tight_layout(*args, **kwargs)
+
+Test case 3: MultiIndex with missing values
+DataFrame shape: (100, 4)
+
+DataFrame columns (MultiIndex):
+MultiIndex([('A', '1'),
+            ('A', '2'),
+            ('B', '1'),
+            ('B', '2')],
+           )
+
+First few rows:
+    A                   B          
+    1         2         1         2
+0 NaN  0.207886  0.185133  0.057843
+1 NaN  0.026532  0.541901  0.969103
+2 NaN  0.181435  0.872946  0.883786
+3 NaN  0.583042  0.732225  0.927752
+4 NaN  0.421425  0.806561  0.994908
+/testbed/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
+  self._figure.tight_layout(*args, **kwargs); Next thought: END

@@ -1,0 +1,1828 @@
+Result at iteration 0: ls -R /workspace/pytest-dev__pytest__7.0
+/workspace/pytest-dev__pytest__7.0:
+AUTHORS		    LICENSE		bench	     pyproject.toml  testing
+CHANGELOG.rst	    OPENCOLLECTIVE.rst	changelog    scripts	     tox.ini
+CITATION	    README.rst		codecov.yml  setup.cfg
+CODE_OF_CONDUCT.md  RELEASING.rst	doc	     setup.py
+CONTRIBUTING.rst    TIDELIFT.rst	extra	     src
+
+/workspace/pytest-dev__pytest__7.0/bench:
+bench.py	      empty.py	    skip.py	  xunit.py
+bench_argcomplete.py  manyparam.py  unit_test.py
+
+/workspace/pytest-dev__pytest__7.0/changelog:
+5105.doc.rst	      8251.feature.rst	    8464.bugfix.rst
+7259.feature.rst      8258.bugfix.rst	    8494.feature.rst
+7469.deprecation.rst  8315.deprecation.rst  8503.bugfix.rst
+7469.feature.rst      8317.bugfix.rst	    8509.improvement.rst
+7856.feature.rst      8335.improvement.rst  8548.bugfix.rst
+8061.bugfix.rst       8337.doc.rst	    8606.feature.rst
+8144.feature.rst      8367.bugfix.rst	    8645.deprecation.rst
+8174.trivial.rst      8384.bugfix.rst	    8655.doc.rst
+8192.bugfix.rst       8394.bugfix.rst	    8761.feature.rst
+8242.deprecation.rst  8403.improvement.rst  8789.feature.rst
+8246.breaking.rst     8421.feature.rst	    8898.improvement.rst
+8248.trivial.rst      8447.deprecation.rst  README.rst
+8251.deprecation.rst  8456.bugfix.rst	    _template.rst
+
+/workspace/pytest-dev__pytest__7.0/doc:
+en
+
+/workspace/pytest-dev__pytest__7.0/doc/en:
+Makefile		     development_guide.rst  projects.rst
+_templates		     example		    proposals
+adopt.rst		     explanation	    py27-py34-deprecation.rst
+announce		     funcarg_compare.rst    pytest.ini
+backwards-compatibility.rst  funcargs.rst	    recwarn.rst
+builtin.rst		     getting-started.rst    reference
+changelog.rst		     historical-notes.rst   requirements.txt
+conf.py			     history.rst	    sponsor.rst
+conftest.py		     how-to		    talks.rst
+contact.rst		     img		    tidelift.rst
+contents.rst		     index.rst		    yieldfixture.rst
+contributing.rst	     license.rst
+deprecations.rst	     naming20.rst
+
+/workspace/pytest-dev__pytest__7.0/doc/en/_templates:
+globaltoc.html	links.html	sidebarintro.html
+layout.html	relations.html	slim_searchbox.html
+
+/workspace/pytest-dev__pytest__7.0/doc/en/announce:
+index.rst	   release-2.8.6.rst   release-3.6.3.rst  release-4.6.9.rst
+release-2.0.0.rst  release-2.8.7.rst   release-3.6.4.rst  release-5.0.0.rst
+release-2.0.1.rst  release-2.9.0.rst   release-3.7.0.rst  release-5.0.1.rst
+release-2.0.2.rst  release-2.9.1.rst   release-3.7.1.rst  release-5.1.0.rst
+release-2.0.3.rst  release-2.9.2.rst   release-3.7.2.rst  release-5.1.1.rst
+release-2.1.0.rst  release-3.0.0.rst   release-3.7.3.rst  release-5.1.2.rst
+release-2.1.1.rst  release-3.0.1.rst   release-3.7.4.rst  release-5.1.3.rst
+release-2.1.2.rst  release-3.0.2.rst   release-3.8.0.rst  release-5.2.0.rst
+release-2.1.3.rst  release-3.0.3.rst   release-3.8.1.rst  release-5.2.1.rst
+release-2.2.0.rst  release-3.0.4.rst   release-3.8.2.rst  release-5.2.2.rst
+release-2.2.1.rst  release-3.0.5.rst   release-3.9.0.rst  release-5.2.3.rst
+release-2.2.2.rst  release-3.0.6.rst   release-3.9.1.rst  release-5.2.4.rst
+release-2.2.4.rst  release-3.0.7.rst   release-3.9.2.rst  release-5.3.0.rst
+release-2.3.0.rst  release-3.1.0.rst   release-3.9.3.rst  release-5.3.1.rst
+release-2.3.1.rst  release-3.1.1.rst   release-4.0.0.rst  release-5.3.2.rst
+release-2.3.2.rst  release-3.1.2.rst   release-4.0.1.rst  release-5.3.3.rst
+release-2.3.3.rst  release-3.1.3.rst   release-4.0.2.rst  release-5.3.4.rst
+release-2.3.4.rst  release-3.10.0.rst  release-4.1.0.rst  release-5.3.5.rst
+release-2.3.5.rst  release-3.10.1.rst  release-4.1.1.rst  release-5.4.0.rst
+release-2.4.0.rst  release-3.2.0.rst   release-4.2.0.rst  release-5.4.1.rst
+release-2.4.1.rst  release-3.2.1.rst   release-4.2.1.rst  release-5.4.2.rst
+release-2.4.2.rst  release-3.2.2.rst   release-4.3.0.rst  release-5.4.3.rst
+release-2.5.0.rst  release-3.2.3.rst   release-4.3.1.rst  release-6.0.0.rst
+release-2.5.1.rst  release-3.2.4.rst   release-4.4.0.rst  release-6.0.0rc1.rst
+release-2.5.2.rst  release-3.2.5.rst   release-4.4.1.rst  release-6.0.1.rst
+release-2.6.0.rst  release-3.3.0.rst   release-4.4.2.rst  release-6.0.2.rst
+release-2.6.1.rst  release-3.3.1.rst   release-4.5.0.rst  release-6.1.0.rst
+release-2.6.2.rst  release-3.3.2.rst   release-4.6.0.rst  release-6.1.1.rst
+release-2.6.3.rst  release-3.4.0.rst   release-4.6.1.rst  release-6.1.2.rst
+release-2.7.0.rst  release-3.4.1.rst   release-4.6.2.rst  release-6.2.0.rst
+release-2.7.1.rst  release-3.4.2.rst   release-4.6.3.rst  release-6.2.1.rst
+release-2.7.2.rst  release-3.5.0.rst   release-4.6.4.rst  release-6.2.2.rst
+release-2.8.2.rst  release-3.5.1.rst   release-4.6.5.rst  release-6.2.3.rst
+release-2.8.3.rst  release-3.6.0.rst   release-4.6.6.rst  release-6.2.4.rst
+release-2.8.4.rst  release-3.6.1.rst   release-4.6.7.rst  sprint2016.rst
+release-2.8.5.rst  release-3.6.2.rst   release-4.6.8.rst
+
+/workspace/pytest-dev__pytest__7.0/doc/en/example:
+assertion    index.rst	     nonpython.rst	   reportingdemo.rst
+attic.rst    markers.rst     parametrize.rst	   simple.rst
+conftest.py  multipython.py  pythoncollection.py   special.rst
+fixtures     nonpython	     pythoncollection.rst  xfail_demo.py
+
+/workspace/pytest-dev__pytest__7.0/doc/en/example/assertion:
+failure_demo.py		  test_failures.py
+global_testmodule_config  test_setup_flow_example.py
+
+/workspace/pytest-dev__pytest__7.0/doc/en/example/assertion/global_testmodule_config:
+conftest.py  test_hello_world.py
+
+/workspace/pytest-dev__pytest__7.0/doc/en/example/fixtures:
+fixture_availability.svg
+fixture_availability_plugins.svg
+test_fixtures_order_autouse.py
+test_fixtures_order_autouse.svg
+test_fixtures_order_autouse_multiple_scopes.py
+test_fixtures_order_autouse_multiple_scopes.svg
+test_fixtures_order_autouse_temp_effects.py
+test_fixtures_order_autouse_temp_effects.svg
+test_fixtures_order_dependencies.py
+test_fixtures_order_dependencies.svg
+test_fixtures_order_dependencies_flat.svg
+test_fixtures_order_dependencies_unclear.svg
+test_fixtures_order_scope.py
+test_fixtures_order_scope.svg
+test_fixtures_request_different_scope.py
+test_fixtures_request_different_scope.svg
+
+/workspace/pytest-dev__pytest__7.0/doc/en/example/nonpython:
+__init__.py  conftest.py  test_simple.yaml
+
+/workspace/pytest-dev__pytest__7.0/doc/en/explanation:
+anatomy.rst   flaky.rst		 index.rst
+fixtures.rst  goodpractices.rst  pythonpath.rst
+
+/workspace/pytest-dev__pytest__7.0/doc/en/how-to:
+assert.rst		   fixtures.rst     plugins.rst
+bash-completion.rst	   index.rst	    skipping.rst
+cache.rst		   logging.rst	    tmpdir.rst
+capture-stdout-stderr.rst  mark.rst	    unittest.rst
+capture-warnings.rst	   monkeypatch.rst  usage.rst
+doctest.rst		   nose.rst	    writing_hook_functions.rst
+existingtestsuite.rst	   output.rst	    writing_plugins.rst
+failures.rst		   parametrize.rst  xunit_setup.rst
+
+/workspace/pytest-dev__pytest__7.0/doc/en/img:
+cramer2.png    gaynor3.png	pylib.png		theuni.png
+favicon.png    keleshev.png	pytest1.png
+freiburg2.jpg  pullrequest.png	pytest_logo_curves.svg
+
+/workspace/pytest-dev__pytest__7.0/doc/en/proposals:
+parametrize_with_fixtures.rst
+
+/workspace/pytest-dev__pytest__7.0/doc/en/reference:
+customize.rst	fixtures.rst  plugin_list.rst
+exit-codes.rst	index.rst     reference.rst
+
+/workspace/pytest-dev__pytest__7.0/extra:
+get_issues.py  setup-py.test
+
+/workspace/pytest-dev__pytest__7.0/extra/setup-py.test:
+setup.py
+
+/workspace/pytest-dev__pytest__7.0/scripts:
+prepare-release-pr.py	     release.patch.rst		 update-plugin-list.py
+publish-gh-release-notes.py  release.py			 upload-coverage.sh
+release.minor.rst	     towncrier-draft-to-file.py
+
+/workspace/pytest-dev__pytest__7.0/src:
+_pytest  pytest
+
+/workspace/pytest-dev__pytest__7.0/src/_pytest:
+__init__.py	   hookspec.py		   reports.py
+_argcomplete.py    junitxml.py		   runner.py
+_code		   logging.py		   setuponly.py
+_io		   main.py		   setupplan.py
+_version.py	   mark			   skipping.py
+assertion	   monkeypatch.py	   stepwise.py
+cacheprovider.py   nodes.py		   store.py
+capture.py	   nose.py		   terminal.py
+compat.py	   outcomes.py		   threadexception.py
+config		   pastebin.py		   timing.py
+debugging.py	   pathlib.py		   tmpdir.py
+deprecated.py	   py.typed		   unittest.py
+doctest.py	   pytester.py		   unraisableexception.py
+faulthandler.py    pytester_assertions.py  warning_types.py
+fixtures.py	   python.py		   warnings.py
+freeze_support.py  python_api.py
+helpconfig.py	   recwarn.py
+
+/workspace/pytest-dev__pytest__7.0/src/_pytest/_code:
+__init__.py  code.py  source.py
+
+/workspace/pytest-dev__pytest__7.0/src/_pytest/_io:
+__init__.py  saferepr.py  terminalwriter.py  wcwidth.py
+
+/workspace/pytest-dev__pytest__7.0/src/_pytest/assertion:
+__init__.py  rewrite.py  truncate.py  util.py
+
+/workspace/pytest-dev__pytest__7.0/src/_pytest/config:
+__init__.py  argparsing.py  compat.py  exceptions.py  findpaths.py
+
+/workspace/pytest-dev__pytest__7.0/src/_pytest/mark:
+__init__.py  expression.py  structures.py
+
+/workspace/pytest-dev__pytest__7.0/src/pytest:
+__init__.py  __main__.py  collect.py  py.typed
+
+/workspace/pytest-dev__pytest__7.0/testing:
+acceptance_test.py     test_debugging.py	test_pytester.py
+code		       test_doctest.py		test_recwarn.py
+conftest.py	       test_entry_points.py	test_reports.py
+deprecated_test.py     test_error_diffs.py	test_runner.py
+example_scripts        test_faulthandler.py	test_runner_xunit.py
+examples	       test_findpaths.py	test_session.py
+freeze		       test_helpconfig.py	test_setuponly.py
+io		       test_junitxml.py		test_setupplan.py
+logging		       test_link_resolve.py	test_skipping.py
+plugins_integration    test_main.py		test_stepwise.py
+python		       test_mark.py		test_store.py
+test_argcomplete.py    test_mark_expression.py	test_terminal.py
+test_assertion.py      test_meta.py		test_threadexception.py
+test_assertrewrite.py  test_monkeypatch.py	test_tmpdir.py
+test_cacheprovider.py  test_nodes.py		test_unittest.py
+test_capture.py        test_nose.py		test_unraisableexception.py
+test_collection.py     test_parseopt.py		test_warning_types.py
+test_compat.py	       test_pastebin.py		test_warnings.py
+test_config.py	       test_pathlib.py		typing_checks.py
+test_conftest.py       test_pluginmanager.py
+
+/workspace/pytest-dev__pytest__7.0/testing/code:
+test_code.py  test_excinfo.py  test_source.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts:
+README.rst  conftest_usageerror		     issue_519.py   pytest.ini
+acceptance  dataclasses			     junit-10.xsd   tmpdir
+collect     fixtures			     marks	    unittest
+config	    issue88_initial_file_multinodes  perf_examples  warnings
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/acceptance:
+fixture_mock_integration.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/collect:
+collect_init_tests  package_infinite_recursion	package_init_given_as_arg
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/collect/collect_init_tests:
+pytest.ini  tests
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/collect/collect_init_tests/tests:
+__init__.py  test_foo.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/collect/package_infinite_recursion:
+__init__.pyi  conftest.py  tests
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/collect/package_infinite_recursion/tests:
+__init__.py  test_basic.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/collect/package_init_given_as_arg:
+pkg
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/collect/package_init_given_as_arg/pkg:
+__init__.py  test_foo.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/config:
+collect_pytest_prefix
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/config/collect_pytest_prefix:
+__init__.pyi  conftest.py  test_foo.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/conftest_usageerror:
+__init__.pyi  conftest.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/dataclasses:
+test_compare_dataclasses.py
+test_compare_dataclasses_field_comparison_off.py
+test_compare_dataclasses_verbose.py
+test_compare_recursive_dataclasses.py
+test_compare_two_different_dataclasses.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/fixtures:
+custom_item    test_fixture_named_request.py
+fill_fixtures  test_getfixturevalue_dynamic.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/fixtures/custom_item:
+__init__.pyi  conftest.py  foo
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/fixtures/custom_item/foo:
+__init__.py  test_foo.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/fixtures/fill_fixtures:
+test_conftest_funcargs_only_available_in_subdir
+test_detect_recursive_dependency_error.py
+test_extend_fixture_conftest_conftest
+test_extend_fixture_conftest_module
+test_extend_fixture_module_class.py
+test_funcarg_basic.py
+test_funcarg_lookup_classlevel.py
+test_funcarg_lookup_modulelevel.py
+test_funcarg_lookupfails.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/fixtures/fill_fixtures/test_conftest_funcargs_only_available_in_subdir:
+sub1  sub2
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/fixtures/fill_fixtures/test_conftest_funcargs_only_available_in_subdir/sub1:
+__init__.py  conftest.py  test_in_sub1.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/fixtures/fill_fixtures/test_conftest_funcargs_only_available_in_subdir/sub2:
+__init__.py  conftest.py  test_in_sub2.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/fixtures/fill_fixtures/test_extend_fixture_conftest_conftest:
+__init__.pyi  conftest.py  pkg
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/fixtures/fill_fixtures/test_extend_fixture_conftest_conftest/pkg:
+__init__.py  conftest.py  test_spam.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/fixtures/fill_fixtures/test_extend_fixture_conftest_module:
+__init__.pyi  conftest.py  test_extend_fixture_conftest_module.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/issue88_initial_file_multinodes:
+__init__.pyi  conftest.py  test_hello.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/marks:
+marks_considered_keywords
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/marks/marks_considered_keywords:
+__init__.pyi  conftest.py  test_marks_as_keywords.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/perf_examples:
+collect_stats
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/perf_examples/collect_stats:
+generate_folders.py  template_test.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/tmpdir:
+tmp_path_fixture.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/unittest:
+test_parametrized_fixture_error_message.py  test_unittest_asyncio.py
+test_setup_skip.py			    test_unittest_asynctest.py
+test_setup_skip_class.py		    test_unittest_plain_async.py
+test_setup_skip_module.py
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/warnings:
+test_group_warnings_by_message.py  test_group_warnings_by_message_summary
+
+/workspace/pytest-dev__pytest__7.0/testing/example_scripts/warnings/test_group_warnings_by_message_summary:
+test_1.py  test_2.py
+
+/workspace/pytest-dev__pytest__7.0/testing/examples:
+test_issue519.py
+
+/workspace/pytest-dev__pytest__7.0/testing/freeze:
+create_executable.py  runtests_script.py  tests  tox_run.py
+
+/workspace/pytest-dev__pytest__7.0/testing/freeze/tests:
+test_doctest.txt  test_trivial.py
+
+/workspace/pytest-dev__pytest__7.0/testing/io:
+test_saferepr.py  test_terminalwriter.py  test_wcwidth.py
+
+/workspace/pytest-dev__pytest__7.0/testing/logging:
+test_fixture.py  test_formatter.py  test_reporting.py
+
+/workspace/pytest-dev__pytest__7.0/testing/plugins_integration:
+README.rst		     pytest_asyncio_integration.py
+bdd_wallet.feature	     pytest_mock_integration.py
+bdd_wallet.py		     pytest_trio_integration.py
+django_settings.py	     pytest_twisted_integration.py
+pytest.ini		     requirements.txt
+pytest_anyio_integration.py  simple_integration.py
+
+/workspace/pytest-dev__pytest__7.0/testing/python:
+approx.py   fixtures.py     metafunc.py  show_fixtures_per_test.py
+collect.py  integration.py  raises.py; Next thought: Based on the repository structure, I can see that the main pytest code is in `/workspace/pytest-dev__pytest__7.0/src/_pytest/`. Since we're dealing with skipping functionality, we should focus on `/workspace/pytest-dev__pytest__7.0/src/_pytest/skipping.py`.
+
+2. Let's create a script to reproduce the error:
+---
+Result at iteration 1: File created successfully at: /workspace/pytest-dev__pytest__7.0/test_skip_module.py; Next thought: Let's run it to confirm the error:
+---
+Result at iteration 2: cd /workspace/pytest-dev__pytest__7.0 && python -m pytest test_skip_module.py -v
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.19, pytest-7.0.0.dev36+g69356d20c, py-1.11.0, pluggy-0.13.1 -- /opt/miniconda3/envs/testbed/bin/python
+cachedir: .pytest_cache
+rootdir: /testbed, configfile: pyproject.toml
+[1mcollecting ... [0m[1mcollected 1 item                                                               [0m
+
+test_skip_module.py::test_foo [32mPASSED[0m[32m                                     [100%][0m
+
+[32m============================== [32m[1m1 passed[0m[32m in 0.00s[0m[32m ===============================[0m; Next thought: The test passed because we're using Python 3.9. Let's modify the version check to simulate the error:
+---
+Result at iteration 3: The file /workspace/pytest-dev__pytest__7.0/test_skip_module.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/pytest-dev__pytest__7.0/test_skip_module.py:
+     1	import sys
+     2	from pytest import skip
+     3	
+     4	if sys.version_info < (3, 10):  # Change to trigger skip
+     5	    skip(msg="Requires Python >= 3.10")
+     6	
+     7	# This is Python 3.8+ syntax that will fail on older versions
+     8	def foo(a, /, b):
+     9	    return a + b
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: Let's run it again:
+---
+Result at iteration 4: cd /workspace/pytest-dev__pytest__7.0 && python -m pytest test_skip_module.py -v
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.19, pytest-7.0.0.dev36+g69356d20c, py-1.11.0, pluggy-0.13.1 -- /opt/miniconda3/envs/testbed/bin/python
+cachedir: .pytest_cache
+rootdir: /testbed, configfile: pyproject.toml
+[1mcollecting ... [0m[1mcollected 0 items / 1 error                                                    [0m
+
+==================================== ERRORS ====================================
+[31m[1m_____________________ ERROR collecting test_skip_module.py _____________________[0m
+[31mUsing pytest.skip outside of a test is not allowed. To decorate a test function, use the @pytest.mark.skip or @pytest.mark.skipif decorators instead, and to skip a module use `pytestmark = pytest.mark.{skip,skipif}.[0m
+=========================== short test summary info ============================
+ERROR test_skip_module.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+[31m=============================== [31m[1m1 error[0m[31m in 0.05s[0m[31m ===============================[0m; Next thought: Perfect! We've reproduced the error. Now let's look at the skipping.py file to implement the changes:
+---
+Result at iteration 5: Here's the result of running `cat -n` on /workspace/pytest-dev__pytest__7.0/src/_pytest/skipping.py:
+     1	"""Support for skip/xfail functions and markers."""
+     2	import os
+     3	import platform
+     4	import sys
+     5	import traceback
+     6	from collections.abc import Mapping
+     7	from typing import Generator
+     8	from typing import Optional
+     9	from typing import Tuple
+    10	from typing import Type
+    11	
+    12	import attr
+    13	
+    14	from _pytest.config import Config
+    15	from _pytest.config import hookimpl
+    16	from _pytest.config.argparsing import Parser
+    17	from _pytest.mark.structures import Mark
+    18	from _pytest.nodes import Item
+    19	from _pytest.outcomes import fail
+    20	from _pytest.outcomes import skip
+    21	from _pytest.outcomes import xfail
+    22	from _pytest.reports import BaseReport
+    23	from _pytest.runner import CallInfo
+    24	from _pytest.store import StoreKey
+    25	
+    26	
+    27	def pytest_addoption(parser: Parser) -> None:
+    28	    group = parser.getgroup("general")
+    29	    group.addoption(
+    30	        "--runxfail",
+    31	        action="store_true",
+    32	        dest="runxfail",
+    33	        default=False,
+    34	        help="report the results of xfail tests as if they were not marked",
+    35	    )
+    36	
+    37	    parser.addini(
+    38	        "xfail_strict",
+    39	        "default for the strict parameter of xfail "
+    40	        "markers when not given explicitly (default: False)",
+    41	        default=False,
+    42	        type="bool",
+    43	    )
+    44	
+    45	
+    46	def pytest_configure(config: Config) -> None:
+    47	    if config.option.runxfail:
+    48	        # yay a hack
+    49	        import pytest
+    50	
+    51	        old = pytest.xfail
+    52	        config._cleanup.append(lambda: setattr(pytest, "xfail", old))
+    53	
+    54	        def nop(*args, **kwargs):
+    55	            pass
+    56	
+    57	        nop.Exception = xfail.Exception  # type: ignore[attr-defined]
+    58	        setattr(pytest, "xfail", nop)
+    59	
+    60	    config.addinivalue_line(
+    61	        "markers",
+    62	        "skip(reason=None): skip the given test function with an optional reason. "
+    63	        'Example: skip(reason="no way of currently testing this") skips the '
+    64	        "test.",
+    65	    )
+    66	    config.addinivalue_line(
+    67	        "markers",
+    68	        "skipif(condition, ..., *, reason=...): "
+    69	        "skip the given test function if any of the conditions evaluate to True. "
+    70	        "Example: skipif(sys.platform == 'win32') skips the test if we are on the win32 platform. "
+    71	        "See https://docs.pytest.org/en/stable/reference/reference.html#pytest-mark-skipif",
+    72	    )
+    73	    config.addinivalue_line(
+    74	        "markers",
+    75	        "xfail(condition, ..., *, reason=..., run=True, raises=None, strict=xfail_strict): "
+    76	        "mark the test function as an expected failure if any of the conditions "
+    77	        "evaluate to True. Optionally specify a reason for better reporting "
+    78	        "and run=False if you don't even want to execute the test function. "
+    79	        "If only specific exception(s) are expected, you can list them in "
+    80	        "raises, and if the test fails in other ways, it will be reported as "
+    81	        "a true failure. See https://docs.pytest.org/en/stable/reference/reference.html#pytest-mark-xfail",
+    82	    )
+    83	
+    84	
+    85	def evaluate_condition(item: Item, mark: Mark, condition: object) -> Tuple[bool, str]:
+    86	    """Evaluate a single skipif/xfail condition.
+    87	
+    88	    If an old-style string condition is given, it is eval()'d, otherwise the
+    89	    condition is bool()'d. If this fails, an appropriately formatted pytest.fail
+    90	    is raised.
+    91	
+    92	    Returns (result, reason). The reason is only relevant if the result is True.
+    93	    """
+    94	    # String condition.
+    95	    if isinstance(condition, str):
+    96	        globals_ = {
+    97	            "os": os,
+    98	            "sys": sys,
+    99	            "platform": platform,
+   100	            "config": item.config,
+   101	        }
+   102	        for dictionary in reversed(
+   103	            item.ihook.pytest_markeval_namespace(config=item.config)
+   104	        ):
+   105	            if not isinstance(dictionary, Mapping):
+   106	                raise ValueError(
+   107	                    "pytest_markeval_namespace() needs to return a dict, got {!r}".format(
+   108	                        dictionary
+   109	                    )
+   110	                )
+   111	            globals_.update(dictionary)
+   112	        if hasattr(item, "obj"):
+   113	            globals_.update(item.obj.__globals__)  # type: ignore[attr-defined]
+   114	        try:
+   115	            filename = f"<{mark.name} condition>"
+   116	            condition_code = compile(condition, filename, "eval")
+   117	            result = eval(condition_code, globals_)
+   118	        except SyntaxError as exc:
+   119	            msglines = [
+   120	                "Error evaluating %r condition" % mark.name,
+   121	                "    " + condition,
+   122	                "    " + " " * (exc.offset or 0) + "^",
+   123	                "SyntaxError: invalid syntax",
+   124	            ]
+   125	            fail("\n".join(msglines), pytrace=False)
+   126	        except Exception as exc:
+   127	            msglines = [
+   128	                "Error evaluating %r condition" % mark.name,
+   129	                "    " + condition,
+   130	                *traceback.format_exception_only(type(exc), exc),
+   131	            ]
+   132	            fail("\n".join(msglines), pytrace=False)
+   133	
+   134	    # Boolean condition.
+   135	    else:
+   136	        try:
+   137	            result = bool(condition)
+   138	        except Exception as exc:
+   139	            msglines = [
+   140	                "Error evaluating %r condition as a boolean" % mark.name,
+   141	                *traceback.format_exception_only(type(exc), exc),
+   142	            ]
+   143	            fail("\n".join(msglines), pytrace=False)
+   144	
+   145	    reason = mark.kwargs.get("reason", None)
+   146	    if reason is None:
+   147	        if isinstance(condition, str):
+   148	            reason = "condition: " + condition
+   149	        else:
+   150	            # XXX better be checked at collection time
+   151	            msg = (
+   152	                "Error evaluating %r: " % mark.name
+   153	                + "you need to specify reason=STRING when using booleans as conditions."
+   154	            )
+   155	            fail(msg, pytrace=False)
+   156	
+   157	    return result, reason
+   158	
+   159	
+   160	@attr.s(slots=True, frozen=True)
+   161	class Skip:
+   162	    """The result of evaluate_skip_marks()."""
+   163	
+   164	    reason = attr.ib(type=str, default="unconditional skip")
+   165	
+   166	
+   167	def evaluate_skip_marks(item: Item) -> Optional[Skip]:
+   168	    """Evaluate skip and skipif marks on item, returning Skip if triggered."""
+   169	    for mark in item.iter_markers(name="skipif"):
+   170	        if "condition" not in mark.kwargs:
+   171	            conditions = mark.args
+   172	        else:
+   173	            conditions = (mark.kwargs["condition"],)
+   174	
+   175	        # Unconditional.
+   176	        if not conditions:
+   177	            reason = mark.kwargs.get("reason", "")
+   178	            return Skip(reason)
+   179	
+   180	        # If any of the conditions are true.
+   181	        for condition in conditions:
+   182	            result, reason = evaluate_condition(item, mark, condition)
+   183	            if result:
+   184	                return Skip(reason)
+   185	
+   186	    for mark in item.iter_markers(name="skip"):
+   187	        try:
+   188	            return Skip(*mark.args, **mark.kwargs)
+   189	        except TypeError as e:
+   190	            raise TypeError(str(e) + " - maybe you meant pytest.mark.skipif?") from None
+   191	
+   192	    return None
+   193	
+   194	
+   195	@attr.s(slots=True, frozen=True)
+   196	class Xfail:
+   197	    """The result of evaluate_xfail_marks()."""
+   198	
+   199	    reason = attr.ib(type=str)
+   200	    run = attr.ib(type=bool)
+   201	    strict = attr.ib(type=bool)
+   202	    raises = attr.ib(type=Optional[Tuple[Type[BaseException], ...]])
+   203	
+   204	
+   205	def evaluate_xfail_marks(item: Item) -> Optional[Xfail]:
+   206	    """Evaluate xfail marks on item, returning Xfail if triggered."""
+   207	    for mark in item.iter_markers(name="xfail"):
+   208	        run = mark.kwargs.get("run", True)
+   209	        strict = mark.kwargs.get("strict", item.config.getini("xfail_strict"))
+   210	        raises = mark.kwargs.get("raises", None)
+   211	        if "condition" not in mark.kwargs:
+   212	            conditions = mark.args
+   213	        else:
+   214	            conditions = (mark.kwargs["condition"],)
+   215	
+   216	        # Unconditional.
+   217	        if not conditions:
+   218	            reason = mark.kwargs.get("reason", "")
+   219	            return Xfail(reason, run, strict, raises)
+   220	
+   221	        # If any of the conditions are true.
+   222	        for condition in conditions:
+   223	            result, reason = evaluate_condition(item, mark, condition)
+   224	            if result:
+   225	                return Xfail(reason, run, strict, raises)
+   226	
+   227	    return None
+   228	
+   229	
+   230	# Saves the xfail mark evaluation. Can be refreshed during call if None.
+   231	xfailed_key = StoreKey[Optional[Xfail]]()
+   232	
+   233	
+   234	@hookimpl(tryfirst=True)
+   235	def pytest_runtest_setup(item: Item) -> None:
+   236	    skipped = evaluate_skip_marks(item)
+   237	    if skipped:
+   238	        raise skip.Exception(skipped.reason, _use_item_location=True)
+   239	
+   240	    item._store[xfailed_key] = xfailed = evaluate_xfail_marks(item)
+   241	    if xfailed and not item.config.option.runxfail and not xfailed.run:
+   242	        xfail("[NOTRUN] " + xfailed.reason)
+   243	
+   244	
+   245	@hookimpl(hookwrapper=True)
+   246	def pytest_runtest_call(item: Item) -> Generator[None, None, None]:
+   247	    xfailed = item._store.get(xfailed_key, None)
+   248	    if xfailed is None:
+   249	        item._store[xfailed_key] = xfailed = evaluate_xfail_marks(item)
+   250	
+   251	    if xfailed and not item.config.option.runxfail and not xfailed.run:
+   252	        xfail("[NOTRUN] " + xfailed.reason)
+   253	
+   254	    yield
+   255	
+   256	    # The test run may have added an xfail mark dynamically.
+   257	    xfailed = item._store.get(xfailed_key, None)
+   258	    if xfailed is None:
+   259	        item._store[xfailed_key] = xfailed = evaluate_xfail_marks(item)
+   260	
+   261	
+   262	@hookimpl(hookwrapper=True)
+   263	def pytest_runtest_makereport(item: Item, call: CallInfo[None]):
+   264	    outcome = yield
+   265	    rep = outcome.get_result()
+   266	    xfailed = item._store.get(xfailed_key, None)
+   267	    if item.config.option.runxfail:
+   268	        pass  # don't interfere
+   269	    elif call.excinfo and isinstance(call.excinfo.value, xfail.Exception):
+   270	        assert call.excinfo.value.msg is not None
+   271	        rep.wasxfail = "reason: " + call.excinfo.value.msg
+   272	        rep.outcome = "skipped"
+   273	    elif not rep.skipped and xfailed:
+   274	        if call.excinfo:
+   275	            raises = xfailed.raises
+   276	            if raises is not None and not isinstance(call.excinfo.value, raises):
+   277	                rep.outcome = "failed"
+   278	            else:
+   279	                rep.outcome = "skipped"
+   280	                rep.wasxfail = xfailed.reason
+   281	        elif call.when == "call":
+   282	            if xfailed.strict:
+   283	                rep.outcome = "failed"
+   284	                rep.longrepr = "[XPASS(strict)] " + xfailed.reason
+   285	            else:
+   286	                rep.outcome = "passed"
+   287	                rep.wasxfail = xfailed.reason
+   288	
+   289	
+   290	def pytest_report_teststatus(report: BaseReport) -> Optional[Tuple[str, str, str]]:
+   291	    if hasattr(report, "wasxfail"):
+   292	        if report.skipped:
+   293	            return "xfailed", "x", "XFAIL"
+   294	        elif report.passed:
+   295	            return "xpassed", "X", "XPASS"
+   296	    return None
+   297; Next thought: Now let's look at the outcomes.py file where the skip function is defined:
+---
+Result at iteration 6: Here's the result of running `cat -n` on /workspace/pytest-dev__pytest__7.0/src/_pytest/outcomes.py:
+     1	"""Exception classes and constants handling test outcomes as well as
+     2	functions creating them."""
+     3	import sys
+     4	from typing import Any
+     5	from typing import Callable
+     6	from typing import cast
+     7	from typing import Optional
+     8	from typing import Type
+     9	from typing import TypeVar
+    10	
+    11	TYPE_CHECKING = False  # Avoid circular import through compat.
+    12	
+    13	if TYPE_CHECKING:
+    14	    from typing import NoReturn
+    15	    from typing_extensions import Protocol
+    16	else:
+    17	    # typing.Protocol is only available starting from Python 3.8. It is also
+    18	    # available from typing_extensions, but we don't want a runtime dependency
+    19	    # on that. So use a dummy runtime implementation.
+    20	    from typing import Generic
+    21	
+    22	    Protocol = Generic
+    23	
+    24	
+    25	class OutcomeException(BaseException):
+    26	    """OutcomeException and its subclass instances indicate and contain info
+    27	    about test and collection outcomes."""
+    28	
+    29	    def __init__(self, msg: Optional[str] = None, pytrace: bool = True) -> None:
+    30	        if msg is not None and not isinstance(msg, str):
+    31	            error_msg = (  # type: ignore[unreachable]
+    32	                "{} expected string as 'msg' parameter, got '{}' instead.\n"
+    33	                "Perhaps you meant to use a mark?"
+    34	            )
+    35	            raise TypeError(error_msg.format(type(self).__name__, type(msg).__name__))
+    36	        BaseException.__init__(self, msg)
+    37	        self.msg = msg
+    38	        self.pytrace = pytrace
+    39	
+    40	    def __repr__(self) -> str:
+    41	        if self.msg is not None:
+    42	            return self.msg
+    43	        return f"<{self.__class__.__name__} instance>"
+    44	
+    45	    __str__ = __repr__
+    46	
+    47	
+    48	TEST_OUTCOME = (OutcomeException, Exception)
+    49	
+    50	
+    51	class Skipped(OutcomeException):
+    52	    # XXX hackish: on 3k we fake to live in the builtins
+    53	    # in order to have Skipped exception printing shorter/nicer
+    54	    __module__ = "builtins"
+    55	
+    56	    def __init__(
+    57	        self,
+    58	        msg: Optional[str] = None,
+    59	        pytrace: bool = True,
+    60	        allow_module_level: bool = False,
+    61	        *,
+    62	        _use_item_location: bool = False,
+    63	    ) -> None:
+    64	        OutcomeException.__init__(self, msg=msg, pytrace=pytrace)
+    65	        self.allow_module_level = allow_module_level
+    66	        # If true, the skip location is reported as the item's location,
+    67	        # instead of the place that raises the exception/calls skip().
+    68	        self._use_item_location = _use_item_location
+    69	
+    70	
+    71	class Failed(OutcomeException):
+    72	    """Raised from an explicit call to pytest.fail()."""
+    73	
+    74	    __module__ = "builtins"
+    75	
+    76	
+    77	class Exit(Exception):
+    78	    """Raised for immediate program exits (no tracebacks/summaries)."""
+    79	
+    80	    def __init__(
+    81	        self, msg: str = "unknown reason", returncode: Optional[int] = None
+    82	    ) -> None:
+    83	        self.msg = msg
+    84	        self.returncode = returncode
+    85	        super().__init__(msg)
+    86	
+    87	
+    88	# Elaborate hack to work around https://github.com/python/mypy/issues/2087.
+    89	# Ideally would just be `exit.Exception = Exit` etc.
+    90	
+    91	_F = TypeVar("_F", bound=Callable[..., object])
+    92	_ET = TypeVar("_ET", bound=Type[BaseException])
+    93	
+    94	
+    95	class _WithException(Protocol[_F, _ET]):
+    96	    Exception: _ET
+    97	    __call__: _F
+    98	
+    99	
+   100	def _with_exception(exception_type: _ET) -> Callable[[_F], _WithException[_F, _ET]]:
+   101	    def decorate(func: _F) -> _WithException[_F, _ET]:
+   102	        func_with_exception = cast(_WithException[_F, _ET], func)
+   103	        func_with_exception.Exception = exception_type
+   104	        return func_with_exception
+   105	
+   106	    return decorate
+   107	
+   108	
+   109	# Exposed helper methods.
+   110	
+   111	
+   112	@_with_exception(Exit)
+   113	def exit(msg: str, returncode: Optional[int] = None) -> "NoReturn":
+   114	    """Exit testing process.
+   115	
+   116	    :param str msg: Message to display upon exit.
+   117	    :param int returncode: Return code to be used when exiting pytest.
+   118	    """
+   119	    __tracebackhide__ = True
+   120	    raise Exit(msg, returncode)
+   121	
+   122	
+   123	@_with_exception(Skipped)
+   124	def skip(msg: str = "", *, allow_module_level: bool = False) -> "NoReturn":
+   125	    """Skip an executing test with the given message.
+   126	
+   127	    This function should be called only during testing (setup, call or teardown) or
+   128	    during collection by using the ``allow_module_level`` flag.  This function can
+   129	    be called in doctests as well.
+   130	
+   131	    :param bool allow_module_level:
+   132	        Allows this function to be called at module level, skipping the rest
+   133	        of the module. Defaults to False.
+   134	
+   135	    .. note::
+   136	        It is better to use the :ref:`pytest.mark.skipif ref` marker when
+   137	        possible to declare a test to be skipped under certain conditions
+   138	        like mismatching platforms or dependencies.
+   139	        Similarly, use the ``# doctest: +SKIP`` directive (see `doctest.SKIP
+   140	        <https://docs.python.org/3/library/how-to/doctest.html#doctest.SKIP>`_)
+   141	        to skip a doctest statically.
+   142	    """
+   143	    __tracebackhide__ = True
+   144	    raise Skipped(msg=msg, allow_module_level=allow_module_level)
+   145	
+   146	
+   147	@_with_exception(Failed)
+   148	def fail(msg: str = "", pytrace: bool = True) -> "NoReturn":
+   149	    """Explicitly fail an executing test with the given message.
+   150	
+   151	    :param str msg:
+   152	        The message to show the user as reason for the failure.
+   153	    :param bool pytrace:
+   154	        If False, msg represents the full failure information and no
+   155	        python traceback will be reported.
+   156	    """
+   157	    __tracebackhide__ = True
+   158	    raise Failed(msg=msg, pytrace=pytrace)
+   159	
+   160	
+   161	class XFailed(Failed):
+   162	    """Raised from an explicit call to pytest.xfail()."""
+   163	
+   164	
+   165	@_with_exception(XFailed)
+   166	def xfail(reason: str = "") -> "NoReturn":
+   167	    """Imperatively xfail an executing test or setup function with the given reason.
+   168	
+   169	    This function should be called only during testing (setup, call or teardown).
+   170	
+   171	    .. note::
+   172	        It is better to use the :ref:`pytest.mark.xfail ref` marker when
+   173	        possible to declare a test to be xfailed under certain conditions
+   174	        like known bugs or missing features.
+   175	    """
+   176	    __tracebackhide__ = True
+   177	    raise XFailed(reason)
+   178	
+   179	
+   180	def importorskip(
+   181	    modname: str, minversion: Optional[str] = None, reason: Optional[str] = None
+   182	) -> Any:
+   183	    """Import and return the requested module ``modname``, or skip the
+   184	    current test if the module cannot be imported.
+   185	
+   186	    :param str modname:
+   187	        The name of the module to import.
+   188	    :param str minversion:
+   189	        If given, the imported module's ``__version__`` attribute must be at
+   190	        least this minimal version, otherwise the test is still skipped.
+   191	    :param str reason:
+   192	        If given, this reason is shown as the message when the module cannot
+   193	        be imported.
+   194	
+   195	    :returns:
+   196	        The imported module. This should be assigned to its canonical name.
+   197	
+   198	    Example::
+   199	
+   200	        docutils = pytest.importorskip("docutils")
+   201	    """
+   202	    import warnings
+   203	
+   204	    __tracebackhide__ = True
+   205	    compile(modname, "", "eval")  # to catch syntaxerrors
+   206	
+   207	    with warnings.catch_warnings():
+   208	        # Make sure to ignore ImportWarnings that might happen because
+   209	        # of existing directories with the same name we're trying to
+   210	        # import but without a __init__.py file.
+   211	        warnings.simplefilter("ignore")
+   212	        try:
+   213	            __import__(modname)
+   214	        except ImportError as exc:
+   215	            if reason is None:
+   216	                reason = f"could not import {modname!r}: {exc}"
+   217	            raise Skipped(reason, allow_module_level=True) from None
+   218	    mod = sys.modules[modname]
+   219	    if minversion is None:
+   220	        return mod
+   221	    verattr = getattr(mod, "__version__", None)
+   222	    if minversion is not None:
+   223	        # Imported lazily to improve start-up time.
+   224	        from packaging.version import Version
+   225	
+   226	        if verattr is None or Version(verattr) < Version(minversion):
+   227	            raise Skipped(
+   228	                "module %r has __version__ %r, required is: %r"
+   229	                % (modname, verattr, minversion),
+   230	                allow_module_level=True,
+   231	            )
+   232	    return mod
+   233; Next thought: Based on the code and the PR description, we need to make two changes:
+
+1. Update the error message to include information about `allow_module_level=True`
+2. Create a new API function `skip_module()` for easier module-level skipping
+
+Let's make these changes:
+
+1. First, let's create a new function `skip_module()` in `outcomes.py`:
+---
+Result at iteration 7: The file /workspace/pytest-dev__pytest__7.0/src/_pytest/outcomes.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/pytest-dev__pytest__7.0/src/_pytest/outcomes.py:
+   161	class XFailed(Failed):
+   162	    """Raised from an explicit call to pytest.xfail()."""
+   163	
+   164	
+   165	@_with_exception(XFailed)
+   166	def xfail(reason: str = "") -> "NoReturn":
+   167	    """Imperatively xfail an executing test or setup function with the given reason.
+   168	
+   169	    This function should be called only during testing (setup, call or teardown).
+   170	
+   171	    .. note::
+   172	        It is better to use the :ref:`pytest.mark.xfail ref` marker when
+   173	        possible to declare a test to be xfailed under certain conditions
+   174	        like known bugs or missing features.
+   175	    """
+   176	    __tracebackhide__ = True
+   177	    raise XFailed(reason)
+   178	
+   179	
+   180	@_with_exception(Skipped)
+   181	def skip_module(msg: str = "") -> "NoReturn":
+   182	    """Skip the rest of the module with the given message.
+   183	
+   184	    This is a convenience function that calls skip() with allow_module_level=True.
+   185	    It should be used when you need to skip an entire module, for example when
+   186	    the module uses syntax or features only available in newer Python versions.
+   187	
+   188	    Example::
+   189	
+   190	        if sys.version_info < (3, 8):
+   191	            pytest.skip_module("Requires Python >= 3.8")
+   192	
+   193	    :param str msg: The message to show the user as reason for the skip.
+   194	    """
+   195	    __tracebackhide__ = True
+   196	    raise Skipped(msg=msg, allow_module_level=True)
+   197	
+   198	
+   199	def importorskip(
+   200	    modname: str, minversion: Optional[str] = None, reason: Optional[str] = None
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: 2. Now let's update the error message in `skipping.py` to mention `allow_module_level=True`:
+---
+Result at iteration 8: The file /workspace/pytest-dev__pytest__7.0/src/_pytest/skipping.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/pytest-dev__pytest__7.0/src/_pytest/skipping.py:
+   230	# Saves the xfail mark evaluation. Can be refreshed during call if None.
+   231	xfailed_key = StoreKey[Optional[Xfail]]()
+   232	
+   233	
+   234	@hookimpl(tryfirst=True)
+   235	def pytest_runtest_setup(item: Item) -> None:
+   236	    try:
+   237	        skipped = evaluate_skip_marks(item)
+   238	        if skipped:
+   239	            raise skip.Exception(skipped.reason, _use_item_location=True)
+   240	
+   241	        item._store[xfailed_key] = xfailed = evaluate_xfail_marks(item)
+   242	        if xfailed and not item.config.option.runxfail and not xfailed.run:
+   243	            xfail("[NOTRUN] " + xfailed.reason)
+   244	    except skip.Exception as e:
+   245	        if not e.allow_module_level:
+   246	            msg = (
+   247	                "Using pytest.skip outside of a test is not allowed. "
+   248	                "To decorate a test function, use the @pytest.mark.skip or @pytest.mark.skipif decorators instead, "
+   249	                "and to skip a module use `pytestmark = pytest.mark.{skip,skipif}` or use `skip(msg=..., allow_module_level=True)`. "
+   250	                "You can also use the new `skip_module(msg=...)` function which is equivalent to `skip(msg=..., allow_module_level=True)`."
+   251	            )
+   252	            raise skip.Exception(msg, pytrace=False) from None
+   253	        raise
+   254	
+   255	
+   256	@hookimpl(hookwrapper=True)
+   257	def pytest_runtest_call(item: Item) -> Generator[None, None, None]:
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: Now let's update our test script to try both the old and new ways of skipping:
+---
+Result at iteration 9: The file /workspace/pytest-dev__pytest__7.0/test_skip_module.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/pytest-dev__pytest__7.0/test_skip_module.py:
+     1	import sys
+     2	from pytest import skip, skip_module
+     3	
+     4	if sys.version_info < (3, 10):  # Change to trigger skip
+     5	    skip_module(msg="Requires Python >= 3.10")
+     6	
+     7	# This is Python 3.8+ syntax that will fail on older versions
+     8	def foo(a, /, b):
+     9	    return a + b
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: Let's run the test again to see if it works:
+---
+Result at iteration 10: cd /workspace/pytest-dev__pytest__7.0 && python -m pytest test_skip_module.py -v
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.19, pytest-7.0.0.dev36+g69356d20c, py-1.11.0, pluggy-0.13.1 -- /opt/miniconda3/envs/testbed/bin/python
+cachedir: .pytest_cache
+rootdir: /testbed, configfile: pyproject.toml
+[1mcollecting ... [0m[1mcollected 0 items / 1 error                                                    [0m
+
+==================================== ERRORS ====================================
+[31m[1m_____________________ ERROR collecting test_skip_module.py _____________________[0m
+[31mImportError while importing test module '/testbed/test_skip_module.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/miniconda3/envs/testbed/lib/python3.9/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test_skip_module.py:2: in <module>
+    from pytest import skip, skip_module
+E   ImportError: cannot import name 'skip_module' from 'pytest' (/testbed/src/pytest/__init__.py)[0m
+=========================== short test summary info ============================
+ERROR test_skip_module.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+[31m=============================== [31m[1m1 error[0m[31m in 0.16s[0m[31m ===============================[0m; Next thought: Ah, we need to expose the `skip_module` function in the public API. Let's update `src/pytest/__init__.py`:
+---
+Result at iteration 11: Here's the result of running `cat -n` on /workspace/pytest-dev__pytest__7.0/src/pytest/__init__.py:
+     1	# PYTHON_ARGCOMPLETE_OK
+     2	"""pytest: unit and functional testing with Python."""
+     3	from . import collect
+     4	from _pytest import __version__
+     5	from _pytest import version_tuple
+     6	from _pytest._code import ExceptionInfo
+     7	from _pytest.assertion import register_assert_rewrite
+     8	from _pytest.cacheprovider import Cache
+     9	from _pytest.capture import CaptureFixture
+    10	from _pytest.config import cmdline
+    11	from _pytest.config import Config
+    12	from _pytest.config import console_main
+    13	from _pytest.config import ExitCode
+    14	from _pytest.config import hookimpl
+    15	from _pytest.config import hookspec
+    16	from _pytest.config import main
+    17	from _pytest.config import PytestPluginManager
+    18	from _pytest.config import UsageError
+    19	from _pytest.config.argparsing import OptionGroup
+    20	from _pytest.config.argparsing import Parser
+    21	from _pytest.debugging import pytestPDB as __pytestPDB
+    22	from _pytest.fixtures import _fillfuncargs
+    23	from _pytest.fixtures import fixture
+    24	from _pytest.fixtures import FixtureLookupError
+    25	from _pytest.fixtures import FixtureRequest
+    26	from _pytest.fixtures import yield_fixture
+    27	from _pytest.freeze_support import freeze_includes
+    28	from _pytest.logging import LogCaptureFixture
+    29	from _pytest.main import Session
+    30	from _pytest.mark import Mark
+    31	from _pytest.mark import MARK_GEN as mark
+    32	from _pytest.mark import MarkDecorator
+    33	from _pytest.mark import MarkGenerator
+    34	from _pytest.mark import param
+    35	from _pytest.monkeypatch import MonkeyPatch
+    36	from _pytest.nodes import Collector
+    37	from _pytest.nodes import File
+    38	from _pytest.nodes import Item
+    39	from _pytest.outcomes import exit
+    40	from _pytest.outcomes import fail
+    41	from _pytest.outcomes import importorskip
+    42	from _pytest.outcomes import skip
+    43	from _pytest.outcomes import xfail
+    44	from _pytest.pytester import Pytester
+    45	from _pytest.pytester import Testdir
+    46	from _pytest.python import Class
+    47	from _pytest.python import Function
+    48	from _pytest.python import Instance
+    49	from _pytest.python import Metafunc
+    50	from _pytest.python import Module
+    51	from _pytest.python import Package
+    52	from _pytest.python_api import approx
+    53	from _pytest.python_api import raises
+    54	from _pytest.recwarn import deprecated_call
+    55	from _pytest.recwarn import WarningsRecorder
+    56	from _pytest.recwarn import warns
+    57	from _pytest.runner import CallInfo
+    58	from _pytest.tmpdir import TempdirFactory
+    59	from _pytest.tmpdir import TempPathFactory
+    60	from _pytest.warning_types import PytestAssertRewriteWarning
+    61	from _pytest.warning_types import PytestCacheWarning
+    62	from _pytest.warning_types import PytestCollectionWarning
+    63	from _pytest.warning_types import PytestConfigWarning
+    64	from _pytest.warning_types import PytestDeprecationWarning
+    65	from _pytest.warning_types import PytestExperimentalApiWarning
+    66	from _pytest.warning_types import PytestUnhandledCoroutineWarning
+    67	from _pytest.warning_types import PytestUnhandledThreadExceptionWarning
+    68	from _pytest.warning_types import PytestUnknownMarkWarning
+    69	from _pytest.warning_types import PytestUnraisableExceptionWarning
+    70	from _pytest.warning_types import PytestWarning
+    71	
+    72	set_trace = __pytestPDB.set_trace
+    73	
+    74	__all__ = [
+    75	    "__version__",
+    76	    "_fillfuncargs",
+    77	    "approx",
+    78	    "Cache",
+    79	    "CallInfo",
+    80	    "CaptureFixture",
+    81	    "Class",
+    82	    "cmdline",
+    83	    "collect",
+    84	    "Collector",
+    85	    "Config",
+    86	    "console_main",
+    87	    "deprecated_call",
+    88	    "exit",
+    89	    "ExceptionInfo",
+    90	    "ExitCode",
+    91	    "fail",
+    92	    "File",
+    93	    "fixture",
+    94	    "FixtureLookupError",
+    95	    "FixtureRequest",
+    96	    "freeze_includes",
+    97	    "Function",
+    98	    "hookimpl",
+    99	    "hookspec",
+   100	    "importorskip",
+   101	    "Instance",
+   102	    "Item",
+   103	    "LogCaptureFixture",
+   104	    "main",
+   105	    "mark",
+   106	    "Mark",
+   107	    "MarkDecorator",
+   108	    "MarkGenerator",
+   109	    "Metafunc",
+   110	    "Module",
+   111	    "MonkeyPatch",
+   112	    "OptionGroup",
+   113	    "Package",
+   114	    "param",
+   115	    "Parser",
+   116	    "PytestAssertRewriteWarning",
+   117	    "PytestCacheWarning",
+   118	    "PytestCollectionWarning",
+   119	    "PytestConfigWarning",
+   120	    "PytestDeprecationWarning",
+   121	    "PytestExperimentalApiWarning",
+   122	    "Pytester",
+   123	    "PytestPluginManager",
+   124	    "PytestUnhandledCoroutineWarning",
+   125	    "PytestUnhandledThreadExceptionWarning",
+   126	    "PytestUnknownMarkWarning",
+   127	    "PytestUnraisableExceptionWarning",
+   128	    "PytestWarning",
+   129	    "raises",
+   130	    "register_assert_rewrite",
+   131	    "Session",
+   132	    "set_trace",
+   133	    "skip",
+   134	    "version_tuple",
+   135	    "TempPathFactory",
+   136	    "Testdir",
+   137	    "TempdirFactory",
+   138	    "UsageError",
+   139	    "WarningsRecorder",
+   140	    "warns",
+   141	    "xfail",
+   142	    "yield_fixture",
+   143	]
+   144; Next thought: Let's add `skip_module` to the imports and `__all__`:
+---
+Result at iteration 12: The file /workspace/pytest-dev__pytest__7.0/src/pytest/__init__.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/pytest-dev__pytest__7.0/src/pytest/__init__.py:
+    38	from _pytest.nodes import Item
+    39	from _pytest.outcomes import exit
+    40	from _pytest.outcomes import fail
+    41	from _pytest.outcomes import importorskip
+    42	from _pytest.outcomes import skip
+    43	from _pytest.outcomes import skip_module
+    44	from _pytest.outcomes import xfail
+    45	from _pytest.pytester import Pytester
+    46	from _pytest.pytester import Testdir
+    47	from _pytest.python import Class
+    48	from _pytest.python import Function
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: None
+---
+Result at iteration 13: The file /workspace/pytest-dev__pytest__7.0/src/pytest/__init__.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/pytest-dev__pytest__7.0/src/pytest/__init__.py:
+   130	    "raises",
+   131	    "register_assert_rewrite",
+   132	    "Session",
+   133	    "set_trace",
+   134	    "skip",
+   135	    "skip_module",
+   136	    "version_tuple",
+   137	    "TempPathFactory",
+   138	    "Testdir",
+   139	    "TempdirFactory",
+   140	    "UsageError",
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: Now let's run the test again:
+---
+Result at iteration 14: cd /workspace/pytest-dev__pytest__7.0 && python -m pytest test_skip_module.py -v
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.19, pytest-7.0.0.dev36+g69356d20c, py-1.11.0, pluggy-0.13.1 -- /opt/miniconda3/envs/testbed/bin/python
+cachedir: .pytest_cache
+rootdir: /testbed, configfile: pyproject.toml
+[1mcollecting ... [0m[1mcollected 0 items / 1 skipped                                                  [0m
+
+[33m============================== [33m[1m1 skipped[0m[33m in 0.00s[0m[33m ==============================[0m; Next thought: Perfect! The test is now properly skipped. Let's also test the old way with `allow_module_level=True` to make sure it still works:
+---
+Result at iteration 15: The file /workspace/pytest-dev__pytest__7.0/test_skip_module.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/pytest-dev__pytest__7.0/test_skip_module.py:
+     1	import sys
+     2	from pytest import skip, skip_module
+     3	
+     4	if sys.version_info < (3, 10):  # Change to trigger skip
+     5	    skip(msg="Requires Python >= 3.10", allow_module_level=True)
+     6	
+     7	# This is Python 3.8+ syntax that will fail on older versions
+     8	def foo(a, /, b):
+     9	    return a + b
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: None
+---
+Result at iteration 16: cd /workspace/pytest-dev__pytest__7.0 && python -m pytest test_skip_module.py -v
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.19, pytest-7.0.0.dev36+g69356d20c, py-1.11.0, pluggy-0.13.1 -- /opt/miniconda3/envs/testbed/bin/python
+cachedir: .pytest_cache
+rootdir: /testbed, configfile: pyproject.toml
+[1mcollecting ... [0m[1mcollected 0 items / 1 skipped                                                  [0m
+
+[33m============================== [33m[1m1 skipped[0m[33m in 0.00s[0m[33m ==============================[0m; Next thought: Great! Both ways work as expected. Let's also test the error message when trying to use skip without `allow_module_level`:
+---
+Result at iteration 17: The file /workspace/pytest-dev__pytest__7.0/test_skip_module.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/pytest-dev__pytest__7.0/test_skip_module.py:
+     1	import sys
+     2	from pytest import skip, skip_module
+     3	
+     4	if sys.version_info < (3, 10):  # Change to trigger skip
+     5	    skip(msg="Requires Python >= 3.10")
+     6	
+     7	# This is Python 3.8+ syntax that will fail on older versions
+     8	def foo(a, /, b):
+     9	    return a + b
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: None
+---
+Result at iteration 18: cd /workspace/pytest-dev__pytest__7.0 && python -m pytest test_skip_module.py -v
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.19, pytest-7.0.0.dev36+g69356d20c, py-1.11.0, pluggy-0.13.1 -- /opt/miniconda3/envs/testbed/bin/python
+cachedir: .pytest_cache
+rootdir: /testbed, configfile: pyproject.toml
+[1mcollecting ... [0m[1mcollected 0 items / 1 error                                                    [0m
+
+==================================== ERRORS ====================================
+[31m[1m_____________________ ERROR collecting test_skip_module.py _____________________[0m
+[31mUsing pytest.skip outside of a test is not allowed. To decorate a test function, use the @pytest.mark.skip or @pytest.mark.skipif decorators instead, and to skip a module use `pytestmark = pytest.mark.{skip,skipif}.[0m
+=========================== short test summary info ============================
+ERROR test_skip_module.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+[31m=============================== [31m[1m1 error[0m[31m in 0.05s[0m[31m ===============================[0m; Next thought: Hmm, it seems our error message update in `skipping.py` didn't take effect. This is because the error is being raised in a different place. Let's look for where this error message is defined:
+---
+Result at iteration 19: cd /workspace/pytest-dev__pytest__7.0 && find . -type f -exec grep -l "Using pytest.skip outside of a test is not allowed" {} \;
+./src/_pytest/python.py
+./src/_pytest/skipping.py
+./src/_pytest/__pycache__/python.cpython-39.pyc
+./src/_pytest/__pycache__/skipping.cpython-39.pyc
+./testing/test_skipping.py; Next thought: Let's check `python.py`:
+---
+Result at iteration 20: Here's the result of running `cat -n` on /workspace/pytest-dev__pytest__7.0/src/_pytest/python.py:
+     1	"""Python test discovery, setup and run of test functions."""
+     2	import enum
+     3	import fnmatch
+     4	import inspect
+     5	import itertools
+     6	import os
+     7	import sys
+     8	import types
+     9	import warnings
+    10	from collections import Counter
+    11	from collections import defaultdict
+    12	from functools import partial
+    13	from pathlib import Path
+    14	from typing import Any
+    15	from typing import Callable
+    16	from typing import Dict
+    17	from typing import Generator
+    18	from typing import Iterable
+    19	from typing import Iterator
+    20	from typing import List
+    21	from typing import Mapping
+    22	from typing import Optional
+    23	from typing import Sequence
+    24	from typing import Set
+    25	from typing import Tuple
+    26	from typing import TYPE_CHECKING
+    27	from typing import Union
+    28	
+    29	import _pytest
+    30	from _pytest import fixtures
+    31	from _pytest import nodes
+    32	from _pytest._code import filter_traceback
+    33	from _pytest._code import getfslineno
+    34	from _pytest._code.code import ExceptionInfo
+    35	from _pytest._code.code import TerminalRepr
+    36	from _pytest._io import TerminalWriter
+    37	from _pytest._io.saferepr import saferepr
+    38	from _pytest.compat import ascii_escaped
+    39	from _pytest.compat import final
+    40	from _pytest.compat import get_default_arg_names
+    41	from _pytest.compat import get_real_func
+    42	from _pytest.compat import getimfunc
+    43	from _pytest.compat import getlocation
+    44	from _pytest.compat import is_async_function
+    45	from _pytest.compat import is_generator
+    46	from _pytest.compat import LEGACY_PATH
+    47	from _pytest.compat import legacy_path
+    48	from _pytest.compat import NOTSET
+    49	from _pytest.compat import REGEX_TYPE
+    50	from _pytest.compat import safe_getattr
+    51	from _pytest.compat import safe_isclass
+    52	from _pytest.compat import STRING_TYPES
+    53	from _pytest.config import Config
+    54	from _pytest.config import ExitCode
+    55	from _pytest.config import hookimpl
+    56	from _pytest.config.argparsing import Parser
+    57	from _pytest.deprecated import check_ispytest
+    58	from _pytest.deprecated import FSCOLLECTOR_GETHOOKPROXY_ISINITPATH
+    59	from _pytest.fixtures import FuncFixtureInfo
+    60	from _pytest.main import Session
+    61	from _pytest.mark import MARK_GEN
+    62	from _pytest.mark import ParameterSet
+    63	from _pytest.mark.structures import get_unpacked_marks
+    64	from _pytest.mark.structures import Mark
+    65	from _pytest.mark.structures import MarkDecorator
+    66	from _pytest.mark.structures import normalize_mark_list
+    67	from _pytest.outcomes import fail
+    68	from _pytest.outcomes import skip
+    69	from _pytest.pathlib import bestrelpath
+    70	from _pytest.pathlib import fnmatch_ex
+    71	from _pytest.pathlib import import_path
+    72	from _pytest.pathlib import ImportPathMismatchError
+    73	from _pytest.pathlib import parts
+    74	from _pytest.pathlib import visit
+    75	from _pytest.warning_types import PytestCollectionWarning
+    76	from _pytest.warning_types import PytestUnhandledCoroutineWarning
+    77	
+    78	if TYPE_CHECKING:
+    79	    from typing_extensions import Literal
+    80	    from _pytest.fixtures import _Scope
+    81	
+    82	
+    83	def pytest_addoption(parser: Parser) -> None:
+    84	    group = parser.getgroup("general")
+    85	    group.addoption(
+    86	        "--fixtures",
+    87	        "--funcargs",
+    88	        action="store_true",
+    89	        dest="showfixtures",
+    90	        default=False,
+    91	        help="show available fixtures, sorted by plugin appearance "
+    92	        "(fixtures with leading '_' are only shown with '-v')",
+    93	    )
+    94	    group.addoption(
+    95	        "--fixtures-per-test",
+    96	        action="store_true",
+    97	        dest="show_fixtures_per_test",
+    98	        default=False,
+    99	        help="show fixtures per test",
+   100	    )
+   101	    parser.addini(
+   102	        "python_files",
+   103	        type="args",
+   104	        # NOTE: default is also used in AssertionRewritingHook.
+   105	        default=["test_*.py", "*_test.py"],
+   106	        help="glob-style file patterns for Python test module discovery",
+   107	    )
+   108	    parser.addini(
+   109	        "python_classes",
+   110	        type="args",
+   111	        default=["Test"],
+   112	        help="prefixes or glob names for Python test class discovery",
+   113	    )
+   114	    parser.addini(
+   115	        "python_functions",
+   116	        type="args",
+   117	        default=["test"],
+   118	        help="prefixes or glob names for Python test function and method discovery",
+   119	    )
+   120	    parser.addini(
+   121	        "disable_test_id_escaping_and_forfeit_all_rights_to_community_support",
+   122	        type="bool",
+   123	        default=False,
+   124	        help="disable string escape non-ascii characters, might cause unwanted "
+   125	        "side effects(use at your own risk)",
+   126	    )
+   127	
+   128	
+   129	def pytest_cmdline_main(config: Config) -> Optional[Union[int, ExitCode]]:
+   130	    if config.option.showfixtures:
+   131	        showfixtures(config)
+   132	        return 0
+   133	    if config.option.show_fixtures_per_test:
+   134	        show_fixtures_per_test(config)
+   135	        return 0
+   136	    return None
+   137	
+   138	
+   139	def pytest_generate_tests(metafunc: "Metafunc") -> None:
+   140	    for marker in metafunc.definition.iter_markers(name="parametrize"):
+   141	        metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+   142	
+   143	
+   144	def pytest_configure(config: Config) -> None:
+   145	    config.addinivalue_line(
+   146	        "markers",
+   147	        "parametrize(argnames, argvalues): call a test function multiple "
+   148	        "times passing in different arguments in turn. argvalues generally "
+   149	        "needs to be a list of values if argnames specifies only one name "
+   150	        "or a list of tuples of values if argnames specifies multiple names. "
+   151	        "Example: @parametrize('arg1', [1,2]) would lead to two calls of the "
+   152	        "decorated test function, one with arg1=1 and another with arg1=2."
+   153	        "see https://docs.pytest.org/en/stable/how-to/parametrize.html for more info "
+   154	        "and examples.",
+   155	    )
+   156	    config.addinivalue_line(
+   157	        "markers",
+   158	        "usefixtures(fixturename1, fixturename2, ...): mark tests as needing "
+   159	        "all of the specified fixtures. see "
+   160	        "https://docs.pytest.org/en/stable/explanation/fixtures.html#usefixtures ",
+   161	    )
+   162	
+   163	
+   164	def async_warn_and_skip(nodeid: str) -> None:
+   165	    msg = "async def functions are not natively supported and have been skipped.\n"
+   166	    msg += (
+   167	        "You need to install a suitable plugin for your async framework, for example:\n"
+   168	    )
+   169	    msg += "  - anyio\n"
+   170	    msg += "  - pytest-asyncio\n"
+   171	    msg += "  - pytest-tornasync\n"
+   172	    msg += "  - pytest-trio\n"
+   173	    msg += "  - pytest-twisted"
+   174	    warnings.warn(PytestUnhandledCoroutineWarning(msg.format(nodeid)))
+   175	    skip(msg="async def function and no async plugin installed (see warnings)")
+   176	
+   177	
+   178	@hookimpl(trylast=True)
+   179	def pytest_pyfunc_call(pyfuncitem: "Function") -> Optional[object]:
+   180	    testfunction = pyfuncitem.obj
+   181	    if is_async_function(testfunction):
+   182	        async_warn_and_skip(pyfuncitem.nodeid)
+   183	    funcargs = pyfuncitem.funcargs
+   184	    testargs = {arg: funcargs[arg] for arg in pyfuncitem._fixtureinfo.argnames}
+   185	    result = testfunction(**testargs)
+   186	    if hasattr(result, "__await__") or hasattr(result, "__aiter__"):
+   187	        async_warn_and_skip(pyfuncitem.nodeid)
+   188	    return True
+   189	
+   190	
+   191	def pytest_collect_file(fspath: Path, parent: nodes.Collector) -> Optional["Module"]:
+   192	    if fspath.suffix == ".py":
+   193	        if not parent.session.isinitpath(fspath):
+   194	            if not path_matches_patterns(
+   195	                fspath, parent.config.getini("python_files") + ["__init__.py"]
+   196	            ):
+   197	                return None
+   198	        ihook = parent.session.gethookproxy(fspath)
+   199	        module: Module = ihook.pytest_pycollect_makemodule(fspath=fspath, parent=parent)
+   200	        return module
+   201	    return None
+   202	
+   203	
+   204	def path_matches_patterns(path: Path, patterns: Iterable[str]) -> bool:
+   205	    """Return whether path matches any of the patterns in the list of globs given."""
+   206	    return any(fnmatch_ex(pattern, path) for pattern in patterns)
+   207	
+   208	
+   209	def pytest_pycollect_makemodule(fspath: Path, parent) -> "Module":
+   210	    if fspath.name == "__init__.py":
+   211	        pkg: Package = Package.from_parent(parent, path=fspath)
+   212	        return pkg
+   213	    mod: Module = Module.from_parent(parent, path=fspath)
+   214	    return mod
+   215	
+   216	
+   217	@hookimpl(trylast=True)
+   218	def pytest_pycollect_makeitem(collector: "PyCollector", name: str, obj: object):
+   219	    # Nothing was collected elsewhere, let's do it here.
+   220	    if safe_isclass(obj):
+   221	        if collector.istestclass(obj, name):
+   222	            return Class.from_parent(collector, name=name, obj=obj)
+   223	    elif collector.istestfunction(obj, name):
+   224	        # mock seems to store unbound methods (issue473), normalize it.
+   225	        obj = getattr(obj, "__func__", obj)
+   226	        # We need to try and unwrap the function if it's a functools.partial
+   227	        # or a functools.wrapped.
+   228	        # We mustn't if it's been wrapped with mock.patch (python 2 only).
+   229	        if not (inspect.isfunction(obj) or inspect.isfunction(get_real_func(obj))):
+   230	            filename, lineno = getfslineno(obj)
+   231	            warnings.warn_explicit(
+   232	                message=PytestCollectionWarning(
+   233	                    "cannot collect %r because it is not a function." % name
+   234	                ),
+   235	                category=None,
+   236	                filename=str(filename),
+   237	                lineno=lineno + 1,
+   238	            )
+   239	        elif getattr(obj, "__test__", True):
+   240	            if is_generator(obj):
+   241	                res = Function.from_parent(collector, name=name)
+   242	                reason = "yield tests were removed in pytest 4.0 - {name} will be ignored".format(
+   243	                    name=name
+   244	                )
+   245	                res.add_marker(MARK_GEN.xfail(run=False, reason=reason))
+   246	                res.warn(PytestCollectionWarning(reason))
+   247	            else:
+   248	                res = list(collector._genfunctions(name, obj))
+   249	            return res
+   250	
+   251	
+   252	class PyobjMixin(nodes.Node):
+   253	    """this mix-in inherits from Node to carry over the typing information
+   254	
+   255	    as its intended to always mix in before a node
+   256	    its position in the mro is unaffected"""
+   257	
+   258	    _ALLOW_MARKERS = True
+   259	
+   260	    @property
+   261	    def module(self):
+   262	        """Python module object this node was collected from (can be None)."""
+   263	        node = self.getparent(Module)
+   264	        return node.obj if node is not None else None
+   265	
+   266	    @property
+   267	    def cls(self):
+   268	        """Python class object this node was collected from (can be None)."""
+   269	        node = self.getparent(Class)
+   270	        return node.obj if node is not None else None
+   271	
+   272	    @property
+   273	    def instance(self):
+   274	        """Python instance object this node was collected from (can be None)."""
+   275	        node = self.getparent(Instance)
+   276	        return node.obj if node is not None else None
+   277	
+   278	    @property
+   279	    def obj(self):
+   280	        """Underlying Python object."""
+   281	        obj = getattr(self, "_obj", None)
+   282	        if obj is None:
+   283	            self._obj = obj = self._getobj()
+   284	            # XXX evil hack
+   285	            # used to avoid Instance collector marker duplication
+   286	            if self._ALLOW_MARKERS:
+   287	                self.own_markers.extend(get_unpacked_marks(self.obj))
+   288	        return obj
+   289	
+   290	    @obj.setter
+   291	    def obj(self, value):
+   292	        self._obj = value
+   293	
+   294	    def _getobj(self):
+   295	        """Get the underlying Python object. May be overwritten by subclasses."""
+   296	        # TODO: Improve the type of `parent` such that assert/ignore aren't needed.
+   297	        assert self.parent is not None
+   298	        obj = self.parent.obj  # type: ignore[attr-defined]
+   299	        return getattr(obj, self.name)
+   300	
+   301	    def getmodpath(self, stopatmodule: bool = True, includemodule: bool = False) -> str:
+   302	        """Return Python path relative to the containing module."""
+   303	        chain = self.listchain()
+   304	        chain.reverse()
+   305	        parts = []
+   306	        for node in chain:
+   307	            if isinstance(node, Instance):
+   308	                continue
+   309	            name = node.name
+   310	            if isinstance(node, Module):
+   311	                name = os.path.splitext(name)[0]
+   312	                if stopatmodule:
+   313	                    if includemodule:
+   314	                        parts.append(name)
+   315	                    break
+   316	            parts.append(name)
+   317	        parts.reverse()
+   318	        return ".".join(parts)
+   319	
+   320	    def reportinfo(self) -> Tuple[Union[LEGACY_PATH, str], int, str]:
+   321	        # XXX caching?
+   322	        obj = self.obj
+   323	        compat_co_firstlineno = getattr(obj, "compat_co_firstlineno", None)
+   324	        if isinstance(compat_co_firstlineno, int):
+   325	            # nose compatibility
+   326	            file_path = sys.modules[obj.__module__].__file__
+   327	            if file_path.endswith(".pyc"):
+   328	                file_path = file_path[:-1]
+   329	            fspath: Union[LEGACY_PATH, str] = file_path
+   330	            lineno = compat_co_firstlineno
+   331	        else:
+   332	            path, lineno = getfslineno(obj)
+   333	            if isinstance(path, Path):
+   334	                fspath = legacy_path(path)
+   335	            else:
+   336	                fspath = path
+   337	        modpath = self.getmodpath()
+   338	        assert isinstance(lineno, int)
+   339	        return fspath, lineno, modpath
+   340	
+   341	
+   342	# As an optimization, these builtin attribute names are pre-ignored when
+   343	# iterating over an object during collection -- the pytest_pycollect_makeitem
+   344	# hook is not called for them.
+   345	# fmt: off
+   346	class _EmptyClass: pass  # noqa: E701
+   347	IGNORED_ATTRIBUTES = frozenset.union(  # noqa: E305
+   348	    frozenset(),
+   349	    # Module.
+   350	    dir(types.ModuleType("empty_module")),
+   351	    # Some extra module attributes the above doesn't catch.
+   352	    {"__builtins__", "__file__", "__cached__"},
+   353	    # Class.
+   354	    dir(_EmptyClass),
+   355	    # Instance.
+   356	    dir(_EmptyClass()),
+   357	)
+   358	del _EmptyClass
+   359	# fmt: on
+   360	
+   361	
+   362	class PyCollector(PyobjMixin, nodes.Collector):
+   363	    def funcnamefilter(self, name: str) -> bool:
+   364	        return self._matches_prefix_or_glob_option("python_functions", name)
+   365	
+   366	    def isnosetest(self, obj: object) -> bool:
+   367	        """Look for the __test__ attribute, which is applied by the
+   368	        @nose.tools.istest decorator.
+   369	        """
+   370	        # We explicitly check for "is True" here to not mistakenly treat
+   371	        # classes with a custom __getattr__ returning something truthy (like a
+   372	        # function) as test classes.
+   373	        return safe_getattr(obj, "__test__", False) is True
+   374	
+   375	    def classnamefilter(self, name: str) -> bool:
+   376	        return self._matches_prefix_or_glob_option("python_classes", name)
+   377	
+   378	    def istestfunction(self, obj: object, name: str) -> bool:
+   379	        if self.funcnamefilter(name) or self.isnosetest(obj):
+   380	            if isinstance(obj, staticmethod):
+   381	                # staticmethods need to be unwrapped.
+   382	                obj = safe_getattr(obj, "__func__", False)
+   383	            return callable(obj) and fixtures.getfixturemarker(obj) is None
+   384	        else:
+   385	            return False
+   386	
+   387	    def istestclass(self, obj: object, name: str) -> bool:
+   388	        return self.classnamefilter(name) or self.isnosetest(obj)
+   389	
+   390	    def _matches_prefix_or_glob_option(self, option_name: str, name: str) -> bool:
+   391	        """Check if the given name matches the prefix or glob-pattern defined
+   392	        in ini configuration."""
+   393	        for option in self.config.getini(option_name):
+   394	            if name.startswith(option):
+   395	                return True
+   396	            # Check that name looks like a glob-string before calling fnmatch
+   397	            # because this is called for every name in each collected module,
+   398	            # and fnmatch is somewhat expensive to call.
+   399	            elif ("*" in option or "?" in option or "[" in option) and fnmatch.fnmatch(
+   400	                name, option
+   401	            ):
+   402	                return True
+   403	        return False
+   404	
+   405	    def collect(self) -> Iterable[Union[nodes.Item, nodes.Collector]]:
+   406	        if not getattr(self.obj, "__test__", True):
+   407	            return []
+   408	
+   409	        # NB. we avoid random getattrs and peek in the __dict__ instead
+   410	        # (XXX originally introduced from a PyPy need, still true?)
+   411	        dicts = [getattr(self.obj, "__dict__", {})]
+   412	        for basecls in self.obj.__class__.__mro__:
+   413	            dicts.append(basecls.__dict__)
+   414	        seen: Set[str] = set()
+   415	        values: List[Union[nodes.Item, nodes.Collector]] = []
+   416	        ihook = self.ihook
+   417	        for dic in dicts:
+   418	            # Note: seems like the dict can change during iteration -
+   419	            # be careful not to remove the list() without consideration.
+   420	            for name, obj in list(dic.items()):
+   421	                if name in IGNORED_ATTRIBUTES:
+   422	                    continue
+   423	                if name in seen:
+   424	                    continue
+   425	                seen.add(name)
+   426	                res = ihook.pytest_pycollect_makeitem(
+   427	                    collector=self, name=name, obj=obj
+   428	             <response clipped><NOTE>To save on context only part of this file has been shown to you. You should retry this tool after you have searched inside the file with `grep -n` in order to find the line numbers of what you are looking for.</NOTE>; Next thought: Let's search for the error message:
+---
+Result at iteration 21: cd /workspace/pytest-dev__pytest__7.0 && grep -n "Using pytest.skip outside of a test is not allowed" src/_pytest/python.py
+611:                "Using pytest.skip outside of a test is not allowed. "; Next thought: Let's look at that part of the file:
+---
+Result at iteration 22: Here's the result of running `cat -n` on /workspace/pytest-dev__pytest__7.0/src/_pytest/python.py:
+   600	            formatted_tb = str(exc_repr)
+   601	            raise self.CollectError(
+   602	                "ImportError while importing test module '{path}'.\n"
+   603	                "Hint: make sure your test modules/packages have valid Python names.\n"
+   604	                "Traceback:\n"
+   605	                "{traceback}".format(path=self.path, traceback=formatted_tb)
+   606	            ) from e
+   607	        except skip.Exception as e:
+   608	            if e.allow_module_level:
+   609	                raise
+   610	            raise self.CollectError(
+   611	                "Using pytest.skip outside of a test is not allowed. "
+   612	                "To decorate a test function, use the @pytest.mark.skip "
+   613	                "or @pytest.mark.skipif decorators instead, and to skip a "
+   614	                "module use `pytestmark = pytest.mark.{skip,skipif}."
+   615	            ) from e
+   616	        self.config.pluginmanager.consider_module(mod)
+   617	        return mod
+   618	
+   619	
+   620	class Package(Module):; Next thought: Perfect! Let's update the error message here too:
+---
+Result at iteration 23: The file /workspace/pytest-dev__pytest__7.0/src/_pytest/python.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/pytest-dev__pytest__7.0/src/_pytest/python.py:
+   607	        except skip.Exception as e:
+   608	            if e.allow_module_level:
+   609	                raise
+   610	            raise self.CollectError(
+   611	                "Using pytest.skip outside of a test is not allowed. "
+   612	                "To decorate a test function, use the @pytest.mark.skip "
+   613	                "or @pytest.mark.skipif decorators instead, and to skip a "
+   614	                "module use `pytestmark = pytest.mark.{skip,skipif}` or use "
+   615	                "`skip(msg=..., allow_module_level=True)`. You can also use "
+   616	                "the new `skip_module(msg=...)` function which is equivalent to "
+   617	                "`skip(msg=..., allow_module_level=True)`."
+   618	            ) from e
+   619	        self.config.pluginmanager.consider_module(mod)
+   620	        return mod
+   621	
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: Let's run the test again to see the updated error message:
+---
+Result at iteration 24: cd /workspace/pytest-dev__pytest__7.0 && python -m pytest test_skip_module.py -v
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.19, pytest-7.0.0.dev36+g69356d20c, py-1.11.0, pluggy-0.13.1 -- /opt/miniconda3/envs/testbed/bin/python
+cachedir: .pytest_cache
+rootdir: /testbed, configfile: pyproject.toml
+[1mcollecting ... [0m[1mcollected 0 items / 1 error                                                    [0m
+
+==================================== ERRORS ====================================
+[31m[1m_____________________ ERROR collecting test_skip_module.py _____________________[0m
+[31mUsing pytest.skip outside of a test is not allowed. To decorate a test function, use the @pytest.mark.skip or @pytest.mark.skipif decorators instead, and to skip a module use `pytestmark = pytest.mark.{skip,skipif}` or use `skip(msg=..., allow_module_level=True)`. You can also use the new `skip_module(msg=...)` function which is equivalent to `skip(msg=..., allow_module_level=True)`.[0m
+=========================== short test summary info ============================
+ERROR test_skip_module.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+[31m=============================== [31m[1m1 error[0m[31m in 0.10s[0m[31m ===============================[0m; Next thought: Perfect! The error message now includes information about both ways to skip a module.
+
+Let's test both ways one more time to make sure they work:
+
+1. Using `skip_module`:
+---
+Result at iteration 25: The file /workspace/pytest-dev__pytest__7.0/test_skip_module.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/pytest-dev__pytest__7.0/test_skip_module.py:
+     1	import sys
+     2	from pytest import skip, skip_module
+     3	
+     4	if sys.version_info < (3, 10):  # Change to trigger skip
+     5	    skip_module(msg="Requires Python >= 3.10")
+     6	
+     7	# This is Python 3.8+ syntax that will fail on older versions
+     8	def foo(a, /, b):
+     9	    return a + b
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: None
+---
+Result at iteration 26: cd /workspace/pytest-dev__pytest__7.0 && python -m pytest test_skip_module.py -v
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.19, pytest-7.0.0.dev36+g69356d20c, py-1.11.0, pluggy-0.13.1 -- /opt/miniconda3/envs/testbed/bin/python
+cachedir: .pytest_cache
+rootdir: /testbed, configfile: pyproject.toml
+[1mcollecting ... [0m[1mcollected 0 items / 1 skipped                                                  [0m
+
+[33m============================== [33m[1m1 skipped[0m[33m in 0.00s[0m[33m ==============================[0m; Next thought: 2. Using `skip` with `allow_module_level=True`:
+---
+Result at iteration 27: The file /workspace/pytest-dev__pytest__7.0/test_skip_module.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/pytest-dev__pytest__7.0/test_skip_module.py:
+     1	import sys
+     2	from pytest import skip, skip_module
+     3	
+     4	if sys.version_info < (3, 10):  # Change to trigger skip
+     5	    skip(msg="Requires Python >= 3.10", allow_module_level=True)
+     6	
+     7	# This is Python 3.8+ syntax that will fail on older versions
+     8	def foo(a, /, b):
+     9	    return a + b
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: None
+---
+Result at iteration 28: cd /workspace/pytest-dev__pytest__7.0 && python -m pytest test_skip_module.py -v
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.19, pytest-7.0.0.dev36+g69356d20c, py-1.11.0, pluggy-0.13.1 -- /opt/miniconda3/envs/testbed/bin/python
+cachedir: .pytest_cache
+rootdir: /testbed, configfile: pyproject.toml
+[1mcollecting ... [0m[1mcollected 0 items / 1 skipped                                                  [0m
+
+[33m============================== [33m[1m1 skipped[0m[33m in 0.01s[0m[33m ==============================[0m; Next thought: END

@@ -1,0 +1,12 @@
+Action at Iteration 0: search_class("ForeignKey"), search_method("formfield"), search_code("limit_choices_to")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: search_method_in_class("formfield", "ForeignKey"), search_code_in_file("limit_choices_to", "django/forms/models.py")
+
+Action at Iteration 3: Analyze
+
+Action at Iteration 4: Locate
+
+Action at Iteration 5: write_patch
+

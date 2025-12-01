@@ -1,0 +1,12 @@
+Action at Iteration 0: search_class("DatasetGroupBy"), search_method_in_class("__repr__", "DatasetGroupBy")
+
+Action at Iteration 1: search_method_in_class("__repr__", "GroupBy"), search_method_in_class("__repr__", "ImplementsDatasetReduce"), search_method_in_class("_repr_html_", "DatasetGroupBy"), search_method_in_file("def __str__", "xarray/core/groupby.py")
+
+Action at Iteration 2: search_method_in_class("__repr__", "GroupBy"), search_method_in_class("__repr__", "ImplementsDatasetReduce"), search_method_in_class("_repr_html_", "DatasetGroupBy"), search_method_in_file("def __str__", "xarray/core/groupby.py")
+
+Action at Iteration 3: Analyze
+
+Action at Iteration 4: Locate
+
+Action at Iteration 5: write_patch
+

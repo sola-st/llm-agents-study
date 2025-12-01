@@ -1,0 +1,94 @@
+Result at Iteration 0: Result of search_class("BoundaryNorm"):
+Found 1 classes with name BoundaryNorm in the codebase.
+Search result 1: <file>lib/matplotlib/colors.py</file> <class>BoundaryNorm</class> <code>class BoundaryNorm(Normalize):
+    def __init__(self, boundaries, ncolors, clip=False, *, extend='neither'):
+    def __call__(self, value, clip=None):
+    def inverse(self, value):
+</code>
+
+
+
+Result of search_method_in_file("format_cursor_data", "/Users/jklymak/matplotlib/lib/matplotlib/artist.py"):
+Could not find file /Users/jklymak/matplotlib/lib/matplotlib/artist.py in the codebase.
+
+Result of search_method_in_class("inverse", "BoundaryNorm"):
+Found 1 methods with name inverse in class BoundaryNorm.
+Search result 1: <file>lib/matplotlib/colors.py</file> <class>BoundaryNorm</class> <func>inverse</func> <code>    def inverse(self, value):
+        """
+        Raises
+        ------
+        ValueError
+            BoundaryNorm is not invertible, so calling this method will always
+            raise an error
+        """
+        raise ValueError("BoundaryNorm is not invertible")
+</code>
+
+Other results are in these files:
+Action at Iteration 1: Analyze
+
+Result at Iteration 1: The result is contained in the reasoning
+Action at Iteration 2: Localize
+
+Result at Iteration 2: The buggy locations is not precise. You may need to check whether the arguments are correct and search more information.
+Action at Iteration 3: search_method("format_cursor_data")
+
+Result at Iteration 3: Result of search_method("format_cursor_data"):
+Found 1 methods with name format_cursor_data in the codebase.
+Search result 1: <file>lib/matplotlib/artist.py</file> <class>Artist</class> <func>format_cursor_data</func> <code>    def format_cursor_data(self, data):
+        """
+        Return a string representation of *data*.
+
+        .. note::
+            This method is intended to be overridden by artist subclasses.
+            As an end-user of Matplotlib you will most likely not call this
+            method yourself.
+
+        The default implementation converts ints and floats and arrays of ints
+        and floats into a comma-separated string enclosed in square brackets,
+        unless the artist has an associated colorbar, in which case scalar
+        values are formatted using the colorbar's formatter.
+
+        See Also
+        --------
+        get_cursor_data
+        """
+        if np.ndim(data) == 0 and isinstance(self, ScalarMappable):
+            # This block logically belongs to ScalarMappable, but can't be
+            # implemented in it because most ScalarMappable subclasses inherit
+            # from Artist first and from ScalarMappable second, so
+            # Artist.format_cursor_data would always have precedence over
+            # ScalarMappable.format_cursor_data.
+            n = self.cmap.N
+            if np.ma.getmask(data):
+                return "[]"
+            normed = self.norm(data)
+            if np.isfinite(normed):
+                # Midpoints of neighboring color intervals.
+                neighbors = self.norm.inverse(
+                    (int(self.norm(data) * n) + np.array([0, 1])) / n)
+                delta = abs(neighbors - data).max()
+                g_sig_digits = cbook._g_sig_digits(data, delta)
+            else:
+                g_sig_digits = 3  # Consistent with default below.
+            return "[{:-#.{}g}]".format(data, g_sig_digits)
+        else:
+            try:
+                data[0]
+            except (TypeError, IndexError):
+                data = [data]
+            data_str = ', '.join('{:0.3g}'.format(item) for item in data
+                                 if isinstance(item, Number))
+            return "[" + data_str + "]"
+</code>
+Action at Iteration 4: Analyze
+
+Result at Iteration 4: The result is contained in the reasoning
+Action at Iteration 5: Locate
+
+Result at Iteration 5: The buggy locations is not precise. You may need to check whether the arguments are correct and search more information.
+Action at Iteration 6: Analyze
+
+Result at Iteration 6: The result is contained in the reasoning
+Action at Iteration 7: write_patch
+

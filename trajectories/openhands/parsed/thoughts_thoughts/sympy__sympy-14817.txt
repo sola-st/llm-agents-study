@@ -1,0 +1,20 @@
+Thought at iteration 0: I'll help you implement the necessary changes to fix the issue with pretty printing MatAdd. Let's follow the steps:
+
+1. First, let's explore the repository structure to locate the relevant files:
+Thought at iteration 1: Based on the repository structure and the error message, we need to focus on the pretty printing functionality for MatAdd in the sympy/printing/pretty/pretty.py file. Let's first create a script to reproduce the error:
+Thought at iteration 2: Let's run the script to confirm the error:
+Thought at iteration 3: I apologize for the path issue. Let's try again with the correct path:
+Thought at iteration 4: Great, we've reproduced the error. The issue is in the pretty printing code for MatAdd. Let's examine the relevant code:
+Thought at iteration 5: Let's search for the MatAdd printing function:
+Thought at iteration 6: Let's look at the _print_MatAdd function:
+Thought at iteration 7: The issue is in the `_print_MatAdd` function. The problem is that it's trying to use `S(item.args[0])` to check if the first argument is negative, but this is incorrect because:
+
+1. It's trying to sympify the first argument of a matrix expression, which may contain special characters like '*' that can't be parsed
+2. It's making assumptions about the internal structure of the matrix expression
+
+Let's fix this by using the `_coeff_isneg` function that's already imported from sympy.core.function. This function is designed to check if an expression is negative without trying to parse strings.
+
+Here's the fix:
+Thought at iteration 8: The changes look good. Let's test if this fixes the issue by running our reproduce script again:
+Thought at iteration 9: Great! The error is fixed and the output shows the matrix addition correctly. Let's test some edge cases to make sure our fix handles them properly:
+Thought at iteration 10: The changes look good. Let's run the test cases:

@@ -1,0 +1,1553 @@
+Result at iteration 0: ls -R /workspace/sympy__sympy__1.1
+/workspace/sympy__sympy__1.1:
+AUTHORS			  bin			 release
+CODE_OF_CONDUCT.md	  conftest.py		 setup.py
+CONTRIBUTING.md		  data			 setupegg.py
+LICENSE			  doc			 sympy
+MANIFEST.in		  examples		 sympy.egg-info
+PULL_REQUEST_TEMPLATE.md  github_deploy_key.enc  tox.ini.sample
+README.rst		  isympy.py
+
+/workspace/sympy__sympy__1.1/bin:
+ask_update.py		 generate_test_list.py	sympy_time_cache.py
+authors_update.py	 get_sympy.py		test
+coverage_doctest.py	 isympy			test_import
+coverage_report.py	 mailmap_update.py	test_import.py
+diagnose_imports	 py.bench		test_isolated
+doctest			 strip_whitespace	test_setup.py
+generate_module_list.py  sympy_time.py		test_travis.sh
+
+/workspace/sympy__sympy__1.1/data:
+TeXmacs
+
+/workspace/sympy__sympy__1.1/data/TeXmacs:
+LICENSE  bin  progs
+
+/workspace/sympy__sympy__1.1/data/TeXmacs/bin:
+tm_sympy
+
+/workspace/sympy__sympy__1.1/data/TeXmacs/progs:
+init-sympy.scm
+
+/workspace/sympy__sympy__1.1/doc:
+Makefile    api		 cheatsheet  generate_logos.py	src
+README.rst  apidoc.conf  ext	     man
+
+/workspace/sympy__sympy__1.1/doc/api:
+conf.py  index.rst
+
+/workspace/sympy__sympy__1.1/doc/cheatsheet:
+cheatsheet.tex	combinatoric_cheatsheet.tex
+
+/workspace/sympy__sympy__1.1/doc/ext:
+docscrape.py  docscrape_sphinx.py  numpydoc.py	sympylive.py
+
+/workspace/sympy__sympy__1.1/doc/man:
+isympy.1  isympy.xml
+
+/workspace/sympy__sympy__1.1/doc/src:
+_static      conf.py	  install.rst	pics			wiki.rst
+_templates   gotchas.rst  logo		python-comparisons.rst
+aboutus.rst  guide.rst	  modules	special_topics
+citing.rst   index.rst	  outreach.rst	tutorial
+
+/workspace/sympy__sympy__1.1/doc/src/_static:
+default.css_t  sympylogo.png  sympylogo_big.png
+
+/workspace/sympy__sympy__1.1/doc/src/_templates:
+layout.html
+
+/workspace/sympy__sympy__1.1/doc/src/logo:
+info.txt  sympy-use-text.svg  sympy.svg
+
+/workspace/sympy__sympy__1.1/doc/src/modules:
+assumptions	crypto.rst    integrals		       physics	      simplify
+calculus	diffgeom.rst  liealgebras	       plotting.rst   solvers
+categories.rst	evalf.rst     logic.rst		       polys	      stats.rst
+codegen.rst	functions     matrices		       printing.rst   tensor
+combinatorics	geometry      ntheory.rst	       rewriting.rst  utilities
+concrete.rst	holonomic     numeric-computation.rst  series	      vector
+core.rst	index.rst     parsing.rst	       sets.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/assumptions:
+ask.rst  assume.rst  handlers  index.rst  refine.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/assumptions/handlers:
+calculus.rst  index.rst  ntheory.rst  order.rst  sets.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/calculus:
+index.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/combinatorics:
+fp_groups.rst	      named_groups.rst	polyhedron.rst	testutil.rst
+graycode.rst	      partitions.rst	prufer.rst	util.rst
+group_constructs.rst  perm_groups.rst	subsets.rst
+index.rst	      permutations.rst	tensor_can.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/functions:
+combinatorial.rst  elementary.rst  index.rst  special.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/geometry:
+curves.rst    entities.rst  lines.rst  points.rst    utils.rst
+ellipses.rst  index.rst     plane.rst  polygons.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/holonomic:
+about.rst  convert.rst	index.rst  operations.rst  represent.rst  uses.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/integrals:
+g-functions.rst  integrals.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/liealgebras:
+index.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/matrices:
+dense.rst	 immutablematrices.rst	matrices.rst
+expressions.rst  index.rst		sparse.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/physics:
+continuum_mechanics  matrices.rst      qho_1d.rst	units
+hep		     mechanics	       quantum		vector
+hydrogen.rst	     optics	       secondquant.rst	wigner.rst
+index.rst	     paulialgebra.rst  sho.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/physics/continuum_mechanics:
+beam.rst  beam_problems.rst  index.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/physics/hep:
+index.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/physics/mechanics:
+advanced.rst  examples.rst  lagrange.rst   reference.rst
+api	      index.rst     linearize.rst  symsystem.rst
+examples      kane.rst	    masses.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/physics/mechanics/api:
+body.rst	kane_lagrange.rst  part_bod.rst  system.rst
+expr_manip.rst	linearize.rst	   printing.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/physics/mechanics/examples:
+bicycle_example.rst	     rollingdisc_example.rst
+lin_pend_nonmin_example.rst  rollingdisc_example_kane.rst
+pendulum_nonmin.svg	     rollingdisc_example_kane_constraints.rst
+rollingdisc.svg		     rollingdisc_example_lagrange.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/physics/optics:
+gaussopt.rst  index.rst  medium.rst  utils.rst	waves.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/physics/quantum:
+anticommutator.rst  dagger.rst	      operator.rst     represent.rst
+cartesian.rst	    gate.rst	      operatorset.rst  shor.rst
+cg.rst		    grover.rst	      piab.rst	       spin.rst
+circuitplot.rst     hilbert.rst       qapply.rst       state.rst
+commutator.rst	    index.rst	      qft.rst	       tensorproduct.rst
+constants.rst	    innerproduct.rst  qubit.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/physics/units:
+dimensions.rst	index.rst	prefixes.rst	unitsystem.rst
+examples.rst	philosophy.rst	quantities.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/physics/vector:
+advanced.rst  kin_2.svg        kin_angvel3.svg	vec_dot.svg
+api	      kin_2pt.svg      kin_rolling.svg	vec_fix_notfix.svg
+fields.rst    kin_3.svg        kinematics.rst	vec_mul.svg
+index.rst     kin_4.svg        simp_rot.svg	vec_rep.svg
+kin_1.svg     kin_angvel1.svg  vec_add.svg	vec_simp_der.svg
+kin_1pt.svg   kin_angvel2.svg  vec_cross.svg	vectors.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/physics/vector/api:
+classes.rst  fieldfunctions.rst  functions.rst	kinematics.rst	printing.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/polys:
+agca.rst    index.rst	   literature.rst  ringseries.rst
+basics.rst  internals.rst  reference.rst   wester.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/series:
+formal.rst  fourier.rst  index.rst  limitseq.rst  sequences.rst  series.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/simplify:
+hyperexpand.rst  simplify.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/solvers:
+diophantine.rst  inequalities.rst  ode.rst  pde.rst  solvers.rst  solveset.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/tensor:
+array.rst  index.rst  index_methods.rst  indexed.rst  tensor.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/utilities:
+autowrap.rst   enumerative.rst	lambdify.rst	 pkgdata.rst   runtests.rst
+codegen.rst    index.rst	memoization.rst  pytest.rst    source.rst
+decorator.rst  iterables.rst	misc.rst	 randtest.rst  timeutils.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/vector:
+api	    coordsys.rst      examples.rst  index.rst
+basics.rst  coordsys_rot.svg  fields.rst    intro.rst
+
+/workspace/sympy__sympy__1.1/doc/src/modules/vector/api:
+classes.rst  orienterclasses.rst  vectorfunctions.rst
+
+/workspace/sympy__sympy__1.1/doc/src/pics:
+consoleascii.png    ipythonnotebook.png   pngview1.png	winpdb2.png
+consoleunicode.png  ipythonqtconsole.png  winpdb1.png
+
+/workspace/sympy__sympy__1.1/doc/src/special_topics:
+finite_diff_derivatives.rst  index.rst	intro.rst
+
+/workspace/sympy__sympy__1.1/doc/src/tutorial:
+basic_operations.rst  index.rst		matrices.rst	   simplification.rst
+calculus.rst	      intro.rst		preliminaries.rst  solvers.rst
+gotchas.rst	      manipulation.rst	printing.rst
+
+/workspace/sympy__sympy__1.1/examples:
+README	advanced  all.py  beginner  intermediate  notebooks
+
+/workspace/sympy__sympy__1.1/examples/advanced:
+autowrap_integrators.py     gibbs_phenomenon.py		  pyglet_plotting.py
+autowrap_ufuncify.py	    grover_example.py		  qft.py
+curvilinear_coordinates.py  hydrogen.py			  relativity.py
+dense_coding_example.py     identitysearch_example.ipynb
+fem.py			    pidigits.py
+
+/workspace/sympy__sympy__1.1/examples/beginner:
+basic.py	    limits_examples.py	 plot_examples.py	precision.py
+differentiation.py  plot_advanced.ipynb  plot_gallery.ipynb	print_pretty.py
+expansion.py	    plot_colors.ipynb	 plot_intro.ipynb	series.py
+functions.py	    plot_discont.ipynb	 plotting_nice_plot.py	substitution.py
+
+/workspace/sympy__sympy__1.1/examples/intermediate:
+coupled_cluster.py	       mplot2d.py		    sample.py
+differential_equations.py      mplot3d.py		    schwarzschild.ipynb
+infinite_1d_box.py	       partial_differential_eqs.py  trees.py
+limit_examples_advanced.ipynb  print_gtk.py		    vandermonde.py
+
+/workspace/sympy__sympy__1.1/examples/notebooks:
+Bezout_Dixon_resultant.ipynb	Sylvester_resultant.ipynb  qubits.ipynb
+IntegrationOverPolytopes.ipynb	density.ipynb		   sho1d_example.ipynb
+Macaulay_resultant.ipynb	fidelity.ipynb		   spin.ipynb
+README.txt			fresnel_integrals.ipynb    trace.ipynb
+
+/workspace/sympy__sympy__1.1/release:
+Dockerfile  README.md  fabfile.py  pull_and_run_rever.sh  release.sh  rever.xsh
+
+/workspace/sympy__sympy__1.1/sympy:
+__init__.py    conftest.py  holonomic	      plotting	  strategies
+abc.py	       core	    integrals	      polys	  tensor
+algebras       crypto	    interactive       printing	  this.py
+assumptions    deprecated   liealgebras       release.py  unify
+benchmarks     diffgeom     logic	      sandbox	  utilities
+calculus       discrete     matrices	      series	  vector
+categories     external     multipledispatch  sets
+codegen        functions    ntheory	      simplify
+combinatorics  galgebra.py  parsing	      solvers
+concrete       geometry     physics	      stats
+
+/workspace/sympy__sympy__1.1/sympy/algebras:
+__init__.py  quaternion.py  tests
+
+/workspace/sympy__sympy__1.1/sympy/algebras/tests:
+test_quaternion.py
+
+/workspace/sympy__sympy__1.1/sympy/assumptions:
+__init__.py  ask_generated.py  handlers   satask.py	  tests
+ask.py	     assume.py	       refine.py  sathandlers.py
+
+/workspace/sympy__sympy__1.1/sympy/assumptions/handlers:
+__init__.py  calculus.py  common.py  matrices.py  ntheory.py  order.py	sets.py
+
+/workspace/sympy__sympy__1.1/sympy/assumptions/tests:
+__init__.py	       test_context.py	 test_query.py	 test_satask.py
+test_assumptions_2.py  test_matrices.py  test_refine.py  test_sathandlers.py
+
+/workspace/sympy__sympy__1.1/sympy/benchmarks:
+__init__.py  bench_discrete_log.py  bench_meijerint.py	bench_symbench.py
+
+/workspace/sympy__sympy__1.1/sympy/calculus:
+__init__.py  euler.py  finite_diff.py  singularities.py  tests	util.py
+
+/workspace/sympy__sympy__1.1/sympy/calculus/tests:
+__init__.py    test_finite_diff.py    test_util.py
+test_euler.py  test_singularities.py
+
+/workspace/sympy__sympy__1.1/sympy/categories:
+__init__.py  baseclasses.py  diagram_drawing.py  tests
+
+/workspace/sympy__sympy__1.1/sympy/categories/tests:
+__init__.py  test_baseclasses.py  test_drawing.py
+
+/workspace/sympy__sympy__1.1/sympy/codegen:
+__init__.py	   ast.py	  ffunctions.py  tests
+approximations.py  cfunctions.py  rewriting.py
+
+/workspace/sympy__sympy__1.1/sympy/codegen/tests:
+test_approximations.py	test_cfunctions.py  test_rewriting.py
+test_ast.py		test_ffunctions.py
+
+/workspace/sympy__sympy__1.1/sympy/combinatorics:
+__init__.py	graycode.py	     perm_groups.py	 subsets.py
+coset_table.py	group_constructs.py  permutations.py	 tensor_can.py
+fp_groups.py	homomorphisms.py     polyhedron.py	 tests
+free_groups.py	named_groups.py      prufer.py		 testutil.py
+generators.py	partitions.py	     rewritingsystem.py  util.py
+
+/workspace/sympy__sympy__1.1/sympy/combinatorics/tests:
+__init__.py		  test_homomorphisms.py  test_rewriting.py
+test_coset_table.py	  test_named_groups.py	 test_subsets.py
+test_fp_groups.py	  test_partitions.py	 test_tensor_can.py
+test_free_groups.py	  test_perm_groups.py	 test_testutil.py
+test_generators.py	  test_permutations.py	 test_util.py
+test_graycode.py	  test_polyhedron.py
+test_group_constructs.py  test_prufer.py
+
+/workspace/sympy__sympy__1.1/sympy/concrete:
+__init__.py  expr_with_intlimits.py  gosper.py	products.py    tests
+delta.py     expr_with_limits.py     guess.py	summations.py
+
+/workspace/sympy__sympy__1.1/sympy/concrete/tests:
+__init__.py    test_gosper.py  test_products.py
+test_delta.py  test_guess.py   test_sums_products.py
+
+/workspace/sympy__sympy__1.1/sympy/core:
+__init__.py	  containers.py  function.py	      rules.py
+add.py		  core.py	 logic.py	      singleton.py
+alphabets.py	  coreerrors.py  mod.py		      symbol.py
+assumptions.py	  decorators.py  mul.py		      sympify.py
+backend.py	  evalf.py	 multidimensional.py  tests
+basic.py	  evaluate.py	 numbers.py	      trace.py
+benchmarks	  expr.py	 operations.py
+cache.py	  exprtools.py	 power.py
+compatibility.py  facts.py	 relational.py
+
+/workspace/sympy__sympy__1.1/sympy/core/benchmarks:
+__init__.py    bench_assumptions.py  bench_expand.py   bench_sympify.py
+bench_arit.py  bench_basic.py	     bench_numbers.py
+
+/workspace/sympy__sympy__1.1/sympy/core/tests:
+__init__.py			   test_equal.py	   test_numbers.py
+test_args.py			   test_eval.py		   test_operations.py
+test_arit.py			   test_evalf.py	   test_power.py
+test_assumptions.py		   test_evaluate.py	   test_priority.py
+test_basic.py			   test_expand.py	   test_relational.py
+test_cache.py			   test_expr.py		   test_rules.py
+test_compatibility.py		   test_exprtools.py	   test_subs.py
+test_complex.py			   test_facts.py	   test_symbol.py
+test_constructor_postprocessor.py  test_function.py	   test_sympify.py
+test_containers.py		   test_logic.py	   test_trace.py
+test_count_ops.py		   test_match.py	   test_truediv.py
+test_diff.py			   test_noncommutative.py  test_var.py
+
+/workspace/sympy__sympy__1.1/sympy/crypto:
+__init__.py  crypto.py	tests
+
+/workspace/sympy__sympy__1.1/sympy/crypto/tests:
+__init__.py  test_crypto.py
+
+/workspace/sympy__sympy__1.1/sympy/deprecated:
+__init__.py  class_registry.py	tests
+
+/workspace/sympy__sympy__1.1/sympy/deprecated/tests:
+__init__.py  test_class_registry.py
+
+/workspace/sympy__sympy__1.1/sympy/diffgeom:
+__init__.py  diffgeom.py  rn.py  tests
+
+/workspace/sympy__sympy__1.1/sympy/diffgeom/tests:
+__init__.py		 test_function_diffgeom_book.py
+test_class_structure.py  test_hyperbolic_space.py
+test_diffgeom.py
+
+/workspace/sympy__sympy__1.1/sympy/discrete:
+__init__.py  convolution.py  tests  transforms.py
+
+/workspace/sympy__sympy__1.1/sympy/discrete/tests:
+__init__.py  test_convolution.py  test_transforms.py
+
+/workspace/sympy__sympy__1.1/sympy/external:
+__init__.py  importtools.py  tests
+
+/workspace/sympy__sympy__1.1/sympy/external/tests:
+__init__.py	  test_codegen.py      test_numpy.py  test_scipy.py
+test_autowrap.py  test_importtools.py  test_sage.py
+
+/workspace/sympy__sympy__1.1/sympy/functions:
+__init__.py  combinatorial  elementary	special
+
+/workspace/sympy__sympy__1.1/sympy/functions/combinatorial:
+__init__.py  factorials.py  numbers.py	tests
+
+/workspace/sympy__sympy__1.1/sympy/functions/combinatorial/tests:
+__init__.py  test_comb_factorials.py  test_comb_numbers.py
+
+/workspace/sympy__sympy__1.1/sympy/functions/elementary:
+__init__.py  complexes.py    hyperbolic.py  miscellaneous.py  tests
+benchmarks   exponential.py  integers.py    piecewise.py      trigonometric.py
+
+/workspace/sympy__sympy__1.1/sympy/functions/elementary/benchmarks:
+__init__.py  bench_exp.py
+
+/workspace/sympy__sympy__1.1/sympy/functions/elementary/tests:
+__init__.py	     test_hyperbolic.py  test_miscellaneous.py
+test_complexes.py    test_integers.py	 test_piecewise.py
+test_exponential.py  test_interface.py	 test_trigonometric.py
+
+/workspace/sympy__sympy__1.1/sympy/functions/special:
+__init__.py	    elliptic_integrals.py  singularity_functions.py
+benchmarks	    error_functions.py	   spherical_harmonics.py
+bessel.py	    gamma_functions.py	   tensor_functions.py
+beta_functions.py   hyper.py		   tests
+bsplines.py	    mathieu_functions.py   zeta_functions.py
+delta_functions.py  polynomials.py
+
+/workspace/sympy__sympy__1.1/sympy/functions/special/benchmarks:
+__init__.py  bench_special.py
+
+/workspace/sympy__sympy__1.1/sympy/functions/special/tests:
+__init__.py		    test_hyper.py
+test_bessel.py		    test_mathieu.py
+test_beta_functions.py	    test_singularity_functions.py
+test_bsplines.py	    test_spec_polynomials.py
+test_delta_functions.py     test_spherical_harmonics.py
+test_elliptic_integrals.py  test_tensor_functions.py
+test_error_functions.py     test_zeta_functions.py
+test_gamma_functions.py
+
+/workspace/sympy__sympy__1.1/sympy/geometry:
+__init__.py  ellipse.py  exceptions.py	parabola.py  point.py	 tests
+curve.py     entity.py	 line.py	plane.py     polygon.py  util.py
+
+/workspace/sympy__sympy__1.1/sympy/geometry/tests:
+__init__.py	 test_entity.py        test_parabola.py  test_polygon.py
+test_curve.py	 test_geometrysets.py  test_plane.py	 test_util.py
+test_ellipse.py  test_line.py	       test_point.py
+
+/workspace/sympy__sympy__1.1/sympy/holonomic:
+__init__.py   holonomicerrors.py  numerical.py	 tests
+holonomic.py  linearsolver.py	  recurrence.py
+
+/workspace/sympy__sympy__1.1/sympy/holonomic/tests:
+test_holonomic.py  test_recurrence.py
+
+/workspace/sympy__sympy__1.1/sympy/integrals:
+__init__.py	    meijerint.py      rubi
+benchmarks	    meijerint_doc.py  singularityfunctions.py
+deltafunctions.py   prde.py	      tests
+heurisch.py	    quadrature.py     transforms.py
+integrals.py	    rationaltools.py  trigonometry.py
+intpoly.py	    rde.py
+manualintegrate.py  risch.py
+
+/workspace/sympy__sympy__1.1/sympy/integrals/benchmarks:
+__init__.py  bench_integrate.py  bench_trigintegrate.py
+
+/workspace/sympy__sympy__1.1/sympy/integrals/rubi:
+__init__.py  parsetools  rubi.py  rules  symbol.py  tests  utility_function.py
+
+/workspace/sympy__sympy__1.1/sympy/integrals/rubi/parsetools:
+__init__.py  header.py.txt  parse.py  tests
+
+/workspace/sympy__sympy__1.1/sympy/integrals/rubi/parsetools/tests:
+__init__.py  test_parse.py
+
+/workspace/sympy__sympy__1.1/sympy/integrals/rubi/rules:
+__init__.py		     miscellaneous_algebraic.py
+binomial_products.py	     miscellaneous_integration.py
+exponential.py		     miscellaneous_trig.py
+hyperbolic.py		     piecewise_linear.py
+integrand_simplification.py  quadratic_products.py
+inverse_hyperbolic.py	     secant.py
+inverse_trig.py		     sine.py
+linear_products.py	     tangent.py
+logarithms.py		     trinomial_products.py
+
+/workspace/sympy__sympy__1.1/sympy/integrals/rubi/tests:
+__init__.py  test_1_3.py  test_rubi_integrate.py
+test_1_2.py  test_1_4.py  test_utility_function.py
+
+/workspace/sympy__sympy__1.1/sympy/integrals/tests:
+__init__.py		   test_lineintegrals.py  test_rde.py
+test_deltafunctions.py	   test_manual.py	  test_risch.py
+test_failing_integrals.py  test_meijerint.py	  test_singularityfunctions.py
+test_heurisch.py	   test_prde.py		  test_transforms.py
+test_integrals.py	   test_quadrature.py	  test_trigonometry.py
+test_intpoly.py		   test_rationaltools.py
+
+/workspace/sympy__sympy__1.1/sympy/interactive:
+__init__.py  ipythonprinting.py  printing.py  session.py  tests
+
+/workspace/sympy__sympy__1.1/sympy/interactive/tests:
+__init__.py  test_interactive.py  test_ipython.py  test_ipythonprinting.py
+
+/workspace/sympy__sympy__1.1/sympy/liealgebras:
+__init__.py	  dynkin_diagram.py  type_a.py	type_d.py  type_g.py
+cartan_matrix.py  root_system.py     type_b.py	type_e.py  weyl_group.py
+cartan_type.py	  tests		     type_c.py	type_f.py
+
+/workspace/sympy__sympy__1.1/sympy/liealgebras/tests:
+__init__.py		test_root_system.py  test_type_D.py  test_weyl_group.py
+test_cartan_matrix.py	test_type_A.py	     test_type_E.py
+test_cartan_type.py	test_type_B.py	     test_type_F.py
+test_dynkin_diagram.py	test_type_C.py	     test_type_G.py
+
+/workspace/sympy__sympy__1.1/sympy/logic:
+__init__.py  algorithms  boolalg.py  inference.py  tests  utilities
+
+/workspace/sympy__sympy__1.1/sympy/logic/algorithms:
+__init__.py  dpll.py  dpll2.py
+
+/workspace/sympy__sympy__1.1/sympy/logic/tests:
+__init__.py  test_boolalg.py  test_dimacs.py  test_inference.py
+
+/workspace/sympy__sympy__1.1/sympy/logic/utilities:
+__init__.py  dimacs.py
+
+/workspace/sympy__sympy__1.1/sympy/matrices:
+__init__.py  dense.py	    densetools.py  matrices.py	   sparsetools.py
+benchmarks   densearith.py  expressions    normalforms.py  tests
+common.py    densesolve.py  immutable.py   sparse.py
+
+/workspace/sympy__sympy__1.1/sympy/matrices/benchmarks:
+__init__.py  bench_matrix.py
+
+/workspace/sympy__sympy__1.1/sympy/matrices/expressions:
+__init__.py	diagonal.py	   funcmatrix.py  matadd.py   slice.py
+adjoint.py	dotproduct.py	   hadamard.py	  matexpr.py  tests
+blockmatrix.py	factorizations.py  inverse.py	  matmul.py   trace.py
+determinant.py	fourier.py	   kronecker.py   matpow.py   transpose.py
+
+/workspace/sympy__sympy__1.1/sympy/matrices/expressions/tests:
+__init__.py	     test_factorizations.py  test_matadd.py
+test_adjoint.py      test_fourier.py	     test_matexpr.py
+test_blockmatrix.py  test_funcmatrix.py      test_matmul.py
+test_derivatives.py  test_hadamard.py	     test_matpow.py
+test_determinant.py  test_indexing.py	     test_slice.py
+test_diagonal.py     test_inverse.py	     test_trace.py
+test_dotproduct.py   test_kronecker.py	     test_transpose.py
+
+/workspace/sympy__sympy__1.1/sympy/matrices/tests:
+__init__.py	      test_densetools.py    test_normalforms.py
+test_commonmatrix.py  test_immutable.py     test_sparse.py
+test_densearith.py    test_interactions.py  test_sparsetools.py
+test_densesolve.py    test_matrices.py
+
+/workspace/sympy__sympy__1.1/sympy/multipledispatch:
+__init__.py  conflict.py  core.py  dispatcher.py  tests  utils.py
+
+/workspace/sympy__sympy__1.1/sympy/multipledispatch/tests:
+test_conflict.py  test_core.py	test_dispatcher.py
+
+/workspace/sympy__sympy__1.1/sympy/ntheory:
+__init__.py	       egyptian_fraction.py  modular.py      primetest.py
+bbp_pi.py	       factor_.py	     multinomial.py  residue_ntheory.py
+continued_fraction.py  generate.py	     partitions_.py  tests
+
+/workspace/sympy__sympy__1.1/sympy/ntheory/tests:
+__init__.py		    test_factor_.py	 test_partitions.py
+test_bbp_pi.py		    test_generate.py	 test_primetest.py
+test_continued_fraction.py  test_modular.py	 test_residue.py
+test_egyptian_fraction.py   test_multinomial.py
+
+/workspace/sympy__sympy__1.1/sympy/parsing:
+__init__.py    latex	       maxima.py	tests
+ast_parser.py  mathematica.py  sympy_parser.py
+
+/workspace/sympy__sympy__1.1/sympy/parsing/latex:
+LICENSE.txt  __init__.py  _build_latex_antlr.py  errors.py
+LaTeX.g4     _antlr	  _parse_latex_antlr.py
+
+/workspace/sympy__sympy__1.1/sympy/parsing/latex/_antlr:
+__init__.py   latex.tokens	 latexlexer.py	    latexparser.py
+latex.interp  latexlexer.interp  latexlexer.tokens
+
+/workspace/sympy__sympy__1.1/sympy/parsing/tests:
+__init__.py				     test_mathematica.py
+test_implicit_multiplication_application.py  test_maxima.py
+test_latex.py				     test_sympy_parser.py
+test_latex_deps.py
+
+/workspace/sympy__sympy__1.1/sympy/physics:
+__init__.py	     matrices.py      qho_1d.py       units
+continuum_mechanics  mechanics	      quantum	      unitsystems.py
+gaussopt.py	     optics	      secondquant.py  vector
+hep		     paulialgebra.py  sho.py	      wigner.py
+hydrogen.py	     pring.py	      tests
+
+/workspace/sympy__sympy__1.1/sympy/physics/continuum_mechanics:
+__init__.py  beam.py  tests
+
+/workspace/sympy__sympy__1.1/sympy/physics/continuum_mechanics/tests:
+__init__.py  test_beam.py
+
+/workspace/sympy__sympy__1.1/sympy/physics/hep:
+__init__.py  gamma_matrices.py	tests
+
+/workspace/sympy__sympy__1.1/sympy/physics/hep/tests:
+__init__.py  test_gamma_matrices.py
+
+/workspace/sympy__sympy__1.1/sympy/physics/mechanics:
+__init__.py  functions.py  lagrange.py	 models.py    rigidbody.py  tests
+body.py      kane.py	   linearize.py  particle.py  system.py
+
+/workspace/sympy__sympy__1.1/sympy/physics/mechanics/tests:
+__init__.py	   test_kane2.py      test_linearize.py  test_system.py
+test_body.py	   test_kane3.py      test_models.py
+test_functions.py  test_lagrange.py   test_particle.py
+test_kane.py	   test_lagrange2.py  test_rigidbody.py
+
+/workspace/sympy__sympy__1.1/sympy/physics/optics:
+__init__.py  gaussopt.py  medium.py  tests  utils.py  waves.py
+
+/workspace/sympy__sympy__1.1/sympy/physics/optics/tests:
+__init__.py  test_gaussopt.py  test_medium.py  test_utils.py  test_waves.py
+
+/workspace/sympy__sympy__1.1/sympy/physics/quantum:
+__init__.py	   dagger.py	      matrixutils.py	   qft.py
+anticommutator.py  density.py	      operator.py	   qubit.py
+boson.py	   fermion.py	      operatorordering.py  represent.py
+cartesian.py	   gate.py	      operatorset.py	   sho1d.py
+cg.py		   grover.py	      pauli.py		   shor.py
+circuitplot.py	   hilbert.py	      piab.py		   spin.py
+circuitutils.py    identitysearch.py  qapply.py		   state.py
+commutator.py	   innerproduct.py    qasm.py		   tensorproduct.py
+constants.py	   matrixcache.py     qexpr.py		   tests
+
+/workspace/sympy__sympy__1.1/sympy/physics/quantum/tests:
+__init__.py		test_gate.py		  test_qapply.py
+test_anticommutator.py	test_grover.py		  test_qasm.py
+test_boson.py		test_hilbert.py		  test_qexpr.py
+test_cartesian.py	test_identitysearch.py	  test_qft.py
+test_cg.py		test_innerproduct.py	  test_qubit.py
+test_circuitplot.py	test_matrixutils.py	  test_represent.py
+test_circuitutils.py	test_operator.py	  test_sho1d.py
+test_commutator.py	test_operatorordering.py  test_shor.py
+test_constants.py	test_operatorset.py	  test_spin.py
+test_dagger.py		test_pauli.py		  test_state.py
+test_density.py		test_piab.py		  test_tensorproduct.py
+test_fermion.py		test_printing.py
+
+/workspace/sympy__sympy__1.1/sympy/physics/tests:
+__init__.py		test_paulialgebra.py	  test_qho_1d.py
+test_clebsch_gordan.py	test_physics_matrices.py  test_secondquant.py
+test_hydrogen.py	test_pring.py		  test_sho.py
+
+/workspace/sympy__sympy__1.1/sympy/physics/units:
+__init__.py	dimensions.py  quantities.py  tests	     util.py
+definitions.py	prefixes.py    systems	      unitsystem.py
+
+/workspace/sympy__sympy__1.1/sympy/physics/units/systems:
+__init__.py  mks.py  mksa.py  natural.py  si.py
+
+/workspace/sympy__sympy__1.1/sympy/physics/units/tests:
+__init__.py	    test_dimensionsystem.py  test_quantities.py  test_util.py
+test_dimensions.py  test_prefixes.py	     test_unitsystem.py
+
+/workspace/sympy__sympy__1.1/sympy/physics/vector:
+__init__.py  fieldfunctions.py	functions.py  printing.py  vector.py
+dyadic.py    frame.py		point.py      tests
+
+/workspace/sympy__sympy__1.1/sympy/physics/vector/tests:
+__init__.py		test_frame.py	   test_point.py
+test_dyadic.py		test_functions.py  test_printing.py
+test_fieldfunctions.py	test_output.py	   test_vector.py
+
+/workspace/sympy__sympy__1.1/sympy/plotting:
+__init__.py		  intervalmath	plot_implicit.py  tests
+experimental_lambdify.py  plot.py	pygletplot	  textplot.py
+
+/workspace/sympy__sympy__1.1/sympy/plotting/intervalmath:
+__init__.py  interval_arithmetic.py  lib_interval.py  tests
+
+/workspace/sympy__sympy__1.1/sympy/plotting/intervalmath/tests:
+__init__.py  test_interval_functions.py  test_intervalmath.py
+
+/workspace/sympy__sympy__1.1/sympy/plotting/pygletplot:
+__init__.py	   plot_camera.py      plot_mode_base.py  plot_window.py
+color_scheme.py    plot_controller.py  plot_modes.py	  tests
+managed_window.py  plot_curve.py       plot_object.py	  util.py
+plot.py		   plot_interval.py    plot_rotation.py
+plot_axes.py	   plot_mode.py        plot_surface.py
+
+/workspace/sympy__sympy__1.1/sympy/plotting/pygletplot/tests:
+__init__.py  test_plotting.py
+
+/workspace/sympy__sympy__1.1/sympy/plotting/tests:
+__init__.py  test_plot.py  test_plot_implicit.py
+
+/workspace/sympy__sympy__1.1/sympy/polys:
+__init__.py	       galoistools.py		   polyoptions.py
+agca		       groebnertools.py		   polyquinticconst.py
+benchmarks	       heuristicgcd.py		   polyroots.py
+compatibility.py       modulargcd.py		   polytools.py
+constructor.py	       monomials.py		   polyutils.py
+densearith.py	       multivariate_resultants.py  rationaltools.py
+densebasic.py	       numberfields.py		   ring_series.py
+densetools.py	       orderings.py		   rings.py
+dispersion.py	       orthopolys.py		   rootisolation.py
+distributedmodules.py  partfrac.py		   rootoftools.py
+domains		       polyclasses.py		   solvers.py
+euclidtools.py	       polyconfig.py		   specialpolys.py
+factortools.py	       polyerrors.py		   sqfreetools.py
+fglmtools.py	       polyfuncs.py		   subresultants_qq_zz.py
+fields.py	       polymatrix.py		   tests
+
+/workspace/sympy__sympy__1.1/sympy/polys/agca:
+__init__.py  extensions.py  homomorphisms.py  ideals.py  modules.py  tests
+
+/workspace/sympy__sympy__1.1/sympy/polys/agca/tests:
+__init__.py	    test_homomorphisms.py  test_modules.py
+test_extensions.py  test_ideals.py
+
+/workspace/sympy__sympy__1.1/sympy/polys/benchmarks:
+__init__.py  bench_galoispolys.py  bench_groebnertools.py  bench_solvers.py
+
+/workspace/sympy__sympy__1.1/sympy/polys/domains:
+__init__.py	       gmpyfinitefield.py     pythonintegerring.py
+algebraicfield.py      gmpyintegerring.py     pythonrational.py
+characteristiczero.py  gmpyrationalfield.py   pythonrationalfield.py
+complexfield.py        groundtypes.py	      quotientring.py
+compositedomain.py     integerring.py	      rationalfield.py
+domain.py	       modularinteger.py      realfield.py
+domainelement.py       mpelements.py	      ring.py
+expressiondomain.py    old_fractionfield.py   simpledomain.py
+field.py	       old_polynomialring.py  tests
+finitefield.py	       polynomialring.py
+fractionfield.py       pythonfinitefield.py
+
+/workspace/sympy__sympy__1.1/sympy/polys/domains/tests:
+__init__.py  test_domains.py  test_polynomialring.py  test_quotientring.py
+
+/workspace/sympy__sympy__1.1/sympy/polys/tests:
+__init__.py			 test_orthopolys.py
+test_constructor.py		 test_partfrac.py
+test_densearith.py		 test_polyclasses.py
+test_densebasic.py		 test_polyfuncs.py
+test_densetools.py		 test_polymatrix.py
+test_dispersion.py		 test_polyoptions.py
+test_distributedmodules.py	 test_polyroots.py
+test_euclidtools.py		 test_polytools.py
+test_factortools.py		 test_polyutils.py
+test_fields.py			 test_pythonrational.py
+test_galoistools.py		 test_rationaltools.py
+test_groebnertools.py		 test_ring_series.py
+test_heuristicgcd.py		 test_rings.py
+test_injections.py		 test_rootisolation.py
+test_modulargcd.py		 test_rootoftools.py
+test_monomials.py		 test_solvers.py
+test_multivariate_resultants.py  test_specialpolys.py
+test_numberfields.py		 test_sqfreetools.py
+test_orderings.py		 test_subresultants_qq_zz.py
+
+/workspace/sympy__sympy__1.1/sympy/printing:
+__init__.py	fcode.py       llvmjitcode.py  printer.py  tableform.py
+ccode.py	glsl.py        mathematica.py  pycode.py   tests
+codeprinter.py	gtk.py	       mathml.py       python.py   theanocode.py
+conventions.py	jscode.py      octave.py       rcode.py    tree.py
+cxxcode.py	julia.py       precedence.py   repr.py
+defaults.py	lambdarepr.py  pretty	       rust.py
+dot.py		latex.py       preview.py      str.py
+
+/workspace/sympy__sympy__1.1/sympy/printing/pretty:
+__init__.py  pretty.py	pretty_symbology.py  stringpict.py  tests
+
+/workspace/sympy__sympy__1.1/sympy/printing/pretty/tests:
+__init__.py  test_pretty.py
+
+/workspace/sympy__sympy__1.1/sympy/printing/tests:
+__init__.py	     test_julia.py	  test_pycode.py
+test_ccode.py	     test_lambdarepr.py   test_python.py
+test_codeprinter.py  test_latex.py	  test_rcode.py
+test_conventions.py  test_llvmjit.py	  test_repr.py
+test_cxxcode.py      test_mathematica.py  test_rust.py
+test_dot.py	     test_mathml.py	  test_str.py
+test_fcode.py	     test_numpy.py	  test_tableform.py
+test_glsl.py	     test_octave.py	  test_theanocode.py
+test_gtk.py	     test_precedence.py
+test_jscode.py	     test_preview.py
+
+/workspace/sympy__sympy__1.1/sympy/sandbox:
+__init__.py  indexed_integrals.py  tests
+
+/workspace/sympy__sympy__1.1/sympy/sandbox/tests:
+__init__.py  test_indexed_integrals.py
+
+/workspace/sympy__sympy__1.1/sympy/series:
+__init__.py	 benchmarks  gruntz.py	limitseq.py  sequences.py     tests
+acceleration.py  formal.py   kauers.py	order.py     series.py
+approximants.py  fourier.py  limits.py	residues.py  series_class.py
+
+/workspace/sympy__sympy__1.1/sympy/series/benchmarks:
+__init__.py  bench_limit.py  bench_order.py
+
+/workspace/sympy__sympy__1.1/sympy/series/tests:
+__init__.py	      test_fourier.py  test_limitseq.py  test_residues.py
+test_approximants.py  test_gruntz.py   test_lseries.py	 test_sequences.py
+test_demidovich.py    test_kauers.py   test_nseries.py	 test_series.py
+test_formal.py	      test_limits.py   test_order.py
+
+/workspace/sympy__sympy__1.1/sympy/sets:
+__init__.py	 contains.py   handlers     setexpr.py	tests
+conditionset.py  fancysets.py  ordinals.py  sets.py
+
+/workspace/sympy__sympy__1.1/sympy/sets/handlers:
+__init__.py  add.py  functions.py  intersection.py  mul.py  power.py  union.py
+
+/workspace/sympy__sympy__1.1/sympy/sets/tests:
+__init__.py	      test_contains.py	 test_ordinals.py  test_sets.py
+test_conditionset.py  test_fancysets.py  test_setexpr.py
+
+/workspace/sympy__sympy__1.1/sympy/simplify:
+__init__.py  epathtools.py   hyperexpand_doc.py  simplify.py	    trigsimp.py
+combsimp.py  fu.py	     powsimp.py		 sqrtdenest.py
+cse_main.py  gammasimp.py    radsimp.py		 tests
+cse_opts.py  hyperexpand.py  ratsimp.py		 traversaltools.py
+
+/workspace/sympy__sympy__1.1/sympy/simplify/tests:
+__init__.py	    test_gammasimp.py	 test_simplify.py
+test_combsimp.py    test_hyperexpand.py  test_sqrtdenest.py
+test_cse.py	    test_powsimp.py	 test_traversaltools.py
+test_epathtools.py  test_radsimp.py	 test_trigsimp.py
+test_fu.py	    test_ratsimp.py
+test_function.py    test_rewrite.py
+
+/workspace/sympy__sympy__1.1/sympy/solvers:
+__init__.py   decompogen.py   inequalities.py  polysys.py  solveset.py
+benchmarks    deutils.py      ode.py	       recurr.py   tests
+bivariate.py  diophantine.py  pde.py	       solvers.py
+
+/workspace/sympy__sympy__1.1/sympy/solvers/benchmarks:
+__init__.py  bench_solvers.py
+
+/workspace/sympy__sympy__1.1/sympy/solvers/tests:
+__init__.py	      test_diophantine.py   test_ode.py      test_recurr.py
+test_constantsimp.py  test_inequalities.py  test_pde.py      test_solvers.py
+test_decompogen.py    test_numeric.py	    test_polysys.py  test_solveset.py
+
+/workspace/sympy__sympy__1.1/sympy/stats:
+__init__.py   drv.py	     frv.py	   rv_interface.py
+crv.py	      drv_types.py   frv_types.py  symbolic_probability.py
+crv_types.py  error_prop.py  rv.py	   tests
+
+/workspace/sympy__sympy__1.1/sympy/stats/tests:
+__init__.py	       test_error_prop.py  test_rv.py
+test_continuous_rv.py  test_finite_rv.py   test_symbolic_probability.py
+test_discrete_rv.py    test_mix.py
+
+/workspace/sympy__sympy__1.1/sympy/strategies:
+__init__.py  core.py  tests	traverse.py  util.py
+branch	     rl.py    tools.py	tree.py
+
+/workspace/sympy__sympy__1.1/sympy/strategies/branch:
+__init__.py  core.py  tests  tools.py  traverse.py
+
+/workspace/sympy__sympy__1.1/sympy/strategies/branch/tests:
+__init__.py  test_core.py  test_tools.py  test_traverse.py
+
+/workspace/sympy__sympy__1.1/sympy/strategies/tests:
+__init__.py   test_rl.py     test_tools.py     test_tree.py
+test_core.py  test_strat.py  test_traverse.py
+
+/workspace/sympy__sympy__1.1/sympy/tensor:
+__init__.py  functions.py      indexed.py  tests
+array	     index_methods.py  tensor.py
+
+/workspace/sympy__sympy__1.1/sympy/tensor/array:
+__init__.py  dense_ndim_array.py    ndim_array.py	  tests
+arrayop.py   mutable_ndim_array.py  sparse_ndim_array.py
+
+/workspace/sympy__sympy__1.1/sympy/tensor/array/tests:
+__init__.py	 test_immutable_ndim_array.py  test_ndim_array_conversions.py
+test_arrayop.py  test_mutable_ndim_array.py
+
+/workspace/sympy__sympy__1.1/sympy/tensor/tests:
+__init__.py	   test_index_methods.py  test_tensor.py
+test_functions.py  test_indexed.py
+
+/workspace/sympy__sympy__1.1/sympy/unify:
+__init__.py  core.py  rewrite.py  tests  usympy.py
+
+/workspace/sympy__sympy__1.1/sympy/unify/tests:
+__init__.py  test_rewrite.py  test_sympy.py  test_unify.py
+
+/workspace/sympy__sympy__1.1/sympy/utilities:
+__init__.py	 decorator.py	 lambdify.py	 misc.py      runtests.py
+autowrap.py	 enumerative.py  magic.py	 pkgdata.py   source.py
+benchmarking.py  exceptions.py	 mathml		 pytest.py    tests
+codegen.py	 iterables.py	 memoization.py  randtest.py  timeutils.py
+
+/workspace/sympy__sympy__1.1/sympy/utilities/mathml:
+__init__.py  data
+
+/workspace/sympy__sympy__1.1/sympy/utilities/mathml/data:
+mmlctop.xsl  mmltex.xsl  simple_mmlctop.xsl
+
+/workspace/sympy__sympy__1.1/sympy/utilities/tests:
+__init__.py		test_codegen_rust.py	test_pickling.py
+diagnose_imports.py	test_decorator.py	test_pytest.py
+test_autowrap.py	test_enumerative.py	test_source.py
+test_code_quality.py	test_iterables.py	test_timeutils.py
+test_codegen.py		test_lambdify.py	test_wester.py
+test_codegen_julia.py	test_misc.py
+test_codegen_octave.py	test_module_imports.py
+
+/workspace/sympy__sympy__1.1/sympy/vector:
+__init__.py	   deloperator.py  operators.py  scalar.py
+basisdependent.py  dyadic.py	   orienters.py  tests
+coordsysrect.py    functions.py    point.py	 vector.py
+
+/workspace/sympy__sympy__1.1/sympy/vector/tests:
+__init__.py	      test_field_functions.py  test_printing.py
+test_coordsysrect.py  test_functions.py        test_vector.py
+test_dyadic.py	      test_operators.py
+
+/workspace/sympy__sympy__1.1/sympy.egg-info:
+PKG-INFO     dependency_links.txt  not-zip-safe  top_level.txt
+SOURCES.txt  entry_points.txt	   requires.txt; Next thought: Based on the repository structure and the error message, we need to focus on the pretty printing functionality for MatAdd in the sympy/printing/pretty/pretty.py file. Let's first create a script to reproduce the error:
+---
+Result at iteration 1: File created successfully at: /workspace/reproduce.py; Next thought: Let's run the script to confirm the error:
+---
+Result at iteration 2: cd /workspace/sympy__sympy__1.1 && python reproduce.py
+python: can't open file '/testbed/reproduce.py': [Errno 2] No such file or directory; Next thought: I apologize for the path issue. Let's try again with the correct path:
+---
+Result at iteration 3: cd /workspace && python reproduce.py
+/testbed/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Mapping, defaultdict
+/testbed/sympy/core/expr.py:12: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import defaultdict, Iterable
+/testbed/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  class OrderedSet(collections.MutableSet):
+/testbed/sympy/solvers/diophantine.py:3188: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if feasible is 1:  # it's prime and k == 2
+/testbed/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Callable
+Traceback (most recent call last):
+  File "/testbed/sympy/core/sympify.py", line 368, in sympify
+    expr = parse_expr(a, local_dict=locals, transformations=transformations, evaluate=evaluate)
+  File "/testbed/sympy/parsing/sympy_parser.py", line 950, in parse_expr
+    return eval_expr(code, local_dict, global_dict)
+  File "/testbed/sympy/parsing/sympy_parser.py", line 862, in eval_expr
+    expr = eval(
+  File "<string>", line 1
+    Symbol ('y' )*
+                 ^
+SyntaxError: unexpected EOF while parsing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/reproduce.py", line 9, in <module>
+    pprint(x + y)
+  File "/testbed/sympy/printing/pretty/pretty.py", line 2369, in pretty_print
+    print(pretty(expr, wrap_line=wrap_line, num_columns=num_columns,
+  File "/testbed/sympy/printing/pretty/pretty.py", line 2331, in pretty
+    return pp.doprint(expr)
+  File "/testbed/sympy/printing/pretty/pretty.py", line 62, in doprint
+    return self._print(expr).render(**self._settings)
+  File "/testbed/sympy/printing/printer.py", line 274, in _print
+    return getattr(self, printmethod)(expr, *args, **kwargs)
+  File "/testbed/sympy/printing/pretty/pretty.py", line 828, in _print_MatAdd
+    if S(item.args[0]).is_negative:
+  File "/testbed/sympy/core/sympify.py", line 370, in sympify
+    raise SympifyError('could not parse %r' % a, exc)
+sympy.core.sympify.SympifyError: Sympify of expression 'could not parse 'y*'' failed, because of exception being raised:
+SyntaxError: unexpected EOF while parsing (<string>, line 1); Next thought: Great, we've reproduced the error. The issue is in the pretty printing code for MatAdd. Let's examine the relevant code:
+---
+Result at iteration 4: Here's the result of running `cat -n` on /workspace/sympy__sympy__1.1/sympy/printing/pretty/pretty.py:
+     1	from __future__ import print_function, division
+     2	
+     3	import itertools
+     4	
+     5	from sympy.core import S
+     6	from sympy.core.containers import Tuple
+     7	from sympy.core.function import _coeff_isneg
+     8	from sympy.core.mod import Mod
+     9	from sympy.core.mul import Mul
+    10	from sympy.core.numbers import Rational
+    11	from sympy.core.power import Pow
+    12	from sympy.core.relational import Equality
+    13	from sympy.core.symbol import Symbol
+    14	from sympy.printing.precedence import PRECEDENCE, precedence, precedence_traditional
+    15	from sympy.utilities import group
+    16	from sympy.utilities.iterables import has_variety
+    17	from sympy.core.sympify import SympifyError
+    18	from sympy.core.compatibility import range
+    19	from sympy.core.add import Add
+    20	
+    21	from sympy.printing.printer import Printer
+    22	from sympy.printing.str import sstr
+    23	from sympy.printing.conventions import requires_partial
+    24	
+    25	from .stringpict import prettyForm, stringPict
+    26	from .pretty_symbology import xstr, hobj, vobj, xobj, xsym, pretty_symbol, \
+    27	    pretty_atom, pretty_use_unicode, pretty_try_use_unicode, greek_unicode, U, \
+    28	    annotated
+    29	
+    30	from sympy.utilities import default_sort_key
+    31	
+    32	# rename for usage from outside
+    33	pprint_use_unicode = pretty_use_unicode
+    34	pprint_try_use_unicode = pretty_try_use_unicode
+    35	
+    36	
+    37	class PrettyPrinter(Printer):
+    38	    """Printer, which converts an expression into 2D ASCII-art figure."""
+    39	    printmethod = "_pretty"
+    40	
+    41	    _default_settings = {
+    42	        "order": None,
+    43	        "full_prec": "auto",
+    44	        "use_unicode": None,
+    45	        "wrap_line": True,
+    46	        "num_columns": None,
+    47	        "use_unicode_sqrt_char": True,
+    48	    }
+    49	
+    50	    def __init__(self, settings=None):
+    51	        Printer.__init__(self, settings)
+    52	        self.emptyPrinter = lambda x: prettyForm(xstr(x))
+    53	
+    54	    @property
+    55	    def _use_unicode(self):
+    56	        if self._settings['use_unicode']:
+    57	            return True
+    58	        else:
+    59	            return pretty_use_unicode()
+    60	
+    61	    def doprint(self, expr):
+    62	        return self._print(expr).render(**self._settings)
+    63	
+    64	    # empty op so _print(stringPict) returns the same
+    65	    def _print_stringPict(self, e):
+    66	        return e
+    67	
+    68	    def _print_basestring(self, e):
+    69	        return prettyForm(e)
+    70	
+    71	    def _print_atan2(self, e):
+    72	        pform = prettyForm(*self._print_seq(e.args).parens())
+    73	        pform = prettyForm(*pform.left('atan2'))
+    74	        return pform
+    75	
+    76	    def _print_Symbol(self, e):
+    77	        symb = pretty_symbol(e.name)
+    78	        return prettyForm(symb)
+    79	    _print_RandomSymbol = _print_Symbol
+    80	
+    81	    def _print_Float(self, e):
+    82	        # we will use StrPrinter's Float printer, but we need to handle the
+    83	        # full_prec ourselves, according to the self._print_level
+    84	        full_prec = self._settings["full_prec"]
+    85	        if full_prec == "auto":
+    86	            full_prec = self._print_level == 1
+    87	        return prettyForm(sstr(e, full_prec=full_prec))
+    88	
+    89	    def _print_Cross(self, e):
+    90	        vec1 = e._expr1
+    91	        vec2 = e._expr2
+    92	        pform = self._print(vec2)
+    93	        pform = prettyForm(*pform.left('('))
+    94	        pform = prettyForm(*pform.right(')'))
+    95	        pform = prettyForm(*pform.left(self._print(U('MULTIPLICATION SIGN'))))
+    96	        pform = prettyForm(*pform.left(')'))
+    97	        pform = prettyForm(*pform.left(self._print(vec1)))
+    98	        pform = prettyForm(*pform.left('('))
+    99	        return pform
+   100	
+   101	    def _print_Curl(self, e):
+   102	        vec = e._expr
+   103	        pform = self._print(vec)
+   104	        pform = prettyForm(*pform.left('('))
+   105	        pform = prettyForm(*pform.right(')'))
+   106	        pform = prettyForm(*pform.left(self._print(U('MULTIPLICATION SIGN'))))
+   107	        pform = prettyForm(*pform.left(self._print(U('NABLA'))))
+   108	        return pform
+   109	
+   110	    def _print_Divergence(self, e):
+   111	        vec = e._expr
+   112	        pform = self._print(vec)
+   113	        pform = prettyForm(*pform.left('('))
+   114	        pform = prettyForm(*pform.right(')'))
+   115	        pform = prettyForm(*pform.left(self._print(U('DOT OPERATOR'))))
+   116	        pform = prettyForm(*pform.left(self._print(U('NABLA'))))
+   117	        return pform
+   118	
+   119	    def _print_Dot(self, e):
+   120	        vec1 = e._expr1
+   121	        vec2 = e._expr2
+   122	        pform = self._print(vec2)
+   123	        pform = prettyForm(*pform.left('('))
+   124	        pform = prettyForm(*pform.right(')'))
+   125	        pform = prettyForm(*pform.left(self._print(U('DOT OPERATOR'))))
+   126	        pform = prettyForm(*pform.left(')'))
+   127	        pform = prettyForm(*pform.left(self._print(vec1)))
+   128	        pform = prettyForm(*pform.left('('))
+   129	        return pform
+   130	
+   131	    def _print_Gradient(self, e):
+   132	        func = e._expr
+   133	        pform = self._print(func)
+   134	        pform = prettyForm(*pform.left('('))
+   135	        pform = prettyForm(*pform.right(')'))
+   136	        pform = prettyForm(*pform.left(self._print(U('DOT OPERATOR'))))
+   137	        pform = prettyForm(*pform.left(self._print(U('NABLA'))))
+   138	        return pform
+   139	
+   140	    def _print_Atom(self, e):
+   141	        try:
+   142	            # print atoms like Exp1 or Pi
+   143	            return prettyForm(pretty_atom(e.__class__.__name__))
+   144	        except KeyError:
+   145	            return self.emptyPrinter(e)
+   146	
+   147	    # Infinity inherits from Number, so we have to override _print_XXX order
+   148	    _print_Infinity = _print_Atom
+   149	    _print_NegativeInfinity = _print_Atom
+   150	    _print_EmptySet = _print_Atom
+   151	    _print_Naturals = _print_Atom
+   152	    _print_Naturals0 = _print_Atom
+   153	    _print_Integers = _print_Atom
+   154	    _print_Complexes = _print_Atom
+   155	
+   156	    def _print_Reals(self, e):
+   157	        if self._use_unicode:
+   158	            return self._print_Atom(e)
+   159	        else:
+   160	            inf_list = ['-oo', 'oo']
+   161	            return self._print_seq(inf_list, '(', ')')
+   162	
+   163	    def _print_subfactorial(self, e):
+   164	        x = e.args[0]
+   165	        pform = self._print(x)
+   166	        # Add parentheses if needed
+   167	        if not ((x.is_Integer and x.is_nonnegative) or x.is_Symbol):
+   168	            pform = prettyForm(*pform.parens())
+   169	        pform = prettyForm(*pform.left('!'))
+   170	        return pform
+   171	
+   172	    def _print_factorial(self, e):
+   173	        x = e.args[0]
+   174	        pform = self._print(x)
+   175	        # Add parentheses if needed
+   176	        if not ((x.is_Integer and x.is_nonnegative) or x.is_Symbol):
+   177	            pform = prettyForm(*pform.parens())
+   178	        pform = prettyForm(*pform.right('!'))
+   179	        return pform
+   180	
+   181	    def _print_factorial2(self, e):
+   182	        x = e.args[0]
+   183	        pform = self._print(x)
+   184	        # Add parentheses if needed
+   185	        if not ((x.is_Integer and x.is_nonnegative) or x.is_Symbol):
+   186	            pform = prettyForm(*pform.parens())
+   187	        pform = prettyForm(*pform.right('!!'))
+   188	        return pform
+   189	
+   190	    def _print_binomial(self, e):
+   191	        n, k = e.args
+   192	
+   193	        n_pform = self._print(n)
+   194	        k_pform = self._print(k)
+   195	
+   196	        bar = ' '*max(n_pform.width(), k_pform.width())
+   197	
+   198	        pform = prettyForm(*k_pform.above(bar))
+   199	        pform = prettyForm(*pform.above(n_pform))
+   200	        pform = prettyForm(*pform.parens('(', ')'))
+   201	
+   202	        pform.baseline = (pform.baseline + 1)//2
+   203	
+   204	        return pform
+   205	
+   206	    def _print_Relational(self, e):
+   207	        op = prettyForm(' ' + xsym(e.rel_op) + ' ')
+   208	
+   209	        l = self._print(e.lhs)
+   210	        r = self._print(e.rhs)
+   211	        pform = prettyForm(*stringPict.next(l, op, r))
+   212	        return pform
+   213	
+   214	    def _print_Not(self, e):
+   215	        from sympy import Equivalent, Implies
+   216	        if self._use_unicode:
+   217	            arg = e.args[0]
+   218	            pform = self._print(arg)
+   219	            if isinstance(arg, Equivalent):
+   220	                return self._print_Equivalent(arg, altchar=u"\N{LEFT RIGHT DOUBLE ARROW WITH STROKE}")
+   221	            if isinstance(arg, Implies):
+   222	                return self._print_Implies(arg, altchar=u"\N{RIGHTWARDS ARROW WITH STROKE}")
+   223	
+   224	            if arg.is_Boolean and not arg.is_Not:
+   225	                pform = prettyForm(*pform.parens())
+   226	
+   227	            return prettyForm(*pform.left(u"\N{NOT SIGN}"))
+   228	        else:
+   229	            return self._print_Function(e)
+   230	
+   231	    def __print_Boolean(self, e, char, sort=True):
+   232	        args = e.args
+   233	        if sort:
+   234	            args = sorted(e.args, key=default_sort_key)
+   235	        arg = args[0]
+   236	        pform = self._print(arg)
+   237	
+   238	        if arg.is_Boolean and not arg.is_Not:
+   239	            pform = prettyForm(*pform.parens())
+   240	
+   241	        for arg in args[1:]:
+   242	            pform_arg = self._print(arg)
+   243	
+   244	            if arg.is_Boolean and not arg.is_Not:
+   245	                pform_arg = prettyForm(*pform_arg.parens())
+   246	
+   247	            pform = prettyForm(*pform.right(u' %s ' % char))
+   248	            pform = prettyForm(*pform.right(pform_arg))
+   249	
+   250	        return pform
+   251	
+   252	    def _print_And(self, e):
+   253	        if self._use_unicode:
+   254	            return self.__print_Boolean(e, u"\N{LOGICAL AND}")
+   255	        else:
+   256	            return self._print_Function(e, sort=True)
+   257	
+   258	    def _print_Or(self, e):
+   259	        if self._use_unicode:
+   260	            return self.__print_Boolean(e, u"\N{LOGICAL OR}")
+   261	        else:
+   262	            return self._print_Function(e, sort=True)
+   263	
+   264	    def _print_Xor(self, e):
+   265	        if self._use_unicode:
+   266	            return self.__print_Boolean(e, u"\N{XOR}")
+   267	        else:
+   268	            return self._print_Function(e, sort=True)
+   269	
+   270	    def _print_Nand(self, e):
+   271	        if self._use_unicode:
+   272	            return self.__print_Boolean(e, u"\N{NAND}")
+   273	        else:
+   274	            return self._print_Function(e, sort=True)
+   275	
+   276	    def _print_Nor(self, e):
+   277	        if self._use_unicode:
+   278	            return self.__print_Boolean(e, u"\N{NOR}")
+   279	        else:
+   280	            return self._print_Function(e, sort=True)
+   281	
+   282	    def _print_Implies(self, e, altchar=None):
+   283	        if self._use_unicode:
+   284	            return self.__print_Boolean(e, altchar or u"\N{RIGHTWARDS ARROW}", sort=False)
+   285	        else:
+   286	            return self._print_Function(e)
+   287	
+   288	    def _print_Equivalent(self, e, altchar=None):
+   289	        if self._use_unicode:
+   290	            return self.__print_Boolean(e, altchar or u"\N{LEFT RIGHT DOUBLE ARROW}")
+   291	        else:
+   292	            return self._print_Function(e, sort=True)
+   293	
+   294	    def _print_conjugate(self, e):
+   295	        pform = self._print(e.args[0])
+   296	        return prettyForm( *pform.above( hobj('_', pform.width())) )
+   297	
+   298	    def _print_Abs(self, e):
+   299	        pform = self._print(e.args[0])
+   300	        pform = prettyForm(*pform.parens('|', '|'))
+   301	        return pform
+   302	    _print_Determinant = _print_Abs
+   303	
+   304	    def _print_floor(self, e):
+   305	        if self._use_unicode:
+   306	            pform = self._print(e.args[0])
+   307	            pform = prettyForm(*pform.parens('lfloor', 'rfloor'))
+   308	            return pform
+   309	        else:
+   310	            return self._print_Function(e)
+   311	
+   312	    def _print_ceiling(self, e):
+   313	        if self._use_unicode:
+   314	            pform = self._print(e.args[0])
+   315	            pform = prettyForm(*pform.parens('lceil', 'rceil'))
+   316	            return pform
+   317	        else:
+   318	            return self._print_Function(e)
+   319	
+   320	    def _print_Derivative(self, deriv):
+   321	        if requires_partial(deriv) and self._use_unicode:
+   322	            deriv_symbol = U('PARTIAL DIFFERENTIAL')
+   323	        else:
+   324	            deriv_symbol = r'd'
+   325	        x = None
+   326	        count_total_deriv = 0
+   327	
+   328	        for sym, num in reversed(deriv.variable_count):
+   329	            s = self._print(sym)
+   330	            ds = prettyForm(*s.left(deriv_symbol))
+   331	            count_total_deriv += num
+   332	
+   333	            if (not num.is_Integer) or (num > 1):
+   334	                ds = ds**prettyForm(str(num))
+   335	
+   336	            if x is None:
+   337	                x = ds
+   338	            else:
+   339	                x = prettyForm(*x.right(' '))
+   340	                x = prettyForm(*x.right(ds))
+   341	
+   342	        f = prettyForm(
+   343	            binding=prettyForm.FUNC, *self._print(deriv.expr).parens())
+   344	
+   345	        pform = prettyForm(deriv_symbol)
+   346	
+   347	        if (count_total_deriv > 1) != False:
+   348	            pform = pform**prettyForm(str(count_total_deriv))
+   349	
+   350	        pform = prettyForm(*pform.below(stringPict.LINE, x))
+   351	        pform.baseline = pform.baseline + 1
+   352	        pform = prettyForm(*stringPict.next(pform, f))
+   353	        pform.binding = prettyForm.MUL
+   354	
+   355	        return pform
+   356	
+   357	    def _print_Cycle(self, dc):
+   358	        from sympy.combinatorics.permutations import Permutation, Cycle
+   359	        # for Empty Cycle
+   360	        if dc == Cycle():
+   361	            cyc = stringPict('')
+   362	            return prettyForm(*cyc.parens())
+   363	
+   364	        dc_list = Permutation(dc.list()).cyclic_form
+   365	        # for Identity Cycle
+   366	        if dc_list == []:
+   367	            cyc = self._print(dc.size - 1)
+   368	            return prettyForm(*cyc.parens())
+   369	
+   370	        cyc = stringPict('')
+   371	        for i in dc_list:
+   372	            l = self._print(str(tuple(i)).replace(',', ''))
+   373	            cyc = prettyForm(*cyc.right(l))
+   374	        return cyc
+   375	
+   376	    def _print_PDF(self, pdf):
+   377	        lim = self._print(pdf.pdf.args[0])
+   378	        lim = prettyForm(*lim.right(', '))
+   379	        lim = prettyForm(*lim.right(self._print(pdf.domain[0])))
+   380	        lim = prettyForm(*lim.right(', '))
+   381	        lim = prettyForm(*lim.right(self._print(pdf.domain[1])))
+   382	        lim = prettyForm(*lim.parens())
+   383	
+   384	        f = self._print(pdf.pdf.args[1])
+   385	        f = prettyForm(*f.right(', '))
+   386	        f = prettyForm(*f.right(lim))
+   387	        f = prettyForm(*f.parens())
+   388	
+   389	        pform = prettyForm('PDF')
+   390	        pform = prettyForm(*pform.right(f))
+   391	        return pform
+   392	
+   393	    def _print_Integral(self, integral):
+   394	        f = integral.function
+   395	
+   396	        # Add parentheses if arg involves addition of terms and
+   397	        # create a pretty form for the argument
+   398	        prettyF = self._print(f)
+   399	        # XXX generalize parens
+   400	        if f.is_Add:
+   401	            prettyF = prettyForm(*prettyF.parens())
+   402	
+   403	        # dx dy dz ...
+   404	        arg = prettyF
+   405	        for x in integral.limits:
+   406	            prettyArg = self._print(x[0])
+   407	            # XXX qparens (parens if needs-parens)
+   408	            if prettyArg.width() > 1:
+   409	                prettyArg = prettyForm(*prettyArg.parens())
+   410	
+   411	            arg = prettyForm(*arg.right(' d', prettyArg))
+   412	
+   413	        # \int \int \int ...
+   414	        firstterm = True
+   415	        s = None
+   416	        for lim in integral.limits:
+   417	            x = lim[0]
+   418	            # Create bar based on the height of the argument
+   419	            h = arg.height()
+   420	            H = h + 2
+   421	
+   422	            # XXX hack!
+   423	            ascii_mode = not self._use_unicode
+   424	            if ascii_mode:
+   425	                H += 2
+   426	
+   427	            vint = vobj('int', H)
+   428	
+   429	            # Construct the pretty form with the integral sign and the argument
+   430	            pform = prettyForm(vint)
+   431	            pform.baseline = arg.baseline + (
+   432	                H - h)//2    # covering the whole argument
+   433	
+   434	            if len(lim) > 1:
+   435	                # Create pretty forms for endpoints, if definite integral.
+   436	                # Do not print empty endpoints.
+   437	                if len(lim) == 2:
+   438	                    prettyA = prettyForm("")
+   439	                    prettyB = self._print(lim[1])
+   440	                if len(lim) == 3:
+   441	                    prettyA = self._print(lim[1])
+   442	                    prettyB = self._print(lim[2])
+   443	
+   444	                if ascii_mode:  # XXX hack
+   445	                    # Add spacing so that endpoint can more easily be
+   446	                    # identified with the correct integral sign
+   447	                    spc = max(1, 3 - prettyB.width())
+   448	                    prettyB = prettyForm(*prettyB.left(' ' * spc))
+   449	
+   450	                    spc = max(1, 4 - prettyA.width())
+   451	                    prettyA = prettyForm(*prettyA.right(' ' * spc))
+   452	
+   453	                pform = prettyForm(*pform.above(prettyB))
+   454	                pform = prettyForm(*pform.below(prettyA))
+   455	
+   456	            if not ascii_mode:  # XXX hack
+   457	                pform = prettyForm(*pform.right(' '))
+   458	
+   459	            if firstterm:
+   460	                s = pform   # first term
+   461	                firstterm = False
+   462	            else:
+   463	                s = prettyForm(*s.left(pform))
+   464	
+   465	        pform = prettyForm(*arg.left(s))
+   466	        pform.binding = prettyForm.MUL
+   467	        return pform
+   468	
+   469	    def _print_Product(self, expr):
+   470	        func = expr.term
+   471	        pretty_func = self._print(func)
+   472	
+   473	        horizontal_chr = xobj('_', 1)
+   474	        corner_chr = xobj('_', 1)
+   475	        vertical_chr = xobj('|', 1)
+   476	
+   477	        if self._use_unicode:
+   478	            # use unicode corners
+   479	            horizontal_chr = xobj('-', 1)
+   480	            corner_chr = u'\N{BOX DRAWINGS LIGHT DOWN AND HORIZONTAL}'
+   481	
+   482	        func_height = pretty_func.height()
+   483	
+   484	        first = True
+   485	        max_upper = 0
+   486	        sign_height = 0
+   487	
+   488	        for lim in expr.limits:
+   489	    <response clipped><NOTE>To save on context only part of this file has been shown to you. You should retry this tool after you have searched inside the file with `grep -n` in order to find the line numbers of what you are looking for.</NOTE>; Next thought: Let's search for the MatAdd printing function:
+---
+Result at iteration 5: cd /workspace/sympy__sympy__1.1 && grep -n "_print_MatAdd" sympy/printing/pretty/pretty.py
+821:    def _print_MatAdd(self, expr):; Next thought: Let's look at the _print_MatAdd function:
+---
+Result at iteration 6: Here's the result of running `cat -n` on /workspace/sympy__sympy__1.1/sympy/printing/pretty/pretty.py:
+   821	    def _print_MatAdd(self, expr):
+   822	        s = None
+   823	        for item in expr.args:
+   824	            pform = self._print(item)
+   825	            if s is None:
+   826	                s = pform     # First element
+   827	            else:
+   828	                if S(item.args[0]).is_negative:
+   829	                    s = prettyForm(*stringPict.next(s, ' '))
+   830	                    pform = self._print(item)
+   831	                else:
+   832	                    s = prettyForm(*stringPict.next(s, ' + '))
+   833	                s = prettyForm(*stringPict.next(s, pform))
+   834	
+   835	        return s; Next thought: The issue is in the `_print_MatAdd` function. The problem is that it's trying to use `S(item.args[0])` to check if the first argument is negative, but this is incorrect because:
+
+1. It's trying to sympify the first argument of a matrix expression, which may contain special characters like '*' that can't be parsed
+2. It's making assumptions about the internal structure of the matrix expression
+
+Let's fix this by using the `_coeff_isneg` function that's already imported from sympy.core.function. This function is designed to check if an expression is negative without trying to parse strings.
+
+Here's the fix:
+---
+Result at iteration 7: The file /workspace/sympy__sympy__1.1/sympy/printing/pretty/pretty.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/sympy__sympy__1.1/sympy/printing/pretty/pretty.py:
+   817	        if B.blocks.shape == (1, 1):
+   818	            return self._print(B.blocks[0, 0])
+   819	        return self._print(B.blocks)
+   820	
+   821	    def _print_MatAdd(self, expr):
+   822	        s = None
+   823	        for item in expr.args:
+   824	            pform = self._print(item)
+   825	            if s is None:
+   826	                s = pform     # First element
+   827	            else:
+   828	                if _coeff_isneg(item):
+   829	                    s = prettyForm(*stringPict.next(s, ' '))
+   830	                else:
+   831	                    s = prettyForm(*stringPict.next(s, ' + '))
+   832	                s = prettyForm(*stringPict.next(s, pform))
+   833	
+   834	        return s
+   835	
+   836	    def _print_MatMul(self, expr):
+   837	        args = list(expr.args)
+   838	        from sympy import Add, MatAdd, HadamardProduct
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: The changes look good. Let's test if this fixes the issue by running our reproduce script again:
+---
+Result at iteration 8: cd /workspace && python reproduce.py
+/testbed/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Mapping, defaultdict
+/testbed/sympy/core/expr.py:12: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import defaultdict, Iterable
+/testbed/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  class OrderedSet(collections.MutableSet):
+/testbed/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Callable
+x + y*; Next thought: Great! The error is fixed and the output shows the matrix addition correctly. Let's test some edge cases to make sure our fix handles them properly:
+---
+Result at iteration 9: The file /workspace/reproduce.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/reproduce.py:
+     1	from sympy import MatrixSymbol, pprint, Symbol, init_printing, S
+     2	from sympy.abc import n
+     3	
+     4	init_printing()
+     5	
+     6	# Test case from PR description
+     7	x = MatrixSymbol('x', n, n)
+     8	y = MatrixSymbol('y*', n, n)
+     9	pprint(x + y)
+    10	
+    11	print("\nTesting edge cases:")
+    12	
+    13	# Test negative matrix
+    14	print("\nNegative matrix:")
+    15	z = -MatrixSymbol('z', n, n)
+    16	pprint(x + z)
+    17	
+    18	# Test multiple matrices with negative
+    19	print("\nMultiple matrices with negative:")
+    20	w = MatrixSymbol('w', n, n)
+    21	pprint(x + y + z + w)
+    22	
+    23	# Test negative coefficient
+    24	print("\nNegative coefficient:")
+    25	pprint(x + 2*y - 3*z)
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next thought: The changes look good. Let's run the test cases:
+---
+Result at iteration 10: cd /workspace && python reproduce.py
+/testbed/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Mapping, defaultdict
+/testbed/sympy/core/expr.py:12: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import defaultdict, Iterable
+/testbed/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  class OrderedSet(collections.MutableSet):
+/testbed/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Callable
+x + y*
+
+Testing edge cases:
+
+Negative matrix:
+-z + x
+
+Multiple matrices with negative:
+-z + w + x + y*
+
+Negative coefficient:
+2⋅y* + 3⋅z + x; Next thought: END

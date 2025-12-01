@@ -1,0 +1,152 @@
+Result at Iteration 0: Result of search_class("Point"):
+Found 4 classes with name Point in the codebase.
+They appeared in the following files:
+<file>sympy/diffgeom/diffgeom.py</file> (1 matches)
+<file>sympy/vector/point.py</file> (1 matches)
+<file>sympy/physics/vector/point.py</file> (1 matches)
+<file>sympy/geometry/point.py</file> (1 matches)
+
+
+Result of search_method_in_class("__add__", "Point"):
+Found 1 methods with name __add__ in class Point.
+Search result 1: <file>sympy/geometry/point.py</file> <class>Point</class> <func>__add__</func> <code>    def __add__(self, other):
+        """Add other to self by incrementing self's coordinates by
+        those of other.
+
+        Notes
+        =====
+
+        >>> from sympy.geometry.point import Point
+
+        When sequences of coordinates are passed to Point methods, they
+        are converted to a Point internally. This __add__ method does
+        not do that so if floating point values are used, a floating
+        point result (in terms of SymPy Floats) will be returned.
+
+        >>> Point(1, 2) + (.1, .2)
+        Point2D(1.1, 2.2)
+
+        If this is not desired, the `translate` method can be used or
+        another Point can be added:
+
+        >>> Point(1, 2).translate(.1, .2)
+        Point2D(11/10, 11/5)
+        >>> Point(1, 2) + Point(.1, .2)
+        Point2D(11/10, 11/5)
+
+        See Also
+        ========
+
+        sympy.geometry.point.Point.translate
+
+        """
+        try:
+            s, o = Point._normalize_dimension(self, Point(other, evaluate=False))
+        except TypeError:
+            raise GeometryError("Don't know how to add {} and a Point object".format(other))
+
+        coords = [simplify(a + b) for a, b in zip(s, o)]
+        return Point(coords, evaluate=False)
+</code>
+
+Other results are in these files:
+
+
+Result of search_class("Mul"):
+Found 1 classes with name Mul in the codebase.
+Search result 1: <file>sympy/core/mul.py</file> <class>Mul</class> <code>class Mul(Expr, AssocOp):
+
+    __slots__ = []
+    is_Mul = True
+    def __neg__(self):
+    @classmethod
+    def flatten(cls, seq):
+    def _eval_power(b, e):
+
+    @classmethod
+    def class_key(cls):
+    def _eval_evalf(self, prec):
+    @property
+    def _mpc_(self):
+    @cacheit
+    def as_two_terms(self):
+    @cacheit
+    def as_coefficients_dict(self):
+    @cacheit
+    def as_coeff_mul(self, *deps, **kwargs):
+    def as_coeff_Mul(self, rational=False):
+    def as_real_imag(self, deep=True, **hints):
+    @staticmethod
+    def _expandsums(sums):
+    def _eval_expand_mul(self, **hints):
+    @cacheit
+    def _eval_derivative(self, s):
+    @cacheit
+    def _eval_derivative_n_times(self, s, n):
+    def _eval_difference_delta(self, n, step):
+    def _matches_simple(self, expr, repl_dict):
+    def matches(self, expr, repl_dict={}, old=False):
+    @staticmethod
+    def _matches_expand_pows(arg_list):
+    @staticmethod
+    def _matches_noncomm(nodes, targets, repl_dict={}):
+    @staticmethod
+    def _matches_add_wildcard(dictionary, state):
+    @staticmethod
+    def _matches_new_states(dictionary, state, nodes, targets):
+    @staticmethod
+    def _matches_match_wilds(dictionary, wildcard_ind, nodes, targets):
+    @staticmethod
+    def _matches_get_other_nodes(dictionary, nodes, node_ind):
+    @staticmethod
+    def _combine_inverse(lhs, rhs):
+    def as_powers_dict(self):
+    def as_numer_denom(self):
+    def as_base_exp(self):
+    def _eval_is_polynomial(self, syms):
+    def _eval_is_rational_function(self, syms):
+    def _eval_is_algebraic_expr(self, syms):
+    _eval_is_commutative = lambda self: _fuzzy_group(
+        a.is_commutative for a in self.args)
+    _eval_is_complex = lambda self: _fuzzy_group(
+        (a.is_complex for a in self.args), quick_exit=True)
+    def _eval_is_finite(self):
+    def _eval_is_infinite(self):
+    def _eval_is_rational(self):
+    def _eval_is_algebraic(self):
+    def _eval_is_zero(self):
+    def _eval_is_integer(self):
+    def _eval_is_polar(self):
+    def _eval_is_extended_real(self):
+    def _eval_real_imag(self, real):
+    def _eval_is_imaginary(self):
+    def _eval_is_hermitian(self):
+    def _eval_herm_antiherm(self, real):
+    def _eval_is_antihermitian(self):
+    def _eval_is_irrational(self):
+    def _eval_is_extended_positive(self):
+    def _eval_pos_neg(self, sign):
+    def _eval_is_extended_negative(self):
+    def _eval_is_odd(self):
+    def _eval_is_even(self):
+    def _eval_is_composite(self):
+    def _eval_subs(self, old, new):
+    def _eval_nseries(self, x, n, logx):
+    def _eval_as_leading_term(self, x):
+    def _eval_conjugate(self):
+    def _eval_transpose(self):
+    def _eval_adjoint(self):
+    def _sage_(self):
+    def as_content_primitive(self, radical=False, clear=True):
+    def as_ordered_factors(self, order=None):
+    @property
+    def _sorted_args(self):
+</code>
+Action at Iteration 1: Analyze
+
+Result at Iteration 1: The result is contained in the reasoning
+Action at Iteration 2: Locate
+
+Result at Iteration 2: The result is contained in the reasoning
+Action at Iteration 3: write_patch
+

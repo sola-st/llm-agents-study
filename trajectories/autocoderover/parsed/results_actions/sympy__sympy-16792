@@ -1,0 +1,342 @@
+Result at Iteration 0: Result of search_method("autowrap"):
+Found 1 methods with name autowrap in the codebase.
+Search result 1: <file>sympy/utilities/autowrap.py</file> <func>autowrap</func> <code>def autowrap(expr, language=None, backend='f2py', tempdir=None, args=None,
+             flags=None, verbose=False, helpers=None, code_gen=None, **kwargs):
+    """Generates python callable binaries based on the math expression.
+
+    Parameters
+    ==========
+
+    expr
+        The SymPy expression that should be wrapped as a binary routine.
+    language : string, optional
+        If supplied, (options: 'C' or 'F95'), specifies the language of the
+        generated code. If ``None`` [default], the language is inferred based
+        upon the specified backend.
+    backend : string, optional
+        Backend used to wrap the generated code. Either 'f2py' [default],
+        or 'cython'.
+    tempdir : string, optional
+        Path to directory for temporary files. If this argument is supplied,
+        the generated code and the wrapper input files are left intact in the
+        specified path.
+    args : iterable, optional
+        An ordered iterable of symbols. Specifies the argument sequence for the
+        function.
+    flags : iterable, optional
+        Additional option flags that will be passed to the backend.
+    verbose : bool, optional
+        If True, autowrap will not mute the command line backends. This can be
+        helpful for debugging.
+    helpers : 3-tuple or iterable of 3-tuples, optional
+        Used to define auxiliary expressions needed for the main expr. If the
+        main expression needs to call a specialized function it should be
+        passed in via ``helpers``. Autowrap will then make sure that the
+        compiled main expression can link to the helper routine. Items should
+        be 3-tuples with (<function_name>, <sympy_expression>,
+        <argument_tuple>). It is mandatory to supply an argument sequence to
+        helper routines.
+    code_gen : CodeGen instance
+        An instance of a CodeGen subclass. Overrides ``language``.
+    include_dirs : [string]
+        A list of directories to search for C/C++ header files (in Unix form
+        for portability).
+    library_dirs : [string]
+        A list of directories to search for C/C++ libraries at link time.
+    libraries : [string]
+        A list of library names (not filenames or paths) to link against.
+    extra_compile_args : [string]
+        Any extra platform- and compiler-specific information to use when
+        compiling the source files in 'sources'.  For platforms and compilers
+        where "command line" makes sense, this is typically a list of
+        command-line arguments, but for other platforms it could be anything.
+    extra_link_args : [string]
+        Any extra platform- and compiler-specific information to use when
+        linking object files together to create the extension (or to create a
+        new static Python interpreter).  Similar interpretation as for
+        'extra_compile_args'.
+
+    Examples
+    ========
+
+    >>> from sympy.abc import x, y, z
+    >>> from sympy.utilities.autowrap import autowrap
+    >>> expr = ((x - y + z)**(13)).expand()
+    >>> binary_func = autowrap(expr)
+    >>> binary_func(1, 4, 2)
+    -1.0
+
+    """
+    if language:
+        if not isinstance(language, type):
+            _validate_backend_language(backend, language)
+    else:
+        language = _infer_language(backend)
+
+    # two cases 1) helpers is an iterable of 3-tuples and 2) helpers is a
+    # 3-tuple
+    if iterable(helpers) and len(helpers) != 0 and iterable(helpers[0]):
+        helpers = helpers if helpers else ()
+    else:
+        helpers = [helpers] if helpers else ()
+    args = list(args) if iterable(args, exclude=set) else args
+
+    if code_gen is None:
+        code_gen = get_code_generator(language, "autowrap")
+
+    CodeWrapperClass = {
+        'F2PY': F2PyCodeWrapper,
+        'CYTHON': CythonCodeWrapper,
+        'DUMMY': DummyWrapper
+    }[backend.upper()]
+    code_wrapper = CodeWrapperClass(code_gen, tempdir, flags if flags else (),
+                                    verbose, **kwargs)
+
+    helps = []
+    for name_h, expr_h, args_h in helpers:
+        helps.append(code_gen.routine(name_h, expr_h, args_h))
+
+    for name_h, expr_h, args_h in helpers:
+        if expr.has(expr_h):
+            name_h = binary_function(name_h, expr_h, backend='dummy')
+            expr = expr.subs(expr_h, name_h(*args_h))
+    try:
+        routine = code_gen.routine('autofunc', expr, args)
+    except CodeGenArgumentListError as e:
+        # if all missing arguments are for pure output, we simply attach them
+        # at the end and try again, because the wrappers will silently convert
+        # them to return values anyway.
+        new_args = []
+        for missing in e.missing_args:
+            if not isinstance(missing, OutputArgument):
+                raise
+            new_args.append(missing.name)
+        routine = code_gen.routine('autofunc', expr, args + new_args)
+
+    return code_wrapper.wrap_code(routine, helpers=helps)
+</code>
+
+
+
+Result of search_code("codegen"):
+Found 639 snippets containing `codegen` in the codebase.
+They appeared in the following files:
+<file>setup.py</file> (2 matches)
+<file>sympy/parsing/autolev/_listener_autolev_antlr.py</file> (2 matches)
+<file>sympy/parsing/autolev/_antlr/autolevlistener.py</file> (2 matches)
+<file>sympy/parsing/autolev/_antlr/autolevparser.py</file> (7 matches)
+<file>sympy/external/tests/test_autowrap.py</file> (1 matches)
+<file>sympy/external/tests/test_codegen.py</file> (34 matches)
+<file>sympy/utilities/autowrap.py</file> (3 matches)
+<file>sympy/utilities/codegen.py</file> (13 matches)
+<file>sympy/utilities/tests/test_autowrap.py</file> (2 matches)
+<file>sympy/utilities/tests/test_codegen_rust.py</file> (24 matches)
+<file>sympy/utilities/tests/test_codegen_julia.py</file> (35 matches)
+<file>sympy/utilities/tests/test_codegen_octave.py</file> (35 matches)
+<file>sympy/utilities/tests/test_codegen.py</file> (51 matches)
+<file>sympy/printing/ccode.py</file> (6 matches)
+<file>sympy/printing/cxxcode.py</file> (1 matches)
+<file>sympy/printing/jscode.py</file> (1 matches)
+<file>sympy/printing/codeprinter.py</file> (1 matches)
+<file>sympy/printing/julia.py</file> (2 matches)
+<file>sympy/printing/fcode.py</file> (2 matches)
+<file>sympy/printing/octave.py</file> (3 matches)
+<file>sympy/printing/glsl.py</file> (1 matches)
+<file>sympy/printing/rcode.py</file> (1 matches)
+<file>sympy/printing/rust.py</file> (2 matches)
+<file>sympy/printing/tensorflow.py</file> (3 matches)
+<file>sympy/printing/pycode.py</file> (2 matches)
+<file>sympy/printing/pretty/tests/test_pretty.py</file> (1 matches)
+<file>sympy/printing/tests/test_cxxcode.py</file> (1 matches)
+<file>sympy/printing/tests/test_numpy.py</file> (4 matches)
+<file>sympy/printing/tests/test_rcode.py</file> (1 matches)
+<file>sympy/printing/tests/test_pycode.py</file> (3 matches)
+<file>sympy/printing/tests/test_ccode.py</file> (5 matches)
+<file>sympy/printing/tests/test_tensorflow.py</file> (3 matches)
+<file>sympy/printing/tests/test_fcode.py</file> (2 matches)
+<file>sympy/codegen/cnodes.py</file> (5 matches)
+<file>sympy/codegen/cfunctions.py</file> (9 matches)
+<file>sympy/codegen/algorithms.py</file> (8 matches)
+<file>sympy/codegen/rewriting.py</file> (7 matches)
+<file>sympy/codegen/ast.py</file> (40 matches)
+<file>sympy/codegen/approximations.py</file> (5 matches)
+<file>sympy/codegen/cxxnodes.py</file> (1 matches)
+<file>sympy/codegen/fnodes.py</file> (31 matches)
+<file>sympy/codegen/futils.py</file> (4 matches)
+<file>sympy/codegen/__init__.py</file> (6 matches)
+<file>sympy/codegen/array_utils.py</file> (17 matches)
+<file>sympy/codegen/tests/test_approximations.py</file> (2 matches)
+<file>sympy/codegen/tests/test_array_utils.py</file> (33 matches)
+<file>sympy/codegen/tests/test_algorithms.py</file> (5 matches)
+<file>sympy/codegen/tests/test_cxxnodes.py</file> (2 matches)
+<file>sympy/codegen/tests/test_cnodes.py</file> (2 matches)
+<file>sympy/codegen/tests/test_fnodes.py</file> (3 matches)
+<file>sympy/codegen/tests/test_ast.py</file> (1 matches)
+<file>sympy/codegen/tests/test_applications.py</file> (3 matches)
+<file>sympy/codegen/tests/test_cfunctions.py</file> (1 matches)
+<file>sympy/codegen/tests/test_rewriting.py</file> (2 matches)
+<file>sympy/matrices/expressions/hadamard.py</file> (3 matches)
+<file>sympy/matrices/expressions/trace.py</file> (1 matches)
+<file>sympy/matrices/expressions/matexpr.py</file> (2 matches)
+<file>sympy/matrices/expressions/matpow.py</file> (1 matches)
+<file>sympy/matrices/expressions/applyfunc.py</file> (1 matches)
+<file>sympy/core/tests/test_args.py</file> (179 matches)
+<file>sympy/polys/rings.py</file> (8 matches)
+<file>bin/generate_module_list.py</file> (1 matches)
+Action at Iteration 1: Analyze
+
+Result at Iteration 1: The result is contained in the reasoning
+Action at Iteration 2: search_class("CythonCodeWrapper");search_method_in_file("wrap_code", "sympy/utilities/autowrap.py");search_code_in_file("routine", "sympy/utilities/codegen.py")
+
+Result at Iteration 2: Result of search_class("CythonCodeWrapper"):
+Found 1 classes with name CythonCodeWrapper in the codebase.
+Search result 1: <file>sympy/utilities/autowrap.py</file> <class>CythonCodeWrapper</class> <code>class CythonCodeWrapper(CodeWrapper):
+    setup_template = """\
+try:
+    from setuptools import setup
+    from setuptools import Extension
+except ImportError:
+    from distutils.core import setup
+    from distutils.extension import Extension
+from Cython.Build import cythonize
+cy_opts = {cythonize_options}
+{np_import}
+ext_mods = [Extension(
+    {ext_args},
+    include_dirs={include_dirs},
+    library_dirs={library_dirs},
+    libraries={libraries},
+    extra_compile_args={extra_compile_args},
+    extra_link_args={extra_link_args}
+)]
+setup(ext_modules=cythonize(ext_mods, **cy_opts))
+"""
+    pyx_imports = (
+        "import numpy as np\n"
+        "cimport numpy as np\n\n")
+    pyx_header = (
+        "cdef extern from '{header_file}.h':\n"
+        "    {prototype}\n\n")
+    pyx_func = (
+        "def {name}_c({arg_string}):\n"
+        "\n"
+        "{declarations}"
+        "{body}")
+    std_compile_flag = '-std=c99'
+    def __init__(self, *args, **kwargs):
+    @property
+    def command(self):
+    def _prepare_files(self, routine, build_dir=os.curdir):
+    @classmethod
+    def _get_wrapped_function(cls, mod, name):
+    def dump_pyx(self, routines, f, prefix):
+    def _partition_args(self, args):
+    def _prototype_arg(self, arg):
+    def _declare_arg(self, arg):
+    def _call_arg(self, arg):
+    def _string_var(self, var):
+</code>
+
+
+
+Result of search_method_in_file("wrap_code", "sympy/utilities/autowrap.py"):
+Found 2 methods with name `wrap_code` in file sympy/utilities/autowrap.py.
+Search result 1: <file>sympy/utilities/autowrap.py</file> <class>CodeWrapper</class> <func>wrap_code</func> <code>    def wrap_code(self, routine, helpers=None):
+        helpers = helpers or []
+        if self.filepath:
+            workdir = os.path.abspath(self.filepath)
+        else:
+            workdir = tempfile.mkdtemp("_sympy_compile")
+        if not os.access(workdir, os.F_OK):
+            os.mkdir(workdir)
+        oldwork = os.getcwd()
+        os.chdir(workdir)
+        try:
+            sys.path.append(workdir)
+            self._generate_code(routine, helpers)
+            self._prepare_files(routine)
+            self._process_files(routine)
+            mod = __import__(self.module_name)
+        finally:
+            sys.path.remove(workdir)
+            CodeWrapper._module_counter += 1
+            os.chdir(oldwork)
+            if not self.filepath:
+                try:
+                    shutil.rmtree(workdir)
+                except OSError:
+                    # Could be some issues on Windows
+                    pass
+
+        return self._get_wrapped_function(mod, routine.name)
+</code>
+
+Search result 2: <file>sympy/utilities/autowrap.py</file> <class>UfuncifyCodeWrapper</class> <func>wrap_code</func> <code>    def wrap_code(self, routines, helpers=None):
+        # This routine overrides CodeWrapper because we can't assume funcname == routines[0].name
+        # Therefore we have to break the CodeWrapper private API.
+        # There isn't an obvious way to extend multi-expr support to
+        # the other autowrap backends, so we limit this change to ufuncify.
+        helpers = helpers if helpers is not None else []
+        # We just need a consistent name
+        funcname = 'wrapped_' + str(id(routines) + id(helpers))
+
+        workdir = self.filepath or tempfile.mkdtemp("_sympy_compile")
+        if not os.access(workdir, os.F_OK):
+            os.mkdir(workdir)
+        oldwork = os.getcwd()
+        os.chdir(workdir)
+        try:
+            sys.path.append(workdir)
+            self._generate_code(routines, helpers)
+            self._prepare_files(routines, funcname)
+            self._process_files(routines)
+            mod = __import__(self.module_name)
+        finally:
+            sys.path.remove(workdir)
+            CodeWrapper._module_counter += 1
+            os.chdir(oldwork)
+            if not self.filepath:
+                try:
+                    shutil.rmtree(workdir)
+                except OSError:
+                    # Could be some issues on Windows
+                    pass
+
+        return self._get_wrapped_function(mod, funcname)
+</code>
+
+
+
+Result of search_code_in_file("routine", "sympy/utilities/codegen.py"):
+Found 190 snippets with code routine in file sympy/utilities/codegen.py.
+They appeared in the following methods:
+<file>sympy/utilities/codegen.py</file>Not in a function (16 matches)
+<file>sympy/utilities/codegen.py</file> <func>__init__</func> (3 matches)
+<file>sympy/utilities/codegen.py</file> <func>variables</func> (2 matches)
+<file>sympy/utilities/codegen.py</file> <func>routine</func> (4 matches)
+<file>sympy/utilities/codegen.py</file> <func>write</func> (5 matches)
+<file>sympy/utilities/codegen.py</file> <func>dump_code</func> (13 matches)
+<file>sympy/utilities/codegen.py</file> <func>get_prototype</func> (15 matches)
+<file>sympy/utilities/codegen.py</file> <func>_get_routine_opening</func> (26 matches)
+<file>sympy/utilities/codegen.py</file> <func>_declare_arguments</func> (6 matches)
+<file>sympy/utilities/codegen.py</file> <func>_declare_globals</func> (7 matches)
+<file>sympy/utilities/codegen.py</file> <func>_declare_locals</func> (8 matches)
+<file>sympy/utilities/codegen.py</file> <func>_call_printer</func> (14 matches)
+<file>sympy/utilities/codegen.py</file> <func>_get_routine_ending</func> (14 matches)
+<file>sympy/utilities/codegen.py</file> <func>dump_c</func> (2 matches)
+<file>sympy/utilities/codegen.py</file> <func>dump_h</func> (10 matches)
+<file>sympy/utilities/codegen.py</file> <func>get_interface</func> (8 matches)
+<file>sympy/utilities/codegen.py</file> <func>dump_f95</func> (3 matches)
+<file>sympy/utilities/codegen.py</file> <func>dump_jl</func> (2 matches)
+<file>sympy/utilities/codegen.py</file> <func>dump_m</func> (12 matches)
+<file>sympy/utilities/codegen.py</file> <func>dump_rs</func> (2 matches)
+<file>sympy/utilities/codegen.py</file> <func>codegen</func> (8 matches)
+<file>sympy/utilities/codegen.py</file> <func>make_routine</func> (10 matches)
+Action at Iteration 3: Analyze
+
+Result at Iteration 3: The result is contained in the reasoning
+Action at Iteration 4: Locate
+
+Result at Iteration 4: The result is contained in the reasoning
+Action at Iteration 5: write_patch
+

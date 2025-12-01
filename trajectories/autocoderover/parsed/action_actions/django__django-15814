@@ -1,0 +1,8 @@
+Action at Iteration 0: search_class("CustomModel"), search_class("ProxyCustomModel"), search_class("AnotherModel"), search_method_in_file("get_related_populators", "django/db/models/query.py"), search_code("opts = cur_model._meta")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: Locate
+
+Action at Iteration 3: write_patch
+

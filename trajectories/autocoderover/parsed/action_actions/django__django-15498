@@ -1,0 +1,12 @@
+Action at Iteration 0: search_code("If-Modified-Since"), search_code("d6aff369ad3")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: search_code_in_file("If-Modified-Since", "django/middleware/http.py"), search_code_in_file("If-Modified-Since", "django/utils/cache.py"), search_code_in_file("If-Modified-Since", "django/views/static.py"), search_code_in_file("If-Modified-Since", "tests/view_tests/tests/test_static.py")
+
+Action at Iteration 3: Analyze
+
+Action at Iteration 4: Locate
+
+Action at Iteration 5: write_patch
+

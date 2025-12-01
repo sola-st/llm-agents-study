@@ -1,0 +1,30 @@
+Iteration 0: Thought=I'll help you implement the necessary changes to fix the issue with pretty printing MatAdd. Let's follow the steps:
+
+1. First, let's explore the repository structure to locate the relevant files:; Action={'arguments': '{"command": "ls -R /workspace/sympy__sympy__1.1"}', 'name': 'execute_bash'}
+---
+Iteration 1: Thought=Based on the repository structure and the error message, we need to focus on the pretty printing functionality for MatAdd in the sympy/printing/pretty/pretty.py file. Let's first create a script to reproduce the error:; Action={'arguments': '{"command": "create", "path": "/workspace/reproduce.py", "file_text": "from sympy import MatrixSymbol, pprint, Symbol, init_printing\\nfrom sympy.abc import n\\n\\ninit_printing()\\n\\n# Test case from PR description\\nx = MatrixSymbol(\'x\', n, n)\\ny = MatrixSymbol(\'y*\', n, n)\\npprint(x + y)"}', 'name': 'str_replace_editor'}
+---
+Iteration 2: Thought=Let's run the script to confirm the error:; Action={'arguments': '{"command": "cd /workspace/sympy__sympy__1.1 && python reproduce.py"}', 'name': 'execute_bash'}
+---
+Iteration 3: Thought=I apologize for the path issue. Let's try again with the correct path:; Action={'arguments': '{"command": "cd /workspace && python reproduce.py"}', 'name': 'execute_bash'}
+---
+Iteration 4: Thought=Great, we've reproduced the error. The issue is in the pretty printing code for MatAdd. Let's examine the relevant code:; Action={'arguments': '{"command": "view", "path": "/workspace/sympy__sympy__1.1/sympy/printing/pretty/pretty.py"}', 'name': 'str_replace_editor'}
+---
+Iteration 5: Thought=Let's search for the MatAdd printing function:; Action={'arguments': '{"command": "cd /workspace/sympy__sympy__1.1 && grep -n \\"_print_MatAdd\\" sympy/printing/pretty/pretty.py"}', 'name': 'execute_bash'}
+---
+Iteration 6: Thought=Let's look at the _print_MatAdd function:; Action={'arguments': '{"command": "view", "path": "/workspace/sympy__sympy__1.1/sympy/printing/pretty/pretty.py", "view_range": [821, 835]}', 'name': 'str_replace_editor'}
+---
+Iteration 7: Thought=The issue is in the `_print_MatAdd` function. The problem is that it's trying to use `S(item.args[0])` to check if the first argument is negative, but this is incorrect because:
+
+1. It's trying to sympify the first argument of a matrix expression, which may contain special characters like '*' that can't be parsed
+2. It's making assumptions about the internal structure of the matrix expression
+
+Let's fix this by using the `_coeff_isneg` function that's already imported from sympy.core.function. This function is designed to check if an expression is negative without trying to parse strings.
+
+Here's the fix:; Action={'arguments': '{"command": "str_replace", "path": "/workspace/sympy__sympy__1.1/sympy/printing/pretty/pretty.py", "old_str": "    def _print_MatAdd(self, expr):\\n        s = None\\n        for item in expr.args:\\n            pform = self._print(item)\\n            if s is None:\\n                s = pform     # First element\\n            else:\\n                if S(item.args[0]).is_negative:\\n                    s = prettyForm(*stringPict.next(s, \' \'))\\n                    pform = self._print(item)\\n                else:\\n                    s = prettyForm(*stringPict.next(s, \' + \'))\\n                s = prettyForm(*stringPict.next(s, pform))\\n\\n        return s", "new_str": "    def _print_MatAdd(self, expr):\\n        s = None\\n        for item in expr.args:\\n            pform = self._print(item)\\n            if s is None:\\n                s = pform     # First element\\n            else:\\n                if _coeff_isneg(item):\\n                    s = prettyForm(*stringPict.next(s, \' \'))\\n                else:\\n                    s = prettyForm(*stringPict.next(s, \' + \'))\\n                s = prettyForm(*stringPict.next(s, pform))\\n\\n        return s"}', 'name': 'str_replace_editor'}
+---
+Iteration 8: Thought=The changes look good. Let's test if this fixes the issue by running our reproduce script again:; Action={'arguments': '{"command": "cd /workspace && python reproduce.py"}', 'name': 'execute_bash'}
+---
+Iteration 9: Thought=Great! The error is fixed and the output shows the matrix addition correctly. Let's test some edge cases to make sure our fix handles them properly:; Action={'arguments': '{"command": "str_replace", "path": "/workspace/reproduce.py", "old_str": "from sympy import MatrixSymbol, pprint, Symbol, init_printing\\nfrom sympy.abc import n\\n\\ninit_printing()\\n\\n# Test case from PR description\\nx = MatrixSymbol(\'x\', n, n)\\ny = MatrixSymbol(\'y*\', n, n)\\npprint(x + y)", "new_str": "from sympy import MatrixSymbol, pprint, Symbol, init_printing, S\\nfrom sympy.abc import n\\n\\ninit_printing()\\n\\n# Test case from PR description\\nx = MatrixSymbol(\'x\', n, n)\\ny = MatrixSymbol(\'y*\', n, n)\\npprint(x + y)\\n\\nprint(\\"\\\\nTesting edge cases:\\")\\n\\n# Test negative matrix\\nprint(\\"\\\\nNegative matrix:\\")\\nz = -MatrixSymbol(\'z\', n, n)\\npprint(x + z)\\n\\n# Test multiple matrices with negative\\nprint(\\"\\\\nMultiple matrices with negative:\\")\\nw = MatrixSymbol(\'w\', n, n)\\npprint(x + y + z + w)\\n\\n# Test negative coefficient\\nprint(\\"\\\\nNegative coefficient:\\")\\npprint(x + 2*y - 3*z)"}', 'name': 'str_replace_editor'}
+---
+Iteration 10: Thought=The changes look good. Let's run the test cases:; Action={'arguments': '{"command": "cd /workspace && python reproduce.py"}', 'name': 'execute_bash'}

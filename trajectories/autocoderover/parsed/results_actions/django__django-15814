@@ -1,0 +1,44 @@
+Result at Iteration 0: Result of search_class("CustomModel"):
+Found 1 classes with name CustomModel in the codebase.
+Search result 1: <file>tests/custom_lookups/tests.py</file> <class>CustomModel</class> <code>class CustomModel(models.Model):
+    field = CustomField()
+</code>
+
+
+
+Result of search_class("ProxyCustomModel"):
+Could not find class ProxyCustomModel in the codebase.
+
+Result of search_class("AnotherModel"):
+Could not find class AnotherModel in the codebase.
+
+Result of search_method_in_file("get_related_populators", "django/db/models/query.py"):
+Found 1 methods with name `get_related_populators` in file django/db/models/query.py.
+Search result 1: <file>django/db/models/query.py</file> <func>get_related_populators</func> <code>def get_related_populators(klass_info, select, db):
+    iterators = []
+    related_klass_infos = klass_info.get("related_klass_infos", [])
+    for rel_klass_info in related_klass_infos:
+        rel_cls = RelatedPopulator(rel_klass_info, select, db)
+        iterators.append(rel_cls)
+    return iterators
+</code>
+
+
+
+Result of search_code("opts = cur_model._meta"):
+Found 1 snippets containing `opts = cur_model._meta` in the codebase.
+Search result 1: <file>django/db/models/sql/query.py</file> <class>Query</class> <func>deferred_to_data</func> <code>
+                else:
+                    cur_model = source.remote_field.model
+                opts = cur_model._meta
+                # Even if we're "just passing through" this model, we must add
+                # both the current model's pk and the related reference field
+                # (if it's not a reverse relation) to the things we select.</code>
+Action at Iteration 1: Analyze
+
+Result at Iteration 1: The result is contained in the reasoning
+Action at Iteration 2: Locate
+
+Result at Iteration 2: The result is contained in the reasoning
+Action at Iteration 3: write_patch
+

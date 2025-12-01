@@ -1,0 +1,21 @@
+Action at iteration 0: {'name': 'extract_test_code', 'args': {'project_name': 'Jsoup', 'bug_index': 51, 'test_file_path': 'org.jsoup.parser.HtmlParserTest::testSupportsNonAsciiTags'}}
+Action at iteration 1: {'name': 'express_hypothesis', 'args': {'hypothesis': 'The matchesLetter() method in CharacterReader.java is not correctly identifying non-ascii characters, causing the text content retrieval to fail in the test case.'}}
+Action at iteration 2: {'name': 'search_code_base', 'args': {'project_name': 'Jsoup', 'bug_index': 51, 'key_words': ['matchesLetter']}}
+Action at iteration 3: {'name': 'extract_method_code', 'args': {'project_name': 'Jsoup', 'bug_index': 51, 'filepath': 'org/jsoup/parser/CharacterReader.java', 'method_name': 'matchesLetter()Z'}}
+Action at iteration 4: {'name': 'read_range', 'args': {'project_name': 'Jsoup', 'bug_index': '51', 'filepath': 'org/jsoup/parser/CharacterReader.java', 'startline': 300, 'endline': 300}}
+Action at iteration 5: {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 51, 'changes_dicts': [{'file_name': 'org/jsoup/parser/CharacterReader.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 300, 'modified_line': "        return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= 128)"}]}]}}
+Action at iteration 6: {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 51, 'changes_dicts': [{'file_name': 'org/jsoup/parser/CharacterReader.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 300, 'modified_line': "        return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c > 127)"}]}]}}
+Action at iteration 7: {'name': 'read_range', 'args': {'project_name': 'Jsoup', 'bug_index': '51', 'filepath': 'org/jsoup/parser/CharacterReader.java', 'startline': 1, 'endline': 50}}
+Action at iteration 8: {'name': 'read_range', 'args': {'project_name': 'Jsoup', 'bug_index': '51', 'filepath': 'org/jsoup/parser/CharacterReader.java', 'startline': 1, 'endline': 1}}
+Action at iteration 9: {'name': 'read_range', 'args': {'project_name': 'Jsoup', 'bug_index': '51', 'filepath': 'org/jsoup/parser/CharacterReader.java', 'startline': 1, 'endline': 1}}
+Action at iteration 10: {'name': 'read_range', 'args': {'project_name': 'Jsoup', 'bug_index': '51', 'filepath': 'org/jsoup/parser/CharacterReader.java', 'startline': 1, 'endline': 50}}
+Action at iteration 11: {'name': 'extract_method_code', 'args': {'method_name': 'matchesLetter()Z', 'buggy_file': 'org/jsoup/parser/CharacterReader.java'}}
+Action at iteration 12: {'name': 'extract_method_code', 'args': {'method_name': 'matchesLetter()Z', 'filepath': 'org/jsoup/parser/CharacterReader.java'}}
+Action at iteration 13: {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 51, 'changes_dicts': []}}
+Action at iteration 14: {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 51, 'changes_dicts': [{'file_name': 'org/jsoup/parser/CharacterReader.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 300, 'modified_line': "        return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c > 127)"}]}]}}
+Action at iteration 15: {'name': 'go_back_to_collect_more_info', 'args': {'reason_for_going_back': 'Compilation failed after the attempted fix'}}
+Action at iteration 16: {'name': 'extract_similar_functions_calls', 'args': {'project_name': 'Jsoup', 'bug_index': '51', 'file_path': 'org/jsoup/parser/CharacterReader.java', 'code_snippet': 'boolean matchesLetter()'}}
+Action at iteration 17: {'name': 'AI_generates_method_code', 'args': {'project_name': 'Jsoup', 'bug_index': '51', 'filepath': 'org/jsoup/parser/CharacterReader.java', 'method_name': 'matchesLetter()Z'}}
+Action at iteration 18: {'name': 'read_range', 'args': {'project_name': 'Jsoup', 'bug_index': '51', 'filepath': 'org/jsoup/parser/CharacterReader.java', 'startline': 295, 'endline': 305}}
+Action at iteration 19: {'name': 'write_fix', 'args': {'project_name': 'Jsoup', 'bug_index': 51, 'changes_dicts': [{'file_name': 'org/jsoup/parser/CharacterReader.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 300, 'modified_line': "        return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c > 127);"}]}]}}
+Action at iteration 20: {'name': 'trying out candidate fixes', 'args': {}}

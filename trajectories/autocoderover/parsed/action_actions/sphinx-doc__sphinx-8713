@@ -1,0 +1,12 @@
+Action at Iteration 0: search_class("NumpyDocstring"), search_method_in_class("_parse_other_parameters_section", "NumpyDocstring"), search_method_in_class("_parse_parameters_section", "NumpyDocstring"), search_code("napoleon_use_param")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: Locate
+
+Action at Iteration 3: Analyze
+
+Action at Iteration 4: Locate
+
+Action at Iteration 5: write_patch
+

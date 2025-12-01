@@ -1,0 +1,1822 @@
+Result at iteration 0: ls -R /workspace/sympy__sympy__1.11
+/workspace/sympy__sympy__1.11:
+AUTHORS			  asv.conf.travis.json	github_deploy_key.enc
+CODEOWNERS		  banner.svg		isympy.py
+CODE_OF_CONDUCT.md	  bin			pytest.ini
+CONTRIBUTING.md		  codecov.yml		release
+LICENSE			  conftest.py		setup.cfg
+MANIFEST.in		  coveragerc_travis	setup.py
+PULL_REQUEST_TEMPLATE.md  data			setupegg.py
+README.md		  doc			sympy
+asv.conf.actions.json	  examples		sympy.egg-info
+
+/workspace/sympy__sympy__1.11/bin:
+ask_update.py		 sympy_time_cache.py
+authors_update.py	 test
+coverage_doctest.py	 test_executable.py
+coverage_report.py	 test_external_imports.py
+diagnose_imports	 test_import
+doctest			 test_import.py
+generate_module_list.py  test_isolated
+generate_test_list.py	 test_optional_dependencies.py
+get_sympy.py		 test_py2_import.py
+isympy			 test_setup.py
+mailmap_check.py	 test_sphinx.sh
+mailmap_update.py	 test_submodule_imports.py
+py.bench		 test_symengine.py
+strip_whitespace	 test_tensorflow.py
+sympy_time.py		 test_travis.sh
+
+/workspace/sympy__sympy__1.11/data:
+TeXmacs
+
+/workspace/sympy__sympy__1.11/data/TeXmacs:
+LICENSE  bin  progs
+
+/workspace/sympy__sympy__1.11/data/TeXmacs/bin:
+tm_sympy
+
+/workspace/sympy__sympy__1.11/data/TeXmacs/progs:
+init-sympy.scm
+
+/workspace/sympy__sympy__1.11/doc:
+Dockerfile.htmldoc  api		 convert-svg-to-pdf.sh	man
+Makefile	    apidoc.conf  ext			requirements.txt
+README.rst	    cheatsheet	 generate_logos.py	src
+
+/workspace/sympy__sympy__1.11/doc/api:
+conf.py  index.rst
+
+/workspace/sympy__sympy__1.11/doc/cheatsheet:
+cheatsheet.tex	combinatoric_cheatsheet.tex
+
+/workspace/sympy__sympy__1.11/doc/ext:
+docscrape.py  docscrape_sphinx.py  numpydoc.py	sympylive.py
+
+/workspace/sympy__sympy__1.11/doc/man:
+isympy.1  isympy.xml
+
+/workspace/sympy__sympy__1.11/doc/src:
+_static      citing.rst   guides     miscellaneous  pics       wiki.rst
+_templates   conf.py	  index.rst  modules	    reference
+aboutus.rst  explanation  logo	     outreach.rst   tutorial
+
+/workspace/sympy__sympy__1.11/doc/src/_static:
+default.css_t  sympylogo.png  sympylogo_big.png
+
+/workspace/sympy__sympy__1.11/doc/src/_templates:
+layout.html
+
+/workspace/sympy__sympy__1.11/doc/src/explanation:
+active-deprecations.md	gotchas.rst  index.rst	special_topics
+
+/workspace/sympy__sympy__1.11/doc/src/explanation/special_topics:
+classification.rst  finite_diff_derivatives.rst  index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/guides:
+assumptions.rst  booleans.rst  contributing  getting_started  index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/guides/contributing:
+build-docs.rst	 deprecations.md  documentation-style-guide.rst
+debug.rst	 dev-setup.rst	  index.rst
+dependencies.md  docstring.rst	  make-a-contribution.rst
+
+/workspace/sympy__sympy__1.11/doc/src/guides/getting_started:
+index.rst  install.md
+
+/workspace/sympy__sympy__1.11/doc/src/logo:
+info.txt  sympy-use-text.svg  sympy.svg
+
+/workspace/sympy__sympy__1.11/doc/src/miscellaneous:
+index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules:
+abc.rst		core.rst      integrals		       physics	      solvers
+algebras.rst	crypto.rst    interactive.rst	       plotting.rst   stats.rst
+assumptions	diffgeom.rst  liealgebras	       polys	      tensor
+calculus	discrete.rst  logic.rst		       printing.rst   testing
+categories.rst	evalf.rst     matrices		       rewriting.rst  utilities
+codegen.rst	functions     ntheory.rst	       series	      vector
+combinatorics	geometry      numeric-computation.rst  sets.rst
+concrete.rst	holonomic     parsing.rst	       simplify
+
+/workspace/sympy__sympy__1.11/doc/src/modules/assumptions:
+ask.rst  assume.rst  index.rst	predicates.rst	refine.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/calculus:
+index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/combinatorics:
+fp_groups.rst	      named_groups.rst	permutations.rst  tensor_can.rst
+graycode.rst	      partitions.rst	polyhedron.rst	  testutil.rst
+group_constructs.rst  pc_groups.rst	prufer.rst	  util.rst
+index.rst	      perm_groups.rst	subsets.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/functions:
+combinatorial.rst  elementary.rst  index.rst  special.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/geometry:
+curves.rst    entities.rst  lines.rst  points.rst    utils.rst
+ellipses.rst  index.rst     plane.rst  polygons.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/holonomic:
+about.rst    index.rst	   operations.rst  uses.rst
+convert.rst  internal.rst  represent.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/integrals:
+g-functions.rst  index.rst  integrals.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/liealgebras:
+index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/matrices:
+common.rst	 immutablematrices.rst	normalforms.rst
+dense.rst	 index.rst		sparse.rst
+expressions.rst  matrices.rst		sparsetools.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/physics:
+continuum_mechanics  matrices.rst      qho_1d.rst	units
+control		     mechanics	       quantum		vector
+hep		     optics	       secondquant.rst	wigner.rst
+hydrogen.rst	     paulialgebra.rst  sho.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/physics/continuum_mechanics:
+allowed-sign-conventions.png  beam_problems.rst  ildshear.png
+beam.rst		      ildreaction.png	 index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/physics/control:
+control.rst  control_plots.rst	index.rst  lti.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/physics/hep:
+index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/physics/mechanics:
+advanced.rst	    index.rst	   reference.rst
+api		    kane.rst	   sympy_mechanics_for_autolev_users.rst
+autolev_parser.rst  lagrange.rst   symsystem.rst
+examples	    linearize.rst
+examples.rst	    masses.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/physics/mechanics/api:
+body.rst	joint.rst	   linearize.rst  printing.rst
+expr_manip.rst	kane_lagrange.rst  part_bod.rst   system.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/physics/mechanics/examples:
+bicycle_example.rst
+lin_pend_nonmin_example.rst
+multi_degree_freedom_holonomic_system.rst
+multidof-holonomic.png
+pendulum_nonmin.svg
+rollingdisc.svg
+rollingdisc_example.rst
+rollingdisc_example_kane.rst
+rollingdisc_example_kane_constraints.rst
+rollingdisc_example_lagrange.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/physics/optics:
+gaussopt.rst  index.rst  medium.rst  polarization.rst  utils.rst  waves.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/physics/quantum:
+anticommutator.rst  dagger.rst	      operator.rst     represent.rst
+cartesian.rst	    gate.rst	      operatorset.rst  shor.rst
+cg.rst		    grover.rst	      piab.rst	       spin.rst
+circuitplot.rst     hilbert.rst       qapply.rst       state.rst
+commutator.rst	    index.rst	      qft.rst	       tensorproduct.rst
+constants.rst	    innerproduct.rst  qubit.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/physics/units:
+dimensions.rst	index.rst	prefixes.rst	unitsystem.rst
+examples.rst	philosophy.rst	quantities.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/physics/vector:
+advanced.rst  kin_2.svg        kin_angvel3.svg	vec_dot.svg
+api	      kin_2pt.svg      kin_rolling.svg	vec_fix_notfix.svg
+fields.rst    kin_3.svg        kinematics.rst	vec_mul.svg
+index.rst     kin_4.svg        simp_rot.svg	vec_rep.svg
+kin_1.svg     kin_angvel1.svg  vec_add.svg	vec_simp_der.svg
+kin_1pt.svg   kin_angvel2.svg  vec_cross.svg	vectors.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/physics/vector/api:
+classes.rst  fieldfunctions.rst  functions.rst	kinematics.rst	printing.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/polys:
+agca.rst	  domainsref.rst  numberfields.rst  wester.rst
+basics.rst	  index.rst	  reference.rst
+domainmatrix.rst  internals.rst   ringseries.rst
+domainsintro.rst  literature.rst  solvers.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/series:
+formal.rst  fourier.rst  index.rst  limitseq.rst  sequences.rst  series.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/simplify:
+fu.rst	hyperexpand.rst  index.rst  simplify.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/solvers:
+diophantine.rst  inequalities.rst  pde.rst	solveset.rst
+index.rst	 ode.rst	   solvers.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/tensor:
+array.rst	       index.rst	  indexed.rst  toperators.rst
+array_expressions.rst  index_methods.rst  tensor.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/testing:
+index.rst  pytest.rst  randtest.rst  runtests.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/utilities:
+autowrap.rst   enumerative.rst	iterables.rst	 misc.rst     timeutils.rst
+codegen.rst    exceptions.rst	lambdify.rst	 pkgdata.rst
+decorator.rst  index.rst	memoization.rst  source.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/vector:
+api	    coordsys.rst      examples.rst  index.rst  vector_integration.rst
+basics.rst  coordsys_rot.svg  fields.rst    intro.rst
+
+/workspace/sympy__sympy__1.11/doc/src/modules/vector/api:
+classes.rst  orienterclasses.rst  vectorfunctions.rst
+
+/workspace/sympy__sympy__1.11/doc/src/pics:
+consoleascii.png    ipythonnotebook.png   pngview1.png
+consoleunicode.png  ipythonqtconsole.png
+
+/workspace/sympy__sympy__1.11/doc/src/reference:
+index.rst  public
+
+/workspace/sympy__sympy__1.11/doc/src/reference/public:
+basics		logic	  numbertheory	topics
+codegeneration	matrices  physics	utilities
+
+/workspace/sympy__sympy__1.11/doc/src/reference/public/basics:
+index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/reference/public/codegeneration:
+index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/reference/public/logic:
+index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/reference/public/matrices:
+index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/reference/public/numbertheory:
+index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/reference/public/physics:
+index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/reference/public/topics:
+index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/reference/public/utilities:
+index.rst
+
+/workspace/sympy__sympy__1.11/doc/src/tutorial:
+basic_operations.rst  index.rst		next.rst	    solvers.rst
+calculus.rst	      intro.rst		preliminaries.rst
+features.rst	      manipulation.rst	printing.rst
+gotchas.rst	      matrices.rst	simplification.rst
+
+/workspace/sympy__sympy__1.11/examples:
+README	advanced  all.py  beginner  intermediate  notebooks
+
+/workspace/sympy__sympy__1.11/examples/advanced:
+autowrap_integrators.py     gibbs_phenomenon.py		  pyglet_plotting.py
+autowrap_ufuncify.py	    grover_example.py		  qft.py
+curvilinear_coordinates.py  hydrogen.py			  relativity.py
+dense_coding_example.py     identitysearch_example.ipynb
+fem.py			    pidigits.py
+
+/workspace/sympy__sympy__1.11/examples/beginner:
+basic.py	    limits_examples.py	 plot_examples.py	precision.py
+differentiation.py  plot_advanced.ipynb  plot_gallery.ipynb	print_pretty.py
+expansion.py	    plot_colors.ipynb	 plot_intro.ipynb	series.py
+functions.py	    plot_discont.ipynb	 plotting_nice_plot.py	substitution.py
+
+/workspace/sympy__sympy__1.11/examples/intermediate:
+coupled_cluster.py	       mplot2d.py		    sample.py
+differential_equations.py      mplot3d.py		    schwarzschild.ipynb
+infinite_1d_box.py	       partial_differential_eqs.py  trees.py
+limit_examples_advanced.ipynb  print_gtk.py		    vandermonde.py
+
+/workspace/sympy__sympy__1.11/examples/notebooks:
+Bezout_Dixon_resultant.ipynb	Sylvester_resultant.ipynb  qubits.ipynb
+IntegrationOverPolytopes.ipynb	density.ipynb		   sho1d_example.ipynb
+Macaulay_resultant.ipynb	fidelity.ipynb		   spin.ipynb
+README.txt			fresnel_integrals.ipynb    trace.ipynb
+
+/workspace/sympy__sympy__1.11/release:
+Dockerfile		    fabfile.py		   rever.xsh
+README.md		    github_release.py	   sha256.py
+aptinstall.sh		    helpers.py		   test_install.py
+authors.py		    pull_and_run_rever.sh  update_docs.py
+build_docs.py		    release.sh		   update_requirements.sh
+ci_release_script.sh	    releasecheck.py
+compare_tar_against_git.py  requirements.txt
+
+/workspace/sympy__sympy__1.11/sympy:
+__init__.py    conftest.py  integrals	      polys	  strategies
+abc.py	       core	    interactive       printing	  tensor
+algebras       crypto	    liealgebras       py.typed	  testing
+assumptions    diffgeom     logic	      release.py  this.py
+benchmarks     discrete     matrices	      sandbox	  unify
+calculus       external     multipledispatch  series	  utilities
+categories     functions    ntheory	      sets	  vector
+codegen        galgebra.py  parsing	      simplify
+combinatorics  geometry     physics	      solvers
+concrete       holonomic    plotting	      stats
+
+/workspace/sympy__sympy__1.11/sympy/algebras:
+__init__.py  quaternion.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/algebras/tests:
+__init__.py  test_quaternion.py
+
+/workspace/sympy__sympy__1.11/sympy/assumptions:
+__init__.py	  assume.py  handlers	 relation	 tests
+ask.py		  cnf.py     predicates  satask.py	 wrapper.py
+ask_generated.py  facts.py   refine.py	 sathandlers.py
+
+/workspace/sympy__sympy__1.11/sympy/assumptions/handlers:
+__init__.py  calculus.py  common.py  matrices.py  ntheory.py  order.py	sets.py
+
+/workspace/sympy__sympy__1.11/sympy/assumptions/predicates:
+__init__.py  calculus.py  common.py  matrices.py  ntheory.py  order.py	sets.py
+
+/workspace/sympy__sympy__1.11/sympy/assumptions/relation:
+__init__.py  binrel.py	equality.py
+
+/workspace/sympy__sympy__1.11/sympy/assumptions/tests:
+__init__.py	       test_matrices.py  test_satask.py
+test_assumptions_2.py  test_query.py	 test_sathandlers.py
+test_context.py        test_refine.py	 test_wrapper.py
+
+/workspace/sympy__sympy__1.11/sympy/benchmarks:
+__init__.py  bench_discrete_log.py  bench_meijerint.py	bench_symbench.py
+
+/workspace/sympy__sympy__1.11/sympy/calculus:
+__init__.py	       euler.py        singularities.py  util.py
+accumulationbounds.py  finite_diff.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/calculus/tests:
+__init__.py		    test_euler.py	 test_singularities.py
+test_accumulationbounds.py  test_finite_diff.py  test_util.py
+
+/workspace/sympy__sympy__1.11/sympy/categories:
+__init__.py  baseclasses.py  diagram_drawing.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/categories/tests:
+__init__.py  test_baseclasses.py  test_drawing.py
+
+/workspace/sympy__sympy__1.11/sympy/codegen:
+__init__.py	   cfunctions.py  futils.py	   rewriting.py
+abstract_nodes.py  cnodes.py	  matrix_nodes.py  scipy_nodes.py
+algorithms.py	   cutils.py	  numpy_nodes.py   tests
+approximations.py  cxxnodes.py	  pynodes.py
+ast.py		   fnodes.py	  pyutils.py
+
+/workspace/sympy__sympy__1.11/sympy/codegen/tests:
+__init__.py		test_cfunctions.py   test_pynodes.py
+test_algorithms.py	test_cnodes.py	     test_pyutils.py
+test_applications.py	test_cxxnodes.py     test_rewriting.py
+test_approximations.py	test_fnodes.py	     test_scipy_nodes.py
+test_ast.py		test_numpy_nodes.py
+
+/workspace/sympy__sympy__1.11/sympy/combinatorics:
+__init__.py	group_constructs.py  permutations.py	     subsets.py
+coset_table.py	homomorphisms.py     polyhedron.py	     tensor_can.py
+fp_groups.py	named_groups.py      prufer.py		     tests
+free_groups.py	partitions.py	     rewritingsystem.py      testutil.py
+generators.py	pc_groups.py	     rewritingsystem_fsm.py  util.py
+graycode.py	perm_groups.py	     schur_number.py
+
+/workspace/sympy__sympy__1.11/sympy/combinatorics/tests:
+__init__.py		  test_homomorphisms.py  test_prufer.py
+test_coset_table.py	  test_named_groups.py	 test_rewriting.py
+test_fp_groups.py	  test_partitions.py	 test_schur_number.py
+test_free_groups.py	  test_pc_groups.py	 test_subsets.py
+test_generators.py	  test_perm_groups.py	 test_tensor_can.py
+test_graycode.py	  test_permutations.py	 test_testutil.py
+test_group_constructs.py  test_polyhedron.py	 test_util.py
+
+/workspace/sympy__sympy__1.11/sympy/concrete:
+__init__.py  expr_with_intlimits.py  gosper.py	products.py    tests
+delta.py     expr_with_limits.py     guess.py	summations.py
+
+/workspace/sympy__sympy__1.11/sympy/concrete/tests:
+__init__.py    test_gosper.py  test_products.py
+test_delta.py  test_guess.py   test_sums_products.py
+
+/workspace/sympy__sympy__1.11/sympy/core:
+__init__.py	   containers.py  logic.py	       rules.py
+_print_helpers.py  core.py	  mod.py	       singleton.py
+add.py		   coreerrors.py  mul.py	       sorting.py
+alphabets.py	   decorators.py  multidimensional.py  symbol.py
+assumptions.py	   evalf.py	  numbers.py	       sympify.py
+backend.py	   expr.py	  operations.py        tests
+basic.py	   exprtools.py   parameters.py        trace.py
+benchmarks	   facts.py	  power.py	       traversal.py
+cache.py	   function.py	  random.py
+compatibility.py   kind.py	  relational.py
+
+/workspace/sympy__sympy__1.11/sympy/core/benchmarks:
+__init__.py    bench_assumptions.py  bench_expand.py   bench_sympify.py
+bench_arit.py  bench_basic.py	     bench_numbers.py
+
+/workspace/sympy__sympy__1.11/sympy/core/tests:
+__init__.py			   test_evalf.py	     test_power.py
+test_args.py			   test_expand.py	     test_priority.py
+test_arit.py			   test_expr.py		     test_random.py
+test_assumptions.py		   test_exprtools.py	     test_relational.py
+test_basic.py			   test_facts.py	     test_rules.py
+test_cache.py			   test_function.py	     test_singleton.py
+test_compatibility.py		   test_kind.py		     test_sorting.py
+test_complex.py			   test_logic.py	     test_subs.py
+test_constructor_postprocessor.py  test_match.py	     test_symbol.py
+test_containers.py		   test_multidimensional.py  test_sympify.py
+test_count_ops.py		   test_noncommutative.py    test_traversal.py
+test_diff.py			   test_numbers.py	     test_truediv.py
+test_equal.py			   test_operations.py	     test_var.py
+test_eval.py			   test_parameters.py
+
+/workspace/sympy__sympy__1.11/sympy/crypto:
+__init__.py  crypto.py	tests
+
+/workspace/sympy__sympy__1.11/sympy/crypto/tests:
+__init__.py  test_crypto.py
+
+/workspace/sympy__sympy__1.11/sympy/diffgeom:
+__init__.py  diffgeom.py  rn.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/diffgeom/tests:
+__init__.py		 test_function_diffgeom_book.py
+test_class_structure.py  test_hyperbolic_space.py
+test_diffgeom.py
+
+/workspace/sympy__sympy__1.11/sympy/discrete:
+__init__.py  convolutions.py  recurrences.py  tests  transforms.py
+
+/workspace/sympy__sympy__1.11/sympy/discrete/tests:
+__init__.py  test_convolutions.py  test_recurrences.py	test_transforms.py
+
+/workspace/sympy__sympy__1.11/sympy/external:
+__init__.py  gmpy.py  importtools.py  pythonmpq.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/external/tests:
+__init__.py	  test_codegen.py      test_numpy.py	  test_scipy.py
+test_autowrap.py  test_importtools.py  test_pythonmpq.py
+
+/workspace/sympy__sympy__1.11/sympy/functions:
+__init__.py  combinatorial  elementary	special
+
+/workspace/sympy__sympy__1.11/sympy/functions/combinatorial:
+__init__.py  factorials.py  numbers.py	tests
+
+/workspace/sympy__sympy__1.11/sympy/functions/combinatorial/tests:
+__init__.py  test_comb_factorials.py  test_comb_numbers.py
+
+/workspace/sympy__sympy__1.11/sympy/functions/elementary:
+__init__.py  complexes.py    hyperbolic.py  miscellaneous.py  tests
+benchmarks   exponential.py  integers.py    piecewise.py      trigonometric.py
+
+/workspace/sympy__sympy__1.11/sympy/functions/elementary/benchmarks:
+__init__.py  bench_exp.py
+
+/workspace/sympy__sympy__1.11/sympy/functions/elementary/tests:
+__init__.py	     test_hyperbolic.py  test_miscellaneous.py
+test_complexes.py    test_integers.py	 test_piecewise.py
+test_exponential.py  test_interface.py	 test_trigonometric.py
+
+/workspace/sympy__sympy__1.11/sympy/functions/special:
+__init__.py	    elliptic_integrals.py  singularity_functions.py
+benchmarks	    error_functions.py	   spherical_harmonics.py
+bessel.py	    gamma_functions.py	   tensor_functions.py
+beta_functions.py   hyper.py		   tests
+bsplines.py	    mathieu_functions.py   zeta_functions.py
+delta_functions.py  polynomials.py
+
+/workspace/sympy__sympy__1.11/sympy/functions/special/benchmarks:
+__init__.py  bench_special.py
+
+/workspace/sympy__sympy__1.11/sympy/functions/special/tests:
+__init__.py		    test_hyper.py
+test_bessel.py		    test_mathieu.py
+test_beta_functions.py	    test_singularity_functions.py
+test_bsplines.py	    test_spec_polynomials.py
+test_delta_functions.py     test_spherical_harmonics.py
+test_elliptic_integrals.py  test_tensor_functions.py
+test_error_functions.py     test_zeta_functions.py
+test_gamma_functions.py
+
+/workspace/sympy__sympy__1.11/sympy/geometry:
+__init__.py  ellipse.py  exceptions.py	parabola.py  point.py	 tests
+curve.py     entity.py	 line.py	plane.py     polygon.py  util.py
+
+/workspace/sympy__sympy__1.11/sympy/geometry/tests:
+__init__.py	 test_entity.py        test_parabola.py  test_polygon.py
+test_curve.py	 test_geometrysets.py  test_plane.py	 test_util.py
+test_ellipse.py  test_line.py	       test_point.py
+
+/workspace/sympy__sympy__1.11/sympy/holonomic:
+__init__.py   holonomicerrors.py  recurrence.py
+holonomic.py  numerical.py	  tests
+
+/workspace/sympy__sympy__1.11/sympy/holonomic/tests:
+__init__.py  test_holonomic.py	test_recurrence.py
+
+/workspace/sympy__sympy__1.11/sympy/integrals:
+__init__.py	    meijerint.py      rubi
+benchmarks	    meijerint_doc.py  singularityfunctions.py
+deltafunctions.py   prde.py	      tests
+heurisch.py	    quadrature.py     transforms.py
+integrals.py	    rationaltools.py  trigonometry.py
+intpoly.py	    rde.py
+manualintegrate.py  risch.py
+
+/workspace/sympy__sympy__1.11/sympy/integrals/benchmarks:
+__init__.py  bench_integrate.py  bench_trigintegrate.py
+
+/workspace/sympy__sympy__1.11/sympy/integrals/rubi:
+__init__.py	parsetools  rubimain.py  symbol.py  utility_function.py
+constraints.py	rubi_tests  rules	 tests
+
+/workspace/sympy__sympy__1.11/sympy/integrals/rubi/parsetools:
+__init__.py	   generate_tests.py  parse.py
+generate_rules.py  header.py.txt      tests
+
+/workspace/sympy__sympy__1.11/sympy/integrals/rubi/parsetools/tests:
+__init__.py  test_parse.py
+
+/workspace/sympy__sympy__1.11/sympy/integrals/rubi/rubi_tests:
+__init__.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/integrals/rubi/rubi_tests/tests:
+__init__.py	     test_hyperbolic_sine.py	      test_secant.py
+test_1_2.py	     test_inverse_hyperbolic_sine.py  test_sine.py
+test_1_3.py	     test_inverse_sine.py	      test_special_functions.py
+test_1_4.py	     test_logarithms.py		      test_tangent.py
+test_exponential.py  test_miscellaneous_algebra.py    test_trinomials.py
+
+/workspace/sympy__sympy__1.11/sympy/integrals/rubi/rules:
+__init__.py		     miscellaneous_integration.py
+binomial_products.py	     miscellaneous_trig.py
+exponential.py		     piecewise_linear.py
+hyperbolic.py		     quadratic_products.py
+integrand_simplification.py  secant.py
+inverse_hyperbolic.py	     sine.py
+inverse_trig.py		     special_functions.py
+linear_products.py	     tangent.py
+logarithms.py		     trinomial_products.py
+miscellaneous_algebraic.py
+
+/workspace/sympy__sympy__1.11/sympy/integrals/rubi/tests:
+__init__.py  test_rubi_integrate.py  test_utility_function.py
+
+/workspace/sympy__sympy__1.11/sympy/integrals/tests:
+__init__.py		   test_lineintegrals.py  test_rde.py
+test_deltafunctions.py	   test_manual.py	  test_risch.py
+test_failing_integrals.py  test_meijerint.py	  test_singularityfunctions.py
+test_heurisch.py	   test_prde.py		  test_transforms.py
+test_integrals.py	   test_quadrature.py	  test_trigonometry.py
+test_intpoly.py		   test_rationaltools.py
+
+/workspace/sympy__sympy__1.11/sympy/interactive:
+__init__.py  printing.py  session.py  tests  traversal.py
+
+/workspace/sympy__sympy__1.11/sympy/interactive/tests:
+__init__.py  test_interactive.py  test_ipython.py
+
+/workspace/sympy__sympy__1.11/sympy/liealgebras:
+__init__.py	  dynkin_diagram.py  type_a.py	type_d.py  type_g.py
+cartan_matrix.py  root_system.py     type_b.py	type_e.py  weyl_group.py
+cartan_type.py	  tests		     type_c.py	type_f.py
+
+/workspace/sympy__sympy__1.11/sympy/liealgebras/tests:
+__init__.py		test_root_system.py  test_type_D.py  test_weyl_group.py
+test_cartan_matrix.py	test_type_A.py	     test_type_E.py
+test_cartan_type.py	test_type_B.py	     test_type_F.py
+test_dynkin_diagram.py	test_type_C.py	     test_type_G.py
+
+/workspace/sympy__sympy__1.11/sympy/logic:
+__init__.py  algorithms  boolalg.py  inference.py  tests  utilities
+
+/workspace/sympy__sympy__1.11/sympy/logic/algorithms:
+__init__.py  dpll.py  dpll2.py	minisat22_wrapper.py  pycosat_wrapper.py
+
+/workspace/sympy__sympy__1.11/sympy/logic/tests:
+__init__.py  test_boolalg.py  test_dimacs.py  test_inference.py
+
+/workspace/sympy__sympy__1.11/sympy/logic/utilities:
+__init__.py  dimacs.py
+
+/workspace/sympy__sympy__1.11/sympy/matrices:
+__init__.py	   determinant.py  inverse.py	   solvers.py	   utilities.py
+benchmarks	   eigen.py	   matrices.py	   sparse.py
+common.py	   expressions	   normalforms.py  sparsetools.py
+decompositions.py  graph.py	   reductions.py   subspaces.py
+dense.py	   immutable.py    repmatrix.py    tests
+
+/workspace/sympy__sympy__1.11/sympy/matrices/benchmarks:
+__init__.py  bench_matrix.py
+
+/workspace/sympy__sympy__1.11/sympy/matrices/expressions:
+__init__.py	determinant.py	   funcmatrix.py  matexpr.py	  slice.py
+adjoint.py	diagonal.py	   hadamard.py	  matmul.py	  special.py
+applyfunc.py	dotproduct.py	   inverse.py	  matpow.py	  tests
+blockmatrix.py	factorizations.py  kronecker.py   permutation.py  trace.py
+companion.py	fourier.py	   matadd.py	  sets.py	  transpose.py
+
+/workspace/sympy__sympy__1.11/sympy/matrices/expressions/tests:
+__init__.py	     test_factorizations.py  test_matmul.py
+test_adjoint.py      test_fourier.py	     test_matpow.py
+test_applyfunc.py    test_funcmatrix.py      test_permutation.py
+test_blockmatrix.py  test_hadamard.py	     test_sets.py
+test_companion.py    test_indexing.py	     test_slice.py
+test_derivatives.py  test_inverse.py	     test_special.py
+test_determinant.py  test_kronecker.py	     test_trace.py
+test_diagonal.py     test_matadd.py	     test_transpose.py
+test_dotproduct.py   test_matexpr.py
+
+/workspace/sympy__sympy__1.11/sympy/matrices/tests:
+__init__.py		test_graph.py	      test_reductions.py
+test_commonmatrix.py	test_immutable.py     test_solvers.py
+test_decompositions.py	test_interactions.py  test_sparse.py
+test_determinant.py	test_matrices.py      test_sparsetools.py
+test_eigen.py		test_normalforms.py   test_subspaces.py
+
+/workspace/sympy__sympy__1.11/sympy/multipledispatch:
+__init__.py  conflict.py  core.py  dispatcher.py  tests  utils.py
+
+/workspace/sympy__sympy__1.11/sympy/multipledispatch/tests:
+__init__.py  test_conflict.py  test_core.py  test_dispatcher.py
+
+/workspace/sympy__sympy__1.11/sympy/ntheory:
+__init__.py	       ecm.py		     generate.py     primetest.py
+bbp_pi.py	       egyptian_fraction.py  modular.py      qs.py
+continued_fraction.py  elliptic_curve.py     multinomial.py  residue_ntheory.py
+digits.py	       factor_.py	     partitions_.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/ntheory/tests:
+__init__.py		    test_egyptian_fraction.py  test_multinomial.py
+test_bbp_pi.py		    test_elliptic_curve.py     test_partitions.py
+test_continued_fraction.py  test_factor_.py	       test_primetest.py
+test_digits.py		    test_generate.py	       test_qs.py
+test_ecm.py		    test_modular.py	       test_residue.py
+
+/workspace/sympy__sympy__1.11/sympy/parsing:
+__init__.py    autolev	fortran  mathematica.py  sym_expr.py	  tests
+ast_parser.py  c	latex	 maxima.py	 sympy_parser.py
+
+/workspace/sympy__sympy__1.11/sympy/parsing/autolev:
+Autolev.g4   _antlr			 _parse_autolev_antlr.py
+__init__.py  _listener_autolev_antlr.py  test-examples
+
+/workspace/sympy__sympy__1.11/sympy/parsing/autolev/_antlr:
+__init__.py  autolevlexer.py  autolevlistener.py  autolevparser.py
+
+/workspace/sympy__sympy__1.11/sympy/parsing/autolev/test-examples:
+README.txt	   ruletest11.al  ruletest3.al	ruletest6.al  ruletest9.al
+pydy-example-repo  ruletest11.py  ruletest3.py	ruletest6.py  ruletest9.py
+ruletest1.al	   ruletest12.al  ruletest4.al	ruletest7.al
+ruletest1.py	   ruletest12.py  ruletest4.py	ruletest7.py
+ruletest10.al	   ruletest2.al   ruletest5.al	ruletest8.al
+ruletest10.py	   ruletest2.py   ruletest5.py	ruletest8.py
+
+/workspace/sympy__sympy__1.11/sympy/parsing/autolev/test-examples/pydy-example-repo:
+chaos_pendulum.al   double_pendulum.py	   non_min_pendulum.al
+chaos_pendulum.py   mass_spring_damper.al  non_min_pendulum.py
+double_pendulum.al  mass_spring_damper.py
+
+/workspace/sympy__sympy__1.11/sympy/parsing/c:
+__init__.py  c_parser.py
+
+/workspace/sympy__sympy__1.11/sympy/parsing/fortran:
+__init__.py  fortran_parser.py
+
+/workspace/sympy__sympy__1.11/sympy/parsing/latex:
+LICENSE.txt  __init__.py  _build_latex_antlr.py  errors.py
+LaTeX.g4     _antlr	  _parse_latex_antlr.py
+
+/workspace/sympy__sympy__1.11/sympy/parsing/latex/_antlr:
+__init__.py  latexlexer.py  latexparser.py
+
+/workspace/sympy__sympy__1.11/sympy/parsing/tests:
+__init__.py				     test_latex.py
+test_ast_parser.py			     test_latex_deps.py
+test_autolev.py				     test_mathematica.py
+test_c_parser.py			     test_maxima.py
+test_fortran_parser.py			     test_sym_expr.py
+test_implicit_multiplication_application.py  test_sympy_parser.py
+
+/workspace/sympy__sympy__1.11/sympy/physics:
+__init__.py	     hydrogen.py  paulialgebra.py  secondquant.py  vector
+continuum_mechanics  matrices.py  pring.py	   sho.py	   wigner.py
+control		     mechanics	  qho_1d.py	   tests
+hep		     optics	  quantum	   units
+
+/workspace/sympy__sympy__1.11/sympy/physics/continuum_mechanics:
+__init__.py  beam.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/physics/continuum_mechanics/tests:
+__init__.py  test_beam.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/control:
+__init__.py  control_plots.py  lti.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/physics/control/tests:
+__init__.py  test_control_plots.py  test_lti.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/hep:
+__init__.py  gamma_matrices.py	tests
+
+/workspace/sympy__sympy__1.11/sympy/physics/hep/tests:
+__init__.py  test_gamma_matrices.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/mechanics:
+__init__.py   joint.py	       lagrange.py   models.py	   system.py
+body.py       jointsmethod.py  linearize.py  particle.py   tests
+functions.py  kane.py	       method.py     rigidbody.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/mechanics/tests:
+__init__.py	      test_kane.py	test_lagrange2.py  test_rigidbody.py
+test_body.py	      test_kane2.py	test_linearize.py  test_system.py
+test_functions.py     test_kane3.py	test_method.py
+test_joint.py	      test_kane4.py	test_models.py
+test_jointsmethod.py  test_lagrange.py	test_particle.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/optics:
+__init__.py  gaussopt.py  medium.py  polarization.py  tests  utils.py  waves.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/optics/tests:
+__init__.py	  test_medium.py	test_utils.py
+test_gaussopt.py  test_polarization.py	test_waves.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/quantum:
+__init__.py	   density.py	      operatorordering.py  sho1d.py
+anticommutator.py  fermion.py	      operatorset.py	   shor.py
+boson.py	   gate.py	      pauli.py		   spin.py
+cartesian.py	   grover.py	      piab.py		   state.py
+cg.py		   hilbert.py	      qapply.py		   tensorproduct.py
+circuitplot.py	   identitysearch.py  qasm.py		   tests
+circuitutils.py    innerproduct.py    qexpr.py		   trace.py
+commutator.py	   matrixcache.py     qft.py
+constants.py	   matrixutils.py     qubit.py
+dagger.py	   operator.py	      represent.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/quantum/tests:
+__init__.py		test_gate.py		  test_qapply.py
+test_anticommutator.py	test_grover.py		  test_qasm.py
+test_boson.py		test_hilbert.py		  test_qexpr.py
+test_cartesian.py	test_identitysearch.py	  test_qft.py
+test_cg.py		test_innerproduct.py	  test_qubit.py
+test_circuitplot.py	test_matrixutils.py	  test_represent.py
+test_circuitutils.py	test_operator.py	  test_sho1d.py
+test_commutator.py	test_operatorordering.py  test_shor.py
+test_constants.py	test_operatorset.py	  test_spin.py
+test_dagger.py		test_pauli.py		  test_state.py
+test_density.py		test_piab.py		  test_tensorproduct.py
+test_fermion.py		test_printing.py	  test_trace.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/tests:
+__init__.py		test_paulialgebra.py	  test_qho_1d.py
+test_clebsch_gordan.py	test_physics_matrices.py  test_secondquant.py
+test_hydrogen.py	test_pring.py		  test_sho.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/units:
+__init__.py  dimensions.py  quantities.py  tests	  util.py
+definitions  prefixes.py    systems	   unitsystem.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/units/definitions:
+__init__.py  dimension_definitions.py  unit_definitions.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/units/systems:
+__init__.py  cgs.py  length_weight_time.py  mks.py  mksa.py  natural.py  si.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/units/tests:
+__init__.py		 test_prefixes.py		test_unitsystem.py
+test_dimensions.py	 test_quantities.py		test_util.py
+test_dimensionsystem.py  test_unit_system_cgs_gauss.py
+
+/workspace/sympy__sympy__1.11/sympy/physics/vector:
+__init__.py  fieldfunctions.py	functions.py  printing.py  vector.py
+dyadic.py    frame.py		point.py      tests
+
+/workspace/sympy__sympy__1.11/sympy/physics/vector/tests:
+__init__.py		test_frame.py	   test_point.py
+test_dyadic.py		test_functions.py  test_printing.py
+test_fieldfunctions.py	test_output.py	   test_vector.py
+
+/workspace/sympy__sympy__1.11/sympy/plotting:
+__init__.py		  intervalmath	plot_implicit.py  tests
+experimental_lambdify.py  plot.py	pygletplot	  textplot.py
+
+/workspace/sympy__sympy__1.11/sympy/plotting/intervalmath:
+__init__.py		interval_membership.py	tests
+interval_arithmetic.py	lib_interval.py
+
+/workspace/sympy__sympy__1.11/sympy/plotting/intervalmath/tests:
+__init__.py		    test_interval_membership.py
+test_interval_functions.py  test_intervalmath.py
+
+/workspace/sympy__sympy__1.11/sympy/plotting/pygletplot:
+__init__.py	   plot_camera.py      plot_mode_base.py  plot_window.py
+color_scheme.py    plot_controller.py  plot_modes.py	  tests
+managed_window.py  plot_curve.py       plot_object.py	  util.py
+plot.py		   plot_interval.py    plot_rotation.py
+plot_axes.py	   plot_mode.py        plot_surface.py
+
+/workspace/sympy__sympy__1.11/sympy/plotting/pygletplot/tests:
+__init__.py  test_plotting.py
+
+/workspace/sympy__sympy__1.11/sympy/plotting/tests:
+__init__.py		       test_plot_implicit.py  test_region_or.png
+test_experimental_lambdify.py  test_region_and.png    test_region_xor.png
+test_plot.py		       test_region_not.png    test_textplot.py
+
+/workspace/sympy__sympy__1.11/sympy/polys:
+__init__.py	       galoistools.py		   polyoptions.py
+agca		       groebnertools.py		   polyquinticconst.py
+benchmarks	       heuristicgcd.py		   polyroots.py
+compatibility.py       matrices			   polytools.py
+constructor.py	       modulargcd.py		   polyutils.py
+densearith.py	       monomials.py		   rationaltools.py
+densebasic.py	       multivariate_resultants.py  ring_series.py
+densetools.py	       numberfields		   rings.py
+dispersion.py	       orderings.py		   rootisolation.py
+distributedmodules.py  orthopolys.py		   rootoftools.py
+domainmatrix.py        partfrac.py		   solvers.py
+domains		       polyclasses.py		   specialpolys.py
+euclidtools.py	       polyconfig.py		   sqfreetools.py
+factortools.py	       polyerrors.py		   subresultants_qq_zz.py
+fglmtools.py	       polyfuncs.py		   tests
+fields.py	       polymatrix.py
+
+/workspace/sympy__sympy__1.11/sympy/polys/agca:
+__init__.py  extensions.py  homomorphisms.py  ideals.py  modules.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/polys/agca/tests:
+__init__.py	    test_homomorphisms.py  test_modules.py
+test_extensions.py  test_ideals.py
+
+/workspace/sympy__sympy__1.11/sympy/polys/benchmarks:
+__init__.py  bench_galoispolys.py  bench_groebnertools.py  bench_solvers.py
+
+/workspace/sympy__sympy__1.11/sympy/polys/domains:
+__init__.py		fractionfield.py       polynomialring.py
+algebraicfield.py	gaussiandomains.py     pythonfinitefield.py
+characteristiczero.py	gmpyfinitefield.py     pythonintegerring.py
+complexfield.py		gmpyintegerring.py     pythonrational.py
+compositedomain.py	gmpyrationalfield.py   pythonrationalfield.py
+domain.py		groundtypes.py	       quotientring.py
+domainelement.py	integerring.py	       rationalfield.py
+expressiondomain.py	modularinteger.py      realfield.py
+expressionrawdomain.py	mpelements.py	       ring.py
+field.py		old_fractionfield.py   simpledomain.py
+finitefield.py		old_polynomialring.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/polys/domains/tests:
+__init__.py  test_domains.py  test_polynomialring.py  test_quotientring.py
+
+/workspace/sympy__sympy__1.11/sympy/polys/matrices:
+__init__.py  domainmatrix.py  exceptions.py   sdm.py
+ddm.py	     domainscalar.py  linsolve.py     tests
+dense.py     eigen.py	      normalforms.py
+
+/workspace/sympy__sympy__1.11/sympy/polys/matrices/tests:
+__init__.py    test_domainmatrix.py  test_linsolve.py
+test_ddm.py    test_domainscalar.py  test_normalforms.py
+test_dense.py  test_eigen.py	     test_sdm.py
+
+/workspace/sympy__sympy__1.11/sympy/polys/numberfields:
+__init__.py  exceptions.py  modules.py	subfield.py  utilities.py
+basis.py     minpoly.py     primes.py	tests
+
+/workspace/sympy__sympy__1.11/sympy/polys/numberfields/tests:
+__init__.py    test_minpoly.py	test_numbers.py  test_subfield.py
+test_basis.py  test_modules.py	test_primes.py	 test_utilities.py
+
+/workspace/sympy__sympy__1.11/sympy/polys/tests:
+__init__.py			 test_partfrac.py
+test_constructor.py		 test_polyclasses.py
+test_densearith.py		 test_polyfuncs.py
+test_densebasic.py		 test_polymatrix.py
+test_densetools.py		 test_polyoptions.py
+test_dispersion.py		 test_polyroots.py
+test_distributedmodules.py	 test_polytools.py
+test_euclidtools.py		 test_polyutils.py
+test_factortools.py		 test_pythonrational.py
+test_fields.py			 test_rationaltools.py
+test_galoistools.py		 test_ring_series.py
+test_groebnertools.py		 test_rings.py
+test_heuristicgcd.py		 test_rootisolation.py
+test_injections.py		 test_rootoftools.py
+test_modulargcd.py		 test_solvers.py
+test_monomials.py		 test_specialpolys.py
+test_multivariate_resultants.py  test_sqfreetools.py
+test_orderings.py		 test_subresultants_qq_zz.py
+test_orthopolys.py
+
+/workspace/sympy__sympy__1.11/sympy/printing:
+__init__.py	defaults.py  lambdarepr.py   precedence.py  rust.py
+aesaracode.py	dot.py	     latex.py	     pretty	    str.py
+c.py		fcode.py     llvmjitcode.py  preview.py     tableform.py
+ccode.py	fortran.py   maple.py	     printer.py     tensorflow.py
+codeprinter.py	glsl.py      mathematica.py  pycode.py	    tests
+conventions.py	gtk.py	     mathml.py	     python.py	    theanocode.py
+cxx.py		jscode.py    numpy.py	     rcode.py	    tree.py
+cxxcode.py	julia.py     octave.py	     repr.py
+
+/workspace/sympy__sympy__1.11/sympy/printing/pretty:
+__init__.py  pretty.py	pretty_symbology.py  stringpict.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/printing/pretty/tests:
+__init__.py  test_pretty.py
+
+/workspace/sympy__sympy__1.11/sympy/printing/tests:
+__init__.py	     test_jscode.py	  test_preview.py
+test_aesaracode.py   test_julia.py	  test_pycode.py
+test_c.py	     test_lambdarepr.py   test_python.py
+test_codeprinter.py  test_latex.py	  test_rcode.py
+test_conventions.py  test_llvmjit.py	  test_repr.py
+test_cupy.py	     test_maple.py	  test_rust.py
+test_cxx.py	     test_mathematica.py  test_str.py
+test_dot.py	     test_mathml.py	  test_tableform.py
+test_fortran.py      test_numpy.py	  test_tensorflow.py
+test_glsl.py	     test_octave.py	  test_theanocode.py
+test_gtk.py	     test_precedence.py   test_tree.py
+
+/workspace/sympy__sympy__1.11/sympy/sandbox:
+__init__.py  indexed_integrals.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/sandbox/tests:
+__init__.py  test_indexed_integrals.py
+
+/workspace/sympy__sympy__1.11/sympy/series:
+__init__.py	 benchmarks  kauers.py	  residues.py	   tests
+acceleration.py  formal.py   limits.py	  sequences.py
+approximants.py  fourier.py  limitseq.py  series.py
+aseries.py	 gruntz.py   order.py	  series_class.py
+
+/workspace/sympy__sympy__1.11/sympy/series/benchmarks:
+__init__.py  bench_limit.py  bench_order.py
+
+/workspace/sympy__sympy__1.11/sympy/series/tests:
+__init__.py	      test_formal.py   test_limits.py	 test_order.py
+test_approximants.py  test_fourier.py  test_limitseq.py  test_residues.py
+test_aseries.py       test_gruntz.py   test_lseries.py	 test_sequences.py
+test_demidovich.py    test_kauers.py   test_nseries.py	 test_series.py
+
+/workspace/sympy__sympy__1.11/sympy/sets:
+__init__.py	 contains.py   handlers     powerset.py  sets.py
+conditionset.py  fancysets.py  ordinals.py  setexpr.py	 tests
+
+/workspace/sympy__sympy__1.11/sympy/sets/handlers:
+__init__.py  comparison.py  intersection.py  mul.py    union.py
+add.py	     functions.py   issubset.py      power.py
+
+/workspace/sympy__sympy__1.11/sympy/sets/tests:
+__init__.py	      test_contains.py	 test_ordinals.py  test_setexpr.py
+test_conditionset.py  test_fancysets.py  test_powerset.py  test_sets.py
+
+/workspace/sympy__sympy__1.11/sympy/simplify:
+__init__.py  epathtools.py   hyperexpand_doc.py  simplify.py	    trigsimp.py
+combsimp.py  fu.py	     powsimp.py		 sqrtdenest.py
+cse_main.py  gammasimp.py    radsimp.py		 tests
+cse_opts.py  hyperexpand.py  ratsimp.py		 traversaltools.py
+
+/workspace/sympy__sympy__1.11/sympy/simplify/tests:
+__init__.py	    test_fu.py		 test_powsimp.py  test_simplify.py
+test_combsimp.py    test_function.py	 test_radsimp.py  test_sqrtdenest.py
+test_cse.py	    test_gammasimp.py	 test_ratsimp.py  test_trigsimp.py
+test_epathtools.py  test_hyperexpand.py  test_rewrite.py
+
+/workspace/sympy__sympy__1.11/sympy/solvers:
+__init__.py   decompogen.py  inequalities.py  polysys.py  solveset.py
+benchmarks    deutils.py     ode	      recurr.py   tests
+bivariate.py  diophantine    pde.py	      solvers.py
+
+/workspace/sympy__sympy__1.11/sympy/solvers/benchmarks:
+__init__.py  bench_solvers.py
+
+/workspace/sympy__sympy__1.11/sympy/solvers/diophantine:
+__init__.py  diophantine.py  tests
+
+/workspace/sympy__sympy__1.11/sympy/solvers/diophantine/tests:
+__init__.py  test_diophantine.py
+
+/workspace/sympy__sympy__1.11/sympy/solvers/ode:
+__init__.py	   lie_group.py       ode.py	  single.py	systems.py
+hypergeometric.py  nonhomogeneous.py  riccati.py  subscheck.py	tests
+
+/workspace/sympy__sympy__1.11/sympy/solvers/ode/tests:
+__init__.py	   test_ode.py	    test_single.py     test_systems.py
+test_lie_group.py  test_riccati.py  test_subscheck.py
+
+/workspace/sympy__sympy__1.11/sympy/solvers/tests:
+__init__.py	      test_inequalities.py  test_polysys.py  test_solveset.py
+test_constantsimp.py  test_numeric.py	    test_recurr.py
+test_decompogen.py    test_pde.py	    test_solvers.py
+
+/workspace/sympy__sympy__1.11/sympy/stats:
+__init__.py	frv_types.py		 sampling
+compound_rv.py	joint_rv.py		 stochastic_process.py
+crv.py		joint_rv_types.py	 stochastic_process_types.py
+crv_types.py	matrix_distributions.py  symbolic_multivariate_probability.py
+drv.py		random_matrix.py	 symbolic_probability.py
+drv_types.py	random_matrix_models.py  tests
+error_prop.py	rv.py
+frv.py		rv_interface.py
+
+/workspace/sympy__sympy__1.11/sympy/stats/sampling:
+__init__.py  sample_numpy.py  sample_pymc3.py  sample_scipy.py	tests
+
+/workspace/sympy__sympy__1.11/sympy/stats/sampling/tests:
+__init__.py		      test_sample_discrete_rv.py
+test_sample_continuous_rv.py  test_sample_finite_rv.py
+
+/workspace/sympy__sympy__1.11/sympy/stats/tests:
+__init__.py	       test_matrix_distributions.py
+test_compound_rv.py    test_mix.py
+test_continuous_rv.py  test_random_matrix.py
+test_discrete_rv.py    test_rv.py
+test_error_prop.py     test_stochastic_process.py
+test_finite_rv.py      test_symbolic_multivariate.py
+test_joint_rv.py       test_symbolic_probability.py
+
+/workspace/sympy__sympy__1.11/sympy/strategies:
+__init__.py  core.py  tests	traverse.py  util.py
+branch	     rl.py    tools.py	tree.py
+
+/workspace/sympy__sympy__1.11/sympy/strategies/branch:
+__init__.py  core.py  tests  tools.py  traverse.py
+
+/workspace/sympy__sympy__1.11/sympy/strategies/branch/tests:
+__init__.py  test_core.py  test_tools.py  test_traverse.py
+
+/workspace/sympy__sympy__1.11/sympy/strategies/tests:
+__init__.py   test_rl.py     test_tools.py     test_tree.py
+test_core.py  test_strat.py  test_traverse.py
+
+/workspace/sympy__sympy__1.11/sympy/tensor:
+__init__.py  functions.py      indexed.py  tests
+array	     index_methods.py  tensor.py   toperators.py
+
+/workspace/sympy__sympy__1.11/sympy/tensor/array:
+__init__.py		arrayop.py	     mutable_ndim_array.py  tests
+array_comprehension.py	dense_ndim_array.py  ndim_array.py
+array_derivatives.py	expressions	     sparse_ndim_array.py
+
+/workspace/sympy__sympy__1.11/sympy/tensor/array/expressions:
+__init__.py		  conv_array_to_indexed.py  conv_matrix_to_array.py
+array_expressions.py	  conv_array_to_matrix.py   tests
+arrayexpr_derivatives.py  conv_indexed_to_array.py  utils.py
+
+/workspace/sympy__sympy__1.11/sympy/tensor/array/expressions/tests:
+__init__.py		       test_convert_array_to_indexed.py
+test_array_expressions.py      test_convert_array_to_matrix.py
+test_arrayexpr_derivatives.py  test_convert_index_to_array.py
+test_as_explicit.py	       test_convert_matrix_to_array.py
+
+/workspace/sympy__sympy__1.11/sympy/tensor/array/tests:
+__init__.py		     test_immutable_ndim_array.py
+test_array_comprehension.py  test_mutable_ndim_array.py
+test_array_derivatives.py    test_ndim_array.py
+test_arrayop.py		     test_ndim_array_conversions.py
+
+/workspace/sympy__sympy__1.11/sympy/tensor/tests:
+__init__.py	       test_indexed.py	       test_tensor_operators.py
+test_functions.py      test_tensor.py
+test_index_methods.py  test_tensor_element.py
+
+/workspace/sympy__sympy__1.11/sympy/testing:
+__init__.py	 matrices.py  quality_unicode.py  runtests.py  tmpfiles.py
+benchmarking.py  pytest.py    randtest.py	  tests
+
+/workspace/sympy__sympy__1.11/sympy/testing/tests:
+__init__.py	     test_code_quality.py  test_module_imports.py
+diagnose_imports.py  test_deprecated.py    test_pytest.py
+
+/workspace/sympy__sympy__1.11/sympy/unify:
+__init__.py  core.py  rewrite.py  tests  usympy.py
+
+/workspace/sympy__sympy__1.11/sympy/unify/tests:
+__init__.py  test_rewrite.py  test_sympy.py  test_unify.py
+
+/workspace/sympy__sympy__1.11/sympy/utilities:
+__init__.py	 enumerative.py        mathml	       runtests.py
+_compilation	 exceptions.py	       memoization.py  source.py
+autowrap.py	 iterables.py	       misc.py	       tests
+benchmarking.py  lambdify.py	       pkgdata.py      timeutils.py
+codegen.py	 magic.py	       pytest.py       tmpfiles.py
+decorator.py	 matchpy_connector.py  randtest.py
+
+/workspace/sympy__sympy__1.11/sympy/utilities/_compilation:
+__init__.py  availability.py  compilation.py  runners.py  tests  util.py
+
+/workspace/sympy__sympy__1.11/sympy/utilities/_compilation/tests:
+__init__.py  test_compilation.py
+
+/workspace/sympy__sympy__1.11/sympy/utilities/mathml:
+__init__.py  data
+
+/workspace/sympy__sympy__1.11/sympy/utilities/mathml/data:
+mmlctop.xsl  mmltex.xsl  simple_mmlctop.xsl
+
+/workspace/sympy__sympy__1.11/sympy/utilities/tests:
+__init__.py		test_decorator.py    test_matchpy_connector.py
+test_autowrap.py	test_deprecated.py   test_misc.py
+test_codegen.py		test_enumerative.py  test_pickling.py
+test_codegen_julia.py	test_exceptions.py   test_source.py
+test_codegen_octave.py	test_iterables.py    test_timeutils.py
+test_codegen_rust.py	test_lambdify.py     test_wester.py
+
+/workspace/sympy__sympy__1.11/sympy/vector:
+__init__.py	   dyadic.py	      operators.py	   scalar.py
+basisdependent.py  functions.py       orienters.py	   tests
+coordsysrect.py    implicitregion.py  parametricregion.py  vector.py
+deloperator.py	   integrals.py       point.py
+
+/workspace/sympy__sympy__1.11/sympy/vector/tests:
+__init__.py		 test_functions.py	 test_parametricregion.py
+test_coordsysrect.py	 test_implicitregion.py  test_printing.py
+test_dyadic.py		 test_integrals.py	 test_vector.py
+test_field_functions.py  test_operators.py
+
+/workspace/sympy__sympy__1.11/sympy.egg-info:
+PKG-INFO     dependency_links.txt  not-zip-safe  top_level.txt
+SOURCES.txt  entry_points.txt	   requires.txt; Next action: {'arguments': '{"command": "create", "path": "/workspace/reproduce.py", "file_text": "import sympy\\nfrom sympy import Array\\n\\nprint(f\\"SymPy version: {sympy.__version__}\\")\\nprint(\\"Creating empty Array...\\")\\na = Array([])\\nprint(\\"Success! Empty Array created.\\")\\nprint(f\\"Array contents: {a}\\")"}', 'name': 'str_replace_editor'}
+---
+Result at iteration 1: File created successfully at: /workspace/reproduce.py; Next action: {'arguments': '{"command": "PYTHONPATH=/workspace/sympy__sympy__1.11 python /workspace/reproduce.py"}', 'name': 'execute_bash'}
+---
+Result at iteration 2: PYTHONPATH=/workspace/sympy__sympy__1.11 python /workspace/reproduce.py
+SymPy version: 1.11.dev
+Creating empty Array...
+Traceback (most recent call last):
+  File "/workspace/reproduce.py", line 6, in <module>
+    a = Array([])
+  File "/workspace/sympy__sympy__1.11/sympy/tensor/array/dense_ndim_array.py", line 137, in __new__
+    return cls._new(iterable, shape, **kwargs)
+  File "/workspace/sympy__sympy__1.11/sympy/tensor/array/dense_ndim_array.py", line 141, in _new
+    shape, flat_list = cls._handle_ndarray_creation_inputs(iterable, shape, **kwargs)
+  File "/workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py", line 226, in _handle_ndarray_creation_inputs
+    iterable, shape = cls._scan_iterable_shape(iterable)
+  File "/workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py", line 205, in _scan_iterable_shape
+    return f(iterable)
+  File "/workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py", line 198, in f
+    elems, shapes = zip(*[f(i) for i in pointer])
+ValueError: not enough values to unpack (expected 2, got 0); Next action: {'arguments': '{"command": "view", "path": "/workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py"}', 'name': 'str_replace_editor'}
+---
+Result at iteration 3: Here's the result of running `cat -n` on /workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py:
+     1	from sympy.core.basic import Basic
+     2	from sympy.core.containers import (Dict, Tuple)
+     3	from sympy.core.expr import Expr
+     4	from sympy.core.kind import Kind, NumberKind, UndefinedKind
+     5	from sympy.core.numbers import Integer
+     6	from sympy.core.singleton import S
+     7	from sympy.core.sympify import sympify
+     8	from sympy.external.gmpy import SYMPY_INTS
+     9	from sympy.printing.defaults import Printable
+    10	
+    11	import itertools
+    12	from collections.abc import Iterable
+    13	
+    14	
+    15	class ArrayKind(Kind):
+    16	    """
+    17	    Kind for N-dimensional array in SymPy.
+    18	
+    19	    This kind represents the multidimensional array that algebraic
+    20	    operations are defined. Basic class for this kind is ``NDimArray``,
+    21	    but any expression representing the array can have this.
+    22	
+    23	    Parameters
+    24	    ==========
+    25	
+    26	    element_kind : Kind
+    27	        Kind of the element. Default is :obj:NumberKind `<sympy.core.kind.NumberKind>`,
+    28	        which means that the array contains only numbers.
+    29	
+    30	    Examples
+    31	    ========
+    32	
+    33	    Any instance of array class has ``ArrayKind``.
+    34	
+    35	    >>> from sympy import NDimArray
+    36	    >>> NDimArray([1,2,3]).kind
+    37	    ArrayKind(NumberKind)
+    38	
+    39	    Although expressions representing an array may be not instance of
+    40	    array class, it will have ``ArrayKind`` as well.
+    41	
+    42	    >>> from sympy import Integral
+    43	    >>> from sympy.tensor.array import NDimArray
+    44	    >>> from sympy.abc import x
+    45	    >>> intA = Integral(NDimArray([1,2,3]), x)
+    46	    >>> isinstance(intA, NDimArray)
+    47	    False
+    48	    >>> intA.kind
+    49	    ArrayKind(NumberKind)
+    50	
+    51	    Use ``isinstance()`` to check for ``ArrayKind` without specifying
+    52	    the element kind. Use ``is`` with specifying the element kind.
+    53	
+    54	    >>> from sympy.tensor.array import ArrayKind
+    55	    >>> from sympy.core import NumberKind
+    56	    >>> boolA = NDimArray([True, False])
+    57	    >>> isinstance(boolA.kind, ArrayKind)
+    58	    True
+    59	    >>> boolA.kind is ArrayKind(NumberKind)
+    60	    False
+    61	
+    62	    See Also
+    63	    ========
+    64	
+    65	    shape : Function to return the shape of objects with ``MatrixKind``.
+    66	
+    67	    """
+    68	    def __new__(cls, element_kind=NumberKind):
+    69	        obj = super().__new__(cls, element_kind)
+    70	        obj.element_kind = element_kind
+    71	        return obj
+    72	
+    73	    def __repr__(self):
+    74	        return "ArrayKind(%s)" % self.element_kind
+    75	
+    76	    @classmethod
+    77	    def _union(cls, kinds) -> 'ArrayKind':
+    78	        elem_kinds = set(e.kind for e in kinds)
+    79	        if len(elem_kinds) == 1:
+    80	            elemkind, = elem_kinds
+    81	        else:
+    82	            elemkind = UndefinedKind
+    83	        return ArrayKind(elemkind)
+    84	
+    85	
+    86	class NDimArray(Printable):
+    87	    """
+    88	
+    89	    Examples
+    90	    ========
+    91	
+    92	    Create an N-dim array of zeros:
+    93	
+    94	    >>> from sympy import MutableDenseNDimArray
+    95	    >>> a = MutableDenseNDimArray.zeros(2, 3, 4)
+    96	    >>> a
+    97	    [[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]], [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]]
+    98	
+    99	    Create an N-dim array from a list;
+   100	
+   101	    >>> a = MutableDenseNDimArray([[2, 3], [4, 5]])
+   102	    >>> a
+   103	    [[2, 3], [4, 5]]
+   104	
+   105	    >>> b = MutableDenseNDimArray([[[1, 2], [3, 4], [5, 6]], [[7, 8], [9, 10], [11, 12]]])
+   106	    >>> b
+   107	    [[[1, 2], [3, 4], [5, 6]], [[7, 8], [9, 10], [11, 12]]]
+   108	
+   109	    Create an N-dim array from a flat list with dimension shape:
+   110	
+   111	    >>> a = MutableDenseNDimArray([1, 2, 3, 4, 5, 6], (2, 3))
+   112	    >>> a
+   113	    [[1, 2, 3], [4, 5, 6]]
+   114	
+   115	    Create an N-dim array from a matrix:
+   116	
+   117	    >>> from sympy import Matrix
+   118	    >>> a = Matrix([[1,2],[3,4]])
+   119	    >>> a
+   120	    Matrix([
+   121	    [1, 2],
+   122	    [3, 4]])
+   123	    >>> b = MutableDenseNDimArray(a)
+   124	    >>> b
+   125	    [[1, 2], [3, 4]]
+   126	
+   127	    Arithmetic operations on N-dim arrays
+   128	
+   129	    >>> a = MutableDenseNDimArray([1, 1, 1, 1], (2, 2))
+   130	    >>> b = MutableDenseNDimArray([4, 4, 4, 4], (2, 2))
+   131	    >>> c = a + b
+   132	    >>> c
+   133	    [[5, 5], [5, 5]]
+   134	    >>> a - b
+   135	    [[-3, -3], [-3, -3]]
+   136	
+   137	    """
+   138	
+   139	    _diff_wrt = True
+   140	    is_scalar = False
+   141	
+   142	    def __new__(cls, iterable, shape=None, **kwargs):
+   143	        from sympy.tensor.array import ImmutableDenseNDimArray
+   144	        return ImmutableDenseNDimArray(iterable, shape, **kwargs)
+   145	
+   146	    def _parse_index(self, index):
+   147	        if isinstance(index, (SYMPY_INTS, Integer)):
+   148	            raise ValueError("Only a tuple index is accepted")
+   149	
+   150	        if self._loop_size == 0:
+   151	            raise ValueError("Index not valide with an empty array")
+   152	
+   153	        if len(index) != self._rank:
+   154	            raise ValueError('Wrong number of array axes')
+   155	
+   156	        real_index = 0
+   157	        # check if input index can exist in current indexing
+   158	        for i in range(self._rank):
+   159	            if (index[i] >= self.shape[i]) or (index[i] < -self.shape[i]):
+   160	                raise ValueError('Index ' + str(index) + ' out of border')
+   161	            if index[i] < 0:
+   162	                real_index += 1
+   163	            real_index = real_index*self.shape[i] + index[i]
+   164	
+   165	        return real_index
+   166	
+   167	    def _get_tuple_index(self, integer_index):
+   168	        index = []
+   169	        for i, sh in enumerate(reversed(self.shape)):
+   170	            index.append(integer_index % sh)
+   171	            integer_index //= sh
+   172	        index.reverse()
+   173	        return tuple(index)
+   174	
+   175	    def _check_symbolic_index(self, index):
+   176	        # Check if any index is symbolic:
+   177	        tuple_index = (index if isinstance(index, tuple) else (index,))
+   178	        if any((isinstance(i, Expr) and (not i.is_number)) for i in tuple_index):
+   179	            for i, nth_dim in zip(tuple_index, self.shape):
+   180	                if ((i < 0) == True) or ((i >= nth_dim) == True):
+   181	                    raise ValueError("index out of range")
+   182	            from sympy.tensor import Indexed
+   183	            return Indexed(self, *tuple_index)
+   184	        return None
+   185	
+   186	    def _setter_iterable_check(self, value):
+   187	        from sympy.matrices.matrices import MatrixBase
+   188	        if isinstance(value, (Iterable, MatrixBase, NDimArray)):
+   189	            raise NotImplementedError
+   190	
+   191	    @classmethod
+   192	    def _scan_iterable_shape(cls, iterable):
+   193	        def f(pointer):
+   194	            if not isinstance(pointer, Iterable):
+   195	                return [pointer], ()
+   196	
+   197	            result = []
+   198	            elems, shapes = zip(*[f(i) for i in pointer])
+   199	            if len(set(shapes)) != 1:
+   200	                raise ValueError("could not determine shape unambiguously")
+   201	            for i in elems:
+   202	                result.extend(i)
+   203	            return result, (len(shapes),)+shapes[0]
+   204	
+   205	        return f(iterable)
+   206	
+   207	    @classmethod
+   208	    def _handle_ndarray_creation_inputs(cls, iterable=None, shape=None, **kwargs):
+   209	        from sympy.matrices.matrices import MatrixBase
+   210	        from sympy.tensor.array import SparseNDimArray
+   211	
+   212	        if shape is None:
+   213	            if iterable is None:
+   214	                shape = ()
+   215	                iterable = ()
+   216	            # Construction of a sparse array from a sparse array
+   217	            elif isinstance(iterable, SparseNDimArray):
+   218	                return iterable._shape, iterable._sparse_array
+   219	
+   220	            # Construct N-dim array from another N-dim array:
+   221	            elif isinstance(iterable, NDimArray):
+   222	                shape = iterable.shape
+   223	
+   224	            # Construct N-dim array from an iterable (numpy arrays included):
+   225	            elif isinstance(iterable, Iterable):
+   226	                iterable, shape = cls._scan_iterable_shape(iterable)
+   227	
+   228	            # Construct N-dim array from a Matrix:
+   229	            elif isinstance(iterable, MatrixBase):
+   230	                shape = iterable.shape
+   231	
+   232	            else:
+   233	                shape = ()
+   234	                iterable = (iterable,)
+   235	
+   236	        if isinstance(iterable, (Dict, dict)) and shape is not None:
+   237	            new_dict = iterable.copy()
+   238	            for k, v in new_dict.items():
+   239	                if isinstance(k, (tuple, Tuple)):
+   240	                    new_key = 0
+   241	                    for i, idx in enumerate(k):
+   242	                        new_key = new_key * shape[i] + idx
+   243	                    iterable[new_key] = iterable[k]
+   244	                    del iterable[k]
+   245	
+   246	        if isinstance(shape, (SYMPY_INTS, Integer)):
+   247	            shape = (shape,)
+   248	
+   249	        if not all(isinstance(dim, (SYMPY_INTS, Integer)) for dim in shape):
+   250	            raise TypeError("Shape should contain integers only.")
+   251	
+   252	        return tuple(shape), iterable
+   253	
+   254	    def __len__(self):
+   255	        """Overload common function len(). Returns number of elements in array.
+   256	
+   257	        Examples
+   258	        ========
+   259	
+   260	        >>> from sympy import MutableDenseNDimArray
+   261	        >>> a = MutableDenseNDimArray.zeros(3, 3)
+   262	        >>> a
+   263	        [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+   264	        >>> len(a)
+   265	        9
+   266	
+   267	        """
+   268	        return self._loop_size
+   269	
+   270	    @property
+   271	    def shape(self):
+   272	        """
+   273	        Returns array shape (dimension).
+   274	
+   275	        Examples
+   276	        ========
+   277	
+   278	        >>> from sympy import MutableDenseNDimArray
+   279	        >>> a = MutableDenseNDimArray.zeros(3, 3)
+   280	        >>> a.shape
+   281	        (3, 3)
+   282	
+   283	        """
+   284	        return self._shape
+   285	
+   286	    def rank(self):
+   287	        """
+   288	        Returns rank of array.
+   289	
+   290	        Examples
+   291	        ========
+   292	
+   293	        >>> from sympy import MutableDenseNDimArray
+   294	        >>> a = MutableDenseNDimArray.zeros(3,4,5,6,3)
+   295	        >>> a.rank()
+   296	        5
+   297	
+   298	        """
+   299	        return self._rank
+   300	
+   301	    def diff(self, *args, **kwargs):
+   302	        """
+   303	        Calculate the derivative of each element in the array.
+   304	
+   305	        Examples
+   306	        ========
+   307	
+   308	        >>> from sympy import ImmutableDenseNDimArray
+   309	        >>> from sympy.abc import x, y
+   310	        >>> M = ImmutableDenseNDimArray([[x, y], [1, x*y]])
+   311	        >>> M.diff(x)
+   312	        [[1, 0], [0, y]]
+   313	
+   314	        """
+   315	        from sympy.tensor.array.array_derivatives import ArrayDerivative
+   316	        kwargs.setdefault('evaluate', True)
+   317	        return ArrayDerivative(self.as_immutable(), *args, **kwargs)
+   318	
+   319	    def _eval_derivative(self, base):
+   320	        # Types are (base: scalar, self: array)
+   321	        return self.applyfunc(lambda x: base.diff(x))
+   322	
+   323	    def _eval_derivative_n_times(self, s, n):
+   324	        return Basic._eval_derivative_n_times(self, s, n)
+   325	
+   326	    def applyfunc(self, f):
+   327	        """Apply a function to each element of the N-dim array.
+   328	
+   329	        Examples
+   330	        ========
+   331	
+   332	        >>> from sympy import ImmutableDenseNDimArray
+   333	        >>> m = ImmutableDenseNDimArray([i*2+j for i in range(2) for j in range(2)], (2, 2))
+   334	        >>> m
+   335	        [[0, 1], [2, 3]]
+   336	        >>> m.applyfunc(lambda i: 2*i)
+   337	        [[0, 2], [4, 6]]
+   338	        """
+   339	        from sympy.tensor.array import SparseNDimArray
+   340	        from sympy.tensor.array.arrayop import Flatten
+   341	
+   342	        if isinstance(self, SparseNDimArray) and f(S.Zero) == 0:
+   343	            return type(self)({k: f(v) for k, v in self._sparse_array.items() if f(v) != 0}, self.shape)
+   344	
+   345	        return type(self)(map(f, Flatten(self)), self.shape)
+   346	
+   347	    def _sympystr(self, printer):
+   348	        def f(sh, shape_left, i, j):
+   349	            if len(shape_left) == 1:
+   350	                return "["+", ".join([printer._print(self[self._get_tuple_index(e)]) for e in range(i, j)])+"]"
+   351	
+   352	            sh //= shape_left[0]
+   353	            return "[" + ", ".join([f(sh, shape_left[1:], i+e*sh, i+(e+1)*sh) for e in range(shape_left[0])]) + "]" # + "\n"*len(shape_left)
+   354	
+   355	        if self.rank() == 0:
+   356	            return printer._print(self[()])
+   357	
+   358	        return f(self._loop_size, self.shape, 0, self._loop_size)
+   359	
+   360	    def tolist(self):
+   361	        """
+   362	        Converting MutableDenseNDimArray to one-dim list
+   363	
+   364	        Examples
+   365	        ========
+   366	
+   367	        >>> from sympy import MutableDenseNDimArray
+   368	        >>> a = MutableDenseNDimArray([1, 2, 3, 4], (2, 2))
+   369	        >>> a
+   370	        [[1, 2], [3, 4]]
+   371	        >>> b = a.tolist()
+   372	        >>> b
+   373	        [[1, 2], [3, 4]]
+   374	        """
+   375	
+   376	        def f(sh, shape_left, i, j):
+   377	            if len(shape_left) == 1:
+   378	                return [self[self._get_tuple_index(e)] for e in range(i, j)]
+   379	            result = []
+   380	            sh //= shape_left[0]
+   381	            for e in range(shape_left[0]):
+   382	                result.append(f(sh, shape_left[1:], i+e*sh, i+(e+1)*sh))
+   383	            return result
+   384	
+   385	        return f(self._loop_size, self.shape, 0, self._loop_size)
+   386	
+   387	    def __add__(self, other):
+   388	        from sympy.tensor.array.arrayop import Flatten
+   389	
+   390	        if not isinstance(other, NDimArray):
+   391	            return NotImplemented
+   392	
+   393	        if self.shape != other.shape:
+   394	            raise ValueError("array shape mismatch")
+   395	        result_list = [i+j for i,j in zip(Flatten(self), Flatten(other))]
+   396	
+   397	        return type(self)(result_list, self.shape)
+   398	
+   399	    def __sub__(self, other):
+   400	        from sympy.tensor.array.arrayop import Flatten
+   401	
+   402	        if not isinstance(other, NDimArray):
+   403	            return NotImplemented
+   404	
+   405	        if self.shape != other.shape:
+   406	            raise ValueError("array shape mismatch")
+   407	        result_list = [i-j for i,j in zip(Flatten(self), Flatten(other))]
+   408	
+   409	        return type(self)(result_list, self.shape)
+   410	
+   411	    def __mul__(self, other):
+   412	        from sympy.matrices.matrices import MatrixBase
+   413	        from sympy.tensor.array import SparseNDimArray
+   414	        from sympy.tensor.array.arrayop import Flatten
+   415	
+   416	        if isinstance(other, (Iterable, NDimArray, MatrixBase)):
+   417	            raise ValueError("scalar expected, use tensorproduct(...) for tensorial product")
+   418	
+   419	        other = sympify(other)
+   420	        if isinstance(self, SparseNDimArray):
+   421	            if other.is_zero:
+   422	                return type(self)({}, self.shape)
+   423	            return type(self)({k: other*v for (k, v) in self._sparse_array.items()}, self.shape)
+   424	
+   425	        result_list = [i*other for i in Flatten(self)]
+   426	        return type(self)(result_list, self.shape)
+   427	
+   428	    def __rmul__(self, other):
+   429	        from sympy.matrices.matrices import MatrixBase
+   430	        from sympy.tensor.array import SparseNDimArray
+   431	        from sympy.tensor.array.arrayop import Flatten
+   432	
+   433	        if isinstance(other, (Iterable, NDimArray, MatrixBase)):
+   434	            raise ValueError("scalar expected, use tensorproduct(...) for tensorial product")
+   435	
+   436	        other = sympify(other)
+   437	        if isinstance(self, SparseNDimArray):
+   438	            if other.is_zero:
+   439	                return type(self)({}, self.shape)
+   440	            return type(self)({k: other*v for (k, v) in self._sparse_array.items()}, self.shape)
+   441	
+   442	        result_list = [other*i for i in Flatten(self)]
+   443	        return type(self)(result_list, self.shape)
+   444	
+   445	    def __truediv__(self, other):
+   446	        from sympy.matrices.matrices import MatrixBase
+   447	        from sympy.tensor.array import SparseNDimArray
+   448	        from sympy.tensor.array.arrayop import Flatten
+   449	
+   450	        if isinstance(other, (Iterable, NDimArray, MatrixBase)):
+   451	            raise ValueError("scalar expected")
+   452	
+   453	        other = sympify(other)
+   454	        if isinstance(self, SparseNDimArray) and other != S.Zero:
+   455	            return type(self)({k: v/other for (k, v) in self._sparse_array.items()}, self.shape)
+   456	
+   457	        result_list = [i/other for i in Flatten(self)]
+   458	        return type(self)(result_list, self.shape)
+   459	
+   460	    def __rtruediv__(self, other):
+   461	        raise NotImplementedError('unsupported operation on NDimArray')
+   462	
+   463	    def __neg__(self):
+   464	        from sympy.tensor.array import SparseNDimArray
+   465	        from sympy.tensor.array.arrayop import Flatten
+   466	
+   467	        if isinstance(self, SparseNDimArray):
+   468	            return type(self)({k: -v for (k, v) in self._sparse_array.items()}, self.shape)
+   469	
+   470	        result_list = [-i for i in Flatten(self)]
+   471	        return type(self)(result_list, self.shape)
+   472	
+   473	    def __iter__(self):
+   474	        def iterator():
+   475	            if self._shape:
+   476	                for i in range(self._shape[0]):
+   477	                    yield self[i]
+   478	            else:
+   479	                yield self[()]
+   480	
+   481	        return iterator()
+   482	
+   483	    def __eq__(self, other):
+   484	        """
+   485	        NDimArray instances can be compared to each other.
+   486	        Instances equal if they have same shape and data.
+   487	
+   488	        Examples
+   489	        ========
+   490	
+   491	        >>> from sympy import MutableDenseNDimArray
+   492	        >>> a = MutableDenseNDimArray.zeros(2, 3)
+   493	        >>> b = MutableDenseNDimArray.zeros(2, 3)
+   494	        >>> a == b
+   495	        True
+   496	        >>> c = a.reshape(3, 2)
+   497	        >>> c == b
+   498	        False
+   499	        >>> a[0,0] = 1
+   500	        >>> b[0,0] = 2
+   501	        >>> a == b
+   502	        False
+   503	        """
+   504	        from sympy.tensor.array import SparseNDimArray
+   505	        if not isinstance(other, NDimArray):
+   506	            return False
+   507	
+   508	        if not self.shape == other.shape:
+   509	  <response clipped><NOTE>To save on context only part of this file has been shown to you. You should retry this tool after you have searched inside the file with `grep -n` in order to find the line numbers of what you are looking for.</NOTE>; Next action: {'arguments': '{"command": "grep -n \\"_scan_iterable_shape\\" /workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py"}', 'name': 'execute_bash'}
+---
+Result at iteration 4: grep -n "_scan_iterable_shape" /workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py
+192:    def _scan_iterable_shape(cls, iterable):
+226:                iterable, shape = cls._scan_iterable_shape(iterable); Next action: {'arguments': '{"command": "view", "path": "/workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py", "view_range": [192, 205]}', 'name': 'str_replace_editor'}
+---
+Result at iteration 5: Here's the result of running `cat -n` on /workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py:
+   192	    def _scan_iterable_shape(cls, iterable):
+   193	        def f(pointer):
+   194	            if not isinstance(pointer, Iterable):
+   195	                return [pointer], ()
+   196	
+   197	            result = []
+   198	            elems, shapes = zip(*[f(i) for i in pointer])
+   199	            if len(set(shapes)) != 1:
+   200	                raise ValueError("could not determine shape unambiguously")
+   201	            for i in elems:
+   202	                result.extend(i)
+   203	            return result, (len(shapes),)+shapes[0]
+   204	
+   205	        return f(iterable); Next action: {'arguments': '{"command": "str_replace", "path": "/workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py", "old_str": "    def _scan_iterable_shape(cls, iterable):\\n        def f(pointer):\\n            if not isinstance(pointer, Iterable):\\n                return [pointer], ()\\n\\n            result = []\\n            elems, shapes = zip(*[f(i) for i in pointer])\\n            if len(set(shapes)) != 1:\\n                raise ValueError(\\"could not determine shape unambiguously\\")\\n            for i in elems:\\n                result.extend(i)\\n            return result, (len(shapes),)+shapes[0]\\n\\n        return f(iterable)", "new_str": "    def _scan_iterable_shape(cls, iterable):\\n        def f(pointer):\\n            if not isinstance(pointer, Iterable):\\n                return [pointer], ()\\n\\n            if not pointer:  # Handle empty iterables\\n                return [], (0,)\\n\\n            result = []\\n            elems, shapes = zip(*[f(i) for i in pointer])\\n            if len(set(shapes)) != 1:\\n                raise ValueError(\\"could not determine shape unambiguously\\")\\n            for i in elems:\\n                result.extend(i)\\n            return result, (len(shapes),)+shapes[0]\\n\\n        return f(iterable)"}', 'name': 'str_replace_editor'}
+---
+Result at iteration 6: The file /workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py:
+   188	        if isinstance(value, (Iterable, MatrixBase, NDimArray)):
+   189	            raise NotImplementedError
+   190	
+   191	    @classmethod
+   192	    def _scan_iterable_shape(cls, iterable):
+   193	        def f(pointer):
+   194	            if not isinstance(pointer, Iterable):
+   195	                return [pointer], ()
+   196	
+   197	            if not pointer:  # Handle empty iterables
+   198	                return [], (0,)
+   199	
+   200	            result = []
+   201	            elems, shapes = zip(*[f(i) for i in pointer])
+   202	            if len(set(shapes)) != 1:
+   203	                raise ValueError("could not determine shape unambiguously")
+   204	            for i in elems:
+   205	                result.extend(i)
+   206	            return result, (len(shapes),)+shapes[0]
+   207	
+   208	        return f(iterable)
+   209	
+   210	    @classmethod
+   211	    def _handle_ndarray_creation_inputs(cls, iterable=None, shape=None, **kwargs):
+   212	        from sympy.matrices.matrices import MatrixBase
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next action: {'arguments': '{"command": "PYTHONPATH=/workspace/sympy__sympy__1.11 python /workspace/reproduce.py"}', 'name': 'execute_bash'}
+---
+Result at iteration 7: PYTHONPATH=/workspace/sympy__sympy__1.11 python /workspace/reproduce.py
+SymPy version: 1.11.dev
+Creating empty Array...
+Success! Empty Array created.
+Array contents: []; Next action: {'arguments': '{"command": "create", "path": "/workspace/edge_cases.py", "file_text": "import sympy\\nfrom sympy import Array\\n\\nprint(\\"Test 1: Empty array\\")\\na = Array([])\\nprint(f\\"Shape: {a.shape}\\")\\nprint(f\\"Contents: {a}\\")\\n\\nprint(\\"\\\\nTest 2: Empty array with explicit shape\\")\\nb = Array([], shape=(0,))\\nprint(f\\"Shape: {b.shape}\\")\\nprint(f\\"Contents: {b}\\")\\n\\nprint(\\"\\\\nTest 3: Empty 2D array\\")\\nc = Array([[]])\\nprint(f\\"Shape: {c.shape}\\")\\nprint(f\\"Contents: {c}\\")\\n\\nprint(\\"\\\\nTest 4: Empty array with shape (0,2)\\")\\nd = Array([], shape=(0,2))\\nprint(f\\"Shape: {d.shape}\\")\\nprint(f\\"Contents: {d}\\")\\n\\nprint(\\"\\\\nTest 5: Empty array with shape (2,0)\\")\\ne = Array([], shape=(2,0))\\nprint(f\\"Shape: {e.shape}\\")\\nprint(f\\"Contents: {e}\\")"}', 'name': 'str_replace_editor'}
+---
+Result at iteration 8: File created successfully at: /workspace/edge_cases.py; Next action: {'arguments': '{"command": "PYTHONPATH=/workspace/sympy__sympy__1.11 python /workspace/edge_cases.py"}', 'name': 'execute_bash'}
+---
+Result at iteration 9: PYTHONPATH=/workspace/sympy__sympy__1.11 python /workspace/edge_cases.py
+Test 1: Empty array
+Shape: (0,)
+Contents: []
+
+Test 2: Empty array with explicit shape
+Shape: (0,)
+Contents: []
+
+Test 3: Empty 2D array
+Shape: (1, 0)
+Contents: [[]]
+
+Test 4: Empty array with shape (0,2)
+Shape: (0, 2)
+Traceback (most recent call last):
+  File "/workspace/edge_cases.py", line 22, in <module>
+    print(f"Contents: {d}")
+  File "/workspace/sympy__sympy__1.11/sympy/core/_print_helpers.py", line 29, in __str__
+    return sstr(self, order=None)
+  File "/workspace/sympy__sympy__1.11/sympy/printing/printer.py", line 372, in __call__
+    return self.__wrapped__(*args, **kwargs)
+  File "/workspace/sympy__sympy__1.11/sympy/printing/str.py", line 1001, in sstr
+    s = p.doprint(expr)
+  File "/workspace/sympy__sympy__1.11/sympy/printing/printer.py", line 292, in doprint
+    return self._str(self._print(expr))
+  File "/workspace/sympy__sympy__1.11/sympy/printing/printer.py", line 309, in _print
+    return getattr(expr, self.printmethod)(self, **kwargs)
+  File "/workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py", line 361, in _sympystr
+    return f(self._loop_size, self.shape, 0, self._loop_size)
+  File "/workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py", line 355, in f
+    sh //= shape_left[0]
+  File "/workspace/sympy__sympy__1.11/sympy/core/decorators.py", line 65, in __sympifyit_wrapper
+    return func(a, b)
+  File "/workspace/sympy__sympy__1.11/sympy/core/numbers.py", line 2424, in __floordiv__
+    return Integer(self.p // other)
+  File "/workspace/sympy__sympy__1.11/sympy/core/numbers.py", line 2428, in __rfloordiv__
+    return Integer(Integer(other).p // self.p)
+ZeroDivisionError: integer division or modulo by zero; Next action: {'arguments': '{"command": "str_replace", "path": "/workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py", "old_str": "    def _sympystr(self, printer):\\n        def f(sh, shape_left, i, j):\\n            if len(shape_left) == 1:\\n                return \\"[\\"+\\", \\".join([printer._print(self[self._get_tuple_index(e)]) for e in range(i, j)])+\\"]\\"\\n\\n            sh //= shape_left[0]\\n            return \\"[\\" + \\", \\".join([f(sh, shape_left[1:], i+e*sh, i+(e+1)*sh) for e in range(shape_left[0])]) + \\"]\\" # + \\"\\\\n\\"*len(shape_left)\\n\\n        if self.rank() == 0:\\n            return printer._print(self[()])\\n\\n        return f(self._loop_size, self.shape, 0, self._loop_size)", "new_str": "    def _sympystr(self, printer):\\n        def f(sh, shape_left, i, j):\\n            if len(shape_left) == 1:\\n                return \\"[\\"+\\", \\".join([printer._print(self[self._get_tuple_index(e)]) for e in range(i, j)])+\\"]\\"\\n\\n            if shape_left[0] == 0:\\n                return \\"[]\\"\\n\\n            sh //= shape_left[0]\\n            return \\"[\\" + \\", \\".join([f(sh, shape_left[1:], i+e*sh, i+(e+1)*sh) for e in range(shape_left[0])]) + \\"]\\" # + \\"\\\\n\\"*len(shape_left)\\n\\n        if self.rank() == 0:\\n            return printer._print(self[()])\\n\\n        if self._loop_size == 0:\\n            return \\"[]\\" * self.rank()\\n\\n        return f(self._loop_size, self.shape, 0, self._loop_size)"}', 'name': 'str_replace_editor'}
+---
+Result at iteration 10: The file /workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py has been edited. Here's the result of running `cat -n` on a snippet of /workspace/sympy__sympy__1.11/sympy/tensor/array/ndim_array.py:
+   346	            return type(self)({k: f(v) for k, v in self._sparse_array.items() if f(v) != 0}, self.shape)
+   347	
+   348	        return type(self)(map(f, Flatten(self)), self.shape)
+   349	
+   350	    def _sympystr(self, printer):
+   351	        def f(sh, shape_left, i, j):
+   352	            if len(shape_left) == 1:
+   353	                return "["+", ".join([printer._print(self[self._get_tuple_index(e)]) for e in range(i, j)])+"]"
+   354	
+   355	            if shape_left[0] == 0:
+   356	                return "[]"
+   357	
+   358	            sh //= shape_left[0]
+   359	            return "[" + ", ".join([f(sh, shape_left[1:], i+e*sh, i+(e+1)*sh) for e in range(shape_left[0])]) + "]" # + "\n"*len(shape_left)
+   360	
+   361	        if self.rank() == 0:
+   362	            return printer._print(self[()])
+   363	
+   364	        if self._loop_size == 0:
+   365	            return "[]" * self.rank()
+   366	
+   367	        return f(self._loop_size, self.shape, 0, self._loop_size)
+   368	
+   369	    def tolist(self):
+   370	        """
+   371	        Converting MutableDenseNDimArray to one-dim list
+Review the changes and make sure they are as expected. Edit the file again if necessary.; Next action: {'arguments': '{"command": "PYTHONPATH=/workspace/sympy__sympy__1.11 python /workspace/edge_cases.py"}', 'name': 'execute_bash'}
+---
+Result at iteration 11: PYTHONPATH=/workspace/sympy__sympy__1.11 python /workspace/edge_cases.py
+Test 1: Empty array
+Shape: (0,)
+Contents: []
+
+Test 2: Empty array with explicit shape
+Shape: (0,)
+Contents: []
+
+Test 3: Empty 2D array
+Shape: (1, 0)
+Contents: [][]
+
+Test 4: Empty array with shape (0,2)
+Shape: (0, 2)
+Contents: [][]
+
+Test 5: Empty array with shape (2,0)
+Shape: (2, 0)
+Contents: [][]; Next action: END

@@ -1,0 +1,12 @@
+Action at Iteration 0: search_class("Parent"), search_class("Child"), search_code("class Meta:"), search_method("get_queryset")
+
+Action at Iteration 1: Analyze
+
+Action at Iteration 2: search_code_in_file("class Parent(models.Model):", "tests/model_inheritance/models.py"), search_code_in_file("class Child(Parent):", "tests/model_inheritance/models.py"), search_code_in_file("ordering = ['-pk']", "tests/model_inheritance/models.py")
+
+Action at Iteration 3: Analyze
+
+Action at Iteration 4: Locate
+
+Action at Iteration 5: write_patch
+

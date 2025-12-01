@@ -1,0 +1,111 @@
+Result at Iteration 0: Result of search_method("convert_to"):
+Found 3 methods with name convert_to in the codebase.
+Search result 1: <file>sympy/physics/units/util.py</file> <func>convert_to</func> <code>def convert_to(expr, target_units, unit_system="SI"):
+    """
+    Convert ``expr`` to the same expression with all of its units and quantities
+    represented as factors of ``target_units``, whenever the dimension is compatible.
+
+    ``target_units`` may be a single unit/quantity, or a collection of
+    units/quantities.
+
+    Examples
+    ========
+
+    >>> from sympy.physics.units import speed_of_light, meter, gram, second, day
+    >>> from sympy.physics.units import mile, newton, kilogram, atomic_mass_constant
+    >>> from sympy.physics.units import kilometer, centimeter
+    >>> from sympy.physics.units import gravitational_constant, hbar
+    >>> from sympy.physics.units import convert_to
+    >>> convert_to(mile, kilometer)
+    25146*kilometer/15625
+    >>> convert_to(mile, kilometer).n()
+    1.609344*kilometer
+    >>> convert_to(speed_of_light, meter/second)
+    299792458*meter/second
+    >>> convert_to(day, second)
+    86400*second
+    >>> 3*newton
+    3*newton
+    >>> convert_to(3*newton, kilogram*meter/second**2)
+    3*kilogram*meter/second**2
+    >>> convert_to(atomic_mass_constant, gram)
+    1.660539060e-24*gram
+
+    Conversion to multiple units:
+
+    >>> convert_to(speed_of_light, [meter, second])
+    299792458*meter/second
+    >>> convert_to(3*newton, [centimeter, gram, second])
+    300000*centimeter*gram/second**2
+
+    Conversion to Planck units:
+
+    >>> convert_to(atomic_mass_constant, [gravitational_constant, speed_of_light, hbar]).n()
+    7.62963085040767e-20*gravitational_constant**(-0.5)*hbar**0.5*speed_of_light**0.5
+
+    """
+    from sympy.physics.units import UnitSystem
+    unit_system = UnitSystem.get_unit_system(unit_system)
+
+    if not isinstance(target_units, (Iterable, Tuple)):
+        target_units = [target_units]
+
+    if isinstance(expr, Add):
+        return Add.fromiter(convert_to(i, target_units, unit_system) for i in expr.args)
+
+    expr = sympify(expr)
+
+    if not isinstance(expr, Quantity) and expr.has(Quantity):
+        expr = expr.replace(lambda x: isinstance(x, Quantity), lambda x: x.convert_to(target_units, unit_system))
+
+    def get_total_scale_factor(expr):
+        if isinstance(expr, Mul):
+            return reduce(lambda x, y: x * y, [get_total_scale_factor(i) for i in expr.args])
+        elif isinstance(expr, Pow):
+            return get_total_scale_factor(expr.base) ** expr.exp
+        elif isinstance(expr, Quantity):
+            return unit_system.get_quantity_scale_factor(expr)
+        return expr
+
+    depmat = _get_conversion_matrix_for_expr(expr, target_units, unit_system)
+    if depmat is None:
+        return expr
+
+    expr_scale_factor = get_total_scale_factor(expr)
+    return expr_scale_factor * Mul.fromiter((1/get_total_scale_factor(u) * u) ** p for u, p in zip(target_units, depmat))
+</code>
+
+Search result 2: <file>sympy/physics/units/quantities.py</file> <class>Quantity</class> <func>convert_to</func> <code>    def convert_to(self, other, unit_system="SI"):
+        """
+        Convert the quantity to another quantity of same dimensions.
+
+        Examples
+        ========
+
+        >>> from sympy.physics.units import speed_of_light, meter, second
+        >>> speed_of_light
+        speed_of_light
+        >>> speed_of_light.convert_to(meter/second)
+        299792458*meter/second
+
+        >>> from sympy.physics.units import liter
+        >>> liter.convert_to(meter**3)
+        meter**3/1000
+        """
+        from .util import convert_to
+        return convert_to(self, other, unit_system)
+</code>
+
+Search result 3: <file>sympy/polys/domainmatrix.py</file> <class>DomainMatrix</class> <func>convert_to</func> <code>    def convert_to(self, K):
+        Kold = self.domain
+        new_rows = [[K.convert_from(e, Kold) for e in row] for row in self.rep]
+        return DomainMatrix(new_rows, self.shape, K)
+</code>
+Action at Iteration 1: Analyze
+
+Result at Iteration 1: The result is contained in the reasoning
+Action at Iteration 2: Locate
+
+Result at Iteration 2: The result is contained in the reasoning
+Action at Iteration 3: write_patch
+
